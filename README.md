@@ -1,3 +1,13 @@
+<!-- TOC depth:6 withLinks:1 updateOnSave:1 -->
+- [学习大纲](#)
+	- [Ubuntu Linux](#ubuntu-linux)
+		- [第一阶段](#)
+		- [第二阶段](#)
+		- [第三阶段](#)
+	- [Mac OS X Yosemite](#mac-os-x-yosemite)
+<!-- /TOC -->
+
+
 # 学习大纲
 
 ## Ubuntu Linux
@@ -54,12 +64,7 @@
     - 按任意想要的格式显示当前时间、日期
         - [每天一个linux命令（37）：date命令](http://www.cnblogs.com/peida/archive/2012/12/13/2815687.html)
 - vim对文件的基本操作
-    - 基本操作：打开、关闭、保存、改写、查找、快速跳行、翻页 即可
-    - 通过vimtutor掌握基本操作
-    - 使用.vimrc配置vim环境
-    - [简明Vim练级攻略](http://coolshell.cn/articles/5426.html)
-    - [Graphical vi-vim Cheat Sheet and Tutorial](http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html)
-    - [Vim Cheat Sheet](http://michael.peopleofhonoronly.com/vim/)
+    - [参考](./vim基本操作.md)
 - 常用命令1
     - man: display system manual
     - apropos: search command for a keyword
