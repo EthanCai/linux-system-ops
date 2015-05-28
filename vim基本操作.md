@@ -43,7 +43,6 @@ NOTE: Pressing <ESC> will place you in Normal mode or will cancel
 ## Chapter 2
 
 ```sh
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                                Lesson 2 SUMMARY
 
 
@@ -65,14 +64,11 @@ NOTE: Pressing <ESC> will place you in Normal mode or will cancel
   7. To undo previous actions, type:           u  (lowercase u)
      To undo all the changes on a line, type:  U  (capital U)
      To undo the undo's, type:                 CTRL-R
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ```
 
 ## Chapter 3
 
 ```sh
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                                Lesson 3 SUMMARY
 
 
@@ -91,17 +87,11 @@ NOTE: Pressing <ESC> will place you in Normal mode or will cancel
 
          c   [number]   motion
 
-Now go on to the next lesson.
-
-
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ```
 
 ## Chapter 4
 
 ```sh
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                                Lesson 4 SUMMARY
 
 
@@ -123,14 +113,11 @@ Now go on to the next lesson.
      To substitute phrases between two line #'s type       :#,#s/old/new/g
      To substitute all occurrences in the file type        :%s/old/new/g
      To ask for confirmation each time add 'c'             :%s/old/new/gc
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ```
 
 ## Chapter 5
 
 ```sh
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                                Lesson 5 SUMMARY
 
 
@@ -152,14 +139,11 @@ Now go on to the next lesson.
   5.  :r !dir  reads the output of the dir command and puts it below the
       cursor position.
 
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ```
 
 ## Chapter 6
 
 ```sh
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                                Lesson 6 SUMMARY
 
   1. Type  o  to open a line BELOW the cursor and start Insert mode.
@@ -182,14 +166,12 @@ Now go on to the next lesson.
 
   7. Prepend "no" to switch an option off:   :set noic
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ```
 
 ## Chapter 7
 
 
 ```sh
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                                Lesson 7 SUMMARY
 
 
@@ -206,8 +188,6 @@ Now go on to the next lesson.
   6. When typing a  :  command, press CTRL-D to see possible completions.
      Press <TAB> to use one completion.
 
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ```
 
 # 学习卡片
