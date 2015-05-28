@@ -19,7 +19,6 @@
 ## Chapter 1
 
 ```sh
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                                Lesson 1 SUMMARY
 
 
@@ -39,10 +38,6 @@
 
 NOTE: Pressing <ESC> will place you in Normal mode or will cancel
       an unwanted and partially completed command.
-
-Now continue with Lesson 2.
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ```
 
 ## Chapter 2
@@ -231,7 +226,7 @@ Now go on to the next lesson.
 - [有哪些编程必备的 Vim 配置？](http://www.zhihu.com/question/19989337)
 - [spf13-vim](http://vim.spf13.com/)
 
-由于国内http://j.mp/spf13-vim3被封，spf13-vim官网告知的安装方法无法执行成功。国内用户请通过下面的命令执行安装：
+由于国内[http://j.mp/spf13-vim3](http://j.mp/spf13-vim3)被封，spf13-vim官网告知的安装方法无法执行成功。国内用户请通过下面的命令执行安装：
 
 ```sh
 curl https://raw.githubusercontent.com/spf13/spf13-vim/3.0/bootstrap.sh -L -o - | sh
