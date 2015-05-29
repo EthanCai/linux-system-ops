@@ -79,8 +79,8 @@
     - 文件类型与扩展名
         - [每天一个linux命令(24)：Linux文件类型与扩展名](http://www.cnblogs.com/peida/archive/2012/11/22/2781912.html)
         - Practical Guide to Ubuntu Linux 3rd, page 501, Device Special Files
-- vim对文件的基本操作
-    - [参考](./vim基本操作.md)
+- vim操作
+    - 阅读[vim基本操作](./vim基本操作.md)
 - 常用命令1
     - `man`: display system manual
     - `apropos`: search command for a keyword
