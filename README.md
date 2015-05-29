@@ -18,10 +18,14 @@
 
 在第一阶段，要求掌握的内容大纲如下：
 - 基础概念
-    - [重定向](http://www.php100.com/html/webkaifa/Linux/2010/0430/6470.html)
-    - [管道](http://wenku.baidu.com/view/5a7aeff4f61fb7360b4c65ba.html): communicate between process
     - [信号](http://www.cnblogs.com/taobataoma/archive/2007/08/30/875743.html)
 - 终端软件的使用
+	- 基础概念
+		- [重定向](http://www.php100.com/html/webkaifa/Linux/2010/0430/6470.html): the various ways you can cause the shell to alter where standard input of a command comes from and where standard output goes to.
+			- 理解符号 `<`, `>`, `>>`
+		- [管道](http://wenku.baidu.com/view/5a7aeff4f61fb7360b4c65ba.html): The shell uses a pipe to connect standard output of one command to standard input of another command.
+			- 理解符号 `|`
+			- 理解filter: A filter is a command that processes an input stream of data to produce an output stream of data. 比如`sort`、`tee`。
     - 推荐的终端软件
         - Windows下使用[Xshell](http://www.netsarang.com/products/xsh_overview.html)（其次是SecureCRT，Putty）
         - MacOS下使用[iTerm2](https://www.iterm2.com/index.html)，和[Tmux](http://tmux.sourceforge.net/)
@@ -33,13 +37,22 @@
         - [SSH原理与运用（二）](http://www.ruanyifeng.com/blog/2011/12/ssh_port_forwarding.html)
         - [25个必须记住的SSH命令](http://os.51cto.com/art/201011/235252.htm)
         - [mac下SSH免密码登录远程服务器](http://cssor.com/mac-ssh-auto-login-server.html)
+    - 在后台运行命令
+	    - `ls -l | lpr &`
+	    - Control-Z: You can suspend a foreground job (stop it from running) by pressing the suspend key, usually CONTROL-Z. The shell then stops the process and disconnects standard input from the keyboard. You can put a suspended job in the background and restart it by using the `bg` command followed by the job number. You do not need to specify the job number when there is only one stopped job.
+	    - `fg`: connect the key-board to a program running in the background, bring it to the fore- ground.
+	    - `kill`: kill process like `kill 18228`, kill background job like `kill %1`
+    - 通配符`?`, `*`, `[]`
+	    - `ls memo?`
+	    - `ls t*`
+	    - `lpr part[01235]`, `lpr part[0-35]`, `ls *[^ab]`
     - 终端与本地文件的交换传输
-        - scp
-            - [详解linux scp命令的应用](http://os.51cto.com/art/201003/187301.htm)
-        - rz/sz
-            - [用rz、sz命令在Xshell传输文件](http://www.cnblogs.com/tao560532/p/3885792.html)
+        - `scp`: [详解linux scp命令的应用](http://os.51cto.com/art/201003/187301.htm)
+        - `rz`, `sz`: [用rz、sz命令在Xshell传输文件](http://www.cnblogs.com/tao560532/p/3885792.html)
     - 修改主机名、修改hosts指向
         - [linux操作系统下/etc/hosts文件配置方法](http://blog.itpub.net/21639366/viewspace-604530/)
+	- 按任意想要的格式显示当前时间、日期
+        - [每天一个linux命令（37）：date命令](http://www.cnblogs.com/peida/archive/2012/12/13/2815687.html)
 - 文件、目录与权限
     - Linux下的用户与组的关系、如何管理用户和组
         - [Linux用户和用户组管理](http://www.chinaunix.net/old_jh/4/438660.html)
@@ -48,72 +61,73 @@
         - [浅谈Linux用户权限管理之三（文件与权限的设定）](http://ixdba.blog.51cto.com/2895551/531799)
         - [Users and Groups](https://wiki.archlinux.org/index.php/Users_and_groups)
     - 文件及目录的权限及含义，如何快速计算目录权限
-        - chmod: change file modes or Access Control Lists
-        - chown: change file owner or group
-    - 文件类型与扩展名
-        - [每天一个linux命令(24)：Linux文件类型与扩展名](http://www.cnblogs.com/peida/archive/2012/11/22/2781912.html)
-        - Practical Guide to Ubuntu Linux 3rd, page 501, Device Special Files
+        - `chmod`: change file modes or Access Control Lists
+        - `chown`: change file owner or group
+        - `ls -l`: display file permissions
+        - `cd`: [每天一个linux命令(2)：cd命令](http://www.cnblogs.com/peida/archive/2012/10/24/2736501.html)
+        - 目录访问权限一些特殊的地方
+	        - Execute permission is redefined for a directory: It means that you can cd into the directory and/or examine files that you have permis- sion to read from in the directory. It has nothing to do with executing a file.
+        - 理解ACL
     - 系统自带的特殊目录及其作用
         - Practical Guide to Ubuntu Linux 3rd, page 213, Important Standard Directories and Files
         - [Linux系统默认目录](http://blog.chinaunix.net/uid-30093414-id-4797285.html)
         - [Linux的学习--系统目录](http://www.cnblogs.com/CraryPrimitiveMan/p/4444037.html)
-    - 如何快速在目录间进行切换`cd`命令的应用技巧
-        - [每天一个linux命令(2)：cd命令](http://www.cnblogs.com/peida/archive/2012/10/24/2736501.html)
     - 使用find、grep命令结合正则表达式快速查找指定文件
         - [每天一个linux命令（19）：find 命令概览](http://www.cnblogs.com/peida/archive/2012/11/13/2767374.html)
         - [每天一个linux命令（39）：grep 命令](http://www.cnblogs.com/peida/archive/2012/12/17/2821195.html)
-    - ls及常用命令参数
-    - 按任意想要的格式显示当前时间、日期
-        - [每天一个linux命令（37）：date命令](http://www.cnblogs.com/peida/archive/2012/12/13/2815687.html)
+    - 理解硬链接（hard link）和符号链接（Symbolic link）
+    - 文件类型与扩展名
+        - [每天一个linux命令(24)：Linux文件类型与扩展名](http://www.cnblogs.com/peida/archive/2012/11/22/2781912.html)
+        - Practical Guide to Ubuntu Linux 3rd, page 501, Device Special Files
 - vim对文件的基本操作
     - [参考](./vim基本操作.md)
 - 常用命令1
-    - man: display system manual
-    - apropos: search command for a keyword
-    - info/pinfo: a menu-based hypetext system
-    - dpkg/apt/aptitude: 参考[包管理系统指南](http://wiki.ubuntu.org.cn/包管理系统指南)
-    - git: 在命令行下使用git获取、创建分支、提交、合并代码
-    - 账号间的切换、提权至root
+    - `man`: display system manual
+    - `apropos`: search command for a keyword
+    - `info/pinfo`: a menu-based hypetext system
+    - `dpkg`/`apt`/`aptitude`: 参考[包管理系统指南](http://wiki.ubuntu.org.cn/包管理系统指南)
+    - `git`: 在命令行下使用git获取、创建分支、提交、合并代码
+    - `sudo`: 账号间的切换、提权至root
     - Base Utilites:
-        - ls: list the names of files
-        - cat: display a text files
-        - rm: delete a files
-        - less/more: display a text file one screen at a time
+        - `ls`: list the names of files
+        - `cat`: display a text files
+        - `rm`: delete a files
+        - `less`/`more`: display a text file one screen at a time
     - Working with files:
-        - cp: copy file
-        - mv: move file, change the name of file
-        - lpr: print file
-        - grep: search for a string
-        - head: diplay the beginning of a file
-        - tail: display the end of a file
-        - sort: sort lines of text
-        - uniq: remove duplicate lines from a file
-        - diff: compare two files
-        - file: determine file type
+        - `cp`: copy file
+        - `mv`: move file, change the name of file
+        - `lpr`: print file
+        - `grep`: search for a string
+        - `head`: diplay the beginning of a file
+        - `tail`: display the end of a file
+        - `sort`: sort lines of text
+        - `uniq`: remove duplicate lines from a file
+        - `diff`: compare two files
+        - `file`: determine file type
 - 更多命令
-    - echo: display text
-    - date: display the time and date
-    - script: record a shell session
-    - todos/fromdos: convert linux and macos files to windows format
+    - `echo`: display text
+    - `date`: display the time and date
+    - `script`: record a shell session
+    - `todos`/`fromdos`: convert linux and macos files to windows format
 - 压缩解压相关命令
-    - bzip2: compress a file
-    - bunzip2: uncompress a file
-    - bzcat: decompresses the compressed data and displays the decompressed data
-    - bzip2recover: supports limited data recovery from media errors
-    - gzip: compresses a file
-    - gunzip
-    - zcat
-    - tar: manipulate tape archives
-    - unrar
-    - xz, unxz, xzcat, lzma, unlzma, lzcat: Compress or decompress .xz and .lzma files
+    - `bzip2`: compress a file
+    - `bunzip2`: uncompress a file
+    - `bzcat`: decompresses the compressed data and displays the decompressed data
+    - `bzip2recover`: supports limited data recovery from media errors
+    - `gzip`: compresses a file
+    - `gunzip`
+    - `zcat`
+    - `tar`: manipulate tape archives
+    - `unrar`
+    - `xz`, `unxz`, `xzcat`, `lzma`, `unlzma`, `lzcat`: Compress or decompress .xz and .lzma files
 - 定位命令
-    - which, whereis: locate a utility
-    - mlocate: mac os没有此命令
+    - `which`, whereis: locate a utility
+    - `mlocate`: mac os没有此命令
 - Obtaining user and system information
-    - who: list users on the system
-    - finger: list users on the system
-    - w: list users on the system
-    - hostname: display the system name
+    - `who`: list users on the system
+    - `finger`: list users on the system
+    - `w`: list users on the system
+    - `hostname`: display the system name
 
 ### 第二阶段
 
