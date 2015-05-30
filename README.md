@@ -161,7 +161,7 @@
         - `[]`: test command
         - `[[]]`: conditional expression
 - 语法
-- 正则表达式
+    - 参考：见Practical Guide to Ubuntu Linux 3rd, Chapter 27, page 953
 
 #### 进程与进程控制
 
@@ -174,7 +174,9 @@
 - 实践
     - `ps`: 使用PS查看进程信息，了解每一列的含义，掌握其参数
     - `top`: 使用top查看系统负载，了解每一列的含义
-    - `kill`: 通过kill给进程发送信号
+    - `kill`: 通过kill给进程发送信号，参考:
+        - [每天一个linux命令（42）：kill命令](http://www.cnblogs.com/peida/archive/2012/12/20/2825837.html)
+        - [Linux进程间通信——使用信号](http://blog.csdn.net/ljianhui/article/details/10128731)
     - `du`, `df`: 磁盘信息统计
     - 通过/proc查看系统运行信息
     - [让进程在后台可靠运行的几种方法](https://www.ibm.com/developerworks/cn/linux/l-cn-nohup/)
@@ -192,7 +194,7 @@
     - TCP协议
     - UDP协议
     - PPP协议
-    - Common daemons in linux: 见Practical Guide to Ubuntu Linux 3rd, page 402
+    - Common daemons(守护进程) in linux: 见Practical Guide to Ubuntu Linux 3rd, page 402
 - 网络工具
     - 修改/etc/hosts
     - OpenSSH
