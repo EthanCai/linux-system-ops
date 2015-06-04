@@ -3,6 +3,20 @@
 - [OS X键盘快捷键](https://support.apple.com/zh-cn/HT201236)
 - 打开System Preferences ->  Keyboard -> Shortcuts查看
 
+## Macbook Terminal中有哪些快捷键？
+
+清屏：Command + K 或者 Control + L
+新建标签： Command + T
+关闭当前标签页： Command +W
+保存终端输出：Command + S
+水平分隔当前标签页： Command + D (注意iTerm2中，Command+D是纵向分割)
+取消水平分隔： Command + Shift + D （注意iTerm2中，Command+D是水平分割）
+向左/向右切换标签： Command + shift + { 或 }
+control + a / e    回到命令行头/尾
+option + b / f     向前/后跳一个单词
+control +u /k    删除光标前/后 所有单词
+control + y       撤销上个操作
+
 ## 如何在Finder右键菜单中直接打开Shell？
 - 通过Automator创建一个Service，参考[open-shell-at-selected-folder-via-automater-service](http://blog.xcodev.com/archives/open-shell-at-selected-folder-via-automater-service/)
 - 通过菜单Finder -> Services->Services Preferences，找到"Files and Folders"下的"New Terminal xxx"并勾选上![add-new-terminal-item-in-folder-context-menu](./img/2015/05/add-new-terminal-item-in-folder-context-menu.jpg)
