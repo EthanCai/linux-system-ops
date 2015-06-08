@@ -34,7 +34,7 @@
 
 - 概念
     - Ubuntu各个release版本的区别
-        - [如何查看Ubuntu的版本和Linux内核版本](http://jingyan.baidu.com/article/22fe7ced60f7473002617fae.html)
+        - [如何查看Ubuntu的版本和Linux内核版本](http://jingyan.baidu.com/article/22fe7ced60f7473002617fae.html)  
             ![](./img/2015/06/view-ubuntu-version-and-kernel-version.png)
         - LTS release：long-term support，比如14.04的支持的有效期为5年
     - Ubuntu每个release的不同edition的区别：DVD，Desktop CD，Alternate CD，Server CD，Minimal CD
@@ -48,7 +48,7 @@
         - 通过`mount`命令查看分区的
         - `/etc/fstab`
     - Primary, extended and logical partitions
-        - 参考PG2UL, page 34，把这三个概念讲的很清楚
+        - 参考PG2UL, page 34，把这三个概念讲的很清楚  
             ![](./img/2015/06/primary-extended-logical-partition.png)
     - LVM: Logical Volume Manager
         - 阅读[浅谈Linux磁盘存储管理续](http://ixdba.blog.51cto.com/2895551/562111/)
