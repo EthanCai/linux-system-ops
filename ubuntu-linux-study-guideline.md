@@ -90,6 +90,7 @@
     - `kill`: kill process like `kill 18228`, kill background job like `kill %1`
 
 ## Shell基本命令
+
 - `man`: display system manual
 - `apropos`: search command for a keyword
 - `info`, `pinfo`: a menu-based hypetext system
@@ -102,16 +103,16 @@
 - Working with files:
     - `cp`: copy file
     - `mv`: move file, change the name of file
-    - `grep`: search for a string
+    - `grep`: search for a string，参考[grep命令](http://www.cnblogs.com/peida/archive/2012/12/17/2821195.html)
     - `head`: diplay the beginning of a file
-    - `tail`: display the end of a file
-    - `sort`: sort lines of text
-    - `uniq`: remove duplicate lines from a file
-    - `diff`: compare two files
+    - `tail`: display the end of a file，参考[tail命令](http://www.cnblogs.com/peida/archive/2012/11/07/2758084.html)
+    - `sort`: sort lines of text，参考[sort命令](http://roclinux.cn/?p=1350)
+    - `uniq`: remove duplicate lines from a file，参考[uniq命令](http://www.linuxso.com/command/uniq.html)
+    - `diff`: compare two files，参考[diff命令](http://www.cnblogs.com/peida/archive/2012/12/12/2814048.html)
     - `file`: determine file type
 - 更多命令
     - `echo`: display text
-    - `date`: display the time and date
+        - `date`: display the time and date，参考[date命令](http://www.cnblogs.com/peida/archive/2012/12/12/2814048.html)
 
 
 # Install and Manage Packages
@@ -122,18 +123,36 @@
 ## 内容
 - `dpkg`, `apt`, `aptitude`
     - 参考[包管理系统指南](http://wiki.ubuntu.org.cn/包管理系统指南)
+    - 参考PG2UL, page 517, chapter 13 - downloading and installing software
+    - Ubuntu desktop 14.04中，并没有默认安装aptitude，需要执行`sudo apt-get install aptitude`来安装
+    - apt的命令包含：
+        - apt-get
+        - apt-cache
+        - apt-file
 - `git`
-    - 安装git
+    - 安装git。如果已安装，忽略。
     - 在命令行下使用git获取、创建分支、提交、合并代码
+- `wget`
+    - 安装wget。如果已安装，忽略。
+    - 学习使用wget
+- `vim`
+    - 安装vim
+- 安装oh-my-zsh
+    - 参考[install oh my zsh in ubuntu](http://shyuan.github.io/blog/2012/07/10/install-zsh-and-oh-my-zsh-in-ubuntu-linux/)
+    - 上面这篇文章最后少介绍了两个步骤
+        - 执行`sudo chsh -s /bin/zsh`
+        - 重启系统，打开terminal，oh-my-zsh就生效了
 
 
 # SSH
 
 ## 目标
+
 - 远程控制linux
 - Shell基本命令
 
 ## 内容
+
 - SSH
     - [SSH原理与运用（一）](http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html)
     - [SSH原理与运用（二）](http://www.ruanyifeng.com/blog/2011/12/ssh_port_forwarding.html)

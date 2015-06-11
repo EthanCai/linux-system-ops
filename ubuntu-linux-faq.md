@@ -29,3 +29,11 @@ http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=display
 ## Ubuntu下的包管理命令
 
 参考[包管理系统指南](http://wiki.ubuntu.org.cn/包管理系统指南)
+
+## 使用命令`man wget > man-wget.txt`后，打开man-wget.txt，发现有很多重复字符，或者乱码
+
+将man手册查询命令输出到文本文件中，要求过滤掉控制字符^H（Backspace (退格)）  
+
+`man chmod |col –b >/home/man_chmod.txt`
+
+col命令的使用方法见[col命名详解](http://myblog.jyc.edu.cn/?p=62)
