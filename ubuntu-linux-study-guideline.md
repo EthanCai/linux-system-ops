@@ -267,8 +267,8 @@
     - 孤儿进程: [孤儿进程与僵尸进程](http://www.cnblogs.com/anker/p/3271773.html)
     - [信号](http://www.cnblogs.com/taobataoma/archive/2007/08/30/875743.html)
     - daemons(系统服务) in linux: 见PG2UL, page 402
-            - 阅读[鸟哥的Linux私房菜-认识系统服务](http://vbird.dic.ksu.edu.tw/linux_basic/0560daemons.php)
-            - 阅读[守护进程详解及创建，daemon()使用](http://www.cnblogs.com/mickole/p/3188321.html)
+        - 阅读[鸟哥的Linux私房菜-认识系统服务](http://vbird.dic.ksu.edu.tw/linux_basic/0560daemons.php)
+        - 阅读[守护进程详解及创建，daemon()使用](http://www.cnblogs.com/mickole/p/3188321.html)
 - 实践
     - `ps`: 使用PS查看进程信息，了解每一列的含义，掌握其参数
     - `top`: 使用top查看系统负载，了解每一列的含义
