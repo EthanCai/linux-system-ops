@@ -92,7 +92,7 @@
 ## Shell基本命令
 
 - `man`: display system manual
-- `apropos`: search command for a keyword
+- `apropos`: search the whatis database for stringss
 - `info`, `pinfo`: a menu-based hypetext system
 - `sudo`: 账号间的切换、提权至root
 - Base Utilites:
@@ -132,11 +132,14 @@
 - `git`
     - 安装git。如果已安装，忽略。
     - 在命令行下使用git获取、创建分支、提交、合并代码
+    - 阅读[Pro Git (En)](https://git-scm.com/book/en/v2)， [Pro Git中文版](http://iissnan.com/progit/)
 - `wget`
     - 安装wget。如果已安装，忽略。
     - 学习使用wget
+    - 在线html文档，访问[wget html document](http://www.gnu.org/software/wget/manual/wget.html)
 - `vim`
     - 安装vim
+    - Ubuntu Desktop 14.04 默认没有安装Vim
 - 安装oh-my-zsh
     - 参考[install oh my zsh in ubuntu](http://shyuan.github.io/blog/2012/07/10/install-zsh-and-oh-my-zsh-in-ubuntu-linux/)
     - 上面这篇文章最后少介绍了两个步骤
@@ -156,15 +159,26 @@
 - SSH
     - [SSH原理与运用（一）](http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html)
     - [SSH原理与运用（二）](http://www.ruanyifeng.com/blog/2011/12/ssh_port_forwarding.html)
+    - [OpenSSH-Server(Ubuntu Server Document)](https://help.ubuntu.com/lts/serverguide/openssh-server.html)
     - [25个必须记住的SSH命令](http://os.51cto.com/art/201011/235252.htm)
     - [mac下SSH免密码登录远程服务器](http://cssor.com/mac-ssh-auto-login-server.html)
-- 终端与本地文件的交换传输
+- 终端与本地文件的传输
     - `scp`: [详解linux scp命令的应用](http://os.51cto.com/art/201003/187301.htm)
-    - `rz`, `sz`: [用rz、sz命令在Xshell传输文件](http://www.cnblogs.com/tao560532/p/3885792.html)
+    - 除了scp的其它文件传输方法：sftp，sshfs, rsync，参考 [how-to-copy-files-from-one-machine-to-another-using-ssh](http://unix.stackexchange.com/questions/106480/how-to-copy-files-from-one-machine-to-another-using-ssh#)
 - 了解Linux下的语言编码、文件编码、终端编码之间的关系
     - [Linux下查看文件编码，文件或文件名编码格式转换](http://blog.sina.com.cn/s/blog_6fe0d70d0101du41.html)
     - [Linux中文乱码解决办法](http://www.mutouxiaogui.cn/blog/?p=21)
     - [Linux终端中文显示乱码](http://skypegnu1.blog.51cto.com/8991766/1545449)
+- 练习
+    - SSH
+        - 在Ubuntu Server安装openssh-server
+        - 在客户端操作系统上通过SSH连接Ubuntu Server
+            - Mac OS X上使用Terminal
+            - Windows上使用Putty、Xshell
+            - Ubuntu上安装openssh-client
+    - scp
+        - 通过scp向server传送文件
+        - 通过scp从server获取文件
 
 ## Shell基本命令
 
@@ -180,8 +194,6 @@
 ## 熟悉Vim
 
 - 阅读[vim基本操作](./vim基本操作.md)
-- 修改hosts
-    - [linux操作系统下/etc/hosts文件配置方法](http://blog.itpub.net/21639366/viewspace-604530/)
 
 
 # File, Directory, User, User Group
@@ -254,6 +266,9 @@
     - 僵尸进程: [Linux僵尸进程](http://coolshell.cn/articles/656.html)
     - 孤儿进程: [孤儿进程与僵尸进程](http://www.cnblogs.com/anker/p/3271773.html)
     - [信号](http://www.cnblogs.com/taobataoma/archive/2007/08/30/875743.html)
+    - daemons(系统服务) in linux: 见PG2UL, page 402
+            - 阅读[鸟哥的Linux私房菜-认识系统服务](http://vbird.dic.ksu.edu.tw/linux_basic/0560daemons.php)
+            - 阅读[守护进程详解及创建，daemon()使用](http://www.cnblogs.com/mickole/p/3188321.html)
 - 实践
     - `ps`: 使用PS查看进程信息，了解每一列的含义，掌握其参数
     - `top`: 使用top查看系统负载，了解每一列的含义
@@ -274,20 +289,20 @@
 ## Basic Network Management
 
 - 概念
-    - 网络协议的层次结构，参考[互联网协议入门（一）](http://www.ruanyifeng.com/blog/2012/05/internet_protocol_suite_part_i.html)
+    - 网络协议的层次结构
+        - 参考[TCP IP网络协议图](./file/TCP-IP_Network_Protocol_Diagram.pdf)
+        - 参考[互联网协议入门（一）](http://www.ruanyifeng.com/blog/2012/05/internet_protocol_suite_part_i.html), [互联网协议入门（二）](http://www.ruanyifeng.com/blog/2012/06/internet_protocol_suite_part_ii.html)
     - IP协议，IP地址的分类，子网掩码
     - TCP协议
     - UDP协议
     - PPP协议
-    - Common daemons(守护进程) in linux: 见Practical Guide to Ubuntu Linux 3rd, page 402
 - 网络工具
-    - 修改/etc/hosts
-    - OpenSSH
-        - `scp` vs `rcp`
-        - `ssh` vs `rsh`
+    - 使用Vim修改/etc/hosts
+    - 常用文件传输方式及比较
+        - [Linux 上的常用文件传输方式介绍与比较](http://www.ibm.com/developerworks/cn/linux/l-cn-filetransfer/)
+        - [linux下不同服务器间数据传输(rcp,scp,rsync,ftp,sftp,lftp,wget,curl)](http://blog.csdn.net/emili/article/details/6858818)
     - `ifconfig`:
     - `telnet`:
-    - `ftp`:
     - `ping`: use ICMP
     - `traceroute`: traces a route over the internet
     - `host`, `dig`: query internet nameservers
