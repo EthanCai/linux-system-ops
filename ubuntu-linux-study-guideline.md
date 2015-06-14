@@ -268,7 +268,11 @@
     - `xzcat`
 - 7zip压缩
     - [7zip](http://www.7-zip.org/download.html)
-    - linux、freebsd、macos下的port是p7zip
+    - linux、freebsd、macos下的port是p7zip，ubuntu下执行`sudo apt-get install p7zip-full`安装
+    - 参考
+        - [linux下的压缩解压软件7zip](http://www.linuxdiyf.com/viewarticle.php?id=193969)
+        - [How to use 7zip on Linux command Line](https://www.ibm.com/developerworks/community/blogs/6e6f6d1b-95c3-46df-8a26-b7efd8ee4b57/entry/how_to_use_7zip_on_linux_command_line144?lang=en)
+        - [p7zip - archlinux document](https://wiki.archlinux.org/index.php/P7zip)
 - zip压缩
     - zip
     - unzip
@@ -333,7 +337,7 @@
     - `host`, `dig`: query internet nameservers
     - `whois`: look up information about a internet site
     - `netstat`:
-    - `lsof`:
+    - `lsof`: 
 
 # Writing Shell Scripts
 
