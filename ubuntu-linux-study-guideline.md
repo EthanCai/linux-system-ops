@@ -6,12 +6,12 @@
 - [Install and Manage Packages](#install-and-manage-packages)
 - [SSH](#ssh)
 - [Basic Vim Usage](#basic-vim-usage)
-- [File, Directory, User, User Group](#file-directory-user-user-group)
+- [File, Directory, User, User Group, Authority](#file-directory-user-user-group-authority)
+- [Compress and Uncompress Files](#compress-and-uncompress-files)
 - [Process](#process)
 - [Basic Network Management](#basic-network-management)
 - [Writing Shell Scripts](#writing-shell-scripts)
 - [Schedule Tasks](#schedule-tasks)
-- [Manage Users, User Groups](#manage-users-user-groups)
 <!-- /TOC -->
 
 # Preface
@@ -110,6 +110,9 @@
     - `uniq`: remove duplicate lines from a file，参考[uniq命令](http://www.linuxso.com/command/uniq.html)
     - `diff`: compare two files，参考[diff命令](http://www.cnblogs.com/peida/archive/2012/12/12/2814048.html)
     - `file`: determine file type
+- 定位命令
+    - `which`, whereis: locate a utility
+    - `mlocate`: mac os没有此命令
 - 更多命令
     - `echo`: display text
         - `date`: display the time and date，参考[date命令](http://www.cnblogs.com/peida/archive/2012/12/12/2814048.html)
@@ -196,13 +199,13 @@
 - 阅读[vim基本操作](./vim基本操作.md)
 
 
-# File, Directory, User, User Group
+# File, Directory, User, User Group, Authority
 
 ## 目标
 - 文件、目录、用户、用户组、权限
 - Shell基本命令
 
-## File, Directory, User, User Group
+## 内容
 
 - Linux下的用户与组的关系、如何管理用户和组
     - [Linux用户和用户组管理](http://www.chinaunix.net/old_jh/4/438660.html)
@@ -210,47 +213,68 @@
     - [浅谈Linux用户权限管理之二（用户管理工具）](http://ixdba.blog.51cto.com/2895551/531793)
     - [浅谈Linux用户权限管理之三（文件与权限的设定）](http://ixdba.blog.51cto.com/2895551/531799)
     - [Users and Groups](https://wiki.archlinux.org/index.php/Users_and_groups)
+    - [Linux: Show The Groups a User Is In](http://www.cyberciti.biz/faq/linux-show-groups-for-user/)
 - 文件及目录的权限及含义，如何快速计算目录权限
     - `chmod`: change file modes or Access Control Lists
     - `chown`: change file owner or group
     - `ls -l`: display file permissions
     - `cd`: [每天一个linux命令(2)：cd命令](http://www.cnblogs.com/peida/archive/2012/10/24/2736501.html)
     - 目录访问权限一些特殊的地方
-        - Execute permission is redefined for a directory: It means that you can cd into the directory and/or examine files that you have permis- sion to read from in the directory. It has nothing to do with executing a file.
+        - Execute permission is redefined for a directory: It means that you can cd into the directory and/or examine files that you have permission to read from in the directory. It has nothing to do with executing a file.
     - 理解ACL
 - 系统自带的特殊目录及其作用
     - PG2UL, page 213
     - [Linux系统默认目录](http://blog.chinaunix.net/uid-30093414-id-4797285.html)
     - [Linux的学习--系统目录](http://www.cnblogs.com/CraryPrimitiveMan/p/4444037.html)
 - 使用find、grep命令结合正则表达式快速查找指定文件
-    - [每天一个linux命令（19）：find 命令概览](http://www.cnblogs.com/peida/archive/2012/11/13/2767374.html)
-    - [每天一个linux命令（39）：grep 命令](http://www.cnblogs.com/peida/archive/2012/12/17/2821195.html)
+    - `find`: [每天一个linux命令（19）：find 命令概览](http://www.cnblogs.com/peida/archive/2012/11/13/2767374.html)
+    - `grep`: [每天一个linux命令（39）：grep 命令](http://www.cnblogs.com/peida/archive/2012/12/17/2821195.html)
+    - `ack`: a tool like grep, optimized for programmers
+        - [Offical website](http://beyondgrep.com/)
+        - [manual of ack](./man/man-ack.txt)
 - 理解硬链接（hard link）和符号链接（Symbolic link）
 - 文件类型与扩展名
-    - [每天一个linux命令(24)：Linux文件类型与扩展名](http://www.cnblogs.com/peida/archive/2012/11/22/2781912.html)
+    - [Linux文件类型与扩展名](http://www.cnblogs.com/peida/archive/2012/11/22/2781912.html)
     - PG2UL, page 501, Device Special Files
-
-## Shell Commands
-
-- 压缩解压相关命令
-    - `bzip2`: compress a file
-    - `bunzip2`: uncompress a file
-    - `bzcat`: decompresses the compressed data and displays the decompressed data
-    - `bzip2recover`: supports limited data recovery from media errors
-    - `gzip`: compresses a file
-    - `gunzip`
-    - `zcat`
-    - `tar`: manipulate tape archives
-    - `unrar`
-    - `xz`, `unxz`, `xzcat`, `lzma`, `unlzma`, `lzcat`: Compress or decompress .xz and .lzma files
-- 定位命令
-    - `which`, whereis: locate a utility
-    - `mlocate`: mac os没有此命令
 - Obtaining user and system information
     - `who`: list users on the system
     - `finger`: list users on the system
     - `w`: list users on the system
     - `hostname`: display the system name
+
+# Compress and Uncompress Files
+
+## 目标
+
+- 熟悉文件的压缩和解压
+
+## 内容
+
+- 阅读PG2UL， page 174, Compressing and archiving files
+- [rar tar gz zip 7z 有什么区别?](http://www.zhihu.com/question/26026741)
+- bzip2压缩
+    - `bzip2`: compress a file
+    - `bunzip2`: uncompress a file
+    - `bzcat`: decompresses the compressed data and displays the decompressed data
+    - `bzip2recover`: supports limited data recovery from media errors
+- gzip压缩
+    - `gzip`: compresses a file
+    - `gunzip`
+    - `zcat`
+- xz压缩
+    - [XZ utils](http://tukaani.org/xz/) : XZ Utils is free general-purpose data compression software with high compression ratio. XZ Utils were written for POSIX-like systems, but also work on some not-so-POSIX systems. XZ Utils are the successor to LZMA Utils. The core of the XZ Utils compression code is based on LZMA SDK, but it has been modified quite a lot to be suitable for XZ Utils. The primary compression algorithm is currently LZMA2, which is used inside the .xz container format. With typical files, XZ Utils create 30 % smaller output than gzip and 15 % smaller output than bzip2.
+    - `xz`
+    - `unxz`
+    - `xzcat`
+- 7zip压缩
+    - [7zip](http://www.7-zip.org/download.html)
+    - linux、freebsd、macos下的port是p7zip
+- zip压缩
+    - zip
+    - unzip
+- rar压缩
+    - unrar
+- `tar`: manipulate tape archives
 
 
 # Process
@@ -270,6 +294,7 @@
         - 阅读[鸟哥的Linux私房菜-认识系统服务](http://vbird.dic.ksu.edu.tw/linux_basic/0560daemons.php)
         - 阅读[守护进程详解及创建，daemon()使用](http://www.cnblogs.com/mickole/p/3188321.html)
 - 实践
+    - `vmstat`: Report virtual memory statistics
     - `ps`: 使用PS查看进程信息，了解每一列的含义，掌握其参数
     - `top`: 使用top查看系统负载，了解每一列的含义
     - `kill`: 通过kill给进程发送信号，参考:
@@ -336,5 +361,3 @@
     - 参考：见PG2UL, page 953
 
 # Schedule Tasks
-
-# Manage Users, User Groups
