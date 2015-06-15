@@ -297,16 +297,26 @@
     - daemons(系统服务) in linux: 见PG2UL, page 402
         - 阅读[鸟哥的Linux私房菜-认识系统服务](http://vbird.dic.ksu.edu.tw/linux_basic/0560daemons.php)
         - 阅读[守护进程详解及创建，daemon()使用](http://www.cnblogs.com/mickole/p/3188321.html)
+    - [让进程在后台可靠运行的几种方法](https://www.ibm.com/developerworks/cn/linux/l-cn-nohup/)
 - 实践
     - `vmstat`: Report virtual memory statistics
     - `ps`: 使用PS查看进程信息，了解每一列的含义，掌握其参数
+        - 参考 [manual of ps](./man/man-ps.txt)
+        - 参考 [每天一个linux命令（41）：ps命令](http://www.cnblogs.com/peida/archive/2012/12/19/2824418.html)
     - `top`: 使用top查看系统负载，了解每一列的含义
+        - 参考 [manual of top](./man/man-top.txt)
+        - 参考 [每天一个linux命令（44）：top命令](http://www.cnblogs.com/peida/archive/2012/12/24/2831353.html)
     - `kill`: 通过kill给进程发送信号，参考:
         - [每天一个linux命令（42）：kill命令](http://www.cnblogs.com/peida/archive/2012/12/20/2825837.html)
         - [Linux进程间通信——使用信号](http://blog.csdn.net/ljianhui/article/details/10128731)
-    - `du`, `df`: 磁盘信息统计
+    - `df`: 检查linux服务器的文件系统的磁盘空间占用情况
+        - 参考 [每天一个linux命令（33）：df 命令](http://www.cnblogs.com/peida/archive/2012/12/07/2806483.html)
+    - `du`: 查看使用空间的，但是与df命令不同的是Linux du命令是对文件和目录磁盘使用的空间的查看
+        - 参考 [每天一个linux命令（34）：du 命令](http://www.cnblogs.com/peida/archive/2012/12/10/2810755.html)
     - 通过/proc查看系统运行信息
-    - [让进程在后台可靠运行的几种方法](https://www.ibm.com/developerworks/cn/linux/l-cn-nohup/)
+        - [深入理解linux系统下proc文件系统内容](http://www.cnblogs.com/cute/archive/2011/04/20/2022280.html)
+        - [使用 /proc 文件系统来访问 Linux 内核的内容](http://www.ibm.com/developerworks/cn/linux/l-proc.html)
+
 
 
 # Basic Network Management
@@ -318,9 +328,10 @@
 ## Basic Network Management
 
 - 概念
+    - [基础网络概念](http://vbird.dic.ksu.edu.tw/linux_server/0110network_basic.php)
     - 网络协议的层次结构
-        - 参考[TCP IP网络协议图](./file/TCP-IP_Network_Protocol_Diagram.pdf)
         - 参考[互联网协议入门（一）](http://www.ruanyifeng.com/blog/2012/05/internet_protocol_suite_part_i.html), [互联网协议入门（二）](http://www.ruanyifeng.com/blog/2012/06/internet_protocol_suite_part_ii.html)
+        - 参考[TCP IP网络协议图](./file/TCP-IP_Network_Protocol_Diagram.pdf)
     - IP协议，IP地址的分类，子网掩码
     - TCP协议
     - UDP协议
@@ -330,14 +341,17 @@
     - 常用文件传输方式及比较
         - [Linux 上的常用文件传输方式介绍与比较](http://www.ibm.com/developerworks/cn/linux/l-cn-filetransfer/)
         - [linux下不同服务器间数据传输(rcp,scp,rsync,ftp,sftp,lftp,wget,curl)](http://blog.csdn.net/emili/article/details/6858818)
+    - [Linux常用网络指令](http://linux.vbird.org/linux_server/0140networkcommand.php)
+    - [linux网络配置命令之ifconfig、ip和route](http://chrinux.blog.51cto.com/6466723/1188108)
+    - [Linux and Unix ifconfig command](http://www.computerhope.com/unix/uifconfi.htm)
     - `ifconfig`:
     - `telnet`:
     - `ping`: use ICMP
     - `traceroute`: traces a route over the internet
-    - `host`, `dig`: query internet nameservers
+    - `host`, `dig`: DNS lookup utility
     - `whois`: look up information about a internet site
     - `netstat`:
-    - `lsof`: 
+    - `lsof`:
 
 # Writing Shell Scripts
 
@@ -365,3 +379,13 @@
     - 参考：见PG2UL, page 953
 
 # Schedule Tasks
+
+## 目标
+
+- 掌握cron和anacron
+
+## 内容
+
+- 阅读PG2UL，page 605，Scheduling Tasks
+- 阅读 [crontab 定时任务](http://linuxtools-rst.readthedocs.org/zh_CN/latest/tool/crontab.html)
+- [linux定时任务的设置](http://www.taobaotest.com/blogs/1506)
