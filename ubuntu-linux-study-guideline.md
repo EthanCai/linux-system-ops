@@ -375,6 +375,7 @@
         - `$(())`: arithmetic expansion
         - `[]`: test command
         - `[[]]`: conditional expression
+    - 必读：[Use the Unofficial Bash Strict Mode (Unless You Looove Debugging)](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
 - 语法
     - 参考：见PG2UL, page 953
 
@@ -389,3 +390,15 @@
 - 阅读PG2UL，page 605，Scheduling Tasks
 - 阅读 [crontab 定时任务](http://linuxtools-rst.readthedocs.org/zh_CN/latest/tool/crontab.html)
 - [linux定时任务的设置](http://www.taobaotest.com/blogs/1506)
+
+
+# Futher Reading
+
+## Knowledge
+
+- [The art of command line](https://github.com/jlevy/the-art-of-command-line)
+
+## Utilites
+
+- [Awesome Shell](https://github.com/alebcay/awesome-shell)
+- [Explain Shell](http://explainshell.com/)
