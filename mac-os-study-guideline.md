@@ -4,107 +4,7 @@
     - 系统自带的特殊目录及其作用
         - [苹果新手Mac OS X 使用笔记－－系统目录结构](http://blog.csdn.net/smstong/article/details/15499661)
 
-# Mac软件清单
 
-* 360云盘.app
-* AirServer.app
-* Alfred 2.app
-* AliWangwang.app
-* Android File Transfer.app
-* App Store.app
-* AppCleaner.app
-* Atom.app
-* Automator.app
-* Axure RP Pro 7.0.app
-* Balsamiq Mockups 3.app
-* BetterZip.app
-* Beyond Compare.app
-* BookReaderLite.app
-* CHM Reader.app
-* Calculator.app
-* Calendar.app
-* Chess.app
-* Coda 2.app
-* Contacts.app
-* DVD Player.app
-* Dash.app
-* Dashboard.app
-* Dictionary.app
-* Elmedia Player.app
-* Evernote.app
-* FaceTime.app
-* Firefox.app
-* Folx.app
-* Font Book.app
-* GIMP.app
-* Game Center.app
-* GarageBand.app
-* Google Chrome.app
-* Hype2.app
-* IPMessenger.app
-* Image Capture.app
-* Infographics.app
-* Inkscape.app
-* IntelliJ IDEA 14.app
-* Jump Desktop.app
-* Keynote.app
-* Launchpad.app
-* MATLAB_R2014b.app
-* MacDown.app
-* Mail.app
-* Maps.app
-* Mathematica.app
-* Messages.app
-* Microsoft Excel.app
-* Microsoft OneNote.app
-* Microsoft Outlook.app
-* Microsoft PowerPoint.app
-* Microsoft Word.app
-* Mindjet MindManager.app
-* Mission Control.app
-* Notes.app
-* Numbers.app
-* OmniGraffle.app
-* OneDrive.app
-* Pages.app
-* Photo Booth.app
-* Photos.app
-* Pocket.app
-* Pomodoro Time.app
-* Preview.app
-* PyCharm.app
-* QQ.app
-* QQMusic.app
-* QuickTime Player.app
-* Reeder.app
-* Reminders.app
-* Safari.app
-* Set for iWork.app
-* Sketch.app
-* Skype.app
-* Snagit.app
-* SourceTree.app
-* Stickies.app
-* Sublime Text.app
-* System Preferences.app
-* TeamViewer.app
-* TextEdit.app
-* Thunder.app
-* Time Machine.app
-* Ulysses.app
-* Utilities
-* VLC.app
-* VMware Fusion.app
-* Visual Studio Code.app
-* WeChat.app
-* WebStorm.app
-* Wireshark.app
-* Xcode.app
-* iBooks Author.app
-* iBooks.app
-* iMovie.app
-* iTunes.app
-* 百度云同步盘.app
 
 # Futhur Reading
 
@@ -194,5 +94,19 @@ Mac OS X Yosemite的Bootcamp driver中是支持Windows访问Mac OS X分区的，
 
 我的Bootcamp Windows目前使用的是Trackpad++，注意Trackpad++依赖Power Plan Assistant，安装Trackpad++前必须安装Power Plan Assistant。
 
+## MacOS下的Hosts文件在哪？
+
+```zsh
+zsh > cat /private/etc/hosts
+##
+# Host Database
+#
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+127.0.0.1	localhost
+255.255.255.255	broadcasthost
+::1             localhost
+```
 
 
