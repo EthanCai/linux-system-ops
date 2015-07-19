@@ -1,20 +1,4 @@
 # 目录
-
-<!-- TOC depth:6 withLinks:1 updateOnSave:1 -->
-- [通过vimtutor学习vim的基本操作](#vimtutorvim)
-	- [Chapter 1](#chapter-1)
-	- [Chapter 2](#chapter-2)
-	- [Chapter 3](#chapter-3)
-	- [Chapter 4](#chapter-4)
-	- [Chapter 5](#chapter-5)
-	- [Chapter 6](#chapter-6)
-	- [Chapter 7](#chapter-7)
-- [学习卡片](#)
-- [配置Vim](#vim)
-
-<!-- /TOC -->
-
-
 # 通过vimtutor学习vim的基本操作
 
 在terminal中输入`vimtutor`进行vim基本操作的学习。
