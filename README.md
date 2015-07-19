@@ -1,3 +1,7 @@
+# 说明
+
+学习linux、MacOS一些笔记
+
 # 目录
 
 - [Ubuntu Linux学习大纲](./ubuntu-linux-study-guideline.md)
