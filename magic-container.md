@@ -54,6 +54,10 @@ According to industry analyst firm 451 Research, "Docker is a tool that can pack
 
 # Articles
 
+演讲:
+
+- 2015-06-16: [基于Docker容器的云计算平台搭建实战](http://www.infoq.com/cn/presentations/build-cloud-computing-platform-based-on-docker-container)
+
 深入浅出Docker系列:
 
 - 2014-07-31: [深入浅出Docker（一）：Docker核心技术预览](http://www.infoq.com/cn/articles/docker-core-technology-preview)
@@ -62,7 +66,6 @@ According to industry analyst firm 451 Research, "Docker is a tool that can pack
 - 2014-09-12: [深入浅出Docker（四）：Docker的集成测试部署之道](http://www.infoq.com/cn/articles/docker-integrated-test-and-deployment)
 - 2014-10-23: [深入浅出Docker（五）：基于Fig搭建开发环境](http://www.infoq.com/cn/articles/docker-build-development-environment-based-on-fig)
 - 2015-03-13: [深入浅出Docker（六）：像谷歌一样部署你的应用](http://www.infoq.com/cn/articles/deploy-your-application-like-google)
-- 2015-06-16: [基于Docker容器的云计算平台搭建实战](http://www.infoq.com/cn/presentations/build-cloud-computing-platform-based-on-docker-container)
 
 其它文章:
 
