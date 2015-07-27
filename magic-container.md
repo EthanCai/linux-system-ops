@@ -40,7 +40,6 @@ According to industry analyst firm 451 Research, "Docker is a tool that can pack
 ## Container Management
 
 - [kubernetes](http://kubernetes.io/): Manage a cluster of Linux containers as a single system to accelerate Dev and simplify Ops.
-- [Apache Mesos](http://mesos.apache.org/): Apache Mesos abstracts CPU, memory, storage, and other compute resources away from machines (physical or virtual), enabling fault-tolerant and elastic distributed systems to easily be built and run effectively.
 - [kitematic](https://kitematic.com/): The easiest way to start using Docker on Mac & Windows
 
 ## Virtual Machine
