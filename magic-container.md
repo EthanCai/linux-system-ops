@@ -20,8 +20,9 @@ According to industry analyst firm 451 Research, "Docker is a tool that can pack
 - [Docker Hub](https://hub.docker.com/)
 - [Docker Pool](http://www.dockerpool.com/)
 - [DockOne](http://dockone.io/)
-- [DaoCloud](https://www.daocloud.io/)
-- [灵雀云](http://www.alauda.cn/)
+- [DaoCloud技术Blog](http://blog.daocloud.io/)
+- [灵雀云Blog](http://www.alauda.cn/blog/)
+- [UnitedStack技术分享](https://www.ustack.com/skill-share/)
 
 # Projects
 
@@ -34,6 +35,7 @@ According to industry analyst firm 451 Research, "Docker is a tool that can pack
 - [CoreOS](https://coreos.com/): CoreOS produces, maintains and utilizes open source software for Linux containers and distributed systems. Projects are designed to be composable and complement each other in order to run container-ready infrastructure.
 - [Clear Linux](https://clearlinux.org/): The Clear Linux* Project for Intel® Architecture is a project that is building a Linux OS distribution for various cloud use cases. The goal of Clear Linux OS is to showcase the best of Intel Architecture technology, from low-level kernel features to more complex items that span across the entire operating system stack.
 - [boot2docker](http://boot2docker.io/): boot2docker is a lightweight Linux distribution based on Tiny Core Linux made specifically to run Docker containers. It runs completely from RAM, weighs ~27MB and boots in ~5s (YMMV).
+- [Atomic](http://www.projectatomic.io/): Atomic是Red Hat公司发起的以应用为中心的操作系统，它可以更方便地部署和管理你的Docker容器。Atomic基于成熟的底层操作系统，保证容器运行环境的安全，并且集成了Kubernetes、Systemd等管理工具，提供容器应用部署的全套解决方案。与传统操作系统不同，Atomic经过裁剪后体积更小更容易维护，并且集成了SELinux安全技术，让Docker容器有更好的安全隔离，还有Gockpit等工具让容器的部署和管理更加方便。
 
 ## Container Management
 
@@ -76,11 +78,16 @@ Docker源码分析:
 
 [Docker源码分析](http://www.infoq.com/cn/search.action?queryString=Docker%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90&page=1&searchOrder=&sst=6mw0v60aY59HlPFE)
 
+Kubernetes文章:
+
+- 2014-10-30: [Kubernetes系统架构简介](http://www.infoq.com/cn/articles/Kubernetes-system-architecture-introduction)
+- 2014-10-30: [Kubernetes初探](http://blog.csdn.net/zhangjun2915/article/details/40598151)
+- 2015-02-05: [基于kubernetes构建Docker集群管理详解](http://www.uml.org.cn/zjjs/201502054.asp?artid=15928)
+
 其它文章:
 
 - 2014-08-19: [十大基于Docker的开发工具](http://www.infoq.com/cn/news/2014/08/top-10-open-source-docker)
 - 2014-09-19: [Docker 资源管理](http://segmentfault.com/a/1190000000681188)
-- 2014-10-30: [Kubernetes系统架构简介](http://www.infoq.com/cn/articles/Kubernetes-system-architecture-introduction)
 - 2014-11-26: [Docker at Shopify: How we built containers that power over 100,000 online shops](http://www.shopify.com/technology/15934308-docker-at-shopify-how-we-built-containers-that-power-over-100-000-online-shops), [中文版](http://www.csdn.net/article/2014-11-25/2822806)
 - 2015-02-13: [唱衰Docker，给大红大火的Docker泼点冷水](http://www.infoq.com/cn/articles/bad-mouthing-docker)
 - 2015-05-19: [Eric Brewer：容器和微服务是计算的未来](https://linux.cn/article-5464-1.html)
