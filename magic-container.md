@@ -67,11 +67,22 @@ According to industry analyst firm 451 Research, "Docker is a tool that can pack
 - 2014-10-23: [深入浅出Docker（五）：基于Fig搭建开发环境](http://www.infoq.com/cn/articles/docker-build-development-environment-based-on-fig)
 - 2015-03-13: [深入浅出Docker（六）：像谷歌一样部署你的应用](http://www.infoq.com/cn/articles/deploy-your-application-like-google)
 
+Docker背后的内核知识:
+
+- 2015-03-12: [Docker背后的内核知识——Namespace资源隔离](http://www.infoq.com/cn/articles/docker-kernel-knowledge-namespace-resource-isolation)
+- 2015-04-20: [Docker背后的内核知识——cgroups资源限制](http://www.infoq.com/cn/articles/docker-kernel-knowledge-cgroups-resource-isolation)
+
+Docker源码分析:
+
+[Docker源码分析](http://www.infoq.com/cn/search.action?queryString=Docker%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90&page=1&searchOrder=&sst=6mw0v60aY59HlPFE)
+
 其它文章:
 
+- 2014-08-19: [十大基于Docker的开发工具](http://www.infoq.com/cn/news/2014/08/top-10-open-source-docker)
 - 2014-09-19: [Docker 资源管理](http://segmentfault.com/a/1190000000681188)
 - 2014-10-30: [Kubernetes系统架构简介](http://www.infoq.com/cn/articles/Kubernetes-system-architecture-introduction)
 - 2014-11-26: [Docker at Shopify: How we built containers that power over 100,000 online shops](http://www.shopify.com/technology/15934308-docker-at-shopify-how-we-built-containers-that-power-over-100-000-online-shops), [中文版](http://www.csdn.net/article/2014-11-25/2822806)
+- 2015-02-13: [唱衰Docker，给大红大火的Docker泼点冷水](http://www.infoq.com/cn/articles/bad-mouthing-docker)
 - 2015-05-19: [Eric Brewer：容器和微服务是计算的未来](https://linux.cn/article-5464-1.html)
 
 
