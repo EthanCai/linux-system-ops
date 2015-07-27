@@ -2,11 +2,14 @@
 
 - [Ubuntu](http://www.ubuntu.com/)
 - [CentOS](http://www.centos.org/)
-- [Redhat Linux](http://www.redhat.com)
 - [FreeBSD](http://www.freebsd.org/)
-- [CoreOS](https://coreos.com/)
 - [Kali Linux](https://www.kali.org/): Most Advanced Penetration Testing Distribution
 - [Arch Linux](http://www.archlinux.org/): a lightweight and flexible Linux® distribution that tries to Keep It Simple
+
+## Container OS
+
+- [CoreOS](https://coreos.com/): CoreOS produces, maintains and utilizes open source software for Linux containers and distributed systems. Projects are designed to be composable and complement each other in order to run container-ready infrastructure.
+- [Clear Linux](https://clearlinux.org/): The Clear Linux* Project for Intel® Architecture is a project that is building a Linux OS distribution for various cloud use cases. The goal of Clear Linux OS is to showcase the best of Intel Architecture technology, from low-level kernel features to more complex items that span across the entire operating system stack.
 
 # 阅读资料
 
@@ -49,38 +52,17 @@
 
 # 相关网站
 
-## 最近发现的网站
-
-1. [Linux Tools Quick Tutorial](http://linuxtools-rst.readthedocs.org/zh_CN/latest/index.html)
-
 ## 国内的专业Linux网站
-1. [ChinaUnix](http://www.chinaunix.net/)
-2. [Linux伊甸园论坛](http://bbs.linuxeden.com/index.php)
-
-## 国内的专业Linux网站
-1. [香港Linux用户协会](http://wiki.linux.org.hk/w/Mainpage)：了解香港Linux的好网站。
-2. [Linux@Taiwan](http://www.Linux.org.tw/)：台湾的Linux爱好者组织，CLDP的家，列有翻译的Linux HOWTO 中文版。
-3. [Chinese Linux Extensions Website](http://cle.Linux.org.tw/CLE/)：中文Linux扩展(CLE)，基于Red Hat和KDE的中文解决方案。
-4. [LinuxFocus在线杂志中译版](http://www.linuxfocus.org/ChineseGB/)
+- [ChinaUnix](http://www.chinaunix.net/)
+- [Linux伊甸园论坛](http://bbs.linuxeden.com/index.php)
 
 ## 国外著名Linux网站
-1. [Linux Online](http://www.Linux.org/): 最权威的Linux网站，文章讨论无所不包，软件硬件应有尽有。
-2. [Linux国际协会( Linux International )](http://li.org/): 有大量的Linux资源列表。
-3. [Linux](http://www.Linux.com/): 学习Linux的最好网站，也是Linux使用经验的汇聚地。
-4. [HowTo](http://www.Linux－howto.com/): 查找Linux－Howto的最佳网站，包括了最新最全的Linux－Howto的各种版本。
-5. [《Linux focus Magazine》](http://www.Linuxfocus.org/): 免费电子杂志《Linux focus》，特色是每期集中讨论一个话题。
-6. [《Linux Journal》](http://www.Linuxjournal.com/): 很棒的Linux专业杂志。
-7. http://www.kde.org/ ，KDE的大本营。
-8. [Apache](http://www.apache.org): 全球占有率最高的Web服务器：Apache的网站，学习它的最好场所。
-9. [Linux Kernel](http://www.kernel.org): Linux核心的网站，有着很齐全的Linux的核心的各种版本。
-10. [Linux Documentation Project](http://tldp.org)
-
-## BBS资源
-现在，几乎在所有的大中型BBS网站，尤其是各高校BBS，都开辟了Linux专栏或专区
-，以下并未将所有这些网站列出，只提供几个国内水平较高和上站人数较多的BBS网站。
-1. [水木清华BBS](http://bbs.tsinghua.edu.cn)
-2. [中国科技大学BBS](http://bbs.ustc.edu.cn)
-3. [上海交通大学BBS饮水思源站](http://bbs.sjtu.edu.cn)
+- [Linux](http://www.Linux.com/): 学习Linux的最好网站，也是Linux使用经验的汇聚地。
+- [Linux Online](http://www.Linux.org/): 最权威的Linux网站，文章讨论无所不包，软件硬件应有尽有。
+- [《Linux Journal》](http://www.Linuxjournal.com/): 很棒的Linux专业杂志。
+- [kde](http://www.kde.org/): KDE的大本营。
+- [Apache](http://www.apache.org): 全球占有率最高的Web服务器：Apache的网站，学习它的最好场所。
+- [Linux Kernel](http://www.kernel.org): Linux核心的网站，有着很齐全的Linux的核心的各种版本。
 
 # 专题
 

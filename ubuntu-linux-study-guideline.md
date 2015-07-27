@@ -381,6 +381,7 @@
 ## Knowledge
 
 - [The art of command line](https://github.com/jlevy/the-art-of-command-line)
+- [Linux Tools Quick Tutorial](http://linuxtools-rst.readthedocs.org/zh_CN/latest/index.html)
 
 ## Utilites
 

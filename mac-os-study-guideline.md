@@ -29,7 +29,8 @@
 
 ## MacOS建议使用什么包管理工具？
 
-[Homebrew](http://brew.sh/)
+[Homebrew](http://brew.sh/)  
+[Homebrew的用户手册](https://github.com/Homebrew/homebrew/tree/master/share/doc/homebrew)
 
 ## 如何配置Mac开发环境？
 
