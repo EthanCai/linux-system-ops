@@ -94,8 +94,14 @@
         - `ls t*`
         - `lpr part[01235]`, `lpr part[0-35]`, `ls *[^ab]`
 - 推荐的Shell
-    - Windows下使用[Xshell](http://www.netsarang.com/products/xsh_overview.html)（其次是SecureCRT，Putty）
-    - MacOS下使用[iTerm2](https://www.iterm2.com/index.html)，和[Tmux](http://tmux.sourceforge.net/)
+    - 一般Linux发行版默认的shell是bash，但这里推荐Linux推荐安装zsh + [oh-my-zsh](http://ohmyz.sh/)，理由如下：
+        - zsh vs bash
+            - [Zsh和Bash，究竟有何不同](https://www.soimort.org/posts/163/)
+            - [Zsh shell-for-humans](http://www.slideshare.net/juandebravo/zsh-shellforhumans-27933808?related=2)
+            - [Why zsh is Cooler than Your Shel](http://www.slideshare.net/brendon_jag/why-zsh-is-cooler-than-your-shell?related=1)
+    - Windows下安装[Xshell](http://www.netsarang.com/products/xsh_overview.html)（其次是SecureCRT，Putty）
+    - MacOS下安装[oh-my-zsh](http://ohmyz.sh/), [iTerm2](https://www.iterm2.com/index.html), [Tmux](http://tmux.sourceforge.net/)
+        - [TMUX Rocks!](http://www.slideshare.net/chenkaie/tmux-rocks)
 - 在后台运行命令
     - `ls -l | lpr &`
     - Control-Z: You can suspend a foreground job (stop it from running) by pressing the suspend key, usually CONTROL-Z. The shell then stops the process and disconnects standard input from the keyboard. You can put a suspended job in the background and restart it by using the `bg` command followed by the job number. You do not need to specify the job number when there is only one stopped job.
