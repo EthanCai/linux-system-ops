@@ -392,46 +392,116 @@
 
 ## 如何安装中文语言支持（System Settings -> Language Support）及中文输入法（System Settings -> Text Entry）
 
-Ubuntu上的输入法情况：http://wiki.ubuntu.org.cn/%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95
+[Ubuntu上的输入法情况](http://wiki.ubuntu.org.cn/%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95):
+
+> Ubuntu上有IBus、Fcitx等开源的输入法框架，支持各种各样的引擎。  
+> Rime（中州韵输入法引擎）是一种流行的开源跨平台输入法，支持IBus和Fcitx框架。  
+> 搜狗输入法在2014年4月发布了Linux版本，使用Fcitx框架。  
+> 免费但不开源的小小输入法，也提供对Ubuntu的支持。  
+> 作为Chrome扩展的输入法：Google Input Tools  
+> 作为Firefox扩展的输入法：火输(Fireinput)。  
+> 可以直接在浏览器中使用的云输入法：搜狗云输入法、QQ云输入法等。
 
 目前比较推荐Linux上的搜狗输入法：[下载地址](http://pinyin.sogou.com/linux/?r=pinyin)
 
 搜过拼音的安装方法：
-- http://blog.csdn.net/tao_627/article/details/24119037
-- http://blog.csdn.net/rflyee/article/details/9472579
+
+- [Ubuntu 14.04安装搜狗拼音linux版应该注意的问题](http://blog.csdn.net/tao_627/article/details/24119037)
+- [Ubuntu下安装搜狗拼音输入法](http://blog.csdn.net/rflyee/article/details/9472579)
 
 ## 如何升级系统，安装最新的补丁和最新版本的软件
 
-- GUI操作
-    1. System Settings -> Softwares&Updates -> Select best download server，选择最佳的软件更新服务器
-    2. 然后按Alt+F2组合键调出运行命令框，然后键入update-manager -d，然后升级系统
-- 终端操作
-    1. 修改/etc/apt/sources.list设置更新源，参考[Linux开发环境搭建与使用——ubuntu更新设置](http://blog.csdn.net/tennysonsky/article/details/44221433)
-    2. 执行下面的命令，安装最新的系统补丁：sudo apt-get update && sudo apt-get dist-upgrade
+GUI操作
 
-## 通过Bash修改Ubuntu Software Repository的下载地址
+1. System Settings -> Softwares&Updates -> Select best download server，选择最佳的软件更新服务器
+1. 然后按Alt+F2组合键调出运行命令框，然后键入update-manager -d，然后升级系统
 
-参考：[Repositories/CommandLine](https://help.ubuntu.com/community/Repositories/CommandLine)
+终端操作
 
-This page describes how to manage software repositories from the command line. 
+1. 执行下面的命令，安装最新的系统补丁：sudo apt-get update && sudo apt-get dist-upgrade
+
+## 修改Ubuntu Software Repository的下载地址，比如把下载地址改为国内的repository服务地址
+
+1. GUI操作参考[Linux开发环境搭建与使用——ubuntu更新设置](http://blog.csdn.net/tennysonsky/article/details/44221433)
+1. Bash操作参考：[Repositories/CommandLine](https://help.ubuntu.com/community/Repositories/CommandLine)
 
 ## 如何给Ubuntu Linux虚拟机安装VMWare Tools
 
-http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1022525
+参考[Installing VMware Tools in an Ubuntu virtual machine (1022525)](http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1022525)
 
 ## 给Ubuntu安装SSH服务
 
-- https://help.ubunÂtu.com/lts/serverguide/openssh-server.html
-- http://os.51cto.com/art/201109/291634.htm
+ubuntu默认并没有安装ssh服务，如果通过ssh链接ubuntu，需要自己手动安装ssh-server。
 
-## Ubuntu下的包管理命令
+- [Ubuntu Document - OpenSSH 服务器](https://help.ubuntu.com/lts/serverguide/openssh-server.html)
+- [ubuntu下如何安装使用SSH？](http://os.51cto.com/art/201109/291634.htm)
 
-参考[包管理系统指南](http://wiki.ubuntu.org.cn/包管理系统指南)
-
-## 使用命令`man wget > man-wget.txt`后，打开man-wget.txt，发现有很多重复字符，或者乱码
+## 使用命令`man wget > man-wget.txt`把命令文档输入到文本文件后，打开man-wget.txt，发现有很多重复字符，或者乱码？
 
 将man手册查询命令输出到文本文件中，要求过滤掉控制字符^H（Backspace (退格)）  
 
 `man chmod |col –b >/home/man_chmod.txt`
 
 col命令的使用方法见[col命名详解](http://myblog.jyc.edu.cn/?p=62)
+
+## 如何修改OS的hostname
+
+参考[How do I change the hostname without a restart?](http://askubuntu.com/questions/87665/how-do-i-change-the-hostname-without-a-restart)
+
+`hostname`临时保存在内存，永久保存在`/etc/hostname`文件中，同时`/etc/hosts`文件中也配置了`hostname`对应的IP地址
+
+- 查看主机名`hostname`
+- 临时修改主机名，命令执行后即时生效`sudo hostname [yourhostname]`，重启后依然恢复原hostname
+- 永久修改主机名，将新的主机名写入，重启系统后生效`sudo vim /etc/hostname`
+- `hostnamectl`命令包含了临时修改hostname和修改`/etc/hostname`两种操作，但是不会修改`/etc/hosts`，所以执行`hostnamectl`命令后还需要手动修改`/etc/hosts`文件  
+
+```bash
+hostnamectl set-hostname new-hostname
+``` 
+
+## 设置DNS服务的服务地址
+
+编辑保存DNS信息的配置文件
+
+```bash
+sudo pico /etc/resolv.conf
+```
+
+最多可以使用3个DNS地址，内容如下
+
+```bash
+nameserver xxx.xxx.xxx.xxx  nameserver xxx.xxx.xxx.xxx  nameserver xxx.xxx.xxx.xxx
+```
+
+对resolv.conf文件的修改是即时生效的，可以使用nslookup命令进行查询。
+
+## 如何配置网卡和IP地址
+
+ubuntu的网络配置信息放在`/etc/network/interfaces`中，
+
+```bash
+sudo vim /etc/network/interfaces
+```
+
+要通过dhcp获取ip，则添加如下内容：
+
+```bash
+auto eth0
+iface eth0 inet dhcp
+```
+
+如果配置静态ip，则添加如下内容：
+
+```bash
+auto eth0
+iface eth0 inet static
+    address 192.168.1.201
+    netmask 255.255.255.0
+    gateway 192.168.1.1
+```
+
+需重启下网络服务使配置生效
+
+```bash
+sudo /etc/init.d/networking restart
+```

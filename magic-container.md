@@ -72,6 +72,7 @@ Docker背后的内核知识:
 
 - 2015-03-12: [Docker背后的内核知识——Namespace资源隔离](http://www.infoq.com/cn/articles/docker-kernel-knowledge-namespace-resource-isolation)
 - 2015-04-20: [Docker背后的内核知识——cgroups资源限制](http://www.infoq.com/cn/articles/docker-kernel-knowledge-cgroups-resource-isolation)
+- 2015-06-02: [Docker背后的容器管理——Libcontainer深度解析](http://www.infoq.com/cn/articles/docker-container-management-libcontainer-depth-analysis)
 
 Docker源码分析:
 
@@ -79,9 +80,14 @@ Docker源码分析:
 
 Kubernetes文章:
 
+- 论文: [Large-scale cluster management at Google with Borg](https://research.google.com/pubs/pub43438.html)，[备份](./Large-scale cluster management at Google with Borg.pdf)
+	- [Google发布论文 披露大规模集群管理工具Borg的细节](http://www.infoq.com/cn/news/2015/04/google-borg)
+	- [Docker背后的容器集群管理——从Borg到Kubernetes（一）](http://www.infoq.com/cn/articles/docker-container-cluster-management-part-01/)
 - 2014-10-30: [Kubernetes系统架构简介](http://www.infoq.com/cn/articles/Kubernetes-system-architecture-introduction)
 - 2014-10-30: [Kubernetes初探](http://blog.csdn.net/zhangjun2915/article/details/40598151)
-- 2015-02-05: [基于kubernetes构建Docker集群管理详解](http://www.uml.org.cn/zjjs/201502054.asp?artid=15928)
+- 2014-12-03: [CentOS 7实战Kubernetes部署](http://www.infoq.com/cn/articles/centos7-practical-kubernetes-deployment)
+- 2015-01-09: [An introduction to containers, Kubernetes, and the trajectory of modern cloud computing](http://googlecloudplatform.blogspot.jp/2015/01/in-coming-weeks-we-will-be-publishing.html)
+- 2015-01-22: [What makes a container cluster?](http://googlecloudplatform.blogspot.pt/2015/01/what-makes-a-container-cluster.html)
 
 其它文章:
 
