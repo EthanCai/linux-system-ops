@@ -422,8 +422,26 @@ GUI操作
 
 ## 修改Ubuntu Software Repository的下载地址，比如把下载地址改为国内的repository服务地址
 
+参考：
+
 1. GUI操作参考[Linux开发环境搭建与使用——ubuntu更新设置](http://blog.csdn.net/tennysonsky/article/details/44221433)
 1. Bash操作参考：[Repositories/CommandLine](https://help.ubuntu.com/community/Repositories/CommandLine)
+
+Ubuntu uses apt for package management. Apt stores a list of repositories or software channels in the file
+
+```bash
+/etc/apt/sources.list
+```
+
+and in any file with the suffix .list under the directory
+
+```bash
+/etc/apt/sources.list.d/
+```
+
+See `man sources.list` for more about this storage mechanism.
+
+By editing these files from the command line, we can add, remove, or temporarily disable software repositories.
 
 ## 如何给Ubuntu Linux虚拟机安装VMWare Tools
 
