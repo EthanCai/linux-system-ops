@@ -414,11 +414,11 @@
 GUI操作
 
 1. System Settings -> Softwares&Updates -> Select best download server，选择最佳的软件更新服务器
-1. 然后按Alt+F2组合键调出运行命令框，然后键入update-manager -d，然后升级系统
+1. 然后按Alt+F2组合键调出运行命令框，然后键入`update-manager -d`，然后升级系统
 
 终端操作
 
-1. 执行下面的命令，安装最新的系统补丁：sudo apt-get update && sudo apt-get dist-upgrade
+1. 执行下面的命令，安装最新的系统补丁：`sudo apt-get update && sudo apt-get dist-upgrade`
 
 ## 修改Ubuntu Software Repository的下载地址，比如把下载地址改为国内的repository服务地址
 
