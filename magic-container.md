@@ -10,6 +10,9 @@ According to industry analyst firm 451 Research, "Docker is a tool that can pack
 
 # Docs & Books
 
+- [Get Started with Docker for Linux](http://docs.docker.com/linux/started/)
+- [Get Started with Docker for Mac OS X](http://docs.docker.com/mac/started/)
+- [Get Started with Docker for Windows](http://docs.docker.com/windows/started/)
 - [Docker Docs](https://docs.docker.com/)
 - [The Docker Book](http://book.douban.com/subject/26285268/)
 - [Docker Up and Running](http://www.amazon.com/Docker-Up-Running-Karl-Matthias/dp/1491917571/ref=sr_1_1?ie=UTF8&qid=1437978051&sr=8-1&keywords=docker)
