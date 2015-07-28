@@ -8,6 +8,16 @@ The Linux kernel's support for namespaces mostly isolates an application's view 
 
 According to industry analyst firm 451 Research, "Docker is a tool that can package an application and its dependencies in a virtual container that can run on any Linux server. This helps enable flexibility and portability on where the application can run, whether on premise [sic], public cloud, private cloud, bare metal, etc."
 
+## How is this different from virtual machines?
+
+Each virtual machine includes the application, the necessary binaries and libraries and an entire guest operating system - all of which may be tens of GBs in size.
+
+![](./img/2015/07/what-is-vm-diagram.png)
+
+Containers include the application and all of its dependencies, but share the kernel with other containers. They run as an isolated process in userspace on the host operating system. They’re also not tied to any specific infrastructure – Docker containers run on any computer, on any infrastructure and in any cloud.
+
+![](./img/2015/07/what-is-docker-diagram.png)
+
 # Docs & Books
 
 - [Get Started with Docker for Linux](http://docs.docker.com/linux/started/)
