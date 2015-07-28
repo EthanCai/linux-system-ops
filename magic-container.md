@@ -11,8 +11,8 @@ According to industry analyst firm 451 Research, "Docker is a tool that can pack
 # Docs & Books
 
 - [Get Started with Docker for Linux](http://docs.docker.com/linux/started/)
-- [Get Started with Docker for Mac OS X](http://docs.docker.com/mac/started/)
-- [Get Started with Docker for Windows](http://docs.docker.com/windows/started/)
+- [Get Started with Docker for Mac OS X](http://docs.docker.com/mac/started/): 需要安装boot2docker，boot2docker会安装VirtualBox、Docker、Boot2Docker management tool
+- [Get Started with Docker for Windows](http://docs.docker.com/windows/started/): 需要安装boot2docker，boot2docker会安装VirtualBox、Docker、Boot2Docker management tool
 - [Docker Docs](https://docs.docker.com/)
 - [The Docker Book](http://book.douban.com/subject/26285268/)
 - [Docker Up and Running](http://www.amazon.com/Docker-Up-Running-Karl-Matthias/dp/1491917571/ref=sr_1_1?ie=UTF8&qid=1437978051&sr=8-1&keywords=docker)
@@ -31,7 +31,12 @@ According to industry analyst firm 451 Research, "Docker is a tool that can pack
 
 ## Container
 
-- [Docker](https://www.docker.com/): An open platform for distributed applications for developers and sysadmins
+- [Docker Engine](https://www.docker.com/): An open platform for distributed applications for developers and sysadmins
+	- [docker kitematic](https://kitematic.com/): Kitematic is the fastest and easiest way to start using Docker on your laptop. A completely automated process installs and configures the Docker environment on your machine in just minutes. Build and run containers through a simple, yet powerful graphical user interface (GUI).
+	- [docker registry](https://www.docker.com/docker-registry): Docker Registry is an open source application dedicated to the storage and distribution of your Docker images. Its seamless architecture allows both for fine grain integration with other systems and high-level scalability. Aggressively developed, its vibrant community includes industry leaders and users using it at the core of their images distribution solutions.
+	- [docker machine](https://www.docker.com/docker-machine): To get started with Docker, first you need to setup a Docker Engine. Docker Machine automatically sets up Docker on your computer, on cloud providers, and inside your data center. Docker Machine provisions the hosts, installs Docker Engine on them, and then configures the Docker client to talk to the Docker Engines.
+	- [docker compose](https://www.docker.com/docker-compose): Distributed applications consist of many small applications that work together. Docker transforms these applications into individual containers that are linked together. Instead of having to build, run and manage each individual container, Docker Compose allows you to define your multi-container application with all of its dependencies in a single file, then spin your application up in a single command. Your application’s structure and configuration are held in a single place, which makes spinning up applications simple and repeatable everywhere.
+	- [docker swarm](https://www.docker.com/docker-swarm): The nature of distributed applications requires compute resources that are also distributed. Docker Swarm provides native clustering capabilities to turn a group of Docker engines into a single, virtual Docker Engine. With these pooled resources, you can scale out your application as if it were running on a single, huge computer.
 
 ## OS
 
@@ -43,7 +48,6 @@ According to industry analyst firm 451 Research, "Docker is a tool that can pack
 ## Container Management
 
 - [kubernetes](http://kubernetes.io/): Manage a cluster of Linux containers as a single system to accelerate Dev and simplify Ops.
-- [kitematic](https://kitematic.com/): The easiest way to start using Docker on Mac & Windows
 
 ## Virtual Machine
 
