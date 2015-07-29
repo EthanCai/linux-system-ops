@@ -102,11 +102,13 @@
     - Windows下安装[Xshell](http://www.netsarang.com/products/xsh_overview.html)（其次是SecureCRT，Putty）
     - MacOS下安装[oh-my-zsh](http://ohmyz.sh/), [iTerm2](https://www.iterm2.com/index.html), [Tmux](http://tmux.sourceforge.net/)
         - [TMUX Rocks!](http://www.slideshare.net/chenkaie/tmux-rocks)
-- 在后台进程管理，参考[Linux后台进程管理](http://blog.csdn.net/fengyifei11228/article/details/5737371)
-    - `ls -l | lpr &`
-    - Control-Z: You can suspend a foreground job (stop it from running) by pressing the suspend key, usually CONTROL-Z. The shell then stops the process and disconnects standard input from the keyboard. You can put a suspended job in the background and restart it by using the `bg` command followed by the job number. You do not need to specify the job number when there is only one stopped job.
-    - `fg`: connect the key-board to a program running in the background, bring it to the fore- ground.
-    - `kill`: kill process like `kill 18228`, kill background job like `kill %1`
+- 在后台进程管理，
+    - 参考[Linux后台进程管理](http://blog.csdn.net/fengyifei11228/article/details/5737371)
+        - `ls -l | lpr &`
+        - Control-Z: You can suspend a foreground job (stop it from running) by pressing the suspend key, usually CONTROL-Z. The shell then stops the process and disconnects standard input from the keyboard. You can put a suspended job in the background and restart it by using the `bg` command followed by the job number. You do not need to specify the job number when there is only one stopped job.
+        - `jobs`: view background jobs
+        - `fg`: connect the key-board to a program running in the background, bring it to the fore- ground.
+        - `kill`: kill process like `kill 18228`, kill background job like `kill %1`
 
 ## Shell基本命令
 
