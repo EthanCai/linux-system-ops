@@ -12,11 +12,17 @@ According to industry analyst firm 451 Research, "Docker is a tool that can pack
 
 Each virtual machine includes the application, the necessary binaries and libraries and an entire guest operating system - all of which may be tens of GBs in size.
 
-![](./img/2015/07/what-is-vm-diagram.png)
-
 Containers include the application and all of its dependencies, but share the kernel with other containers. They run as an isolated process in userspace on the host operating system. They’re also not tied to any specific infrastructure – Docker containers run on any computer, on any infrastructure and in any cloud.
 
-![](./img/2015/07/what-is-docker-diagram.png)
+![](./img/2015/07/container-vs-vm.jpg)
+
+## Docker's Architecture
+
+参考：[https://docs.docker.com/introduction/understanding-docker/](https://docs.docker.com/introduction/understanding-docker/)
+
+Docker uses a client-server architecture. The Docker client talks to the Docker daemon, which does the heavy lifting of building, running, and distributing your Docker containers. Both the Docker client and the daemon can run on the same system, or you can connect a Docker client to a remote Docker daemon. The Docker client and daemon communicate via sockets or through a RESTful API.
+
+![](./img/2015/07/architecture.svg)
 
 # Docs & Books
 
