@@ -126,3 +126,13 @@ Kubernetes文章:
 - 2015-05-19: [Eric Brewer：容器和微服务是计算的未来](https://linux.cn/article-5464-1.html)
 - 2015-06-02: [Docker背后的容器管理——Libcontainer深度解析](http://www.infoq.com/cn/articles/docker-container-management-libcontainer-depth-analysis)
 
+# FAQ
+
+## Docker client communicating with remote docker host
+
+参考[Docker client communicating with docker host](http://stackoverflow.com/questions/26481258/docker-client-communicating-with-docker-host)
+
+Using the -H tcp://127.0.0.1:5555 docker daemon option on the UbuntuA machine will instruct docker to bind to the loopback network interface (127.0.0.1). As a result it will only accept connections originating from the UbuntuA machine.
+
+If you want to accept connections incoming from any network interface use -H tcp://0.0.0.0:5555. Be aware that anyone that would be able to connect to your UbuntuA machine on port 5555 will be able to control your docker host. You need to protect it with firewall rules to allow only UbuntuB to connect to UbuntuA on port 5555.
+
