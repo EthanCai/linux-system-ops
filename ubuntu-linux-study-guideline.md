@@ -478,9 +478,17 @@ See `man sources.list` for more about this storage mechanism.
 
 By editing these files from the command line, we can add, remove, or temporarily disable software repositories.
 
-## 如何给Ubuntu Linux虚拟机安装VMWare Tools
+## 如何给Ubuntu Linux Virutal Machine安装VMWare Tools
 
-参考[Installing VMware Tools in an Ubuntu virtual machine (1022525)](http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1022525)
+- 安装方法参考
+    - [Installing VMware Tools in an Ubuntu virtual machine (1022525)](http://kb.vmware.com/selfservice/microsites/search.do?cmd=displayKC&docType=kc&externalId=1022525)
+- 卸载方法参考
+    - [Uninstalling and manually installing VMware Tools in VMware Fusion (1014522)](http://kb.vmware.com/selfservice/microsites/search.do?cmd=displayKC&docType=kc&externalId=1014522&sliceId=1&docTypeID=DT_KB_1_1&dialogID=672738403&stateId=1%200%20672744194)
+    - [VMware Tools Uninstaller in Ubuntu Guest Does Not Remove vmxnet Module (1004351)](http://kb.vmware.com/selfservice/microsites/search.do?cmd=displayKC&docType=kc&externalId=1004351&sliceId=1&docTypeID=DT_KB_1_1&dialogID=672738403&stateId=1%200%20672744194)
+
+## 如何给Ubuntu Linux Virtual Machine安装Parallel Tools
+
+参考[How do I install Parallels Tools in Ubuntu Virtual Machine?](http://kb.parallels.com/en/113394)
 
 ## 给Ubuntu安装SSH服务
 
