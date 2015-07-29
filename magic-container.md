@@ -1,6 +1,6 @@
 # Docker介绍
 
-[Docker Wikipedia](https://en.wiki2.org/wiki/Docker_(software))
+[Docker Wikipedia](https://en.wiki2.org/wiki/Docker_(software)
 
 Docker is an open-source project that automates the deployment of applications inside software containers, by providing an additional layer of abstraction and automation of operating-system-level virtualization on Linux. Docker uses resource isolation features of the Linux kernel such as cgroups and kernel namespaces to allow independent "containers" to run within a single Linux instance, avoiding the overhead of starting and maintaining virtual machines.
 
@@ -26,7 +26,6 @@ Containers include the application and all of its dependencies, but share the ke
 - [Docker Docs](https://docs.docker.com/)
 - [The Docker Book](http://book.douban.com/subject/26285268/)
 - [Docker Up and Running](http://www.amazon.com/Docker-Up-Running-Karl-Matthias/dp/1491917571/ref=sr_1_1?ie=UTF8&qid=1437978051&sr=8-1&keywords=docker)
-- [Docker —— 从入门到实践](https://www.gitbook.com/book/yeasy/docker_practice/details)
 
 # Resources
 
@@ -89,13 +88,13 @@ DockerOne技术分享:
 
 - [DockOne技术分享（一）：Dockerfile与Docker构建流程解读](http://dockone.io/article/346)
 - [DockOne技术分享（二）：集群规模下日志处理和网络方案](http://dockone.io/article/355)
+- [DockOne技术分享（四）：AppC和Docker的对比](http://dockone.io/article/383)
 - [DockOne技术分享（十四）：腾讯蓝鲸数据平台之告警系统](http://dockone.io/article/537)
 
 Docker背后的内核知识:
 
 - 2015-03-12: [Docker背后的内核知识——Namespace资源隔离](http://www.infoq.com/cn/articles/docker-kernel-knowledge-namespace-resource-isolation)
 - 2015-04-20: [Docker背后的内核知识——cgroups资源限制](http://www.infoq.com/cn/articles/docker-kernel-knowledge-cgroups-resource-isolation)
-- 2015-06-02: [Docker背后的容器管理——Libcontainer深度解析](http://www.infoq.com/cn/articles/docker-container-management-libcontainer-depth-analysis)
 
 Docker源码分析:
 
@@ -119,5 +118,5 @@ Kubernetes文章:
 - 2014-11-26: [Docker at Shopify: How we built containers that power over 100,000 online shops](http://www.shopify.com/technology/15934308-docker-at-shopify-how-we-built-containers-that-power-over-100-000-online-shops), [中文版](http://www.csdn.net/article/2014-11-25/2822806)
 - 2015-02-13: [唱衰Docker，给大红大火的Docker泼点冷水](http://www.infoq.com/cn/articles/bad-mouthing-docker)
 - 2015-05-19: [Eric Brewer：容器和微服务是计算的未来](https://linux.cn/article-5464-1.html)
-
+- 2015-06-02: [Docker背后的容器管理——Libcontainer深度解析](http://www.infoq.com/cn/articles/docker-container-management-libcontainer-depth-analysis)
 
