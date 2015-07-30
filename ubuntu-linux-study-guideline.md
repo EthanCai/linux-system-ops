@@ -328,11 +328,12 @@
 - 实践
     - `vmstat`: Report virtual memory statistics
     - `ps`: 使用PS查看进程信息，了解每一列的含义，掌握其参数
-        - 参考 [manual of ps](./man/man-ps.txt)
         - 参考 [每天一个linux命令（41）：ps命令](http://www.cnblogs.com/peida/archive/2012/12/19/2824418.html)
     - `top`: 使用top查看系统负载，了解每一列的含义
-        - 参考 [manual of top](./man/man-top.txt)
         - 参考 [每天一个linux命令（44）：top命令](http://www.cnblogs.com/peida/archive/2012/12/24/2831353.html)
+    - `htop`: an interactive process viewer for Linux
+        - [Linux下取代top的进程管理工具 htop](http://www.cnblogs.com/mchina/archive/2013/03/15/2858041.html)
+        - [htop - an interactive process viewer for Linux](http://hisham.hm/htop/index.php?page=main)
     - `kill`: 通过kill给进程发送信号，参考:
         - [每天一个linux命令（42）：kill命令](http://www.cnblogs.com/peida/archive/2012/12/20/2825837.html)
         - [Linux进程间通信——使用信号](http://blog.csdn.net/ljianhui/article/details/10128731)
