@@ -130,19 +130,30 @@
 - Working with files:
     - `cp`: copy file
     - `mv`: move file, change the name of file
-    - `grep`: search for a string，参考[grep命令](http://www.cnblogs.com/peida/archive/2012/12/17/2821195.html)
     - `head`: diplay the beginning of a file
     - `tail`: display the end of a file，参考[tail命令](http://www.cnblogs.com/peida/archive/2012/11/07/2758084.html)
     - `sort`: sort lines of text，参考[sort命令](http://roclinux.cn/?p=1350)
     - `uniq`: remove duplicate lines from a file，参考[uniq命令](http://www.linuxso.com/command/uniq.html)
     - `diff`: compare two files，参考[diff命令](http://www.cnblogs.com/peida/archive/2012/12/12/2814048.html)
     - `file`: determine file type
-- 定位命令
+- find something
+    - `find`: walk a file hierarchy, [每天一个linux命令（19）：find 命令概览](http://www.cnblogs.com/peida/archive/2012/11/13/2767374.html)
+    - find filenames quickly
+        - `mlocate`: ubuntu, centos下使用此命令，使用前需要执行`updatedb`命令创建`/var/lib/mlocate/mlocate.db`索引文件
+        - `locate`: MacOS使用此命令，使用前需要执行`sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist`创建`/var/db/locate.database`索引文件
     - `which`, whereis: locate a utility
-    - `mlocate`: mac os没有此命令
+    - `grep`: [每天一个linux命令（39）：grep 命令](http://www.cnblogs.com/peida/archive/2012/12/17/2821195.html)
+    - `ack`: a tool like grep, optimized for programmers
+        - [Offical website](http://beyondgrep.com/)
+- manipulate text
+    - `awk`: awk是一个强大的文本分析工具，相对于grep的查找，sed的编辑，awk在其对数据分析并生成报告时，显得尤为强大。
+        - [linux awk命令详解](http://www.cnblogs.com/ggjucheng/archive/2013/01/13/2858470.html)
+        - [simple awk tutorial](http://www.hcs.harvard.edu/~dholland/computers/awk.html)
+    - `sed`: edit text
+        - [linux中sed的用法](http://www.cnblogs.com/emanlee/archive/2013/09/07/3307642.html)
 - 更多命令
     - `echo`: display text
-        - `date`: display the time and date，参考[date命令](http://www.cnblogs.com/peida/archive/2012/12/12/2814048.html)
+    - `date`: display the time and date，参考[date命令](http://www.cnblogs.com/peida/archive/2012/12/12/2814048.html)
 
 
 # Install and Manage Packages
@@ -248,12 +259,6 @@
     - PG2UL, page 213
     - [Linux系统默认目录](http://blog.chinaunix.net/uid-30093414-id-4797285.html)
     - [Linux的学习--系统目录](http://www.cnblogs.com/CraryPrimitiveMan/p/4444037.html)
-- 使用find、grep命令结合正则表达式快速查找指定文件
-    - `find`: [每天一个linux命令（19）：find 命令概览](http://www.cnblogs.com/peida/archive/2012/11/13/2767374.html)
-    - `grep`: [每天一个linux命令（39）：grep 命令](http://www.cnblogs.com/peida/archive/2012/12/17/2821195.html)
-    - `ack`: a tool like grep, optimized for programmers
-        - [Offical website](http://beyondgrep.com/)
-        - [manual of ack](./man/man-ack.txt)
 - 理解硬链接（hard link）和符号链接（Symbolic link）
 - 文件类型与扩展名
     - [Linux文件类型与扩展名](http://www.cnblogs.com/peida/archive/2012/11/22/2781912.html)
