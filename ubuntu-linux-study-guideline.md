@@ -99,6 +99,12 @@
             - [Zsh和Bash，究竟有何不同](https://www.soimort.org/posts/163/)
             - [Zsh shell-for-humans](http://www.slideshare.net/juandebravo/zsh-shellforhumans-27933808?related=2)
             - [Why zsh is Cooler than Your Shel](http://www.slideshare.net/brendon_jag/why-zsh-is-cooler-than-your-shell?related=1)
+        - 安装oh-my-zsh
+            - 先确认os中是否安装了zsh，如果没有安装，先安装zsh, `sudo apt-get install zsh`
+            - 按照[http://ohmyz.sh/](http://ohmyz.sh/)的方法安装oh-my-zsh
+            - 如果安装完成后，默认的shell不是zsh，按照如下操作：
+                - 执行`sudo chsh -s /bin/zsh`
+                - 重启系统，打开terminal，oh-my-zsh就生效了
     - Windows下安装[Xshell](http://www.netsarang.com/products/xsh_overview.html)（其次是SecureCRT，Putty）
     - MacOS下安装[oh-my-zsh](http://ohmyz.sh/), [iTerm2](https://www.iterm2.com/index.html), [Tmux](http://tmux.sourceforge.net/)
         - [TMUX Rocks!](http://www.slideshare.net/chenkaie/tmux-rocks)
@@ -164,11 +170,6 @@
 - `vim`
     - 安装vim
     - Ubuntu Desktop 14.04 默认没有安装Vim
-- 安装oh-my-zsh
-    - 参考[install oh my zsh in ubuntu](http://shyuan.github.io/blog/2012/07/10/install-zsh-and-oh-my-zsh-in-ubuntu-linux/)
-    - 上面这篇文章最后少介绍了两个步骤
-        - 执行`sudo chsh -s /bin/zsh`
-        - 重启系统，打开terminal，oh-my-zsh就生效了
 
 
 # SSH
