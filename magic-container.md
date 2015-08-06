@@ -58,6 +58,7 @@ Docker uses a client-server architecture. The Docker client talks to the Docker 
 - [CoreOS](https://coreos.com/): CoreOS produces, maintains and utilizes open source software for Linux containers and distributed systems. Projects are designed to be composable and complement each other in order to run container-ready infrastructure.
 - [boot2docker](http://boot2docker.io/): boot2docker is a lightweight Linux distribution based on Tiny Core Linux made specifically to run Docker containers. It runs completely from RAM, weighs ~27MB and boots in ~5s (YMMV).
 - [Atomic](http://www.projectatomic.io/): Atomic是Red Hat公司发起的以应用为中心的操作系统，它可以更方便地部署和管理你的Docker容器。Atomic基于成熟的底层操作系统，保证容器运行环境的安全，并且集成了Kubernetes、Systemd等管理工具，提供容器应用部署的全套解决方案。与传统操作系统不同，Atomic经过裁剪后体积更小更容易维护，并且集成了SELinux安全技术，让Docker容器有更好的安全隔离，还有Gockpit等工具让容器的部署和管理更加方便。
+- [Ubuntu Core](http://ubuntu.com.cn/cloud/tools/snappy): Ubuntu Core is a new rendition of Ubuntu for the cloud with transactional updates. Ubuntu Core is a minimal server image with the same libraries as today’s Ubuntu, but applications are provided through a simpler mechanism. The snappy approach is faster, more reliable, and lets us provide stronger security guarantees for apps and users — that’s why we call them “snappy” applications.
 
 ## Container Management
 
