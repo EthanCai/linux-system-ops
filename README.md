@@ -9,3 +9,4 @@
 - [Vim基本操作](./vim基本操作.md)
 - [相关资源](./resources.md)
 - [container学习](./magic-container.md)
+- [Golang学习笔记](./golang-learning-notes.md)
