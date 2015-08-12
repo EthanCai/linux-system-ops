@@ -25,6 +25,16 @@
 - [golang中国](http://golangtc.com/)
 - [go友团](http://golanghome.com/)
 
+工具：
+
+- [Go语言在线交互教程](http://tour.golang.org/welcome/1)
+- [Package sources](http://golang.org/src/)
+- [Package documentation](http://golang.org/pkg/)
+- [Command documentation](http://golang.org/doc/cmd)
+- [Language specification](http://golang.org/ref/spec)
+- [Memory Module](http://golang.org/ref/mem)
+- [effective go - go programming style guide](http://golang.org/doc/effective_go.html)
+
 # Projects
 
 - [Beego](http://beego.me/): 一个使用 Go 的思维来帮助您构建并开发 Go 应用程序的开源框架
