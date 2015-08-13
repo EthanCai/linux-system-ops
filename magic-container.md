@@ -74,6 +74,7 @@ Docker uses a client-server architecture. The Docker client talks to the Docker 
 
 - [dockramp](https://github.com/jlhawn/dockramp): Docker 1.8.0 will introduce a new API endpoint for copying files and directories into a container. With this addition, anyone can now implement their own build system using the Docker Remote API. Dockramp is the first proof of concept for an alternative to docker build.
 - [packer](https://packer.io/): Packer is a tool for creating machine and container images for multiple platforms from a single source configuration.
+- [dockviz](https://github.com/justone/dockviz): Visualizing docker data
 
 ## Developer Tools
 
