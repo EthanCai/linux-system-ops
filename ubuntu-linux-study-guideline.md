@@ -575,3 +575,8 @@ iface eth0 inet static
 ```bash
 sudo /etc/init.d/networking restart
 ```
+## 如何从Internet更新ubuntu本地的时间？
+
+You can do so with `sudo ntpdate time.nist.gov` other servers include time.windows.com, etc.
+http://www.pool.ntp.org/ lists time servers around the world.
+
