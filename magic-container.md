@@ -36,7 +36,7 @@ Docker uses a client-server architecture. The Docker client talks to the Docker 
 
 # Resources
 
-咨询网站：
+网站：
 
 - [Docker Hub](https://hub.docker.com/)
 - [Docker Pool](http://www.dockerpool.com/)
@@ -47,6 +47,19 @@ Docker uses a client-server architecture. The Docker client talks to the Docker 
 社区：
 
 - [DockOne](http://dockone.io/)
+
+容器类产品：
+
+- [灵雀云](http://www.alauda.cn/)
+- [DaoCloud](http://www.daocloud.io/)
+- [希云cSphere](https://csphere.cn/): 企业级Docker管理平台
+
+公有云类产品：
+
+- [阿里云](http://www.aliyun.com/)
+- [Window Azure CN](http://www.windowsazure.cn/)
+- [UnitedStack](https://www.ustack.com/)
+- [青云](https://www.qingcloud.com/)
 
 # Projects
 
@@ -69,7 +82,6 @@ Docker uses a client-server architecture. The Docker client talks to the Docker 
 ## Container Management
 
 - [kubernetes](http://kubernetes.io/): Manage a cluster of Linux containers as a single system to accelerate Dev and simplify Ops.
-- [希云cSphere](https://csphere.cn/): 企业级Docker管理平台
 
 ## Image Build
 
