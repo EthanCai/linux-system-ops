@@ -68,21 +68,31 @@
         - 阅读[LVM (简体中文) - ArchLinux Wiki](https://wiki.archlinux.org/index.php/LVM_%28%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%29)
         - 阅读[RAID](https://wiki.archlinux.org/index.php/RAID)
         - 阅读[Software RAID and LVM](https://wiki.archlinux.org/index.php/Software_RAID_and_LVM)
-- 手动安装Ubuntu Desktop 14.04
-- 手动安装Ubuntu Server 14.04
-- 自动化安装Ubuntu Linux
-    - [Preboot Execution Environment](https://en.wiki2.org/wiki/Preboot_Execution_Environment)
-    - [Cobbler Quickstart Guide](http://www.cobblerd.org/manuals/quickstart/)
-    - [运维自动化之Cobbler系统安装详解](http://os.51cto.com/art/201109/288604_all.htm)
+- 实践
+    - 手动安装Ubuntu Desktop 14.04
+    - 手动安装Ubuntu Server 14.04
+    - 自动化安装Ubuntu Linux
+        - [Preboot Execution Environment](https://en.wiki2.org/wiki/Preboot_Execution_Environment)
+        - [Cobbler Quickstart Guide](http://www.cobblerd.org/manuals/quickstart/)
+        - [运维自动化之Cobbler系统安装详解](http://os.51cto.com/art/201109/288604_all.htm)
+
+## Shell基本命令
+
+- `df`: 检查linux服务器的文件系统的磁盘空间占用情况
+    - 参考 [每天一个linux命令（33）：df 命令](http://www.cnblogs.com/peida/archive/2012/12/07/2806483.html)
+- `du`: 查看使用空间的，但是与df命令不同的是Linux du命令是对文件和目录磁盘使用的空间的查看
+    - 参考 [每天一个linux命令（34）：du 命令](http://www.cnblogs.com/peida/archive/2012/12/10/2810755.html)
 
 
 # Basic Shell Knowledge
 
 ## 目标
+
 - 掌握Shell基本概念
 - 掌握基本的Shell命令
 
 ## 内容
+
 - 基础概念
     - [重定向](http://www.php100.com/html/webkaifa/Linux/2010/0430/6470.html): the various ways you can cause the shell to alter where standard input of a command comes from and where standard output goes to.
         - 理解符号 `<`, `>`, `>>`
@@ -205,7 +215,7 @@
     - [Linux下查看文件编码，文件或文件名编码格式转换](http://blog.sina.com.cn/s/blog_6fe0d70d0101du41.html)
     - [Linux中文乱码解决办法](http://www.mutouxiaogui.cn/blog/?p=21)
     - [Linux终端中文显示乱码](http://skypegnu1.blog.51cto.com/8991766/1545449)
-- 练习
+- 实践
     - SSH
         - 在Ubuntu Server安装openssh-server
         - 在客户端操作系统上通过SSH连接Ubuntu Server
@@ -215,6 +225,7 @@
     - scp
         - 通过scp向server传送文件
         - 通过scp从server获取文件
+    - [让进程在断开SSH连接后依然保持运行](https://www.ibm.com/developerworks/cn/linux/l-cn-nohup/)
 
 ## Shell基本命令
 
@@ -235,6 +246,7 @@
 # File, Directory, User, User Group, Authority
 
 ## 目标
+
 - 文件、目录、用户、用户组、权限
 - Shell基本命令
 
@@ -311,40 +323,52 @@
 # Process
 
 ## 目标
+
 - 进程
 - 进程控制
+- 守护进程（daemon）和服务（service）
 
 ## 内容
 
 - 基础概念
-    - 进程号、父子进程关系
-    - 僵尸进程: [Linux僵尸进程](http://coolshell.cn/articles/656.html)
-    - 孤儿进程: [孤儿进程与僵尸进程](http://www.cnblogs.com/anker/p/3271773.html)
-    - [信号](http://www.cnblogs.com/taobataoma/archive/2007/08/30/875743.html)
-    - daemons(系统服务) in linux: 见PG2UL, page 402
-        - 阅读[鸟哥的Linux私房菜-认识系统服务](http://vbird.dic.ksu.edu.tw/linux_basic/0560daemons.php)
-        - 阅读[守护进程详解及创建，daemon()使用](http://www.cnblogs.com/mickole/p/3188321.html)
-    - [让进程在后台可靠运行的几种方法](https://www.ibm.com/developerworks/cn/linux/l-cn-nohup/)
+    - 进程
+        - 进程号、父子进程关系
+        - 僵尸进程: [Linux僵尸进程](http://coolshell.cn/articles/656.html)
+        - 孤儿进程: [孤儿进程与僵尸进程](http://www.cnblogs.com/anker/p/3271773.html)
+        - [信号](http://www.cnblogs.com/taobataoma/archive/2007/08/30/875743.html)
+    - 守护进程和服务
+        - 概念上的区别：系统为了某些功能必须要提供一些服务 (不论是系统本身还是网络方面)，这个服务就称为 service。但是service的提供总是需要程序的运行吧！达成这个service的程序我们就称呼他为daemon！举例来说，达成循环型例行性工作排程服务 (service) 的程序为 crond 这个 daemon ！
+        - daemon主要分为：
+            - stand_alone，可以自行单独启动服务
+            - super daemon，由一个特殊的 daemon 来统一管理
+        - 参考
+            - 阅读[鸟哥的Linux私房菜-认识系统服务](http://vbird.dic.ksu.edu.tw/linux_basic/0560daemons.php)
 - 实践
-    - `vmstat`: Report virtual memory statistics
-    - `ps`: 使用PS查看进程信息，了解每一列的含义，掌握其参数
-        - 参考 [每天一个linux命令（41）：ps命令](http://www.cnblogs.com/peida/archive/2012/12/19/2824418.html)
-    - `top`: 使用top查看系统负载，了解每一列的含义
-        - 参考 [每天一个linux命令（44）：top命令](http://www.cnblogs.com/peida/archive/2012/12/24/2831353.html)
-    - `htop`: an interactive process viewer for Linux
-        - [Linux下取代top的进程管理工具 htop](http://www.cnblogs.com/mchina/archive/2013/03/15/2858041.html)
-        - [htop - an interactive process viewer for Linux](http://hisham.hm/htop/index.php?page=main)
-    - `kill`: 通过kill给进程发送信号，参考:
-        - [每天一个linux命令（42）：kill命令](http://www.cnblogs.com/peida/archive/2012/12/20/2825837.html)
-        - [Linux进程间通信——使用信号](http://blog.csdn.net/ljianhui/article/details/10128731)
-    - `df`: 检查linux服务器的文件系统的磁盘空间占用情况
-        - 参考 [每天一个linux命令（33）：df 命令](http://www.cnblogs.com/peida/archive/2012/12/07/2806483.html)
-    - `du`: 查看使用空间的，但是与df命令不同的是Linux du命令是对文件和目录磁盘使用的空间的查看
-        - 参考 [每天一个linux命令（34）：du 命令](http://www.cnblogs.com/peida/archive/2012/12/10/2810755.html)
     - 通过/proc查看系统运行信息
         - [深入理解linux系统下proc文件系统内容](http://www.cnblogs.com/cute/archive/2011/04/20/2022280.html)
         - [使用 /proc 文件系统来访问 Linux 内核的内容](http://www.ibm.com/developerworks/cn/linux/l-proc.html)
+    - 观察系统启动的服务
+        - `netstat -tulp`: 找出目前系统开启的『网络服务』
+        - `netstat -lnp`: 找出所有的有监听网络的服务 (包含 socket 状态)
+        - `service --status-all`: 观察所有的服务状态
+    - 通过`/etc/init.d`目录下的脚本控制服务
+        - 用法：`Usage: /etc/init.d/networking {start|stop|reload|restart|force-reload}`
+    - 通过`service`命令控制服务
+        - `sudo service [service name] {start|stop|restart|status}`
 
+## Shell基本命令
+
+- `vmstat`: Report virtual memory statistics
+- `ps`: 使用PS查看进程信息，了解每一列的含义，掌握其参数
+    - 参考 [每天一个linux命令（41）：ps命令](http://www.cnblogs.com/peida/archive/2012/12/19/2824418.html)
+- `top`: 使用top查看系统负载，了解每一列的含义
+    - 参考 [每天一个linux命令（44）：top命令](http://www.cnblogs.com/peida/archive/2012/12/24/2831353.html)
+- `htop`: an interactive process viewer for Linux
+    - [Linux下取代top的进程管理工具 htop](http://www.cnblogs.com/mchina/archive/2013/03/15/2858041.html)
+    - [htop - an interactive process viewer for Linux](http://hisham.hm/htop/index.php?page=main)
+- `kill`: 通过kill给进程发送信号，参考:
+    - [每天一个linux命令（42）：kill命令](http://www.cnblogs.com/peida/archive/2012/12/20/2825837.html)
+    - [Linux进程间通信——使用信号](http://blog.csdn.net/ljianhui/article/details/10128731)
 
 
 # Basic Network Management
@@ -358,7 +382,8 @@
 - 概念
     - [基础网络概念](http://vbird.dic.ksu.edu.tw/linux_server/0110network_basic.php)
     - 网络协议的层次结构
-        - 参考[互联网协议入门（一）](http://www.ruanyifeng.com/blog/2012/05/internet_protocol_suite_part_i.html), [互联网协议入门（二）](http://www.ruanyifeng.com/blog/2012/06/internet_protocol_suite_part_ii.html)
+        - 参考[互联网协议入门（一）](http://www.ruanyifeng.com/blog/2012/05/internet_protocol_suite_part_i.html)
+        - 参考[互联网协议入门（二）](http://www.ruanyifeng.com/blog/2012/06/internet_protocol_suite_part_ii.html)
         - 参考[TCP IP网络协议图](./file/TCP-IP_Network_Protocol_Diagram.pdf)
     - IP协议，IP地址的分类，子网掩码
     - TCP协议
@@ -372,14 +397,17 @@
     - [Linux常用网络指令](http://linux.vbird.org/linux_server/0140networkcommand.php)
     - [linux网络配置命令之ifconfig、ip和route](http://chrinux.blog.51cto.com/6466723/1188108)
     - [Linux and Unix ifconfig command](http://www.computerhope.com/unix/uifconfi.htm)
-    - `ifconfig`:
-    - `telnet`:
-    - `ping`: use ICMP
-    - `traceroute`: traces a route over the internet
-    - `host`, `dig`: DNS lookup utility
-    - `whois`: look up information about a internet site
-    - `netstat`:
-    - `lsof`:
+
+## Shell命令
+
+- `ifconfig`:
+- `telnet`:
+- `ping`: use ICMP
+- `traceroute`: traces a route over the internet
+- `host`, `dig`: DNS lookup utility
+- `whois`: look up information about a internet site
+- `netstat`:
+- `lsof`:
 
 # Writing Shell Scripts
 
@@ -580,3 +608,11 @@ sudo /etc/init.d/networking restart
 You can do so with `sudo ntpdate time.nist.gov` other servers include time.windows.com, etc.
 http://www.pool.ntp.org/ lists time servers around the world.
 
+## 切换网络后，如何强制更新网卡IP？
+
+To renew or release an IP address for the eth0 interface, enter:
+
+```bash
+$ sudo dhclient -r eth0
+$ sudo dhclient eth0
+```
