@@ -408,6 +408,7 @@
 - `whois`: look up information about a internet site
 - `netstat`:
 - `lsof`:
+- `ip`: 
 
 # Writing Shell Scripts
 

@@ -72,6 +72,10 @@ Docker uses a client-server architecture. The Docker client talks to the Docker 
 	- [docker compose](https://www.docker.com/docker-compose): Distributed applications consist of many small applications that work together. Docker transforms these applications into individual containers that are linked together. Instead of having to build, run and manage each individual container, Docker Compose allows you to define your multi-container application with all of its dependencies in a single file, then spin your application up in a single command. Your application’s structure and configuration are held in a single place, which makes spinning up applications simple and repeatable everywhere.
 	- [docker swarm](https://www.docker.com/docker-swarm): The nature of distributed applications requires compute resources that are also distributed. Docker Swarm provides native clustering capabilities to turn a group of Docker engines into a single, virtual Docker Engine. With these pooled resources, you can scale out your application as if it were running on a single, huge computer.
 
+## Docker Network
+
+- [Pipework](https://github.com/jpetazzo/pipework): Software-Defined Networking for Linux Containers. Pipework lets you connect together containers in arbitrarily complex scenarios. Pipework uses cgroups and namespace and works with "plain" LXC containers (created with lxc-start), and with the awesome Docker.
+
 ## Docker Host OS
 
 - [CoreOS](https://coreos.com/): CoreOS produces, maintains and utilizes open source software for Linux containers and distributed systems. Projects are designed to be composable and complement each other in order to run container-ready infrastructure.
@@ -88,6 +92,14 @@ Docker uses a client-server architecture. The Docker client talks to the Docker 
 - [dockramp](https://github.com/jlhawn/dockramp): Docker 1.8.0 will introduce a new API endpoint for copying files and directories into a container. With this addition, anyone can now implement their own build system using the Docker Remote API. Dockramp is the first proof of concept for an alternative to docker build.
 - [packer](https://packer.io/): Packer is a tool for creating machine and container images for multiple platforms from a single source configuration.
 
+## Continous Integration
+
+- [Drone](https://github.com/drone/drone): Drone是一个使用Go语言编写的基于Docker的持续集成系统。Drone可以快速提供隔离的虚拟环境编译测试，而且根据需要保留结果，比使用VM更加简洁有效。如何使用 Drone和Docker搭建全功能的CI服务器可以参考此文。使用Drone搭建CI服务器后，代码可以不离开公司网络即可测试，这非常适合大公司的保密原则，另外，由于Drone基于Docker使用，所以部署到生产环境也非常容易。
+
+## Continuous Delivery
+
+- [wharf](https://github.com/containerops/wharf): ContainerOps is all about product workflow. Wharf builds and runs a container image you defined whenever new code is being pushed, along with corresponding dependence system. But it's not all, the image will also work with continuous integration, or continuous deployment with Rocket, LXC or Atomic, etc. Wharf is focusing on the continuous changes from version control system to production environment.
+
 ## Visualization
 
 - [dockviz](https://github.com/justone/dockviz): Visualizing docker data
@@ -103,10 +115,6 @@ Docker uses a client-server architecture. The Docker client talks to the Docker 
 - [Deis](http://deis.io/): Deis也是一个支持共有云和私有云的开源PaaS系统，Deis基于Docker和CentOS构建了一个类Heroku的PaaS系统。Deis主要设计用来和不同的云提供商进行交互，目前支持 Rackspace、EC2、 DigitalOcean、Google Compute Engine、Bare-Metal。Deis使用out-of-the-box的方式支持Ruby、Python、Node.js、Java、Clojure、Scala、Play、PHP、Perl、Dart和Go语言，同样支持git push部署。Flynn和Deis都是两个基于Docker的云计算微PaaS技术，关于它们的区别，可以参考这篇文章，作者从架构、实现方式等多方面对二者进行了比较，Deis目前也尚未发布1.0版本，但在GitHub上已经有2000+的star量。
 - [Dokku](https://github.com/progrium/dokku): Dokku是一个迷你版的Heroku，基于Docker使用100行左右的Bash代码编写，简单的安装和配置后，即可使用Git命令将应用部署到本地的Dokku平台（当使用git push命令的时候，Dokku会使用buildpack检测应用，然后再部署）。Dokku实际上相当于一个单机版的Heroku，它包含4个组件，分别是Docker、Buildstep、pluginhook、sshcommand。Dokku目前支持Node.js、Ruby、Python。
 - [OpenShift Origin](http://www.openshift.org/): OpenShift 3 is built around a core of application containers powered by Docker, with orchestration and management provided by Kubernetes, on a foundation of Atomic and Enterprise Linux. OpenShift Origin is the upstream community project that brings it all together along with extensions, to accelerate application development and deployment.
-
-## CI
-
-- [Drone](https://github.com/drone/drone): Drone是一个使用Go语言编写的基于Docker的持续集成系统。Drone可以快速提供隔离的虚拟环境编译测试，而且根据需要保留结果，比使用VM更加简洁有效。如何使用 Drone和Docker搭建全功能的CI服务器可以参考此文。使用Drone搭建CI服务器后，代码可以不离开公司网络即可测试，这非常适合大公司的保密原则，另外，由于Drone基于Docker使用，所以部署到生产环境也非常容易。
 
 ## IaaS
 
