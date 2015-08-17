@@ -74,6 +74,8 @@ Docker uses a client-server architecture. The Docker client talks to the Docker 
 
 ## Docker Network
 
+- [flannel](https://github.com/coreos/flannel): flannel is a virtual network that gives a subnet to each host for use with container runtimes. Platforms like Google's Kubernetes assume that each container (pod) has a unique, routable IP inside the cluster. The advantage of this model is that it reduces the complexity of doing port mapping. 
+- [Weave](https://github.com/weaveworks/weave): Weave creates a virtual network that connects Docker containers deployed across multiple hosts and enables their automatic discovery.
 - [Pipework](https://github.com/jpetazzo/pipework): Software-Defined Networking for Linux Containers. Pipework lets you connect together containers in arbitrarily complex scenarios. Pipework uses cgroups and namespace and works with "plain" LXC containers (created with lxc-start), and with the awesome Docker.
 
 ## Docker Host OS
