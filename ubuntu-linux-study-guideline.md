@@ -366,9 +366,11 @@
 - `htop`: an interactive process viewer for Linux
     - [Linux下取代top的进程管理工具 htop](http://www.cnblogs.com/mchina/archive/2013/03/15/2858041.html)
     - [htop - an interactive process viewer for Linux](http://hisham.hm/htop/index.php?page=main)
-- `kill`: 通过kill给进程发送信号，参考:
-    - [每天一个linux命令（42）：kill命令](http://www.cnblogs.com/peida/archive/2012/12/20/2825837.html)
+- `kill`: 通过kill给进程发送信号
+    - 参考[每天一个linux命令（42）：kill命令](http://www.cnblogs.com/peida/archive/2012/12/20/2825837.html)
     - [Linux进程间通信——使用信号](http://blog.csdn.net/ljianhui/article/details/10128731)
+- `lsof`: lsof（list open files）是一个列出当前系统打开文件的工具。在linux环境下，任何事物都以文件的形式存在，通过文件不仅仅可以访问常规数据，还可以访问网络连接和硬件。所以如传输控制协议 (TCP) 和用户数据报协议 (UDP) 套接字等，系统在后台都为该应用程序分配了一个文件描述符，无论这个文件的本质如何，该文件描述符为应用程序与基础操作系统之间的交互提供了通用接口。因为应用程序打开文件的描述符列表提供了大量关于这个应用程序本身的信息，因此通过lsof工具能够查看这个列表对系统监测以及排错将是很有帮助的。
+    - 参考[每天一个linux命令（51）：lsof命令](http://www.cnblogs.com/peida/archive/2013/02/26/2932972.html)
 
 
 # Basic Network Management
@@ -400,15 +402,31 @@
 
 ## Shell命令
 
-- `ifconfig`:
-- `telnet`:
+- `ifconfig`
+    - 参考[每天一个linux命令（52）：ifconfig命令](http://www.cnblogs.com/peida/archive/2013/02/27/2934525.html)
+    - 参考[Linux and Unix - ifconfig command](http://www.computerhope.com/unix/uifconfi.htm)
+- `telnet`
+    - 参考[Linux and Unix - telnet command](http://www.computerhope.com/unix/utelnet.htm)
 - `ping`: use ICMP
+    - 参考[ping结果中TTL是什么意思](http://www.ezloo.com/2007/05/ping_ttl.html)
+    - 参考[ping 命令详解](http://zhidao.baidu.com/question/13855241.html)
 - `traceroute`: traces a route over the internet
-- `host`, `dig`: DNS lookup utility
+    - 参考[每天一个linux命令（55）：traceroute命令](http://www.cnblogs.com/peida/archive/2013/03/07/2947326.html)
+- `nslookup`, `host`, `dig`: DNS lookup utility
+    - 参考[Linux and Unix - nslookup command](http://www.computerhope.com/unix/unslooku.htm)
+    - 参考[Linux and Unix - host command](http://www.computerhope.com/unix/host.htm)
+    - 参考[Linux and Unix - dig command](http://www.computerhope.com/unix/dig.htm)
 - `whois`: look up information about a internet site
+    - 参考[Linux and Unix - whois command](http://www.computerhope.com/unix/uwhois.htm)
+    - [站长之家 - whois查询](http://whois.chinaz.com/)
+    - [Godaddy whois查询](https://who.godaddy.com/)
 - `netstat`:
-- `lsof`:
-- `ip`: 
+    - 参考[每天一个linux命令（56）：netstat命令](http://www.cnblogs.com/peida/archive/2013/03/08/2949194.html)
+- `ip`
+    - 参考[Linux and Unix - ip command](http://www.computerhope.com/unix/ip.htm)
+- `iptables`: iptables is a user-space application program that allows a system administrator to configure the tables provided by the Linux kernel firewall (implemented as different Netfilter modules) and the chains and rules it stores. Different kernel modules and programs are currently used for different protocols; iptables applies to IPv4, ip6tables to IPv6, arptables to ARP, and ebtables to Ethernet frames.
+    - 参考[百度百科-iptables](http://baike.baidu.com/view/504557.htm#1_1)
+    - 参考[wikipedia - iptables](https://en.wiki2.org/wiki/Iptables) 
 
 # Writing Shell Scripts
 
@@ -455,6 +473,7 @@
 
 - [The art of command line](https://github.com/jlevy/the-art-of-command-line)
 - [Linux Tools Quick Tutorial](http://linuxtools-rst.readthedocs.org/zh_CN/latest/index.html)
+- [每天一个linux目录](http://www.cnblogs.com/peida/archive/2012/12/05/2803591.html)
 
 ## Utilites
 
