@@ -34,28 +34,28 @@
     - Linux下的各种文件系统的区别
         - [Ext2、Ext3和Ext4之间的区别](http://misujun.blog.51cto.com/2595192/883949)
     - Linux目录层级结构，及常见目录(参考PG2UL, page 39)
-        ```bash
-        rwxr-xr-x   2 root root  4096 Jul 28 11:46 bin/
-        drwxr-xr-x   3 root root  4096 Jul 28 10:28 boot/
-        drwxr-xr-x  17 root root  4240 Jul 28 11:48 dev/
-        drwxr-xr-x  90 root root  4096 Jul 28 18:25 etc/
-        drwxr-xr-x   3 root root  4096 May 10 02:02 home/
-        drwxr-xr-x  21 root root  4096 May 10 02:01 lib/
-        drwxr-xr-x   2 root root  4096 Jul  8 01:10 lib64/
-        drwx------   2 root root 16384 May 10 01:56 lost+found/
-        drwxr-xr-x   4 root root  4096 May 10 01:56 media/
-        drwxr-xr-x   2 root root  4096 Apr 11  2014 mnt/
-        drwxr-xr-x   2 root root  4096 Feb 19 03:33 opt/
-        dr-xr-xr-x 407 root root     0 Jul 28 11:48 proc/
-        drwx------   2 root root  4096 May 10 01:56 root/
-        drwxr-xr-x  18 root root   680 Jul 28 18:26 run/
-        drwxr-xr-x   2 root root 12288 Jul 28 11:46 sbin/
-        drwxr-xr-x   2 root root  4096 Feb 19 03:33 srv/
-        dr-xr-xr-x  13 root root     0 Jul 28 17:24 sys/
-        drwxrwxrwt   2 root root  4096 Jul 28 19:17 tmp/
-        drwxr-xr-x  10 root root  4096 May 10 01:56 usr/
-        drwxr-xr-x  12 root root  4096 May 10 02:01 var/
-        ```
+    ```bash
+    rwxr-xr-x   2 root root  4096 Jul 28 11:46 bin/
+    drwxr-xr-x   3 root root  4096 Jul 28 10:28 boot/
+    drwxr-xr-x  17 root root  4240 Jul 28 11:48 dev/
+    drwxr-xr-x  90 root root  4096 Jul 28 18:25 etc/
+    drwxr-xr-x   3 root root  4096 May 10 02:02 home/
+    drwxr-xr-x  21 root root  4096 May 10 02:01 lib/
+    drwxr-xr-x   2 root root  4096 Jul  8 01:10 lib64/
+    drwx------   2 root root 16384 May 10 01:56 lost+found/
+    drwxr-xr-x   4 root root  4096 May 10 01:56 media/
+    drwxr-xr-x   2 root root  4096 Apr 11  2014 mnt/
+    drwxr-xr-x   2 root root  4096 Feb 19 03:33 opt/
+    dr-xr-xr-x 407 root root     0 Jul 28 11:48 proc/
+    drwx------   2 root root  4096 May 10 01:56 root/
+    drwxr-xr-x  18 root root   680 Jul 28 18:26 run/
+    drwxr-xr-x   2 root root 12288 Jul 28 11:46 sbin/
+    drwxr-xr-x   2 root root  4096 Feb 19 03:33 srv/
+    dr-xr-xr-x  13 root root     0 Jul 28 17:24 sys/
+    drwxrwxrwt   2 root root  4096 Jul 28 19:17 tmp/
+    drwxr-xr-x  10 root root  4096 May 10 01:56 usr/
+    drwxr-xr-x  12 root root  4096 May 10 02:01 var/
+    ```
     - Mount Points (参考PG2UL, page 35)
         - The directory that you mount a filesystem on is called a mount point.
         - 通过`mount`命令查看分区
