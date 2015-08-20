@@ -453,6 +453,12 @@
     - 必读：[Use the Unofficial Bash Strict Mode (Unless You Looove Debugging)](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
 - 语法
     - 参考：见PG2UL, page 953
+    
+## Shell命令
+
+- `export`
+- `source`
+
 
 # Schedule Tasks
 
