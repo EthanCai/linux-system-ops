@@ -88,6 +88,12 @@ Docker uses a client-server architecture. The Docker client talks to the Docker 
 ## Container Management
 
 - [kubernetes](http://kubernetes.io/): Manage a cluster of Linux containers as a single system to accelerate Dev and simplify Ops.
+	- [kube-ui](https://github.com/kubernetes/kube-ui): Container Cluster Manager from Google Web UI. 介绍见[这里](http://kubernetes.io/v1.0/docs/user-guide/ui.html).
+
+## Monitor
+
+- [cAdvisor](https://github.com/google/cadvisor): Analyzes resource usage and performance characteristics of running containers.
+- [heapster](https://github.com/kubernetes/heapster): Compute Resource Usage Analysis and Monitoring of Container Clusters
 
 ## Data Volume Management
 
