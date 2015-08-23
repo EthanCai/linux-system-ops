@@ -61,6 +61,7 @@ Docker uses a client-server architecture. The Docker client talks to the Docker 
 - [Window Azure CN](http://www.windowsazure.cn/)
 - [UnitedStack](https://www.ustack.com/)
 - [青云](https://www.qingcloud.com/)
+- [时速云](https://www.tenxcloud.com/)
 
 # Projects
 
