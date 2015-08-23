@@ -34,6 +34,7 @@ Docker uses a client-server architecture. The Docker client talks to the Docker 
 - [Docker Up and Running](http://www.amazon.com/Docker-Up-Running-Karl-Matthias/dp/1491917571/ref=sr_1_1?ie=UTF8&qid=1437978051&sr=8-1&keywords=docker)
 - [shipyard中文文档](http://dockerpool.com/static/books/shipyard_doc/index.html)
 
+
 # Resources
 
 网站：
@@ -89,6 +90,7 @@ Docker uses a client-server architecture. The Docker client talks to the Docker 
 
 - [kubernetes](http://kubernetes.io/): Manage a cluster of Linux containers as a single system to accelerate Dev and simplify Ops.
 	- [kube-ui](https://github.com/kubernetes/kube-ui): Container Cluster Manager from Google Web UI. 介绍见[这里](http://kubernetes.io/v1.0/docs/user-guide/ui.html).
+	- [Kubernetes API client libraries](http://kubernetes.io/v1.0/docs/devel/client-libraries.html): 文档见[这里](https://godoc.org/github.com/kubernetes/kubernetes/pkg/client)
 
 ## Monitor
 

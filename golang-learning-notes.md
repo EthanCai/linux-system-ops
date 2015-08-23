@@ -19,6 +19,7 @@
 - [golang](http://golang.org/)
 - [golang国内镜像](http://docscn.studygolang.com/)
 - [golang资料集](https://github.com/ty4z2008/Qix/blob/master/golang.md)
+- [Go Packages](https://godoc.org/)
 
 社区：
 
