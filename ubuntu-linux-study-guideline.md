@@ -458,6 +458,9 @@
 
 - `export`
 - `source`
+- `xargs`: construct argument list(s) and execute utility
+    - [Example xargs](http://examplenow.com/zh-cn/xargs/man1)
+    - [10 Xargs Command Examples in Linux / UNIX](http://www.thegeekstuff.com/2013/12/xargs-examples/)
 
 
 # Schedule Tasks
