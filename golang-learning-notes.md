@@ -20,11 +20,14 @@
 - [golang国内镜像](http://docscn.studygolang.com/)
 - [golang资料集](https://github.com/ty4z2008/Qix/blob/master/golang.md)
 - [Go Packages](https://godoc.org/)
+- [Go语言资料收集](https://github.com/wonderfo/wonderfogo/wiki)
 
 社区：
 
 - [golang中国](http://golangtc.com/)
 - [go友团](http://golanghome.com/)
+- [Go邮件组](http://groups.google.com/group/golang-nuts)
+- [Go的中文邮件组](http://groups.google.com/group/golang-china)
 
 工具：
 
@@ -35,6 +38,16 @@
 - [Language specification](http://golang.org/ref/spec)
 - [Memory Module](http://golang.org/ref/mem)
 - [effective go - go programming style guide](http://golang.org/doc/effective_go.html)
+
+# 学习路径
+
+1. 安装Go
+	- 参考[Get Started](http://golang.org/doc/install)安装Golang runtime，如果OS X通过Homebrew安装
+	- IDE使用Sublime，需要[安装GoSublime Package](https://github.com/DisposaBoy/GoSublime)
+1. 练习搭建基本的Workspace，并熟悉Workspace的结构、Go代码结构、编写基本的单元测试、`Go fmt/build/install/run/test`等命名的使用
+	- 参考[How to Write Go Code](http://golang.org/doc/code.html)
+1. 学习Golang语法
+	- Golang语法手册参考[The Go Programming Language Specification](http://golang.org/ref/spec)
 
 # Projects
 
@@ -63,4 +76,12 @@ The Go runtime multiplexes a potentially large number of goroutines onto a small
 
 - [我为什么从python转向go](http://www.jianshu.com/p/afa14e631930)
 - [Node.js vs Golang: Battle of the Next-Gen Languages](http://www.hostingadvice.com/blog/nodejs-vs-golang/)
+
+## Go语言主要版本和版本变更内容是哪些？
+
+参考：
+
+- [Release History](http://golang.org/doc/devel/release.html)
+
+
 
