@@ -134,6 +134,8 @@ Docker uses a client-server architecture. The Docker client talks to the Docker 
 ## IaaS
 
 - [OpenStack](http://www.openstack.org/): Open source software for creating private and public clouds.
+- [Apache CloudStack](http://cloudstack.apache.org/): Apache CloudStack is open source software designed to deploy and manage large networks of virtual machines, as a highly available, highly scalable Infrastructure as a Service (IaaS) cloud computing platform. CloudStack is used by a number of service providers to offer public cloud services, and by many companies to provide an on-premises (private) cloud offering, or as part of a hybrid cloud solution. 
+- [Zstack](http://zstack.org/cn/): ZStack是下一代开源的云计算IaaS（基础架构即服务）软件。它主要面向的是未来的智能数据中心， 通过提供全完善的APIs来管理包括计算、存储和网络在内的数据中心的各种资源。 用户可以基于ZStack构建自己的智能数据中心，也可以在稳定的ZStack之上搭建灵活的云应用场景， 例如VDI（虚拟桌面基础架构），PaaS（平台即服务），SaaS（软件即服务）等等。
 
 ## Virtual Machine OS
 
