@@ -413,6 +413,8 @@
     - 参考[ping 命令详解](http://zhidao.baidu.com/question/13855241.html)
 - `traceroute`: traces a route over the internet
     - 参考[每天一个linux命令（55）：traceroute命令](http://www.cnblogs.com/peida/archive/2013/03/07/2947326.html)
+- `mtr`: 'traceroute' and 'ping' in a single tool
+    - 参考[mtr命令详解](http://xukaizijian.blog.163.com/blog/static/1704331192011023259812/)
 - `nslookup`, `host`, `dig`: DNS lookup utility
     - 参考[Linux and Unix - nslookup command](http://www.computerhope.com/unix/unslooku.htm)
     - 参考[Linux and Unix - host command](http://www.computerhope.com/unix/host.htm)
