@@ -388,6 +388,7 @@
         - 参考[互联网协议入门（二）](http://www.ruanyifeng.com/blog/2012/06/internet_protocol_suite_part_ii.html)
         - 参考[TCP IP网络协议图](./file/TCP-IP_Network_Protocol_Diagram.pdf)
     - IP协议，IP地址的分类，子网掩码
+        - [如何理解ip路由和操作linux的路由表](http://linux.chinaunix.net/techdoc/net/2008/09/18/1033149.shtml)
     - TCP协议
     - UDP协议
     - PPP协议
