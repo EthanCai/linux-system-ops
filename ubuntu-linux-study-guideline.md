@@ -224,8 +224,101 @@
 
 ## 练习
 
-### 查找是否安装某个package？
+### 查找软件包
 
+```bash
+dpkg --get-selections pattern #查找软件包名称包含 pattern 的软件包，可以在后面用 grep install/deinstall 来选择是否已经被 remove 的包(曾经安装过了的)
+apt-cache search pattern #查找软件包名称和描述包含 pattern 的软件包 (可以是安装了也可以是没有安装)，可以用参数来限制是否已经安装
+aptitude search ~i #查找已经安装的软件包
+aptitude search ~c #查找已经被 remove 的软件包，还有配置文件存在
+aptitude search ~npattern #查找软件包名称包含 pattern 的软件包 (可以是安装了也可以是没有安装)
+aptitude search \!~i~npattern #查找还没有安装的软件包名字包含 pattern 的软件包。(前面的 ! 是取反的意思，反划线是 escape 符号)
+注：还有很多用法，可以去看看我在 forum 中写的帖子 [aptitude Search Patterns](http://forum.ubuntu.org.cn/viewtopic.php?f=52&t=259550)
+
+apt-cache depends package #查找名称是 package 软件包的依赖关系
+aptitude search ~R~npackage #查找名称是 package 软件包的依赖关系，可以同时看到是不是已经安装
+
+apt-cache rdepends package #查找哪些软件包依赖于名称是 package 软件包
+aptitude search ~D~npackage #查找哪些软件包依赖于名称是 package 软件包
+
+dpkg -I package_name.deb #参数是大写i，查找已经下载但末安装的 package_name.deb 软件包的信息
+dpkg -l package #参数是小写L，查找已经安装软件包 package 的信息，精简
+apt-cache show pattern ##查找软件包pattern的信息 (可以是安装了也可以是没有安装)
+aptitude show ~npattern #显示名称是 pattern 软件包的信息(可以是安装了也可以是没有安装)
+
+apt-cache policy pattern #显示 pattern 软件包的策略(可以是安装了也可以是没有安装)
+apt-cache showpkg pattern #显示pattern 软件包的其它信息(可以是安装了也可以是没有安装)
+
+dpkg -S pattern #查找已经安装的文件 pattern 属于哪个软件包
+apt-file search pattern #查找文件 pattern 属于哪个软件包(可以是安装了也可以是没有安装)
+
+dpkg -c package_name.deb #查找已经下载但末安装的 package.deb 软件包包含哪些文件
+dpkg -L package #查找已经安装 package 软件包包含哪些文件
+apt-file show pattern #查找 pattern 软件包(可以是安装了也可以是没有安装)包含哪些文件
+```
+
+### 下载软件包
+
+```bash
+apt-get install package -d #下载软件包
+aptitude download pattern #同上，不同的是下载的是符合 pattern 的软件包，后面不再指出
+```
+
+### 安装软件包
+
+```bash
+dpkg -i package_name.deb #安装本地软件包，不解决依赖关系
+apt-get install package #在线安装软件包
+aptitude install pattern #同上
+
+apt-get install package --reinstall #重新安装软件包
+apitude reinstall package #同上
+```
+
+### 移除软件包
+
+```bash
+dpkg -r package #删除软件包
+apt-get remove package #同上
+aptitude remove package #同上
+
+dpkg -P #删除软件包及配置文件
+apt-get remove package --purge #删除软件包及配置文件
+apitude purge pattern #同上
+```
+
+### 自动移除软件包
+
+```bash
+apt-get autoremove #删除不再需要的软件包
+注：aptitude 没有，它会自动解决这件事
+```
+
+### 清除下载的软件包
+
+```bash
+apt-get clean #清除 /var/cache/apt/archives 目录
+aptitude clean #同上
+
+apt-get autoclean #清除 /var/cache/apt/archives 目录，不过只清理过时的包
+aptitude autoclean #同上
+```
+
+### 更新源
+
+```bash
+apt-get update #更新源
+aptitude update #同上 
+```
+
+### 更新系统
+
+```bash
+apt-get upgrade #更新已经安装的软件包
+aptitude safe-upgrade #同上
+apt-get dist-upgrade #升级系统
+aptitude full-upgrade #同上
+```
 
 
 # SSH
