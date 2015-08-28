@@ -169,17 +169,47 @@
 # Install and Manage Packages
 
 ## 目标
+
 - 安装和管理包
+- 掌握`dpkg`, `apt`, `aptitude`命令
 
 ## 内容
-- `dpkg`, `apt`, `aptitude`
-    - 参考[包管理系统指南](http://wiki.ubuntu.org.cn/包管理系统指南)
-    - 参考PG2UL, page 517, chapter 13 - downloading and installing software
+
+- 参考内容
+    - [包管理系统指南](http://wiki.ubuntu.org.cn/包管理系统指南)
+    - PG2UL, page 517, chapter 13 - downloading and installing software
+- Repository: Repositories hold collections of software packages and related information, includ- ing headers that describe each package and provide information on other packages the package depends on. Ubuntu maintains repositories for each of its releases.
+    - main: Ubuntu-supported open-source software
+    - universe: Community-maintained open-source software
+    - multiverse: Software restricted by copyright or legal issues
+    - restricted: Proprietary device drivers
+    - partner: Packages that are not part of Ubuntu; offered by other vendors
+    - backports: Packages from later releases of Ubuntu that are not available for an earlier release
+- `/etc/apt/sources.list`: specifies the repositories APT searches when you ask it to find or install a package.
+    - 通过命名修改repository地址为中国访问更快的"mirrors.yun-idc.com": `sudo sed -i 's/archive.ubuntu.com/mirrors.yun-idc.com/g' /etc/apt/sources.list`
+- APT local package indexes is in `/var/lib/apt/lists` directory. APT uses these files to determine whether the packages on the system, and those in its cache, are the most recent versions.
+- `/var/cache/apt/archives` directory holds recently downloaded deb files (page 533)
+- The aptitude utility keeps very readable logs in `/var/log/aptitude`.
+
+## Shell命令
+
+- `dpkg`
+    - 全称：Debian package management system
+    - dpkg主要是对本地的软件包进行管理，本地软件包包括已经在本地安装的软件包和已经下载但还没有安装的 deb 文件，不解决依赖关系。
+- `apt`
+    - 全称：Advanced Package Tool
+    - apt和dpkg的用途比较：APT downloads software packages, while dpkg installs, removes, maintains, manages dependencies of, and reports on software packages.
+    - apt的命令包含
+        - `apt-get`: 主要负责软件包的在线安装与升级，低层对 deb 包的处理还是用的 dpkg，解决依赖关系
+        - `apt-cache`: 主要用来查询软件包的状态和依赖关系
+        - `apt-file`: 主要负责查询软件包名称和软件包包含的文件（值得注意的是它要自己同步）
+- `aptitude`
     - Ubuntu desktop 14.04中，并没有默认安装aptitude，需要执行`sudo apt-get install aptitude`来安装
-    - apt的命令包含：
-        - apt-get
-        - apt-cache
-        - apt-file
+    - `aptitude install`: install package and its dependencies
+    - `aptitude remove`: remove package and its dependencies, but not include configuration
+    - `aptitude purge`: remove package and its dependencies, configuration
+    - `aptitude search`: looks for packages with names that match a pattern
+    - `aptitude clean`: Deletes all packages from the APT cache
 - `git`
     - 安装git。如果已安装，忽略。
     - 在命令行下使用git获取、创建分支、提交、合并代码
@@ -191,6 +221,11 @@
 - `vim`
     - 安装vim
     - Ubuntu Desktop 14.04 默认没有安装Vim
+
+## 练习
+
+### 查找是否安装某个package？
+
 
 
 # SSH
@@ -400,6 +435,8 @@
     - [Linux常用网络指令](http://linux.vbird.org/linux_server/0140networkcommand.php)
     - [linux网络配置命令之ifconfig、ip和route](http://chrinux.blog.51cto.com/6466723/1188108)
     - [Linux and Unix ifconfig command](http://www.computerhope.com/unix/uifconfi.htm)
+    - [iptables vs route](http://superuser.com/questions/419659/iptables-vs-route)
+    - [NAT - Network Address Translation](http://www.karlrupp.net/en/computer/nat_tutorial)
 
 ## Shell命令
 
