@@ -1,7 +1,77 @@
+<!-- TOC depth:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [Preface](#preface)
+- [Glossary](#glossary)
+- [Install Ubuntu Linux](#install-ubuntu-linux)
+	- [目标](#)
+	- [内容](#)
+	- [Shell基本命令](#shell)
+- [Basic Shell Knowledge](#basic-shell-knowledge)
+	- [目标](#)
+	- [内容](#)
+	- [Shell基本命令](#shell)
+- [Install and Manage Packages](#install-and-manage-packages)
+	- [目标](#)
+	- [内容](#)
+	- [Shell命令](#shell)
+	- [练习](#)
+		- [查找软件包](#)
+		- [下载软件包](#)
+		- [安装软件包](#)
+		- [移除软件包](#)
+		- [自动移除软件包](#)
+		- [清除下载的软件包](#)
+		- [更新源](#)
+		- [更新系统](#)
+- [SSH](#ssh)
+	- [目标](#)
+	- [内容](#)
+	- [Shell基本命令](#shell)
+- [Basic Vim Usage](#basic-vim-usage)
+	- [目标](#)
+	- [熟悉Vim](#vim)
+- [File, Directory, User, User Group, Authority](#file-directory-user-user-group-authority)
+	- [目标](#)
+	- [内容](#)
+- [Compress and Uncompress Files](#compress-and-uncompress-files)
+	- [目标](#)
+	- [内容](#)
+- [Process](#process)
+	- [目标](#)
+	- [内容](#)
+	- [Shell基本命令](#shell)
+- [Basic Network Management](#basic-network-management)
+	- [目标](#)
+	- [Basic Network Management](#basic-network-management)
+	- [Shell命令](#shell)
+- [Writing Shell Scripts](#writing-shell-scripts)
+	- [目标](#)
+	- [Writing Shell Scripts](#writing-shell-scripts)
+	- [Shell命令](#shell)
+- [Schedule Tasks](#schedule-tasks)
+	- [目标](#)
+	- [内容](#)
+- [Futher Reading](#futher-reading)
+	- [Knowledge](#knowledge)
+	- [Utilites](#utilites)
+- [FAQ](#faq)
+	- [如何安装中文语言支持（System Settings -> Language Support）及中文输入法（System Settings -> Text Entry）](#system-settings-language-supportsystem-settings-text-entry)
+	- [如何升级系统，安装最新的补丁和最新版本的软件](#)
+	- [修改Ubuntu Software Repository的下载地址，比如把下载地址改为国内的repository服务地址](#ubuntu-software-repositoryrepository)
+	- [如何给Ubuntu Linux Virutal Machine安装VMWare Tools](#ubuntu-linux-virutal-machinevmware-tools)
+	- [如何给Ubuntu Linux Virtual Machine安装Parallel Tools](#ubuntu-linux-virtual-machineparallel-tools)
+	- [给Ubuntu安装SSH服务](#ubuntussh)
+	- [使用命令`man wget > man-wget.txt`把命令文档输入到文本文件后，打开man-wget.txt，发现有很多重复字符，或者乱码？](#man-wget-man-wgettxtman-wgettxt)
+	- [如何修改OS的hostname](#oshostname)
+	- [设置DNS服务的服务地址](#dns)
+	- [如何配置网卡和IP地址](#ip)
+	- [如何从Internet更新ubuntu本地的时间？](#internetubuntu)
+	- [切换网络后，如何强制更新网卡IP？](#ip)
+<!-- /TOC -->
+
 # Preface
 
 面向开发的Ubuntu Linux快速学习手册，掌握基本Ubuntu Linux操作和管理
-
 
 # Glossary
 
@@ -308,7 +378,7 @@ aptitude autoclean #同上
 
 ```bash
 apt-get update #更新源
-aptitude update #同上 
+aptitude update #同上
 ```
 
 ### 更新系统
@@ -559,7 +629,7 @@ aptitude full-upgrade #同上
     - 参考[Linux and Unix - ip command](http://www.computerhope.com/unix/ip.htm)
 - `iptables`: iptables is a user-space application program that allows a system administrator to configure the tables provided by the Linux kernel firewall (implemented as different Netfilter modules) and the chains and rules it stores. Different kernel modules and programs are currently used for different protocols; iptables applies to IPv4, ip6tables to IPv6, arptables to ARP, and ebtables to Ethernet frames.
     - 参考[百度百科-iptables](http://baike.baidu.com/view/504557.htm#1_1)
-    - 参考[wikipedia - iptables](https://en.wiki2.org/wiki/Iptables) 
+    - 参考[wikipedia - iptables](https://en.wiki2.org/wiki/Iptables)
 
 # Writing Shell Scripts
 
@@ -586,7 +656,7 @@ aptitude full-upgrade #同上
     - 必读：[Use the Unofficial Bash Strict Mode (Unless You Looove Debugging)](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
 - 语法
     - 参考：见PG2UL, page 953
-    
+
 ## Shell命令
 
 - `export`
@@ -717,7 +787,7 @@ col命令的使用方法见[col命名详解](http://myblog.jyc.edu.cn/?p=62)
 
 ```bash
 hostnamectl set-hostname new-hostname
-``` 
+```
 
 ## 设置DNS服务的服务地址
 
