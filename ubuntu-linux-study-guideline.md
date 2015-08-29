@@ -1,73 +1,66 @@
-<!-- TOC depth:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+<!-- TOC depth:2 withLinks:0 updateOnSave:0 orderedList:0 -->
 
-- [Preface](#preface)
-- [Glossary](#glossary)
-- [Install Ubuntu Linux](#install-ubuntu-linux)
-	- [目标](#)
-	- [内容](#)
-	- [Shell基本命令](#shell)
-	- [练习](#)
-- [Basic Shell Knowledge](#basic-shell-knowledge)
-	- [目标](#)
-	- [内容](#)
-	- [Shell基本命令](#shell)
-- [Install and Manage Packages](#install-and-manage-packages)
-	- [目标](#)
-	- [内容](#)
-	- [Shell命令](#shell)
-	- [练习](#)
-		- [查找软件包](#)
-		- [下载软件包](#)
-		- [安装软件包](#)
-		- [移除软件包](#)
-		- [自动移除软件包](#)
-		- [清除下载的软件包](#)
-		- [更新源](#)
-		- [更新系统](#)
-- [SSH](#ssh)
-	- [目标](#)
-	- [内容](#)
-	- [Shell基本命令](#shell)
-- [Basic Vim Usage](#basic-vim-usage)
-	- [目标](#)
-	- [熟悉Vim](#vim)
-- [File, Directory, User, User Group, Authority](#file-directory-user-user-group-authority)
-	- [目标](#)
-	- [内容](#)
-- [Compress and Uncompress Files](#compress-and-uncompress-files)
-	- [目标](#)
-	- [内容](#)
-- [Process](#process)
-	- [目标](#)
-	- [内容](#)
-	- [Shell基本命令](#shell)
-- [Basic Network Management](#basic-network-management)
-	- [目标](#)
-	- [Basic Network Management](#basic-network-management)
-	- [Shell命令](#shell)
-- [Writing Shell Scripts](#writing-shell-scripts)
-	- [目标](#)
-	- [Writing Shell Scripts](#writing-shell-scripts)
-	- [Shell命令](#shell)
-- [Schedule Tasks](#schedule-tasks)
-	- [目标](#)
-	- [内容](#)
-- [Futher Reading](#futher-reading)
-	- [Knowledge](#knowledge)
-	- [Utilites](#utilites)
-- [FAQ](#faq)
-	- [如何安装中文语言支持（System Settings -> Language Support）及中文输入法（System Settings -> Text Entry）](#system-settings-language-supportsystem-settings-text-entry)
-	- [如何升级系统，安装最新的补丁和最新版本的软件](#)
-	- [修改Ubuntu Software Repository的下载地址，比如把下载地址改为国内的repository服务地址](#ubuntu-software-repositoryrepository)
-	- [如何给Ubuntu Linux Virutal Machine安装VMWare Tools](#ubuntu-linux-virutal-machinevmware-tools)
-	- [如何给Ubuntu Linux Virtual Machine安装Parallel Tools](#ubuntu-linux-virtual-machineparallel-tools)
-	- [给Ubuntu安装SSH服务](#ubuntussh)
-	- [使用命令`man wget > man-wget.txt`把命令文档输入到文本文件后，打开man-wget.txt，发现有很多重复字符，或者乱码？](#man-wget-man-wgettxtman-wgettxt)
-	- [如何修改OS的hostname](#oshostname)
-	- [设置DNS服务的服务地址](#dns)
-	- [如何配置网卡和IP地址](#ip)
-	- [如何从Internet更新ubuntu本地的时间？](#internetubuntu)
-	- [切换网络后，如何强制更新网卡IP？](#ip)
+- Preface
+- Glossary
+- Install Ubuntu Linux
+	- 目标
+	- 内容
+	- Shell基本命令
+	- 练习
+- Basic Shell Knowledge
+	- 目标
+	- 内容
+	- Shell基本命令
+- Install and Manage Packages
+	- 目标
+	- 内容
+	- Shell命令
+	- 练习
+- SSH
+	- 目标
+	- 内容
+	- Shell基本命令
+- Basic Vim Usage
+	- 目标
+	- 熟悉Vim
+- File, Directory, User, User Group, Authority
+	- 目标
+	- 内容
+- Compress and Uncompress Files
+	- 目标
+	- 内容
+	- 练习
+- Process
+	- 目标
+	- 内容
+	- Shell基本命令
+- Basic Network Management
+	- 目标
+	- Basic Network Management
+	- Shell命令
+- Writing Shell Scripts
+	- 目标
+	- Writing Shell Scripts
+	- Shell命令
+- Schedule Tasks
+	- 目标
+	- 内容
+- Futher Reading
+	- Knowledge
+	- Utilites
+- FAQ
+	- 如何安装中文语言支持（System Settings -> Language Support）及中文输入法（System Settings -> Text Entry）
+	- 如何升级系统，安装最新的补丁和最新版本的软件
+	- 修改Ubuntu Software Repository的下载地址，比如把下载地址改为国内的repository服务地址
+	- 如何给Ubuntu Linux Virutal Machine安装VMWare Tools
+	- 如何给Ubuntu Linux Virtual Machine安装Parallel Tools
+	- 给Ubuntu安装SSH服务
+	- 使用命令`man wget > man-wget.txt`把命令文档输入到文本文件后，打开man-wget.txt，发现有很多重复字符，或者乱码？
+	- 如何修改OS的hostname
+	- 设置DNS服务的服务地址
+	- 如何配置网卡和IP地址
+	- 如何从Internet更新ubuntu本地的时间？
+	- 切换网络后，如何强制更新网卡IP？
 <!-- /TOC -->
 
 # Preface
@@ -496,8 +489,28 @@ aptitude full-upgrade #同上
 
 ## 内容
 
-- 阅读PG2UL， page 174, Compressing and archiving files
-- [rar tar gz zip 7z 有什么区别?](http://www.zhihu.com/question/26026741)
+阅读PG2UL， page 174, Compressing and archiving files
+
+[rar tar gz zip 7z 有什么区别?](http://www.zhihu.com/question/26026741)：
+
+    tar是Linux常见的一种归档文件（原生不包括压缩功能）
+    gzip是gnu/Linux的一种压缩文件工具，算法是基于 DEFLATE，文件是gz，可以和tar组合。
+    zip是一种规范开放的压缩文件，算法不定，但主要是用 DEFLATE
+    rar的算法专有，但发行时附送解码器允许解码器再开发，编码器专有
+    7zip和zip差不多，算法不定，主要用bzip2和lzma，而且完全开源。
+    zip和7z更像是压缩容器，因为算法不是格式固定，允许支持其他压缩算法
+    The zip and unzip utilities are compatible with PKZIP, a Windows program that compresses and archives files.
+
+    大小与区别
+    tar是无压缩的，比压缩效率，gz的算法最原始，所以较低，其次zip，接着rar，7z两个主要算法基本上略优于rar，基本不相上下。
+
+    优缺点
+    在Linux里面，tar一般和其他没有文件管理的压缩算法文件结合使用，用tar打包整个文件目录结构成一个文件，再用gz，bzip等压缩算法压缩成一次。也是Linux常见的压缩归档的处理方法。
+
+    zip相对比较老，格式规范可知，所以积累了各种加解压实现，有较好的兼容性，不过现有文件格式相对而言比较落后，还有会有文件名乱码问题（因为文件名是用非Unicode编码）
+
+    rar和7z就新些，所用算法压缩效率也好很多，兼容性不及zip，不过rar的编码器有专利，但可以不制作编码器的情况使用或者再开发发行版的解码器（所以其他压缩管理工具可以调用rar的解码器来解压rar，但不能加压，百度云的在线解压rar可能是使用或者再开发过unrar文件），7z的文件和管理程序都是开源的，文件格式也比较好（支持Unicode文件名），两个主要压缩算法的性能都很好，只是差何时能普及而取代zip而已。
+
 - bzip2压缩
     - `bzip2`: compress a file
     - `bunzip2`: uncompress a file
@@ -519,13 +532,71 @@ aptitude full-upgrade #同上
         - [linux下的压缩解压软件7zip](http://www.linuxdiyf.com/viewarticle.php?id=193969)
         - [How to use 7zip on Linux command Line](https://www.ibm.com/developerworks/community/blogs/6e6f6d1b-95c3-46df-8a26-b7efd8ee4b57/entry/how_to_use_7zip_on_linux_command_line144?lang=en)
         - [p7zip - archlinux document](https://wiki.archlinux.org/index.php/P7zip)
-- zip压缩
-    - zip
-    - unzip
+- zip压缩  
+    - zip: 参考[Linux zip command](http://linux.about.com/od/commands/l/blcmdl1_zip.htm)
+    - unzip: 参考[Linux unzip command](http://linux.about.com/od/commands/l/blcmdl1_unzip.htm)
 - rar压缩
-    - unrar
+    - unrar: 参考[How To Extract RAR Files Under Linux](http://www.lifelinux.com/how-to-extract-rar-files-under-linux/)
 - `tar`: manipulate tape archives
 
+## 练习
+
+### `bzip2`, `bunzip2`, `bzcat`命令练习
+
+```bash
+#使用bzip2压缩文件默认会自动删除原文件，生成的压缩文件名是"[原文件名（包括扩展名）].bz2"
+$ bzip2 -v letter_eletter_e: 11680.00:1, 0.001 bits/byte, 99.99% saved, 584000 in, 50 out.
+
+$ ls -l-rw-rw-r-- 1 sam sam 50 2010-03-01 22:31 letter_e.bz2
+
+# 使用bunzip2解压文件会自动删除原压缩文件，原文件名去掉末尾的".bz2"就是生成的解压缩文件名
+$ bunzip -v letter_e.bz2
+
+$ bzcat letter_e.bz2 | head -2
+eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+```
+
+### `tar`命令练习
+
+```bash
+# === Combine files into one file ===
+
+$ ls -l g b d-rw-r--r-- 1 zach other 1178 2010-08-20 14:16 b
+-rw-r--r-- 1 zach zach  3783 2010-08-20 14:17 d
+-rw-r--r-- 1 zach zach  1302 2010-08-20 14:16 g
+
+#  –c (create), –v (verbose), and –f (write to or read from a file)$ tar -cvf all.tar g b d
+gbd
+$ ls -l all.tar-rw-r--r-- 1 zach zach  9728 2010-08-20 14:17 all.tar
+
+# –t option to display a table of contents for the archive$ tar -tvf all.tar
+-rw-r--r-- zach /zach    1302 2010-08-20 14:16 g
+-rw-r--r-- zach /other   1178 2010-08-20 14:16 b
+-rw-r--r-- zach /zach    3783 2010-08-20 14:17 d
+
+
+# === Extract files from combined file ===
+
+$ ls -l mak*-rw-r--r-- 1 sam sam 1564560 2010-04-12 15:51 make-3.81.tar.gz
+$ gunzip mak*$ ls -l mak*-rw-r--r-- 1 sam sam 6072320 2010-04-12 15:51 make-3.81.tar
+
+# –x to extract files from a tar archive$ tar -xvf mak*make-3.81/make-3.81/config/
+make-3.81/config/dospaths.m4...
+make-3.81/tests/run_make_tests.pl
+make-3.81/tests/test_driver.pl
+
+# ===combine the gunzip and tar commands===
+
+# The –c option causes gunzip to send its output through the pipe instead of creating a file. The final hyphen (–) causes tar to read from standard input.
+$ gunzip -c make-3.81.tar.gz | tar -xvf -
+
+# –z option to cause tar to call gunzip
+$ tar -xvzf make-3.81.tar.gz
+
+# -j option to cause tar to call bzip2
+$ tar -xvjf make-3.81.tar.bz2
+```
 
 # Process
 

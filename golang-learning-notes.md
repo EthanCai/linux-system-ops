@@ -55,6 +55,9 @@
 
 # Tools
 
+- [godep](https://github.com/tools/godep): dependency tool for go
+- [gb](https://github.com/constabulary/gb): the project based build tool for Go
+- [toxy](https://github.com/h2non/toxy): Hackable HTTP proxy to simulate server failure scenarios and unexpected network conditions
 
 # FAQ
 
