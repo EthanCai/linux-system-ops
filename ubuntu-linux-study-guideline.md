@@ -621,6 +621,7 @@ $ tar -xvjf make-3.81.tar.bz2
             - super daemon，由一个特殊的 daemon 来统一管理
         - 参考
             - 阅读[鸟哥的Linux私房菜-认识系统服务](http://vbird.dic.ksu.edu.tw/linux_basic/0560daemons.php)
+			- 阅读[Systemd For Upstart Users](https://wiki.ubuntu.com/SystemdForUpstartUsers)
 - 实践
     - 通过/proc查看系统运行信息
         - [深入理解linux系统下proc文件系统内容](http://www.cnblogs.com/cute/archive/2011/04/20/2022280.html)
