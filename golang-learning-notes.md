@@ -51,7 +51,42 @@
 
 # Projects
 
+## Framework
+
 - [Beego](http://beego.me/): 一个使用 Go 的思维来帮助您构建并开发 Go 应用程序的开源框架
+- [Gobot](http://gobot.io/): Gobot is a framework for robotics, physical computing, and the Internet of Things, written in the Go programming language.
+- [GRPC](http://www.grpc.io/): A high performance, open source, general RPC framework that puts mobile and HTTP/2 first.
+- [bosun](https://github.com/bosun-monitor/bosun): Time Series Alerting Framework
+
+## SDK & Library
+
+- [bleve](https://github.com/blevesearch/bleve): A modern text indexing library for go
+- [weixinmp](https://github.com/sidbusy/weixinmp): 微信公众平台SDK for Go
+
+## Business Application
+
+- [captcha](https://github.com/jianxinio/captcha): Golang 实现的验证码服务
+- [Gor](https://github.com/wendal/gor): Golang编写的静态博客引擎
+- [heim](https://github.com/euphoria-io/heim): A real-time community platform
+- [Mattermost](https://github.com/mattermost/platform): Mattermost is an open-source team communication service. It brings team messaging and file sharing into one place, accessible across PCs and phones, with archiving and search.
+- [ohlala](https://github.com/QLeelulu/ohlala): 觅链： 一个具有社会化媒体属性的链接分享与评论平台。类似Reddit
+- [Pachyderm](https://github.com/pachyderm/pachyderm): Containerized Data Analytics
+- [Pholcus](https://github.com/henrylee2cn/pholcus): Pholcus（幽灵蛛）是一款纯Go语言编写的高并发、分布式、重量级爬虫软件，支持单机、服务端、客户端三种运行模式，拥有Web、GUI、命令行三种操作界面；规则简单灵活、批量任务并发、输出方式丰富（mysql/mongodb/csv/excel等）、有大量Demo共享；同时她还支持横纵向两种抓取模式，支持模拟登录和任务暂停、取消等一系列高级功能 
+ 
+## Infrastructure Application
+
+- [dkron](https://github.com/victorcoder/dkron): Distributed, fault tolerant job scheduling system
+- [GoTTY](https://github.com/yudai/gotty): Share your terminal as a web application
+- [Open-Falcon企业级监控系统解决方案](http://open-falcon.com/): Open-Falcon 是小米运维部开源的一款互联网企业级监控系统解决方案.
+- [Prometheus](https://github.com/prometheus/prometheus): Prometheus is a systems and service monitoring system. It collects metrics from configured targets at given intervals, evaluates rule expressions, displays the results, and can trigger alerts if some condition is observed to be true.
+- [restic](https://github.com/restic/restic): restic backup program
+- [serf](https://github.com/hashicorp/serf): Service orchestration and management tool
+- [syncthing](https://github.com/syncthing/syncthing): Open Source Continuous File Synchronization
+- [Tyk API Gateway](https://github.com/lonelycode/tyk): Tyk is a lightweight, open source API Gateway and enables you to control who accesses your API, when they access it and how they access it. Tyk will also record detailed analytics on how your users are interacting with your API and when things go wrong.
+- [webcron](https://github.com/codeskyblue/webcron): A new crontab that have a web page in order to replace the original crontab. Now it can try on test.
+- [Webhook](https://github.com/adnanh/webhook): webhook is a lightweight configurable tool written in Go, that allows you to easily create HTTP endpoints (hooks) on your server, which you can use to execute configured commands.
+- [gitea - a self-hosted Git service.](https://github.com/go-gitea/gitea)
+- [termui- Golang terminal dashboard](https://github.com/gizak/termui)
 
 # Tools
 
