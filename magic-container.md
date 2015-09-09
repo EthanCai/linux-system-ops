@@ -80,6 +80,10 @@ Docker uses a client-server architecture. The Docker client talks to the Docker 
 - [Weave](https://github.com/weaveworks/weave): Weave creates a virtual network that connects Docker containers deployed across multiple hosts and enables their automatic discovery.
 - [Pipework](https://github.com/jpetazzo/pipework): Software-Defined Networking for Linux Containers. Pipework lets you connect together containers in arbitrarily complex scenarios. Pipework uses cgroups and namespace and works with "plain" LXC containers (created with lxc-start), and with the awesome Docker.
 
+## Configuration Management
+
+- [Registrator](https://github.com/gliderlabs/registrator): Service registry bridge for Docker with pluggable adapters
+
 ## Docker Host OS
 
 - [CoreOS](https://coreos.com/): CoreOS produces, maintains and utilizes open source software for Linux containers and distributed systems. Projects are designed to be composable and complement each other in order to run container-ready infrastructure.
