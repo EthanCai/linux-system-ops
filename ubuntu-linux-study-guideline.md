@@ -908,10 +908,10 @@ col命令的使用方法见[col命名详解](http://myblog.jyc.edu.cn/?p=62)
 
 ```bash
 # 修改已加载的hostname和/etc/hostname中的hostname
-$ hostnamectl set-hostname [new-hostname]
+$ sudo hostnamectl set-hostname [new-hostname]
 
 # 修改/etc/hosts中的hostname
-$ sed -i "s/[old-hostname]/[new-hostname]/g" `grep [oldhostname] /etc/hosts`
+$ sudo sed -i "s/[old-hostname]/[new-hostname]/g" /etc/hosts
 ```
 
 ## 设置DNS服务的服务地址
