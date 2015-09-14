@@ -57,11 +57,13 @@
 - [Gobot](http://gobot.io/): Gobot is a framework for robotics, physical computing, and the Internet of Things, written in the Go programming language.
 - [GRPC](http://www.grpc.io/): A high performance, open source, general RPC framework that puts mobile and HTTP/2 first.
 - [bosun](https://github.com/bosun-monitor/bosun): Time Series Alerting Framework
+- [gokit](https://github.com/go-kit/kit): o kit is a distributed programming toolkit for building microservices in large organizations. We solve common problems in distributed systems, so you can focus on your business logic.
 
 ## SDK & Library
 
 - [bleve](https://github.com/blevesearch/bleve): A modern text indexing library for go
 - [weixinmp](https://github.com/sidbusy/weixinmp): 微信公众平台SDK for Go
+- [Gorilla web toolkit](http://www.gorillatoolkit.org/): Gorilla is a web toolkit for the Go programming language.
 
 ## Business Application
 
