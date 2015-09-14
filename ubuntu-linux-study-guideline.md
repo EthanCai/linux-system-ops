@@ -891,7 +891,7 @@ sudo apt-get install openssh-server
 
 将man手册查询命令输出到文本文件中，要求过滤掉控制字符^H（Backspace (退格)）  
 
-`man chmod |col –b >/home/man_chmod.txt`
+`man chmod | col –b >/home/man_chmod.txt`
 
 col命令的使用方法见[col命名详解](http://myblog.jyc.edu.cn/?p=62)
 
@@ -907,7 +907,11 @@ col命令的使用方法见[col命名详解](http://myblog.jyc.edu.cn/?p=62)
 - `hostnamectl`命令包含了临时修改hostname和修改`/etc/hostname`两种操作，但是不会修改`/etc/hosts`，所以执行`hostnamectl`命令后还需要手动修改`/etc/hosts`文件  
 
 ```bash
-hostnamectl set-hostname new-hostname
+# 修改已加载的hostname和/etc/hostname中的hostname
+$ hostnamectl set-hostname [new-hostname]
+
+# 修改/etc/hosts中的hostname
+$ sed -i "s/[old-hostname]/[new-hostname]/g" `grep [oldhostname] /etc/hosts`
 ```
 
 ## 设置DNS服务的服务地址
