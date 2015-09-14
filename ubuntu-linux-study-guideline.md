@@ -793,25 +793,6 @@ $ tar -xvjf make-3.81.tar.bz2
 
 # FAQ
 
-## 如何安装中文语言支持（System Settings -> Language Support）及中文输入法（System Settings -> Text Entry）
-
-[Ubuntu上的输入法情况](http://wiki.ubuntu.org.cn/%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95):
-
-> Ubuntu上有IBus、Fcitx等开源的输入法框架，支持各种各样的引擎。  
-> Rime（中州韵输入法引擎）是一种流行的开源跨平台输入法，支持IBus和Fcitx框架。  
-> 搜狗输入法在2014年4月发布了Linux版本，使用Fcitx框架。  
-> 免费但不开源的小小输入法，也提供对Ubuntu的支持。  
-> 作为Chrome扩展的输入法：Google Input Tools  
-> 作为Firefox扩展的输入法：火输(Fireinput)。  
-> 可以直接在浏览器中使用的云输入法：搜狗云输入法、QQ云输入法等。
-
-目前比较推荐Linux上的搜狗输入法：[下载地址](http://pinyin.sogou.com/linux/?r=pinyin)
-
-搜过拼音的安装方法：
-
-- [Ubuntu 14.04安装搜狗拼音linux版应该注意的问题](http://blog.csdn.net/tao_627/article/details/24119037)
-- [Ubuntu下安装搜狗拼音输入法](http://blog.csdn.net/rflyee/article/details/9472579)
-
 ## 如何升级系统，安装最新的补丁和最新版本的软件
 
 GUI操作
@@ -821,7 +802,7 @@ GUI操作
 
 终端操作
 
-1. 执行下面的命令，安装最新的系统补丁：`sudo apt-get update && sudo apt-get dist-upgrade`
+1. 执行下面的命令，安装最新的系统补丁：`sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get autoclean`
 
 ## 修改Ubuntu Software Repository的下载地址，比如把下载地址改为国内的repository服务地址
 
@@ -846,6 +827,35 @@ See `man sources.list` for more about this storage mechanism.
 
 By editing these files from the command line, we can add, remove, or temporarily disable software repositories.
 
+To update the repository url, Please refer to following scripts:
+
+```bash
+# 1. backup sources.list
+$ sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup
+
+# 2. modify the url of repositories
+$ sudo sed -i 's/cn.archive.ubuntu.com/mirrors.yun-idc.com/g' /etc/apt/sources.list
+```
+
+## 如何安装中文语言支持（System Settings -> Language Support）及中文输入法（System Settings -> Text Entry）
+
+[Ubuntu上的输入法情况](http://wiki.ubuntu.org.cn/%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95):
+
+> Ubuntu上有IBus、Fcitx等开源的输入法框架，支持各种各样的引擎。  
+> Rime（中州韵输入法引擎）是一种流行的开源跨平台输入法，支持IBus和Fcitx框架。  
+> 搜狗输入法在2014年4月发布了Linux版本，使用Fcitx框架。  
+> 免费但不开源的小小输入法，也提供对Ubuntu的支持。  
+> 作为Chrome扩展的输入法：Google Input Tools  
+> 作为Firefox扩展的输入法：火输(Fireinput)。  
+> 可以直接在浏览器中使用的云输入法：搜狗云输入法、QQ云输入法等。
+
+目前比较推荐Linux上的搜狗输入法：[下载地址](http://pinyin.sogou.com/linux/?r=pinyin)
+
+搜过拼音的安装方法：
+
+- [Ubuntu 14.04安装搜狗拼音linux版应该注意的问题](http://blog.csdn.net/tao_627/article/details/24119037)
+- [Ubuntu下安装搜狗拼音输入法](http://blog.csdn.net/rflyee/article/details/9472579)
+
 ## 如何给Ubuntu Linux Virutal Machine安装VMWare Tools
 
 - 安装方法参考
@@ -858,12 +868,24 @@ By editing these files from the command line, we can add, remove, or temporarily
 
 参考[How do I install Parallels Tools in Ubuntu Virtual Machine?](http://kb.parallels.com/en/113394)
 
-## 给Ubuntu安装SSH服务
+## 给Ubuntu安装OpenSSH Server和Client
 
-ubuntu默认并没有安装ssh服务，如果通过ssh链接ubuntu，需要自己手动安装ssh-server。
+参考：
 
 - [Ubuntu Document - OpenSSH 服务器](https://help.ubuntu.com/lts/serverguide/openssh-server.html)
 - [ubuntu下如何安装使用SSH？](http://os.51cto.com/art/201109/291634.htm)
+
+ubuntu默认并没有安装OpenSSH Server和Client。要在您 Ubuntu 系统中安装 OpenSSH 客户端应用程序，可以在终端提示符后使用以下命令：
+
+```bash
+sudo apt-get install openssh-client
+```
+
+要安装 OpenSSH 服务器应用程序及相关的支持文件，可以在终端提示符后使用以下命令：
+
+```bash
+sudo apt-get install openssh-server
+```
 
 ## 使用命令`man wget > man-wget.txt`把命令文档输入到文本文件后，打开man-wget.txt，发现有很多重复字符，或者乱码？
 
