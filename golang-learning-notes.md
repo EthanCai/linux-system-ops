@@ -54,10 +54,19 @@
 	
 # Projects
 
+# Dev Tools
+
+- [godep](https://github.com/tools/godep): dependency tool for go
+- [gb](https://github.com/constabulary/gb): the project based build tool for Go
+- [Delve](https://github.com/derekparker/delve/): Delve is a debugger for the Go programming language.
+- [Go plugin for IntelliJ](https://github.com/go-lang-plugin-org/go-lang-idea-plugin): Google Go language IDE built using the IntelliJ Platform
+- [Wide](https://github.com/b3log/wide): A Web-based IDE for Teams using Go programming language/Golang
+
 ## Framework
 
 - [Beego](http://beego.me/): 一个使用 Go 的思维来帮助您构建并开发 Go 应用程序的开源框架
 - [revel](http://revel.github.io/): A high-productivity web framework for the Go language.
+- [tango](https://github.com/lunny/tango): Micro & pluggable web framework for Go
 - [Gobot](http://gobot.io/): Gobot is a framework for robotics, physical computing, and the Internet of Things, written in the Go programming language.
 - [GRPC](http://www.grpc.io/): A high performance, open source, general RPC framework that puts mobile and HTTP/2 first.
 - [bosun](https://github.com/bosun-monitor/bosun): Time Series Alerting Framework
@@ -68,6 +77,8 @@
 - [bleve](https://github.com/blevesearch/bleve): A modern text indexing library for go
 - [weixinmp](https://github.com/sidbusy/weixinmp): 微信公众平台SDK for Go
 - [Gorilla web toolkit](http://www.gorillatoolkit.org/): Gorilla is a web toolkit for the Go programming language.
+- [xorm](https://github.com/go-xorm/xorm): Simple and Powerful ORM for Go, support mysql/sqlite3/postgres/mssql/oracle/tidb/ql
+- [GoRazor](https://github.com/sipin/gorazor): Razor view engine for Golang
 
 ## Business Application
 
@@ -94,11 +105,10 @@
 - [Webhook](https://github.com/adnanh/webhook): webhook is a lightweight configurable tool written in Go, that allows you to easily create HTTP endpoints (hooks) on your server, which you can use to execute configured commands.
 - [gitea - a self-hosted Git service.](https://github.com/go-gitea/gitea)
 - [termui- Golang terminal dashboard](https://github.com/gizak/termui)
+- [NSQ](http://nsq.io/): A realtime distributed messaging platform
 
 # Tools
 
-- [godep](https://github.com/tools/godep): dependency tool for go
-- [gb](https://github.com/constabulary/gb): the project based build tool for Go
 - [toxy](https://github.com/h2non/toxy): Hackable HTTP proxy to simulate server failure scenarios and unexpected network conditions
 
 # FAQ
