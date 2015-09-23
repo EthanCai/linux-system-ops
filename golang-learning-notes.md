@@ -41,6 +41,7 @@
 	- IDE
 		- 使用Sublime，需要[安装GoSublime Package](https://github.com/DisposaBoy/GoSublime)
 		- 使用Atom，需要安装[Go-Plus Package](https://atom.io/packages/go-plus)
+		- 使用IDEA，需要安装[go-lang-idea-plugin](https://github.com/go-lang-plugin-org/go-lang-idea-plugin/wiki/Documentation), 文档见[这里](https://github.com/go-lang-plugin-org/go-lang-idea-plugin/wiki/Documentation)
 1. 练习搭建基本的Workspace，并熟悉Workspace的结构、Go代码结构、编写基本的单元测试、`Go fmt/build/install/run/test`等命名的使用
 	- [How to Write Go Code](http://golang.org/doc/code.html)
 	- [Go命令文档](http://golang.org/doc/cmd)
