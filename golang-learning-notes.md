@@ -31,33 +31,37 @@
 
 工具：
 
-- [Go语言在线交互教程](http://tour.golang.org/welcome/1)
-- [Package sources](http://golang.org/src/)
-- [Package documentation](http://golang.org/pkg/)
-- [Command documentation](http://golang.org/doc/cmd)
-- [Language specification](http://golang.org/ref/spec)
-- [Memory Module](http://golang.org/ref/mem)
-- [effective go - go programming style guide](http://golang.org/doc/effective_go.html)
+- [Go-search](http://go-search.org/): 查找Go packages
+- [Go语言在线交互教程，及在线运行IDE](http://tour.golang.org/welcome/1)
 
 # 学习路径
 
 1. 安装Go
 	- 参考[Get Started](http://golang.org/doc/install)安装Golang runtime，如果OS X通过Homebrew安装
-	- IDE使用Sublime，需要[安装GoSublime Package](https://github.com/DisposaBoy/GoSublime)
+	- IDE
+		- 使用Sublime，需要[安装GoSublime Package](https://github.com/DisposaBoy/GoSublime)
+		- 使用Atom，需要安装[Go-Plus Package](https://atom.io/packages/go-plus)
 1. 练习搭建基本的Workspace，并熟悉Workspace的结构、Go代码结构、编写基本的单元测试、`Go fmt/build/install/run/test`等命名的使用
-	- 参考[How to Write Go Code](http://golang.org/doc/code.html)
-1. 学习Golang语法
-	- Golang语法手册参考[The Go Programming Language Specification](http://golang.org/ref/spec)
-
+	- [How to Write Go Code](http://golang.org/doc/code.html)
+	- [Go命令文档](http://golang.org/doc/cmd)
+1. 编写Golang程序
+	- [Effective Go - Go语言编码规范](http://golang.org/doc/effective_go.html)
+	- [Go语言Package文档](http://golang.org/pkg/)
+1. 其它
+	- [Golang Memory Module](http://golang.org/ref/mem)
+	- [Go语言源代码](https://go.googlesource.com/go/)：在线查看Go语言源代码访问[这里](http://golang.org/src/)
+	- [Go语言语法规格](http://golang.org/ref/spec)
+	
 # Projects
 
 ## Framework
 
 - [Beego](http://beego.me/): 一个使用 Go 的思维来帮助您构建并开发 Go 应用程序的开源框架
+- [revel](http://revel.github.io/): A high-productivity web framework for the Go language.
 - [Gobot](http://gobot.io/): Gobot is a framework for robotics, physical computing, and the Internet of Things, written in the Go programming language.
 - [GRPC](http://www.grpc.io/): A high performance, open source, general RPC framework that puts mobile and HTTP/2 first.
 - [bosun](https://github.com/bosun-monitor/bosun): Time Series Alerting Framework
-- [gokit](https://github.com/go-kit/kit): o kit is a distributed programming toolkit for building microservices in large organizations. We solve common problems in distributed systems, so you can focus on your business logic.
+- [gokit](https://github.com/go-kit/kit): Go kit is a distributed programming toolkit for building microservices in large organizations. We solve common problems in distributed systems, so you can focus on your business logic.
 
 ## SDK & Library
 
@@ -67,13 +71,14 @@
 
 ## Business Application
 
-- [captcha](https://github.com/jianxinio/captcha): Golang 实现的验证码服务
+- [captcha](https://github.com/jianxinio/captcha): Golang实现的验证码服务
 - [Gor](https://github.com/wendal/gor): Golang编写的静态博客引擎
 - [heim](https://github.com/euphoria-io/heim): A real-time community platform
 - [Mattermost](https://github.com/mattermost/platform): Mattermost is an open-source team communication service. It brings team messaging and file sharing into one place, accessible across PCs and phones, with archiving and search.
-- [ohlala](https://github.com/QLeelulu/ohlala): 觅链： 一个具有社会化媒体属性的链接分享与评论平台。类似Reddit
+- [ohlala](https://github.com/QLeelulu/ohlala): 觅链，一个具有社会化媒体属性的链接分享与评论平台。类似Reddit
 - [Pachyderm](https://github.com/pachyderm/pachyderm): Containerized Data Analytics
 - [Pholcus](https://github.com/henrylee2cn/pholcus): Pholcus（幽灵蛛）是一款纯Go语言编写的高并发、分布式、重量级爬虫软件，支持单机、服务端、客户端三种运行模式，拥有Web、GUI、命令行三种操作界面；规则简单灵活、批量任务并发、输出方式丰富（mysql/mongodb/csv/excel等）、有大量Demo共享；同时她还支持横纵向两种抓取模式，支持模拟登录和任务暂停、取消等一系列高级功能 
+- [uniqush-push](https://github.com/uniqush/uniqush-push): Uniqush is a free and open source software which provides a unified push service for server-side notification to apps on mobile devices.
  
 ## Infrastructure Application
 
