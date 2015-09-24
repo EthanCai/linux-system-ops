@@ -19,7 +19,6 @@
 - [golang](http://golang.org/)
 - [golang国内镜像](http://docscn.studygolang.com/)
 - [golang资料集](https://github.com/ty4z2008/Qix/blob/master/golang.md)
-- [Go Packages](https://godoc.org/)
 - [Go语言资料收集](https://github.com/wonderfo/wonderfogo/wiki)
 
 社区：
@@ -31,6 +30,7 @@
 
 工具：
 
+- [Go Packages](https://godoc.org/): Search for Go Packages
 - [Go-search](http://go-search.org/): 查找Go packages
 - [Go语言在线交互教程，及在线运行IDE](http://tour.golang.org/welcome/1)
 - [Go by Example](https://gobyexample.com/): Go by Example is a hands-on introduction to Go using annotated example programs. 
@@ -47,13 +47,24 @@
 	- [How to Write Go Code](http://golang.org/doc/code.html)
 	- [Go命令文档](http://golang.org/doc/cmd)
 1. 编写Golang程序
-	- [Effective Go - Go语言编码规范](http://golang.org/doc/effective_go.html)
-	- [Go语言Package文档](http://golang.org/pkg/)
+	- 熟悉Golang的编码规范，[Effective Go - Go语言编码规范](http://golang.org/doc/effective_go.html)
+	- 熟悉Golang标准库，[Go语言Package文档](http://golang.org/pkg/)
 1. 其它
 	- [Golang Memory Module](http://golang.org/ref/mem)
 	- [Go语言源代码](https://go.googlesource.com/go/)：在线查看Go语言源代码访问[这里](http://golang.org/src/)
 	- [Go语言语法规格](http://golang.org/ref/spec)
-	
+
+## Go语言标准库
+
+Go标准库可以大致按其中库的功能进行以下分类,这个分类比较简单,不求准确,但求能 够帮助开发者根据自己模糊的需求更快找到自己需要的包。
+
+- 输入输出。这个分类包括二进制以及文本格式在屏幕、键盘、文件以及其他设备上的输入输出等,比如二进制文件的读写。对应于此分类的包有bufio、fmt、io、log和flag等,其中flag用于处理命令行参数。
+- 文本处理。这个分类包括字符串和文本内容的处理,比如字符编码转换等。对应于此分类的包有encoding、bytes、strings、strconv、text、mime、unicode、regexp、index和path等。其中path用于处理路径字符串。
+- 网络。这个分类包括开发网络程序所需要的包,比如Socket编程和网站开发等。对应于此分类的包有:net、http和expvar等。
+- 系统。这个分类包含对系统功能的封装,比如对操作系统的交互以及原子性操作等。对应于此分类的包有os、syscall、sync、time和unsafe等。
+
+更多的标准库说明参考[Go语言Package文档](http://golang.org/pkg/)
+
 # Projects
 
 # Dev Tools
