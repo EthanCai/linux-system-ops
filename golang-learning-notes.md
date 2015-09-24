@@ -58,6 +58,7 @@
 
 # Dev Tools
 
+- [GoPM](https://github.com/gpmgo/gopm): Go Package Manager (gopm) is a package manager and build tool for Go.
 - [godep](https://github.com/tools/godep): dependency tool for go
 - [gb](https://github.com/constabulary/gb): the project based build tool for Go
 - [Delve](https://github.com/derekparker/delve/): Delve is a debugger for the Go programming language.
