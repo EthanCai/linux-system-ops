@@ -33,6 +33,7 @@
 
 - [Go-search](http://go-search.org/): 查找Go packages
 - [Go语言在线交互教程，及在线运行IDE](http://tour.golang.org/welcome/1)
+- [Go by Example](https://gobyexample.com/): Go by Example is a hands-on introduction to Go using annotated example programs. 
 
 # 学习路径
 
