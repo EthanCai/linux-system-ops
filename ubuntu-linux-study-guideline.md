@@ -1,68 +1,3 @@
-<!-- TOC depth:2 withLinks:0 updateOnSave:0 orderedList:0 -->
-
-- Preface
-- Glossary
-- Install Ubuntu Linux
-	- 目标
-	- 内容
-	- Shell基本命令
-	- 练习
-- Basic Shell Knowledge
-	- 目标
-	- 内容
-	- Shell基本命令
-- Install and Manage Packages
-	- 目标
-	- 内容
-	- Shell命令
-	- 练习
-- SSH
-	- 目标
-	- 内容
-	- Shell基本命令
-- Basic Vim Usage
-	- 目标
-	- 熟悉Vim
-- File, Directory, User, User Group, Authority
-	- 目标
-	- 内容
-- Compress and Uncompress Files
-	- 目标
-	- 内容
-	- 练习
-- Process
-	- 目标
-	- 内容
-	- Shell基本命令
-- Basic Network Management
-	- 目标
-	- Basic Network Management
-	- Shell命令
-- Writing Shell Scripts
-	- 目标
-	- Writing Shell Scripts
-	- Shell命令
-- Schedule Tasks
-	- 目标
-	- 内容
-- Futher Reading
-	- Knowledge
-	- Utilites
-- FAQ
-	- 如何安装中文语言支持（System Settings -> Language Support）及中文输入法（System Settings -> Text Entry）
-	- 如何升级系统，安装最新的补丁和最新版本的软件
-	- 修改Ubuntu Software Repository的下载地址，比如把下载地址改为国内的repository服务地址
-	- 如何给Ubuntu Linux Virutal Machine安装VMWare Tools
-	- 如何给Ubuntu Linux Virtual Machine安装Parallel Tools
-	- 给Ubuntu安装SSH服务
-	- 使用命令`man wget > man-wget.txt`把命令文档输入到文本文件后，打开man-wget.txt，发现有很多重复字符，或者乱码？
-	- 如何修改OS的hostname
-	- 设置DNS服务的服务地址
-	- 如何配置网卡和IP地址
-	- 如何从Internet更新ubuntu本地的时间？
-	- 切换网络后，如何强制更新网卡IP？
-<!-- /TOC -->
-
 # Preface
 
 面向开发的Ubuntu Linux快速学习手册，掌握基本Ubuntu Linux操作和管理
@@ -70,7 +5,6 @@
 # Glossary
 
 - **PG2UL**: 代表Pratical Guide to Ubuntu Linux, 3rd
-
 
 # Install Ubuntu Linux
 
@@ -276,7 +210,6 @@ drwxr-xr-x  12 root root  4096 May 10 02:01 var/
         - `apt-cache`: 主要用来查询软件包的状态和依赖关系
         - `apt-file`: 主要负责查询软件包名称和软件包包含的文件（值得注意的是它要自己同步）
 - `aptitude`
-    - 详细说明参考：[aptitude user's manual](https://www.debian.org/doc/manuals/aptitude/)
     - Ubuntu desktop 14.04中，并没有默认安装aptitude，需要执行`sudo apt-get install aptitude`来安装
     - `aptitude install`: install package and its dependencies
     - `aptitude remove`: remove package and its dependencies, but not include configuration
@@ -302,11 +235,11 @@ drwxr-xr-x  12 root root  4096 May 10 02:01 var/
 ```bash
 dpkg --get-selections pattern #查找软件包名称包含 pattern 的软件包，可以在后面用 grep install/deinstall 来选择是否已经被 remove 的包(曾经安装过了的)
 apt-cache search pattern #查找软件包名称和描述包含 pattern 的软件包 (可以是安装了也可以是没有安装)，可以用参数来限制是否已经安装
-aptitude search '~i' #查找已经安装的软件包
-aptitude search '~ipython' #查找已经安装的名称为python的软件包
-aptitude search '~c' #查找已经被 remove 的软件包，还有配置文件存在
-aptitude search '~npattern' #查找软件包名称包含 pattern 的软件包 (可以是安装了也可以是没有安装)
-aptitude search '\!~i~npattern' #查找还没有安装的软件包名字包含 pattern 的软件包。(前面的 ! 是取反的意思，反划线是 escape 符号)
+aptitude search ~i #查找已经安装的软件包
+aptitude search ~c #查找已经被 remove 的软件包，还有配置文件存在
+aptitude search ~npattern #查找软件包名称包含 pattern 的软件包 (可以是安装了也可以是没有安装)
+aptitude search \!~i~npattern #查找还没有安装的软件包名字包含 pattern 的软件包。(前面的 ! 是取反的意思，反划线是 escape 符号)
+注：还有很多用法，可以去看看我在 forum 中写的帖子 [aptitude Search Patterns](http://forum.ubuntu.org.cn/viewtopic.php?f=52&t=259550)
 
 apt-cache depends package #查找名称是 package 软件包的依赖关系
 aptitude search ~R~npackage #查找名称是 package 软件包的依赖关系，可以同时看到是不是已经安装
@@ -546,11 +479,9 @@ aptitude full-upgrade #同上
 
 ```bash
 #使用bzip2压缩文件默认会自动删除原文件，生成的压缩文件名是"[原文件名（包括扩展名）].bz2"
-$ bzip2 -v letter_e
-letter_e: 11680.00:1, 0.001 bits/byte, 99.99% saved, 584000 in, 50 out.
+$ bzip2 -v letter_eletter_e: 11680.00:1, 0.001 bits/byte, 99.99% saved, 584000 in, 50 out.
 
-$ ls -l
--rw-rw-r-- 1 sam sam 50 2010-03-01 22:31 letter_e.bz2
+$ ls -l-rw-rw-r-- 1 sam sam 50 2010-03-01 22:31 letter_e.bz2
 
 # 使用bunzip2解压文件会自动删除原压缩文件，原文件名去掉末尾的".bz2"就是生成的解压缩文件名
 $ bunzip -v letter_e.bz2
@@ -565,22 +496,15 @@ eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 ```bash
 # === Combine files into one file ===
 
-$ ls -l g b d
--rw-r--r-- 1 zach other 1178 2010-08-20 14:16 b
+$ ls -l g b d-rw-r--r-- 1 zach other 1178 2010-08-20 14:16 b
 -rw-r--r-- 1 zach zach  3783 2010-08-20 14:17 d
 -rw-r--r-- 1 zach zach  1302 2010-08-20 14:16 g
 
-#  –c (create), –v (verbose), and –f (write to or read from a file)
-$ tar -cvf all.tar g b d
-g
-b
-d
+#  –c (create), –v (verbose), and –f (write to or read from a file)$ tar -cvf all.tar g b d
+gbd
+$ ls -l all.tar-rw-r--r-- 1 zach zach  9728 2010-08-20 14:17 all.tar
 
-$ ls -l all.tar
--rw-r--r-- 1 zach zach  9728 2010-08-20 14:17 all.tar
-
-# –t option to display a table of contents for the archive
-$ tar -tvf all.tar
+# –t option to display a table of contents for the archive$ tar -tvf all.tar
 -rw-r--r-- zach /zach    1302 2010-08-20 14:16 g
 -rw-r--r-- zach /other   1178 2010-08-20 14:16 b
 -rw-r--r-- zach /zach    3783 2010-08-20 14:17 d
@@ -588,19 +512,11 @@ $ tar -tvf all.tar
 
 # === Extract files from combined file ===
 
-$ ls -l mak*
--rw-r--r-- 1 sam sam 1564560 2010-04-12 15:51 make-3.81.tar.gz
+$ ls -l mak*-rw-r--r-- 1 sam sam 1564560 2010-04-12 15:51 make-3.81.tar.gz
+$ gunzip mak*$ ls -l mak*-rw-r--r-- 1 sam sam 6072320 2010-04-12 15:51 make-3.81.tar
 
-$ gunzip mak*
-$ ls -l mak*
--rw-r--r-- 1 sam sam 6072320 2010-04-12 15:51 make-3.81.tar
-
-# –x to extract files from a tar archive
-$ tar -xvf mak*
-make-3.81/
-make-3.81/config/
-make-3.81/config/dospaths.m4
-...
+# –x to extract files from a tar archive$ tar -xvf mak*make-3.81/make-3.81/config/
+make-3.81/config/dospaths.m4...
 make-3.81/tests/run_make_tests.pl
 make-3.81/tests/test_driver.pl
 
@@ -639,7 +555,6 @@ $ tar -xvjf make-3.81.tar.bz2
             - super daemon，由一个特殊的 daemon 来统一管理
         - 参考
             - 阅读[鸟哥的Linux私房菜-认识系统服务](http://vbird.dic.ksu.edu.tw/linux_basic/0560daemons.php)
-			- 阅读[Systemd For Upstart Users](https://wiki.ubuntu.com/SystemdForUpstartUsers)
 - 实践
     - 通过/proc查看系统运行信息
         - [深入理解linux系统下proc文件系统内容](http://www.cnblogs.com/cute/archive/2011/04/20/2022280.html)
@@ -740,6 +655,7 @@ $ tar -xvjf make-3.81.tar.bz2
 ## Writing Shell Scripts
 
 ### 基本概念
+
 -  login shell vs nonlogin shell, interactive shell vs noninteractive shell
     - Login shells: `/etc/profile`, `.bash_profile`, `.bash_login`, `.profile`, `.bash_logout`
     - Interactive nonlogin shells: `/etc/bashrc`, `.bashrc`
@@ -753,13 +669,12 @@ $ tar -xvjf make-3.81.tar.bz2
     - `[]`: test command
     - `[[]]`: conditional expression
 - 必读：[Use the Unofficial Bash Strict Mode (Unless You Looove Debugging)](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
+- 参考
+	- PG2UL, page 953
 
 ### 语法
 
-- 参考
-    - Practical Guide to Ubuntu Linux, page 953
-
-#### Control Structure
+#### Control Structures
 
 ```bash
 #----------------------------------
@@ -851,7 +766,7 @@ sort $2 > $file2
 exec 3<$file1
 exec 4<$file2
 
-# Read the first line from each file to figure out how to start. 
+# Read the first line from each file to figure out how to start.
 read Line1 <&3
 status1=$?
 read Line2 <&4
@@ -920,13 +835,6 @@ exit 0
 
 # Futher Reading
 
-## Books
-
-- Practical Guide to Ubuntu Linux，简称PG2UL
-- Linux Shell Scripting Cookbook，简称LSSC
-- Linux Command Line and Shell Scripting Bible，Linux命令行与Shell编程大全（第2版），简称LCL&SSB
-- Unix/Linux系统管理技术手册
-
 ## Knowledge
 
 - [The art of command line](https://github.com/jlevy/the-art-of-command-line)
@@ -940,6 +848,25 @@ exit 0
 
 # FAQ
 
+## 如何安装中文语言支持（System Settings -> Language Support）及中文输入法（System Settings -> Text Entry）
+
+[Ubuntu上的输入法情况](http://wiki.ubuntu.org.cn/%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95):
+
+> Ubuntu上有IBus、Fcitx等开源的输入法框架，支持各种各样的引擎。  
+> Rime（中州韵输入法引擎）是一种流行的开源跨平台输入法，支持IBus和Fcitx框架。  
+> 搜狗输入法在2014年4月发布了Linux版本，使用Fcitx框架。  
+> 免费但不开源的小小输入法，也提供对Ubuntu的支持。  
+> 作为Chrome扩展的输入法：Google Input Tools  
+> 作为Firefox扩展的输入法：火输(Fireinput)。  
+> 可以直接在浏览器中使用的云输入法：搜狗云输入法、QQ云输入法等。
+
+目前比较推荐Linux上的搜狗输入法：[下载地址](http://pinyin.sogou.com/linux/?r=pinyin)
+
+搜过拼音的安装方法：
+
+- [Ubuntu 14.04安装搜狗拼音linux版应该注意的问题](http://blog.csdn.net/tao_627/article/details/24119037)
+- [Ubuntu下安装搜狗拼音输入法](http://blog.csdn.net/rflyee/article/details/9472579)
+
 ## 如何升级系统，安装最新的补丁和最新版本的软件
 
 GUI操作
@@ -949,7 +876,7 @@ GUI操作
 
 终端操作
 
-1. 执行下面的命令，安装最新的系统补丁：`sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get autoclean`
+1. 执行下面的命令，安装最新的系统补丁：`sudo apt-get update && sudo apt-get dist-upgrade`
 
 ## 修改Ubuntu Software Repository的下载地址，比如把下载地址改为国内的repository服务地址
 
@@ -974,35 +901,6 @@ See `man sources.list` for more about this storage mechanism.
 
 By editing these files from the command line, we can add, remove, or temporarily disable software repositories.
 
-To update the repository url, Please refer to following scripts:
-
-```bash
-# 1. backup sources.list
-$ sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup
-
-# 2. modify the url of repositories
-$ sudo sed -i 's/cn.archive.ubuntu.com/mirrors.yun-idc.com/g' /etc/apt/sources.list
-```
-
-## 如何安装中文语言支持（System Settings -> Language Support）及中文输入法（System Settings -> Text Entry）
-
-[Ubuntu上的输入法情况](http://wiki.ubuntu.org.cn/%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95):
-
-> Ubuntu上有IBus、Fcitx等开源的输入法框架，支持各种各样的引擎。  
-> Rime（中州韵输入法引擎）是一种流行的开源跨平台输入法，支持IBus和Fcitx框架。  
-> 搜狗输入法在2014年4月发布了Linux版本，使用Fcitx框架。  
-> 免费但不开源的小小输入法，也提供对Ubuntu的支持。  
-> 作为Chrome扩展的输入法：Google Input Tools  
-> 作为Firefox扩展的输入法：火输(Fireinput)。  
-> 可以直接在浏览器中使用的云输入法：搜狗云输入法、QQ云输入法等。
-
-目前比较推荐Linux上的搜狗输入法：[下载地址](http://pinyin.sogou.com/linux/?r=pinyin)
-
-搜过拼音的安装方法：
-
-- [Ubuntu 14.04安装搜狗拼音linux版应该注意的问题](http://blog.csdn.net/tao_627/article/details/24119037)
-- [Ubuntu下安装搜狗拼音输入法](http://blog.csdn.net/rflyee/article/details/9472579)
-
 ## 如何给Ubuntu Linux Virutal Machine安装VMWare Tools
 
 - 安装方法参考
@@ -1015,30 +913,18 @@ $ sudo sed -i 's/cn.archive.ubuntu.com/mirrors.yun-idc.com/g' /etc/apt/sources.l
 
 参考[How do I install Parallels Tools in Ubuntu Virtual Machine?](http://kb.parallels.com/en/113394)
 
-## 给Ubuntu安装OpenSSH Server和Client
+## 给Ubuntu安装SSH服务
 
-参考：
+ubuntu默认并没有安装ssh服务，如果通过ssh链接ubuntu，需要自己手动安装ssh-server。
 
 - [Ubuntu Document - OpenSSH 服务器](https://help.ubuntu.com/lts/serverguide/openssh-server.html)
 - [ubuntu下如何安装使用SSH？](http://os.51cto.com/art/201109/291634.htm)
-
-ubuntu默认并没有安装OpenSSH Server和Client。要在您 Ubuntu 系统中安装 OpenSSH 客户端应用程序，可以在终端提示符后使用以下命令：
-
-```bash
-sudo apt-get install openssh-client
-```
-
-要安装 OpenSSH 服务器应用程序及相关的支持文件，可以在终端提示符后使用以下命令：
-
-```bash
-sudo apt-get install openssh-server
-```
 
 ## 使用命令`man wget > man-wget.txt`把命令文档输入到文本文件后，打开man-wget.txt，发现有很多重复字符，或者乱码？
 
 将man手册查询命令输出到文本文件中，要求过滤掉控制字符^H（Backspace (退格)）  
 
-`man chmod | col –b >/home/man_chmod.txt`
+`man chmod |col –b >/home/man_chmod.txt`
 
 col命令的使用方法见[col命名详解](http://myblog.jyc.edu.cn/?p=62)
 
@@ -1054,11 +940,7 @@ col命令的使用方法见[col命名详解](http://myblog.jyc.edu.cn/?p=62)
 - `hostnamectl`命令包含了临时修改hostname和修改`/etc/hostname`两种操作，但是不会修改`/etc/hosts`，所以执行`hostnamectl`命令后还需要手动修改`/etc/hosts`文件  
 
 ```bash
-# 修改已加载的hostname和/etc/hostname中的hostname
-$ sudo hostnamectl set-hostname [new-hostname]
-
-# 修改/etc/hosts中的hostname
-$ sudo sed -i "s/[old-hostname]/[new-hostname]/g" /etc/hosts
+hostnamectl set-hostname new-hostname
 ```
 
 ## 设置DNS服务的服务地址
