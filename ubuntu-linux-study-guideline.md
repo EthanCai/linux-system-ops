@@ -754,7 +754,116 @@ $ tar -xvjf make-3.81.tar.bz2
         - `[[]]`: conditional expression
     - 必读：[Use the Unofficial Bash Strict Mode (Unless You Looove Debugging)](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
 - 语法
-    - 参考：见PG2UL, page 953
+    - Control Structure
+        - `if...then`
+```bash
+# pattern
+if test-command
+    then
+        commands
+fi
+
+# check arguments amounts
+if [$# -eq 0]
+    then
+        echo "You must supply at least one argument."
+        exit 1
+fi
+
+# check whether file is an ordinary file
+if [-f "$1"]
+    then
+        echo "$1 is an ordinary file in the working directory"
+    else
+        echo "$1 is NOT an ordinary file in the working directory"
+fi
+```
+        - `if...then...else`
+        - `if...then...elif`
+        - `for...in`
+        - `for`
+        - `while`
+        - `until`
+        - `break` and `continue`
+        - `case`
+        - `select`
+        - here document
+    - File Descriptors
+```bash
+$ cat sortmerg
+#!/bin/bash
+usage ()
+{
+    if [ $# -ne 2 ]; then
+        echo "Usage: $0 file1 file2" 2>&1
+        exit 1
+    fi
+}
+
+# Default temporary directory
+: ${TEMPDIR:=/tmp}
+
+# Check argument count
+usage "$@"
+
+# Set up temporary files for sorting
+file1=$TEMPDIR/$$.file1
+file2=$TEMPDIR/$$.file2
+
+# Sort
+sort $1 > $file1
+sort $2 > $file2
+
+# Open $file1 and $file2 for reading. Use file descriptors 3 and 4.
+exec 3<$file1
+exec 4<$file2
+
+# Read the first line from each file to figure out how to start. 
+read Line1 <&3
+status1=$?
+read Line2 <&4
+status2=$?
+
+# Strategy: while there is still input left in both files:
+# Output the line that should come first.
+# Read a new line from the file that line came from.
+while [ $status1 -eq 0 -a $status2 -eq 0 ]
+do
+    if [[ "$Line2" > "$Line1" ]]; then
+            echo -e "1.\t$Line1"
+            read -u3 Line1
+            status1=$?
+        else
+            echo -e "2.\t$Line2"
+            read -u4 Line2
+            status2=$?
+    fi
+done
+
+# Now one of the files is at end-of-file.
+# Read from each file until the end.
+# First file1:
+while [ $status1 -eq 0 ]
+do
+    echo -e "1.\t$Line1"
+    read Line1 <&3
+    status1=$?
+done
+
+# Next file2:
+while [[ $status2 -eq 0 ]] do
+       echo -e "2.\t$Line2"
+       read Line2 <&4
+       status2=$?
+done
+
+# Close and remove both input files
+exec 3<&- 4<&-
+rm -f $file1 $file2
+exit 0
+```
+- 参考
+    - Practical Guide to Ubuntu Linux, page 953
 
 ## Shell命令
 
@@ -779,6 +888,13 @@ $ tar -xvjf make-3.81.tar.bz2
 
 
 # Futher Reading
+
+## Books
+
+- Practical Guide to Ubuntu Linux，简称PG2UL
+- Linux Shell Scripting Cookbook，简称LSSC
+- Linux Command Line and Shell Scripting Bible，Linux命令行与Shell编程大全（第2版），简称LCL&SSB
+- Unix/Linux系统管理技术手册
 
 ## Knowledge
 
