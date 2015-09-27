@@ -739,56 +739,89 @@ $ tar -xvjf make-3.81.tar.bz2
 
 ## Writing Shell Scripts
 
-- 基本概念
-    -  login shell vs nonlogin shell, interactive shell vs noninteractive shell
-        - Login shells: `/etc/profile`, `.bash_profile`, `.bash_login`, `.profile`, `.bash_logout`
-        - Interactive nonlogin shells: `/etc/bashrc`, `.bashrc`
-        - Noninteractive shells: `BASH_ENV`
-        - [交互式shell和非交互式shell、登录shell和非登录shell的区别](http://smilejay.com/2012/10/interactive-shell-login-shell/)
-    - Builtin commands that are symbols
-        - `()`: subshell
-        - `$()`: command substitution
-        - `(())`: arithmetic evaluation
-        - `$(())`: arithmetic expansion
-        - `[]`: test command
-        - `[[]]`: conditional expression
-    - 必读：[Use the Unofficial Bash Strict Mode (Unless You Looove Debugging)](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
-- 语法
-    - Control Structure
-        - `if...then`
+### 基本概念
+-  login shell vs nonlogin shell, interactive shell vs noninteractive shell
+    - Login shells: `/etc/profile`, `.bash_profile`, `.bash_login`, `.profile`, `.bash_logout`
+    - Interactive nonlogin shells: `/etc/bashrc`, `.bashrc`
+    - Noninteractive shells: `BASH_ENV`
+    - [交互式shell和非交互式shell、登录shell和非登录shell的区别](http://smilejay.com/2012/10/interactive-shell-login-shell/)
+- Builtin commands that are symbols
+    - `()`: subshell
+    - `$()`: command substitution
+    - `(())`: arithmetic evaluation
+    - `$(())`: arithmetic expansion
+    - `[]`: test command
+    - `[[]]`: conditional expression
+- 必读：[Use the Unofficial Bash Strict Mode (Unless You Looove Debugging)](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
+
+### 语法
+
+- 参考
+    - Practical Guide to Ubuntu Linux, page 953
+
+#### Control Structure
+
 ```bash
-# pattern
+#----------------------------------
+# if...else pattern
 if test-command
     then
         commands
 fi
 
 # check arguments amounts
-if [$# -eq 0]
+if [ $# -eq 0 ]
     then
         echo "You must supply at least one argument."
         exit 1
 fi
 
 # check whether file is an ordinary file
-if [-f "$1"]
+if [ -f "$1" ]
     then
         echo "$1 is an ordinary file in the working directory"
     else
         echo "$1 is NOT an ordinary file in the working directory"
 fi
+
+#----------------------------------
+# if...then...else pattern
+if test-command
+    then
+        commands
+    else
+        commands
+fi
+
+$ cat out
+if [ $# -eq 0 ]
+    then
+        echo "Usage: out [-v] filenames..." 1>&2
+        exit 1
+fi
+
+if [ "$1" = "-v" ]
+    then
+        shift
+        less -- "$@"
+    else
+        cat -- "$@"
+fi
+
+# `if...then...elif`
+# `for...in`
+# `for`
+# `while`
+# `until`
+# `break` and `continue`
+# `case`
+# `select`
+# here document
+
 ```
-        - `if...then...else`
-        - `if...then...elif`
-        - `for...in`
-        - `for`
-        - `while`
-        - `until`
-        - `break` and `continue`
-        - `case`
-        - `select`
-        - here document
-    - File Descriptors
+
+#### File Descriptors
+
 ```bash
 $ cat sortmerg
 #!/bin/bash
@@ -862,8 +895,6 @@ exec 3<&- 4<&-
 rm -f $file1 $file2
 exit 0
 ```
-- 参考
-    - Practical Guide to Ubuntu Linux, page 953
 
 ## Shell命令
 
