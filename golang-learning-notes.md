@@ -32,6 +32,7 @@
 
 - [Go Packages](https://godoc.org/): Search for Go Packages
 - [Go-search](http://go-search.org/): 查找Go packages
+- [Go Walker](https://gowalker.org/): Go Walker 是一个可以在线生成并浏览 Go 项目 API 文档的 Web 服务器，目前已支持包括 GitHub 等代码托管平台。
 - [Go语言在线交互教程，及在线运行IDE](http://tour.golang.org/welcome/1)
 - [Go by Example](https://gobyexample.com/): Go by Example is a hands-on introduction to Go using annotated example programs. 
 
@@ -75,6 +76,7 @@ Go标准库可以大致按其中库的功能进行以下分类,这个分类比�
 - [Delve](https://github.com/derekparker/delve/): Delve is a debugger for the Go programming language.
 - [Go plugin for IntelliJ](https://github.com/go-lang-plugin-org/go-lang-idea-plugin): Google Go language IDE built using the IntelliJ Platform
 - [Wide](https://github.com/b3log/wide): A Web-based IDE for Teams using Go programming language/Golang
+- [Gogs](http://gogs.io/): 极易搭建的自助 Git 服务
 
 ## Framework
 
