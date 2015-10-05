@@ -3,14 +3,14 @@
 参考：[Gobooks](https://github.com/dariubs/GoBooks)
 
 - [An Introduction to Programming in Go](http://www.golang-book.com/): 一本介绍Go语言的书籍，内容非常简洁，便于快速掌握Go语法。
-- [Go语言编程](http://book.douban.com/subject/11577300/)
+- [Go语言编程](http://book.douban.com/subject/11577300/): 对个Go语言几个主要的主题进行了介绍，但内容不系统，不适合作为入门读物。更多见[豆瓣点评](http://book.douban.com/subject/11577300/reviews)
 - [Go Programming Blueprints 2015](http://www.amazon.com/Go-Programming-Blueprints-Development-Challenges/dp/1783988029/ref=sr_1_1?ie=UTF8&qid=1438760964&sr=8-1&keywords=golang): Amazon评价很高，这本书介绍了很多高级主题
 - Network programming with Go.(2012)
 - [Programming in Go 2012.5.14](http://www.amazon.com/Programming-Go-Creating-Applications-Developers/dp/0321774639/ref=sr_1_4?ie=UTF8&qid=1438760964&sr=8-4&keywords=golang): 这本书的三个优点：High quality code samples；Idiomatic Go code；Details that aren't in the docs
 - Ready to Go
 - The Go Programming Language Phrasebook.(2012)
 - [The Way to Go a Thorough Introduction to the Go Programming Language 2012.3.8](http://www.amazon.com/Way-Go-Thorough-Introduction-Programming/dp/1469769166/ref=sr_1_9?ie=UTF8&qid=1438760964&sr=8-9&keywords=golang)
-- [build-web-application-with-golang](https://github.com/astaxie/build-web-application-with-golang) 
+- [build-web-application-with-golang](https://github.com/astaxie/build-web-application-with-golang)
 
 
 # Resources
@@ -32,27 +32,27 @@
 - [Go Packages](https://godoc.org/): Search for Go Packages
 - [Go-search](http://go-search.org/): 查找Go packages
 - [Go Walker](https://gowalker.org/): Go Walker 是一个可以在线生成并浏览 Go 项目 API 文档的 Web 服务器，目前已支持包括 GitHub 等代码托管平台。
-- [Go by Example](https://gobyexample.com/): Go by Example is a hands-on introduction to Go using annotated example programs. 
+- [Go by Example](https://gobyexample.com/): Go by Example is a hands-on introduction to Go using annotated example programs.
 
 
 # 学习路径
 
 1. 安装Go
-	- 参考[Get Started](http://golang.org/doc/install)安装Golang runtime，如果OS X通过Homebrew安装
-	- IDE
-		- 使用Atom，需要安装[Go-Plus Package](https://atom.io/packages/go-plus)
-		- 使用IDEA，需要安装[go-lang-idea-plugin](https://github.com/go-lang-plugin-org/go-lang-idea-plugin/wiki/Documentation), 文档见[这里](https://github.com/go-lang-plugin-org/go-lang-idea-plugin/wiki/Documentation)
-		- 使用Sublime，需要[安装GoSublime Package](https://github.com/DisposaBoy/GoSublime)
+    - 参考[Get Started](http://golang.org/doc/install)安装Golang runtime，如果OS X通过Homebrew安装
+    - IDE
+        - 使用Atom，需要安装[Go-Plus Package](https://atom.io/packages/go-plus)
+        - 使用IDEA，需要安装[go-lang-idea-plugin](https://github.com/go-lang-plugin-org/go-lang-idea-plugin/wiki/Documentation), 文档见[这里](https://github.com/go-lang-plugin-org/go-lang-idea-plugin/wiki/Documentation)
+        - 使用Sublime，需要[安装GoSublime Package](https://github.com/DisposaBoy/GoSublime)
 1. 练习搭建基本的Workspace，并熟悉Workspace的结构、Go代码结构、编写基本的单元测试、`Go fmt/build/install/run/test`等命名的使用
-	- [How to Write Go Code](http://golang.org/doc/code.html)
-	- [Go命令文档](http://golang.org/doc/cmd)
+    - [How to Write Go Code](http://golang.org/doc/code.html)
+    - [Go命令文档](http://golang.org/doc/cmd)
 1. 编写Golang程序
-	- 熟悉Golang的编码规范，[Effective Go - Go语言编码规范](http://golang.org/doc/effective_go.html)
-	- 熟悉Golang标准库，[Go语言Package文档](http://golang.org/pkg/)
+    - 熟悉Golang的编码规范，[Effective Go - Go语言编码规范](http://golang.org/doc/effective_go.html)
+    - 熟悉Golang标准库，[Go语言Package文档](http://golang.org/pkg/)
 1. 其它
-	- [Golang Memory Module](http://golang.org/ref/mem)
-	- [Go语言源代码](https://go.googlesource.com/go/)：在线查看Go语言源代码访问[这里](http://golang.org/src/)
-	- [Go语言语法规格](http://golang.org/ref/spec)
+    - [Golang Memory Module](http://golang.org/ref/mem)
+    - [Go语言源代码](https://go.googlesource.com/go/)：在线查看Go语言源代码访问[这里](http://golang.org/src/)
+    - [Go语言语法规格](http://golang.org/ref/spec)
 
 
 ## Go语言标准库
@@ -65,6 +65,273 @@ Go标准库可以大致按其中库的功能进行以下分类,这个分类比�
 - 系统。这个分类包含对系统功能的封装,比如对操作系统的交互以及原子性操作等。对应于此分类的包有os、syscall、sync、time和unsafe等。
 
 更多的标准库说明参考[Go语言Package文档](http://golang.org/pkg/)
+
+### 输入输出
+
+#### fmt
+
+#### io
+
+#### bufio
+
+#### log
+
+#### flag
+
+
+### 文本处理
+
+#### encoding
+
+#### bytes
+
+#### strings
+
+```go
+package main
+
+import (
+    "fmt"
+    "strings"
+)
+
+func main() {
+    fmt.Println(
+        // true
+        strings.Contains("test", "es"),
+        // 2
+        strings.Count("test", "t"),
+        // true
+        strings.HasPrefix("test", "te"),
+        // true
+        strings.HasSuffix("test", "st"),
+        // 1
+        strings.Index("test", "e"),
+        // "a-b"
+        strings.Join([]string{"a","b"}, "-"),
+        // == "aaaaa"
+        strings.Repeat("a", 5),
+        // "bbaa"
+        strings.Replace("aaaa", "a", "b", 2),
+        // []string{"a","b","c","d","e"}
+        strings.Split("a-b-c-d-e", "-"),
+        // "test"
+        strings.ToLower("TEST"),
+        // "TEST"
+        strings.ToUpper("test"),
+    )
+}
+```
+
+Sometimes we need to work with strings as binary data. To convert a string to a slice of bytes (and vice- versa) do this:
+
+```go
+arr := []byte("test")
+str := string([]byte{'t','e','s','t'})
+```
+
+#### strconv
+
+#### text
+
+#### mime
+
+#### regexp
+
+#### index
+
+#### path
+
+
+### 网络
+
+### net
+
+first take a look at how to create a TCP server:
+
+```go
+package main
+
+import (
+    "encoding/gob"
+    "fmt"
+    "net"
+)
+
+func server() {
+    // listen on a port
+    ln, err := net.Listen("tcp", ":9999")
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+    for {
+        // accept a connection
+        c, err := ln.Accept()
+        if err != nil {
+            fmt.Println(err)
+            continue
+        }
+        // handle the connection
+        go handleServerConnection(c)
+     }
+}
+
+func handleServerConnection(c net.Conn) {
+    // receive the message
+    var msg string
+    err := gob.NewDecoder(c).Decode(&msg)
+    if err != nil {
+       fmt.Println(err)
+    } else {
+       fmt.Println("Received", msg)
+    }
+    c.Close()
+}
+
+func client() {
+    // connect to the server
+    c, err := net.Dial("tcp", "127.0.0.1:9999")
+    if err != nil {
+       fmt.Println(err)
+        return
+    }
+    // send the message
+    msg := "Hello World"
+    fmt.Println("Sending", msg)
+    err = gob.NewEncoder(c).Encode(msg)
+    if err != nil {
+       fmt.Println(err)
+    }
+    c.Close()
+}
+
+func main() {
+     go server()
+     go client()
+     var input string
+     fmt.Scanln(&input)
+}
+```
+This example uses the `encoding/gob` package which makes it easy to encode Go values so that other Go programs (or the same Go program in this case) can read them. Additional encodings are available in packages underneath `encoding` (like `encoding/json`) as well as in 3rd party packages. (for example we could use labix.org/v2/mgo/bson for bson support)
+
+#### HTTP
+
+HTTP servers are even easier to setup and use:
+
+```go
+package main
+
+import ("net/http" ; "io")
+
+func hello(res http.ResponseWriter, req *http.Request) {
+     res.Header().Set(
+           "Content-Type",
+           "text/html",
+     )
+     io.WriteString(
+           res,
+           `<doctype html>
+<html>
+     <head>
+           <title>Hello World</title>
+     </head>
+     <body>
+           Hello World!
+     </body>
+</html>`)
+}
+
+func main() {
+    http.HandleFunc("/hello", hello)
+    http.ListenAndServe(":9000", nil)
+}
+```
+
+`HandleFunc` handles a URL route (/hello) by calling the given function. We can also handle static files by using `FileServer`:
+
+```go
+http.Handle(
+    "/assets/",
+    http.StripPrefix(
+        "/assets/",
+        http.FileServer(http.Dir("assets"))
+    ),
+)
+```
+
+#### RPC
+
+The `net/rpc` (remote procedure call) and `net/rpc/jsonrpc` packages provide an easy way to expose methods so they can be invoked over a network. (rather than just in the program running them)
+
+```go
+package main
+
+import (
+    "fmt"
+    "net"
+    "net/rpc"
+)
+
+type Server struct {}
+
+func (this *Server) Negate(i int64, reply *int64) error {
+    *reply = -i
+    return nil
+}
+
+func server() {
+    rpc.Register(new(Server))
+    ln, err := net.Listen("tcp", ":9999")
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+    for {
+        c, err := ln.Accept()
+        if err != nil {
+            continue
+        }
+        go rpc.ServeConn(c)
+    }
+}
+
+func client() {
+    c, err := rpc.Dial("tcp", "127.0.0.1:9999")
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+    var result int64
+    err = c.Call("Server.Negate", int64(999), &result)
+    if err != nil {
+       fmt.Println(err)
+    } else {
+       fmt.Println("Server.Negate(999) =", result)
+    }
+}
+
+func main() {
+     go server()
+     go client()
+     var input string
+     fmt.Scanln(&input)
+}
+```
+
+This program is similar to the TCP example, except now we created an object to hold all the methods we want to expose and we call the `Negate` method from the client. See the documentation in `net/rpc` for more details.
+
+#### expvar
+
+
+
+### 系统
+
+#### os
+#### syscall
+#### sync
+#### time
+#### unsafe
 
 # Projects
 
@@ -98,15 +365,15 @@ Go标准库可以大致按其中库的功能进行以下分类,这个分类比�
 
 ## Business Application
 
-- [captcha](https://github.com/jianxinio/captcha): Golang实现的验证码服务 
+- [captcha](https://github.com/jianxinio/captcha): Golang实现的验证码服务
 - [Gor](https://github.com/wendal/gor): Golang编写的静态博客引擎
 - [heim](https://github.com/euphoria-io/heim): A real-time community platform
 - [Mattermost](https://github.com/mattermost/platform): Mattermost is an open-source team communication service. It brings team messaging and file sharing into one place, accessible across PCs and phones, with archiving and search.
 - [ohlala](https://github.com/QLeelulu/ohlala): 觅链，一个具有社会化媒体属性的链接分享与评论平台。类似Reddit
 - [Pachyderm](https://github.com/pachyderm/pachyderm): Containerized Data Analytics
-- [Pholcus](https://github.com/henrylee2cn/pholcus): Pholcus（幽灵蛛）是一款纯Go语言编写的高并发、分布式、重量级爬虫软件，支持单机、服务端、客户端三种运行模式，拥有Web、GUI、命令行三种操作界面；规则简单灵活、批量任务并发、输出方式丰富（mysql/mongodb/csv/excel等）、有大量Demo共享；同时她还支持横纵向两种抓取模式，支持模拟登录和任务暂停、取消等一系列高级功能 
+- [Pholcus](https://github.com/henrylee2cn/pholcus): Pholcus（幽灵蛛）是一款纯Go语言编写的高并发、分布式、重量级爬虫软件，支持单机、服务端、客户端三种运行模式，拥有Web、GUI、命令行三种操作界面；规则简单灵活、批量任务并发、输出方式丰富（mysql/mongodb/csv/excel等）、有大量Demo共享；同时她还支持横纵向两种抓取模式，支持模拟登录和任务暂停、取消等一系列高级功能
 - [uniqush-push](https://github.com/uniqush/uniqush-push): Uniqush is a free and open source software which provides a unified push service for server-side notification to apps on mobile devices.
- 
+
 ## Infrastructure Application
 
 - [dkron](https://github.com/victorcoder/dkron): Distributed, fault tolerant job scheduling system
@@ -153,6 +420,3 @@ The Go runtime multiplexes a potentially large number of goroutines onto a small
 参考：
 
 - [Release History](http://golang.org/doc/devel/release.html)
-
-
-
