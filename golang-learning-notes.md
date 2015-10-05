@@ -12,6 +12,7 @@
 - [The Way to Go a Thorough Introduction to the Go Programming Language 2012.3.8](http://www.amazon.com/Way-Go-Thorough-Introduction-Programming/dp/1469769166/ref=sr_1_9?ie=UTF8&qid=1438760964&sr=8-9&keywords=golang)
 - [build-web-application-with-golang](https://github.com/astaxie/build-web-application-with-golang) 
 
+
 # Resources
 
 资源：
@@ -23,8 +24,6 @@
 
 社区：
 
-- [golang中国](http://golangtc.com/)
-- [go友团](http://golanghome.com/)
 - [Go邮件组](http://groups.google.com/group/golang-nuts)
 - [Go的中文邮件组](http://groups.google.com/group/golang-china)
 
@@ -33,17 +32,17 @@
 - [Go Packages](https://godoc.org/): Search for Go Packages
 - [Go-search](http://go-search.org/): 查找Go packages
 - [Go Walker](https://gowalker.org/): Go Walker 是一个可以在线生成并浏览 Go 项目 API 文档的 Web 服务器，目前已支持包括 GitHub 等代码托管平台。
-- [Go语言在线交互教程，及在线运行IDE](http://tour.golang.org/welcome/1)
 - [Go by Example](https://gobyexample.com/): Go by Example is a hands-on introduction to Go using annotated example programs. 
+
 
 # 学习路径
 
 1. 安装Go
 	- 参考[Get Started](http://golang.org/doc/install)安装Golang runtime，如果OS X通过Homebrew安装
 	- IDE
-		- 使用Sublime，需要[安装GoSublime Package](https://github.com/DisposaBoy/GoSublime)
 		- 使用Atom，需要安装[Go-Plus Package](https://atom.io/packages/go-plus)
 		- 使用IDEA，需要安装[go-lang-idea-plugin](https://github.com/go-lang-plugin-org/go-lang-idea-plugin/wiki/Documentation), 文档见[这里](https://github.com/go-lang-plugin-org/go-lang-idea-plugin/wiki/Documentation)
+		- 使用Sublime，需要[安装GoSublime Package](https://github.com/DisposaBoy/GoSublime)
 1. 练习搭建基本的Workspace，并熟悉Workspace的结构、Go代码结构、编写基本的单元测试、`Go fmt/build/install/run/test`等命名的使用
 	- [How to Write Go Code](http://golang.org/doc/code.html)
 	- [Go命令文档](http://golang.org/doc/cmd)
@@ -54,6 +53,7 @@
 	- [Golang Memory Module](http://golang.org/ref/mem)
 	- [Go语言源代码](https://go.googlesource.com/go/)：在线查看Go语言源代码访问[这里](http://golang.org/src/)
 	- [Go语言语法规格](http://golang.org/ref/spec)
+
 
 ## Go语言标准库
 
