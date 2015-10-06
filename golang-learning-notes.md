@@ -15,10 +15,13 @@
 
 # Resources
 
-资源：
+官方资源：
 
 - [golang](http://golang.org/)
 - [golang国内镜像](http://docscn.studygolang.com/)
+
+个人资料收集：
+
 - [golang资料集](https://github.com/ty4z2008/Qix/blob/master/golang.md)
 - [Go语言资料收集](https://github.com/wonderfo/wonderfogo/wiki)
 
@@ -49,6 +52,24 @@
 1. 编写Golang程序
     - 熟悉Golang的编码规范，[Effective Go - Go语言编码规范](http://golang.org/doc/effective_go.html)
     - 熟悉Golang标准库，[Go语言Package文档](http://golang.org/pkg/)
+1. 工程管理
+    - PC如果有多个Workspace，`GoPath`如何设置
+        - `GoPath`支持设置多个目录；如果`GoPath`设置了多个路径，执行`go get`命令，会默认下载到`GoPath`中第一个路径中
+        - Go语言编程一般混合使用第三方和自己开发的package，所以建议创建两个目录，一个用于保存第三方package的workspace，一个用于保存自己开发的package的workspace，把这两个目录都加到`GoPath`中
+        - 参考：
+            - [Go environment setup](http://blog.tideland.biz/2013-07-09-go-environment-setup)
+    - 如何引用第三方Package
+        - 工具
+            - [Godep](https://github.com/tools/godep): dependency tool for go
+            - [GoPM](https://github.com/gpmgo/gopm): Go Package Manager (gopm) is a package manager and build tool for Go.
+            - [GO15VENDOREXPERIMENT](http://studygolang.com/articles/4607): Go1.5推出的解决包依赖管理问题的实验性feature，缺少官方工具支持，建议[和Godep一起使用](http://ju.outofmemory.cn/entry/196996)
+        - 介绍
+            - [Package Management Tools - Golang Wiki](https://github.com/golang/go/wiki/PackageManagementTools)
+            - Godep和GoPM的区别：
+                - 使用GoPM方式管理引用的第三方package，引用第三方package的列表保存在`/.gopmfile`文件中，如[这里](https://github.com/gogits/gogs/blob/master/.gopmfile)
+                - 使用Godep方式管理引用的第三方package，引用的第三方package的列表保存在`/Godeps/Godeps.json`文件中，第三方package源代码也需要包含在项目代码中，保存在`/Godeps/_workspace/src`目录下，参考[etcd项目结构](https://github.com/coreos/etcd)
+                - GoPM管理方式更优雅；GoPM的管理命令也比Godep更易用；由于GoPM服务架设在中国，所以在国内使用GoPM访问也更快；但是GoPM管理方式存在安全问题，如果GoPM服务挂掉或者第三方package代码库变更，那么也就无法下载引用的第三方package，从安全角度对于企业是不可接受的
+                - Godeps管理方式虽然不存在安全问题，但是如果第三方package有更新，那么更新`/Godeps`目录下的第三方package代码也不方便
 1. 其它
     - [Golang Memory Module](http://golang.org/ref/mem)
     - [Go语言源代码](https://go.googlesource.com/go/)：在线查看Go语言源代码访问[这里](http://golang.org/src/)
@@ -337,8 +358,6 @@ This program is similar to the TCP example, except now we created an object to h
 
 # Dev Tools
 
-- [GoPM](https://github.com/gpmgo/gopm): Go Package Manager (gopm) is a package manager and build tool for Go.
-- [godep](https://github.com/tools/godep): dependency tool for go
 - [gb](https://github.com/constabulary/gb): the project based build tool for Go
 - [Delve](https://github.com/derekparker/delve/): Delve is a debugger for the Go programming language.
 - [Go plugin for IntelliJ](https://github.com/go-lang-plugin-org/go-lang-idea-plugin): Google Go language IDE built using the IntelliJ Platform
