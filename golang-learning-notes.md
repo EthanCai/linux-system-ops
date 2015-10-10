@@ -381,6 +381,7 @@ This program is similar to the TCP example, except now we created an object to h
 - [Gorilla web toolkit](http://www.gorillatoolkit.org/): Gorilla is a web toolkit for the Go programming language.
 - [xorm](https://github.com/go-xorm/xorm): Simple and Powerful ORM for Go, support mysql/sqlite3/postgres/mssql/oracle/tidb/ql
 - [GoRazor](https://github.com/sipin/gorazor): Razor view engine for Golang
+- [DNS library in Go](https://github.com/miekg/dns): DNS library in Go
 
 ## Business Application
 
