@@ -110,4 +110,8 @@ zsh > cat /private/etc/hosts
 ::1             localhost
 ```
 
+## MacOS如何查看路由表？
+
+执行命令`netstat -nr`。注意macos和linux的`netstat`命令不一样，注意查看文档。
+
 
