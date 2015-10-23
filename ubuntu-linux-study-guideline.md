@@ -682,34 +682,99 @@ $ tar -xvjf make-3.81.tar.bz2
     - 参考[百度百科-iptables](http://baike.baidu.com/view/504557.htm#1_1)
     - 参考[wikipedia - iptables](https://en.wiki2.org/wiki/Iptables)
 
+
 # Writing Shell Scripts
 
 ## 目标
 
 - Shell的基本概念及启动过程
 - 编写Shell脚本
-
-## Writing Shell Scripts
-
-### 基本概念
-
--  login shell vs nonlogin shell, interactive shell vs noninteractive shell
-    - Login shells: `/etc/profile`, `.bash_profile`, `.bash_login`, `.profile`, `.bash_logout`
-    - Interactive nonlogin shells: `/etc/bashrc`, `.bashrc`
-    - Noninteractive shells: `BASH_ENV`
-    - [交互式shell和非交互式shell、登录shell和非登录shell的区别](http://smilejay.com/2012/10/interactive-shell-login-shell/)
-- Builtin commands that are symbols
-    - `()`: subshell
-    - `$()`: command substitution
-    - `(())`: arithmetic evaluation
-    - `$(())`: arithmetic expansion
-    - `[]`: test command
-    - `[[]]`: conditional expression
-- 必读：[Use the Unofficial Bash Strict Mode (Unless You Looove Debugging)](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
 - 参考
-	- PG2UL, page 953
+    - [交互式shell和非交互式shell、登录shell和非登录shell的区别](http://smilejay.com/2012/10/interactive-shell-login-shell/)
+    - [Use the Unofficial Bash Strict Mode (Unless You Looove Debugging)](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
+    - [The art of command line](https://github.com/jlevy/the-art-of-command-line)
+    - [Awesome Shell](https://github.com/alebcay/awesome-shell)
+
+## 基本概念
+
+### 交互式shell和非交互式shell、登录shell和非登录shell的区别
+
+首先，这是两个不同的维度来划分的，一个是是否交互式，另一个是是否登录。
+
+交互式模式就是在终端上执行，shell等待你的输入，并且立即执行你提交的命令。这种模式被称作交互式是因为shell与用户进行交互。这种模式也是大多数用户非常熟悉的：登录、执行一些命令、退出。当你退出后，shell也终止了。
+shell也可以运行在另外一种模式：非交互式模式，以shell script(非交互)方式执行。在这种模式下，shell不与你进行交互，而是读取存放在文件中的命令，并且执行它们。当它读到文件的结尾EOF，shell也就终止了。
+
+可以通过打印“$-”变量的值（代表着当前shell的选项标志），查看其中的“i”选项（表示interactive shell）来区分交互式与非交互式shell。
+
+```bash
+$ echo $-
+himBH
+
+$ ./test.sh
+echo $-
+hB
+```
+
+- 登录shell：是需要用户名、密码登录后才能进入的shell（或者通过”–login”选项生成的shell）。
+- 非登录shell：当然就不需要输入用户名和密码即可打开的Shell，例如：直接命令“bash”就是打开一个新的非登录shell，在Gnome或KDE中打开一个“终端”（terminal）窗口程序也是一个非登录shell。
+- 执行exit命令，退出一个shell（登录或非登录shell）；
+- 执行logout命令，退出登录shell（不能退出非登录shell）。
+
+```bash
+$ bash --login
+$ logout
+$ bash --login
+$ exit
+logout
+ 
+$ bash
+$ logout
+bash: logout: not login shell: use `exit'
+$ exit
+exit
+```
+
+bash是 login shell 时，其进程名为”-bash“ 而不是”bash”。 比如下面的命令行演示：
+man bash: A login shell is one whose first character of argument zero is a -, or one started with the –login option.
+
+```bash
+# 在 login shell 中：
+$ echo $0
+-bash
+$ ps -ef | grep '\-bash' | grep -v grep
+root     16823 16821  0 May06 pts/0    00:00:00 -bash
+perf     21135 21134  0 May07 pts/1    00:00:00 -bash
+ 
+# 在一个非登陆shell中：
+$ echo $0
+/bin/bash
+$ ps -ef | grep '\-bash' | grep -v grep
+$
+```
+
+对于Bash来说，登录shell（包括交互式登录shell和使用“–login”选项的非交互shell），它会首先读取和执行`/etc/profile`全局配置文件中的命令，然后依次查找`~/.bash_profile`、`~/.bash_login` 和 `~/.profile`这三个配置文件，读取和执行这三个中的第一个存在且可读的文件中命令。除非被“–noprofile”选项禁止了。
+
+在非登录shell里，只读取`~/.bashrc`（和`/etc/bash.bashrc`、`/etc/bashrc`）文件，不同的发行版里面可能有所不同，如RHEL6.3中非登录shell仅执行了`~/.bashrc`文件（没有执行`/etc/bashrc`），而KUbuntu10.04中却依次执行了`/etc/bash.bashrc` 和 `~/.bashrc` 文件。
+
+对于这些规则，可以直接在相应的配置文件中加一些echo命令来验证其真实性。
+
+
+### Unofficial Bash Strict Mode - 避免踏进很多坑
+
+
+
 
 ### 语法
+
+#### Builtin commands that are symbols
+
+- `()`: subshell
+- `$()`: command substitution
+- `(())`: arithmetic evaluation
+- `$(())`: arithmetic expansion
+- `[]`: test command
+- `[[]]`: conditional expression
+
 
 #### Control Structures
 
@@ -870,18 +935,21 @@ exit 0
 - [linux定时任务的设置](http://www.taobaotest.com/blogs/1506)
 
 
+
+
 # Futher Reading
 
 ## Knowledge
 
-- [The art of command line](https://github.com/jlevy/the-art-of-command-line)
 - [Linux Tools Quick Tutorial](http://linuxtools-rst.readthedocs.org/zh_CN/latest/index.html)
-- [每天一个linux目录](http://www.cnblogs.com/peida/archive/2012/12/05/2803591.html)
+- [每天一个linux命令目录](http://www.cnblogs.com/peida/archive/2012/12/05/2803591.html)
 
 ## Utilites
 
-- [Awesome Shell](https://github.com/alebcay/awesome-shell)
 - [Explain Shell](http://explainshell.com/)
+
+
+
 
 # FAQ
 
