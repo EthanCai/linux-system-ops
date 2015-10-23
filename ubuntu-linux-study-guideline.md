@@ -246,7 +246,7 @@ The letter in the first column of each entry indicates the status of the package
 - `i` for installed
 - `c` for removed except for configuration files
 - `p` for purged (package and configuration files removed)
-- `v` for a **virtual package**S (When you install certain packages, aptitude queries you and, if you agree, installs more than one package. You are either installing a package with dependencies or a virtual package, also called a metapackage. A **virtual package** is not a software package, but rather a metapackage that depends on other packages. Virtual pack- ages facilitate the installation of software that requires multiple packages.)
+- `v` for a **virtual package** (When you install certain packages, aptitude queries you and, if you agree, installs more than one package. You are either installing a package with dependencies or a virtual package, also called a metapackage. A **virtual package** is not a software package, but rather a metapackage that depends on other packages. Virtual pack- ages facilitate the installation of software that requires multiple packages.)
 
 A second letter in the first column indicates a stored action that will be performed on the package. 
 An `A` appearing as the third letter means the package was automatically installed.
