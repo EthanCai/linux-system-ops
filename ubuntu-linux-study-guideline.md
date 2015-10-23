@@ -232,20 +232,40 @@ drwxr-xr-x  12 root root  4096 May 10 02:01 var/
 
 ### 查找软件包
 
+`aptitude search`命令的查找结果一般如下：
+
+```bash
+➜  ~  aptitude search '~ivim'
+i   vim                                                                 - Vi IMproved - enhanced vi editor                                              
+i   vim-common                                                          - Vi IMproved - Common files                                                    
+i A vim-runtime                                                         - Vi IMproved - Runtime files                                                   
+i   vim-tiny                                                            - Vi IMproved - enhanced vi editor - compact version     
+```
+
+The letter in the first column of each entry indicates the status of the package on the system: 
+- `i` for installed
+- `c` for removed except for configuration files
+- `p` for purged (package and configuration files removed)
+- `v` for a **virtual package**S (When you install certain packages, aptitude queries you and, if you agree, installs more than one package. You are either installing a package with dependencies or a virtual package, also called a metapackage. A **virtual package** is not a software package, but rather a metapackage that depends on other packages. Virtual pack- ages facilitate the installation of software that requires multiple packages.)
+
+A second letter in the first column indicates a stored action that will be performed on the package. 
+An `A` appearing as the third letter means the package was automatically installed.
+
+
 ```bash
 dpkg --get-selections pattern #查找软件包名称包含 pattern 的软件包，可以在后面用 grep install/deinstall 来选择是否已经被 remove 的包(曾经安装过了的)
 apt-cache search pattern #查找软件包名称和描述包含 pattern 的软件包 (可以是安装了也可以是没有安装)，可以用参数来限制是否已经安装
-aptitude search ~i #查找已经安装的软件包
-aptitude search ~c #查找已经被 remove 的软件包，还有配置文件存在
-aptitude search ~npattern #查找软件包名称包含 pattern 的软件包 (可以是安装了也可以是没有安装)
-aptitude search \!~i~npattern #查找还没有安装的软件包名字包含 pattern 的软件包。(前面的 ! 是取反的意思，反划线是 escape 符号)
+aptitude search '~ipattern' #查找已经安装的软件包
+aptitude search '~cpattern' #查找已经被 remove 的软件包，还有配置文件存在
+aptitude search '~npattern' #查找软件包名称包含 pattern 的软件包 (可以是安装了也可以是没有安装)
+aptitude search '!~i~npattern' #查找还没有安装的软件包名字包含 pattern 的软件包。(前面的 ! 是取反的意思，反划线是 escape 符号)
 注：还有很多用法，可以去看看我在 forum 中写的帖子 [aptitude Search Patterns](http://forum.ubuntu.org.cn/viewtopic.php?f=52&t=259550)
 
 apt-cache depends package #查找名称是 package 软件包的依赖关系
-aptitude search ~R~npackage #查找名称是 package 软件包的依赖关系，可以同时看到是不是已经安装
+aptitude search '~R~npackage' #查找名称是 package 软件包的依赖关系，可以同时看到是不是已经安装
 
 apt-cache rdepends package #查找哪些软件包依赖于名称是 package 软件包
-aptitude search ~D~npackage #查找哪些软件包依赖于名称是 package 软件包
+aptitude search '~D~npackage' #查找哪些软件包依赖于名称是 package 软件包
 
 dpkg -I package_name.deb #参数是大写i，查找已经下载但末安装的 package_name.deb 软件包的信息
 dpkg -l package #参数是小写L，查找已经安装软件包 package 的信息，精简
@@ -479,9 +499,11 @@ aptitude full-upgrade #同上
 
 ```bash
 #使用bzip2压缩文件默认会自动删除原文件，生成的压缩文件名是"[原文件名（包括扩展名）].bz2"
-$ bzip2 -v letter_eletter_e: 11680.00:1, 0.001 bits/byte, 99.99% saved, 584000 in, 50 out.
+$ bzip2 -v letter_e
+letter_e: 11680.00:1, 0.001 bits/byte, 99.99% saved, 584000 in, 50 out.
 
-$ ls -l-rw-rw-r-- 1 sam sam 50 2010-03-01 22:31 letter_e.bz2
+$ ls -l
+-rw-rw-r-- 1 sam sam 50 2010-03-01 22:31 letter_e.bz2
 
 # 使用bunzip2解压文件会自动删除原压缩文件，原文件名去掉末尾的".bz2"就是生成的解压缩文件名
 $ bunzip -v letter_e.bz2
@@ -496,15 +518,22 @@ eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 ```bash
 # === Combine files into one file ===
 
-$ ls -l g b d-rw-r--r-- 1 zach other 1178 2010-08-20 14:16 b
+$ ls -l g b d
+-rw-r--r-- 1 zach other 1178 2010-08-20 14:16 b
 -rw-r--r-- 1 zach zach  3783 2010-08-20 14:17 d
 -rw-r--r-- 1 zach zach  1302 2010-08-20 14:16 g
 
-#  –c (create), –v (verbose), and –f (write to or read from a file)$ tar -cvf all.tar g b d
-gbd
-$ ls -l all.tar-rw-r--r-- 1 zach zach  9728 2010-08-20 14:17 all.tar
+#  –c (create), –v (verbose), and –f (write to or read from a file)
+$ tar -cvf all.tar g b d
+g
+b
+d
 
-# –t option to display a table of contents for the archive$ tar -tvf all.tar
+$ ls -l all.tar
+-rw-r--r-- 1 zach zach  9728 2010-08-20 14:17 all.tar
+
+# –t option to display a table of contents for the archive
+$ tar -tvf all.tar
 -rw-r--r-- zach /zach    1302 2010-08-20 14:16 g
 -rw-r--r-- zach /other   1178 2010-08-20 14:16 b
 -rw-r--r-- zach /zach    3783 2010-08-20 14:17 d
@@ -512,11 +541,19 @@ gbd
 
 # === Extract files from combined file ===
 
-$ ls -l mak*-rw-r--r-- 1 sam sam 1564560 2010-04-12 15:51 make-3.81.tar.gz
-$ gunzip mak*$ ls -l mak*-rw-r--r-- 1 sam sam 6072320 2010-04-12 15:51 make-3.81.tar
+$ ls -l mak*
+-rw-r--r-- 1 sam sam 1564560 2010-04-12 15:51 make-3.81.tar.gz
 
-# –x to extract files from a tar archive$ tar -xvf mak*make-3.81/make-3.81/config/
-make-3.81/config/dospaths.m4...
+$ gunzip mak*
+$ ls -l mak*
+-rw-r--r-- 1 sam sam 6072320 2010-04-12 15:51 make-3.81.tar
+
+# –x to extract files from a tar archive
+$ tar -xvf mak*
+make-3.81/
+make-3.81/config/
+make-3.81/config/dospaths.m4
+...
 make-3.81/tests/run_make_tests.pl
 make-3.81/tests/test_driver.pl
 
