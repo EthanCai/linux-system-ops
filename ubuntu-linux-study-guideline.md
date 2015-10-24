@@ -926,15 +926,123 @@ exit 0
 
 ## 目标
 
-- 掌握cron和anacron
+- 掌握cron
+- 掌握anacron
+- 掌握at
 
 ## 内容
 
-- 阅读PG2UL，page 605，Scheduling Tasks
-- 阅读 [crontab 定时任务](http://linuxtools-rst.readthedocs.org/zh_CN/latest/tool/crontab.html)
-- [linux定时任务的设置](http://www.taobaotest.com/blogs/1506)
+### 参考
 
+- PG2UL，page 605，Scheduling Tasks
+- [crontab 定时任务](http://linuxtools-rst.readthedocs.org/zh_CN/latest/tool/crontab.html)
+- [linux Crontab 使用](http://www.oschina.net/questcion/234345_42400)
+- [使用 Anacron 处理 Linux 关机问题](http://www.ibm.com/developerworks/cn/linux/l-anacron/index.html)
+- [linux定时任务的设置](http://www.blogjava.net/freeman1984/archive/2010/09/23/332715.html)
 
+### cron和anacron的区别
+
+cron是用来控制循环执行的例行性工作的，可循环的时间为分钟、小时、每周、每月或每年等。比如我要设定机器每天早上8点进行备份，就可以用到这个服务。
+除非我们的机器保持每天都24小时开始，否则就会有些系统例行工作都没有人做了，这个时候就可以用到anacron了。
+
+anacron并不是用来取代cron的，anacron存在的目的就在于我们上面提到的，在处理非 24 小时一直启动的Linux系统的cron服务的执行！
+所以 anacron 并不能指定何时执行某项任务，而是以天为单位或者是在开机后立刻进行anacron的动作，他会去侦测停机期间应该进行但是并没有进行的cron服务，
+如果有就将该任务执行一遍，然后就自动停止。anacron脚本不会在OS使用电池作为电源时候运行。
+
+### Crontab文件
+
+共有两种类型的 Cron 作业（即由 Cron 运行的程序）：系统 Cron 作业，由系统运行，执行系统维护任务；另一种是 用户 Cron 作业，由用户创建，用于执行用户任务。
+对于这两种作业而言，系统 Cron 作业更加重要一些。这些作业可能包括清除 /tmp 中的陈旧文件、替换日志文件、更新垃圾邮件过滤规则，以及更新 locate 数据库。
+
+cron守护进程根据crontab文件中的配置执行定时任务。
+
+- 系统crontab文件保存在`/etc/cron.d`目录和`/etc/crontab`文件中
+- 用户可以使用`crontab`工具设置个人的crontab文件，用户的crontab文件保存在`/var/spool/cron/crontabs`中
+
+#### 系统crontab文件
+
+crontab文件设置命令的执行频率。
+
+`/etc/crontab`内容如下：
+
+```bash
+# /etc/crontab: system-wide crontab
+# Unlike any other crontab you don't have to run the `crontab'
+# command to install the new version when you edit this file
+# and files in /etc/cron.d. These files also have username fields,
+# that none of the other crontabs do.
+
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# m h dom mon dow user	command
+17 *	* * *	root    cd / && run-parts --report /etc/cron.hourly
+25 6	* * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
+47 6	* * 7	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )
+52 6	1 * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
+```
+
+最后4行命令的格式如下：
+
+> minute hour day-of-month month day-of-week user command
+
+The first five fields indicate when cron will execute the command: 
+
+- The **minute** is the number of minutes after the start of the hour
+- the **hour** is the hour of the day based on a 24-hour clock
+- the **day-of-month** is a number from 1 to 31
+- the **day-of-week** is a number from 0 to 7, with 0 and 7 indicating Sunday
+- An asterisk (*) substitutes for any value in a field
+- The user is the username or user ID of the user that the command will run as
+
+除了`/etc/crontab`，cron守护进程还会读取`/etc/cron.d`下的配置文件。下面是`/etc/cron.d/anacron`的内容，
+这段配置告知`cron`每天7:30 AM运行`anacron`初始化脚本。这段初始化脚本只会在系统开机且不使用电池电源的时候运行`anacron`。
+
+```bash
+# /etc/cron.d/anacron: crontab entries for the anacron package
+
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+30 7    * * *   root	start -q anacron || :
+```
+
+#### 用户crontab文件
+
+- 用户crontab文件保存在`/var/spool/cron/crontabs/`目录下，并且以用户名命令
+- 可以通过`crontab -l`查看当前用户的crontab文件
+- 可以通过`crontab -e`创建或者编辑当前用户的crontab文件
+- 可以通过`crontab -r`删除当前用户的crontab文件
+
+### anacron配置文件
+
+Anacron 通过 /etc/anacrontab 文件进行控制。该文件可以包含注释行（使用一个前导散列符号 # 表示）、环境变量分配（比如 SHELL=/bin/bash）和作业定义。
+
+`/etc/anacrontab`中的内容如下：
+
+```bash
+# /etc/anacrontab: configuration file for anacron
+
+# See anacron(8) and anacrontab(5) for details.
+
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+HOME=/root
+LOGNAME=root
+
+# These replace cron's entries
+1	5	cron.daily	run-parts --report /etc/cron.daily
+7	10	cron.weekly	run-parts --report /etc/cron.weekly
+@monthly	15	cron.monthly	run-parts --report /etc/cron.monthly
+```
+
+最后三行记录的格式如下：
+
+> period delay identifier command
+
+- period是anacron执行命令的频率，单位为天
+- delay是anacron启动后，多长时间执行命令，单位为分钟
+- identifier是anacron用来记录上次什么时候执行命令的文件的文件名，文件保存在`/var/spool/anacron`文件夹下
 
 
 # Futher Reading
