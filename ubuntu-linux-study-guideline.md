@@ -690,14 +690,15 @@ $ tar -xvjf make-3.81.tar.bz2
 - Shell的基本概念及启动过程
 - 编写Shell脚本
 - 参考
-    - [交互式shell和非交互式shell、登录shell和非登录shell的区别](http://smilejay.com/2012/10/interactive-shell-login-shell/)
-    - [Use the Unofficial Bash Strict Mode (Unless You Looove Debugging)](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
+    - [Gnu Bash Reference](http://www.gnu.org/software/bash/manual/bashref.html)
     - [The art of command line](https://github.com/jlevy/the-art-of-command-line)
     - [Awesome Shell](https://github.com/alebcay/awesome-shell)
 
 ## 基本概念
 
 ### 交互式shell和非交互式shell、登录shell和非登录shell的区别
+
+> 本节内容主要参考[交互式shell和非交互式shell、登录shell和非登录shell的区别](http://smilejay.com/2012/10/interactive-shell-login-shell/)
 
 首先，这是两个不同的维度来划分的，一个是是否交互式，另一个是是否登录。
 
@@ -759,12 +760,25 @@ $
 对于这些规则，可以直接在相应的配置文件中加一些echo命令来验证其真实性。
 
 
-### Unofficial Bash Strict Mode - 避免踏进很多坑
+### 如何让你的shell脚本更健壮和更可靠
 
+请阅读：
 
-
+- [Use the Unofficial Bash Strict Mode (Unless You Looove Debugging)](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
+- [How "Exit Traps" Can Make Your Bash Scripts Way More Robust And Reliable](http://redsymbol.net/articles/bash-exit-traps/) 
 
 ### 语法
+
+#### 常用系统变量
+
+- `$0`: 当前shell程序的名字
+- `$1`~`$9`: 命令行上的第一到第九个参数
+- `$#`: 命令行上的参数个数
+- `$*`: 命令行上的所有参数
+- `$@`: 分别用双引号引用命令行上的所有参数
+- `$$`: 当前进程的进程标识号(PID)
+- `$?`: 上一条命令的退出状态
+- `$!`: 最后一个后台进程的进程标识号
 
 #### Builtin commands that are symbols
 
@@ -939,6 +953,10 @@ exit 0
 - [linux Crontab 使用](http://www.oschina.net/questcion/234345_42400)
 - [使用 Anacron 处理 Linux 关机问题](http://www.ibm.com/developerworks/cn/linux/l-anacron/index.html)
 - [linux定时任务的设置](http://www.blogjava.net/freeman1984/archive/2010/09/23/332715.html)
+
+### cron的坑
+
+- crontab文件设置了任务的执行时间，此时间依赖当前os的系统时区。
 
 ### cron和anacron的区别
 
