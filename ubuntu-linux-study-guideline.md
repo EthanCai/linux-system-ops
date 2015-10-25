@@ -706,8 +706,10 @@ $ tar -xvjf make-3.81.tar.bz2
 
 首先，这是两个不同的维度来划分的，一个是是否交互式，另一个是是否登录。
 
-交互式模式就是在终端上执行，shell等待你的输入，并且立即执行你提交的命令。这种模式被称作交互式是因为shell与用户进行交互。这种模式也是大多数用户非常熟悉的：登录、执行一些命令、退出。当你退出后，shell也终止了。
-shell也可以运行在另外一种模式：非交互式模式，以shell script(非交互)方式执行。在这种模式下，shell不与你进行交互，而是读取存放在文件中的命令，并且执行它们。当它读到文件的结尾EOF，shell也就终止了。
+交互式模式就是在终端上执行，shell等待你的输入，并且立即执行你提交的命令。这种模式被称作交互式是因为shell与用户进行交互。
+这种模式也是大多数用户非常熟悉的：登录、执行一些命令、退出。当你退出后，shell也终止了。
+shell也可以运行在另外一种模式：非交互式模式，以shell script(非交互)方式执行。
+在这种模式下，shell不与你进行交互，而是读取存放在文件中的命令，并且执行它们。当它读到文件的结尾EOF，shell也就终止了。
 
 可以通过打印“$-”变量的值（代表着当前shell的选项标志），查看其中的“i”选项（表示interactive shell）来区分交互式与非交互式shell。
 
@@ -799,10 +801,12 @@ $
 ```bash
 #----------------------------------
 # if...else pattern
-if test-command
-    then
-        commands
-fi
+#
+# if test-command
+#    then
+#        commands
+# fi
+#----------------------------------
 
 # check arguments amounts
 if [ $# -eq 0 ]
@@ -810,6 +814,7 @@ if [ $# -eq 0 ]
         echo "You must supply at least one argument."
         exit 1
 fi
+echo "Program running..."
 
 # check whether file is an ordinary file
 if [ -f "$1" ]
@@ -821,12 +826,14 @@ fi
 
 #----------------------------------
 # if...then...else pattern
-if test-command
-    then
-        commands
-    else
-        commands
-fi
+# 
+# if test-command
+#    then
+#        commands
+#    else
+#        commands
+# fi
+#----------------------------------
 
 $ cat out
 if [ $# -eq 0 ]
@@ -843,16 +850,239 @@ if [ "$1" = "-v" ]
         cat -- "$@"
 fi
 
-# `if...then...elif`
-# `for...in`
-# `for`
-# `while`
-# `until`
-# `break` and `continue`
-# `case`
-# `select`
-# here document
+#----------------------------------
+# if...then...elif pattern
+# 
+# if test-command
+#    then
+#        commands
+#    elif test-command
+#    then
+#        commands
+#    ...
+#    else
+#        commands
+# fi
+#----------------------------------
 
+$ cat if3
+echo -n "word 1: "
+read word1
+echo -n "word 2: "
+read word2
+echo -n "word 3: "
+read word3
+if [ "$word1" = "$word2" -a "$word2" = "$word3" ]
+    then
+        echo "Match: words 1, 2, & 3"
+    elif [ "$word1" = "$word2" ]
+    then
+        echo "Match: words 1 & 2"
+    elif [ "$word1" = "$word3" ]
+    then
+        echo "Match: words 1 & 3"
+    elif [ "$word2" = "$word3" ]
+    then
+        echo "Match: words 2 & 3"
+    else
+        echo "No Match"
+fi
+
+#----------------------------------
+# for...in pattern
+# 
+# for loop-index in argument-list
+# do
+#     commands
+# done
+#----------------------------------
+
+$ cat fruit
+for fruit in apples oranges pears bananas
+do
+    echo "$fruit"
+done
+echo "Task complete."
+
+$ cat dirfiles
+for i in *
+do
+    if [ -d "$i" ]
+        then
+            echo "$i"
+    fi
+done
+
+
+#----------------------------------
+# for pattern: the loop-index takes on the value of each of the command- line arguments, one at a time. 
+# 
+# for loop-index
+# do
+#     commands
+# done
+#----------------------------------
+
+$ cat whos
+#!/bin/bash
+
+if [ $# -eq 0 ]
+    then
+        echo "Usage: whos id..." 1>&2
+        exit 1
+fi
+
+for id
+do
+    mawk -F: '{print $1, $5}' /etc/passwd |
+    grep -i "$id"
+done
+
+#----------------------------------
+# while pattern 
+# 
+# while test-command
+# do
+#     commands
+# done
+#----------------------------------
+
+$ cat count
+#!/bin/bash
+number=0
+while [ "$number" -lt 10 ]
+do
+    echo -n "$number"
+    ((number +=1))
+done
+echo
+
+#----------------------------------
+# until pattern 
+# 
+# until test-command
+# do
+#     commands
+# done
+#----------------------------------
+
+$ cat until1
+secretname=zach
+name=noname
+echo "Try to guess the secret name!"
+echo
+until [ "$name" = "$secretname" ]
+do
+    echo -n "Your guess: "
+    read name
+done
+echo "Very good."
+
+
+#----------------------------------
+# break and continue pattern 
+# 
+# until test-command
+# do
+#     commands
+# done
+#----------------------------------
+
+$ cat brk
+for index in 1 2 3 4 5 6 7 8 9 10
+do
+    if [ $index -le 3 ] ; then
+        echo "continue"
+        continue
+    fi
+
+    echo $index
+
+    if [ $index -ge 8 ] ; then
+        echo "break"
+        break
+    fi
+done
+
+
+#----------------------------------
+# case pattern 
+# 
+# case test-string in
+#     pattern-1)
+#         commands-1
+#         ;;
+#     pattern-2)
+#         commands-2
+#         ;;
+#     pattern-3)
+#         commands-3
+#         ;; 
+# ...
+# esac
+#----------------------------------
+
+$ cat case1
+echo -n "Enter A, B, or C: "
+read letter
+case "$letter" in
+    A)
+        echo "You entered A"
+        ;;
+    B)
+        echo "You entered B"
+        ;;
+    C)
+        echo "You entered C"
+        ;;
+    *)
+        echo "You did not enter A, B, or C"
+        ;;
+esac
+
+$ cat case2
+echo -n "Enter A, B, or C: "
+read letter
+case "$letter" in
+    a|A)
+        echo "You entered A"
+        ;;
+    b|B)
+        echo "You entered B"
+        ;;
+    c|C)
+        echo "You entered C"
+        ;;
+    *)
+        echo "You did not enter A, B, or C"
+        ;;
+esac
+
+#----------------------------------
+# select pattern 
+# 
+# select varname [in arg...]
+# do
+#     commands
+# done
+#----------------------------------
+
+$ cat fruit2
+#!/bin/bash
+PS3="Choose your favorite fruit from these possibilities: "
+select FRUIT in apple banana blueberry kiwi orange watermelon STOP
+do
+    if [ "$FRUIT" == "" ]; then
+        echo -e "Invalid entry.\n"
+        continue
+    elif [ $FRUIT = STOP ]; then
+        echo "Thanks for playing!"
+        break
+    fi
+    
+    echo "You chose $FRUIT as your favorite."
+    echo -e "That is choice number $REPLY.\n"
+done
 ```
 
 #### File Descriptors
