@@ -90,6 +90,8 @@ drwxr-xr-x  12 root root  4096 May 10 02:01 var/
 	- 执行结果见下图：  
 		![](./img/2015/06/view-ubuntu-version-and-kernel-version.png)
 
+
+
 # Basic Shell Knowledge
 
 ## 目标
@@ -105,6 +107,8 @@ drwxr-xr-x  12 root root  4096 May 10 02:01 var/
     - [管道](http://wenku.baidu.com/view/5a7aeff4f61fb7360b4c65ba.html): The shell uses a pipe to connect standard output of one command to standard input of another command.
         - 理解符号 `|`
         - 理解filter: A filter is a command that processes an input stream of data to produce an output stream of data. 比如`sort`、`tee`。
+            - [Linux命令之tee - 重定向输出到多个文件](http://codingstandards.iteye.com/blog/833695)
+            - [linux sort 命令详解](http://www.cnblogs.com/51linux/archive/2012/05/23/2515299.html)
     - 通配符`?`, `*`, `[]`
         - `ls memo?`
         - `ls t*`
