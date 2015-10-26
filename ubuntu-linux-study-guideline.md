@@ -127,7 +127,7 @@ drwxr-xr-x  12 root root  4096 May 10 02:01 var/
                 - 重启系统，打开terminal，oh-my-zsh就生效了
     - Windows下安装[Xshell](http://www.netsarang.com/products/xsh_overview.html)（其次是SecureCRT，Putty）
     - MacOS下安装[oh-my-zsh](http://ohmyz.sh/), [iTerm2](https://www.iterm2.com/index.html), [Tmux](http://tmux.sourceforge.net/)
-        - [TMUX Rocks!](http://www.slideshare.net/chenkaie/tmux-rocks)
+        - [TMUX Manual](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man1/tmux.1?query=tmux&sec=1)
 - 在后台进程管理，
     - 参考[Linux后台进程管理](http://blog.csdn.net/fengyifei11228/article/details/5737371)
         - `ls -l | lpr &`
