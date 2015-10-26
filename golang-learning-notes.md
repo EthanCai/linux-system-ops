@@ -234,6 +234,7 @@ func main() {
      fmt.Scanln(&input)
 }
 ```
+
 This example uses the `encoding/gob` package which makes it easy to encode Go values so that other Go programs (or the same Go program in this case) can read them. Additional encodings are available in packages underneath `encoding` (like `encoding/json`) as well as in 3rd party packages. (for example we could use labix.org/v2/mgo/bson for bson support)
 
 #### HTTP
@@ -364,26 +365,44 @@ This program is similar to the TCP example, except now we created an object to h
 - [Wide](https://github.com/b3log/wide): A Web-based IDE for Teams using Go programming language/Golang
 - [Gogs](http://gogs.io/): 极易搭建的自助 Git 服务
 
-## Framework
+## Framework & Library
+
+Text Processing & Search
+
+- [bleve](https://github.com/blevesearch/bleve): A modern text indexing library for go
+
+Network
+
+- [DNS library in Go](https://github.com/miekg/dns): DNS library in Go
+- [GRPC](http://www.grpc.io/): A high performance, open source, general RPC framework that puts mobile and HTTP/2 first.
+
+Web
 
 - [Beego](http://beego.me/): 一个使用 Go 的思维来帮助您构建并开发 Go 应用程序的开源框架
 - [revel](http://revel.github.io/): A high-productivity web framework for the Go language.
 - [tango](https://github.com/lunny/tango): Micro & pluggable web framework for Go
-- [Gobot](http://gobot.io/): Gobot is a framework for robotics, physical computing, and the Internet of Things, written in the Go programming language.
-- [GRPC](http://www.grpc.io/): A high performance, open source, general RPC framework that puts mobile and HTTP/2 first.
-- [bosun](https://github.com/bosun-monitor/bosun): Time Series Alerting Framework
 - [gokit](https://github.com/go-kit/kit): Go kit is a distributed programming toolkit for building microservices in large organizations. We solve common problems in distributed systems, so you can focus on your business logic.
 - [martini](https://github.com/go-martini/martini): Martini is a powerful package for quickly writing modular web applications/services in Golang.
 - [webgo](https://github.com/hoisie/web): web.go is the simplest way to write web applications in the Go programming language. It's ideal for writing simple, performant backend web services.
-
-## SDK & Library
-
-- [bleve](https://github.com/blevesearch/bleve): A modern text indexing library for go
-- [weixinmp](https://github.com/sidbusy/weixinmp): 微信公众平台SDK for Go
 - [Gorilla web toolkit](http://www.gorillatoolkit.org/): Gorilla is a web toolkit for the Go programming language.
-- [xorm](https://github.com/go-xorm/xorm): Simple and Powerful ORM for Go, support mysql/sqlite3/postgres/mssql/oracle/tidb/ql
 - [GoRazor](https://github.com/sipin/gorazor): Razor view engine for Golang
-- [DNS library in Go](https://github.com/miekg/dns): DNS library in Go
+
+Robot
+
+- [Gobot](http://gobot.io/): Gobot is a framework for robotics, physical computing, and the Internet of Things, written in the Go programming language. 
+
+Database
+
+- [xorm](https://github.com/go-xorm/xorm): Simple and Powerful ORM for Go, support mysql/sqlite3/postgres/mssql/oracle/tidb/ql
+- [Go-MySQL-Driver](https://github.com/go-sql-driver/mysql): Go-MySQL-Driver is a lightweight and fast MySQL-Driver for Go's (golang) database/sql package
+
+Integration
+
+- [weixinmp](https://github.com/sidbusy/weixinmp): 微信公众平台SDK for Go
+
+Monitor & Alert
+
+- [bosun](https://github.com/bosun-monitor/bosun): Time Series Alerting Framework
 
 ## Business Application
 
