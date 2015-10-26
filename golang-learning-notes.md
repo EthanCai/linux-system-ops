@@ -3,13 +3,13 @@
 参考：[Gobooks](https://github.com/dariubs/GoBooks)
 
 - [An Introduction to Programming in Go](http://www.golang-book.com/): 一本介绍Go语言的书籍，内容非常简洁，便于快速掌握Go语法。
+- [The Way to Go](http://book.douban.com/subject/10558892/):  a Thorough Introduction to the Go Programming Language 2012.3.8
 - [Go语言编程](http://book.douban.com/subject/11577300/): 对个Go语言几个主要的主题进行了介绍，但内容不系统，不适合作为入门读物。更多见[豆瓣点评](http://book.douban.com/subject/11577300/reviews)
 - [Go Programming Blueprints 2015](http://www.amazon.com/Go-Programming-Blueprints-Development-Challenges/dp/1783988029/ref=sr_1_1?ie=UTF8&qid=1438760964&sr=8-1&keywords=golang): Amazon评价很高，这本书介绍了很多高级主题
 - Network programming with Go.(2012)
 - [Programming in Go 2012.5.14](http://www.amazon.com/Programming-Go-Creating-Applications-Developers/dp/0321774639/ref=sr_1_4?ie=UTF8&qid=1438760964&sr=8-4&keywords=golang): 这本书的三个优点：High quality code samples；Idiomatic Go code；Details that aren't in the docs
 - Ready to Go
 - The Go Programming Language Phrasebook.(2012)
-- [The Way to Go a Thorough Introduction to the Go Programming Language 2012.3.8](http://www.amazon.com/Way-Go-Thorough-Introduction-Programming/dp/1469769166/ref=sr_1_9?ie=UTF8&qid=1438760964&sr=8-9&keywords=golang)
 - [build-web-application-with-golang](https://github.com/astaxie/build-web-application-with-golang)
 
 
@@ -80,7 +80,7 @@
 
 Go标准库可以大致按其中库的功能进行以下分类,这个分类比较简单,不求准确,但求能 够帮助开发者根据自己模糊的需求更快找到自己需要的包。
 
-- 输入输出。这个分类包括二进制以及文本格式在屏幕、键盘、文件以及其他设备上的输入输出等,比如二进制文件的读写。对应于此分类的包有bufio、fmt、io、log和flag等,其中flag用于处理命令行参数。
+- 输入输出。这个分类包括二进制以及文本格式在屏幕、键盘、文件以及其他设备上的输入输出等,比如二进制文件的读写。对应于此分类的包有bufio、fmt、io、io/ioutil、log、log/syslog、flag等,其中flag用于处理命令行参数。
 - 文本处理。这个分类包括字符串和文本内容的处理,比如字符编码转换等。对应于此分类的包有encoding、bytes、strings、strconv、text、mime、unicode、regexp、index和path等。其中path用于处理路径字符串。
 - 网络。这个分类包括开发网络程序所需要的包,比如Socket编程和网站开发等。对应于此分类的包有:net、http和expvar等。
 - 系统。这个分类包含对系统功能的封装,比如对操作系统的交互以及原子性操作等。对应于此分类的包有os、syscall、sync、time和unsafe等。
@@ -91,11 +91,37 @@ Go标准库可以大致按其中库的功能进行以下分类,这个分类比�
 
 #### fmt
 
-#### io
+点击这里查看[官方文档](https://golang.org/pkg/fmt/)
+
+其它相关内容：
+
+- [1.3 fmt — 格式化IO](https://github.com/polaris1119/The-Golang-Standard-Library-by-Example/blob/master/chapter01/01.3.md)
+- [fmt包中的函数和方法](http://www.cnblogs.com/golove/archive/2013/08/28/3286303.html)
+
+
+#### io、io/ioutil
+
+点击这里查看[io](https://golang.org/pkg/io/)、[io/ioutil](https://golang.org/pkg/io/)的官方文档
+
+其它相关内容：
+
+- [1.1 io — 基本的IO接口](https://github.com/polaris1119/The-Golang-Standard-Library-by-Example/blob/master/chapter01/01.1.md)
+- [1.2 ioutil — 方便的IO操作函数集](https://github.com/polaris1119/The-Golang-Standard-Library-by-Example/blob/master/chapter01/01.2.md)
+
 
 #### bufio
 
-#### log
+点击这里查看[官方文档](https://golang.org/pkg/bufio/)
+
+其它相关内容：
+
+- [1.4 bufio — 缓存IO](https://github.com/polaris1119/The-Golang-Standard-Library-by-Example/blob/master/chapter01/01.4.md)
+
+#### log、log/syslog
+
+点击这里查看[log](https://golang.org/pkg/log/)、[log/syslog](https://golang.org/pkg/log/syslog/)的官方文档
+
+
 
 #### flag
 
