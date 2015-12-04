@@ -434,6 +434,10 @@ Monitor & Alert
 Misc
 
 - [go-simplejson](https://github.com/bitly/go-simplejson): a Go package to interact with arbitrary JSON
+- [Jason](https://github.com/antonholmquist/jason): Easy-to-use JSON Library for Go
+- [restful](https://github.com/devcamcar/restful): Restful HTTP Client package in golang
+- [otto](https://github.com/robertkrimen/otto): A JavaScript interpreter in Go (golang)
+- [gopherjs](https://github.com/gopherjs/gopherjs): A compiler from Go to JavaScript for running Go code in a browser
 
 ## Business Application
 
