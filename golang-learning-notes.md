@@ -469,6 +469,7 @@ Misc
 # Tools
 
 - [toxy](https://github.com/h2non/toxy): Hackable HTTP proxy to simulate server failure scenarios and unexpected network conditions
+- [kingtask](https://github.com/kingsoft-wps/kingtask): A lightweight asynchronous timing task system powered by Go
 
 # FAQ
 
