@@ -385,6 +385,10 @@ This program is similar to the TCP example, except now we created an object to h
 
 # Basic Projects
 
+参考：
+
+- [Golang Projects - OSChina](http://www.oschina.net/project/lang/358/go)
+
 ## Project Dependency and Build
 
 - [Godep](https://github.com/tools/godep): dependency tool for go
@@ -468,6 +472,7 @@ This program is similar to the TCP example, except now we created an object to h
 
 - [toxy](https://github.com/h2non/toxy): Hackable HTTP proxy to simulate server failure scenarios and unexpected network conditions
 - [Tyk API Gateway](https://github.com/lonelycode/tyk): Tyk is a lightweight, open source API Gateway and enables you to control who accesses your API, when they access it and how they access it. Tyk will also record detailed analytics on how your users are interacting with your API and when things go wrong.
+- [Gor](https://github.com/buger/gor): Gor is an open-source tool for capturing and replaying live HTTP traffic into a test environment in order to continuously test your system with real data. It can be used to increase confidence in code deployments, configuration changes and infrastructure changes.
 
 ## Job Schedule
 
