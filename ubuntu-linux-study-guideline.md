@@ -19,9 +19,9 @@
 ## 内容
 
 - Ubuntu各个release版本的区别，参考下面几篇文章：
-	- [List of Ubuntu releases](https://en.wiki2.org/wiki/List_of_Ubuntu_releases)
-	- [Ubuntu Release](https://wiki.ubuntu.com/Releases)
-	- [Download Link of Ubuntu Releases](http://releases.ubuntu.com/)
+    - [List of Ubuntu releases](https://en.wiki2.org/wiki/List_of_Ubuntu_releases)
+    - [Ubuntu Release](https://wiki.ubuntu.com/Releases)
+    - [Download Link of Ubuntu Releases](http://releases.ubuntu.com/)
 - Ubuntu每个release的不同edition的区别(参考PG2UL, page 32)
     - **DVD**: The DVD is a live/install DVD. The DVD includes all software packages supported by Ubuntu, not just those installed by default.
     - **Desktop CD**: The Desktop CD is a live/install CD
@@ -80,15 +80,15 @@ drwxr-xr-x  12 root root  4096 May 10 02:01 var/
 - 手动安装Ubuntu Desktop 14.04
 - 手动安装Ubuntu Server 14.04
 - 自动化安装Ubuntu Linux
-	- [Preboot Execution Environment](https://en.wiki2.org/wiki/Preboot_Execution_Environment)
-	- [Cobbler Quickstart Guide](http://www.cobblerd.org/manuals/quickstart/)
-	- [运维自动化之Cobbler系统安装详解](http://os.51cto.com/art/201109/288604_all.htm)
+    - [Preboot Execution Environment](https://en.wiki2.org/wiki/Preboot_Execution_Environment)
+    - [Cobbler Quickstart Guide](http://www.cobblerd.org/manuals/quickstart/)
+    - [运维自动化之Cobbler系统安装详解](http://os.51cto.com/art/201109/288604_all.htm)
 - 如何查看Ubuntu的版本和Linux内核版本
-	- `cat /etc/issue`
-	- `sudo lsb_release -a`
-	- `uname -r`
-	- 执行结果见下图：  
-		![](./img/2015/06/view-ubuntu-version-and-kernel-version.png)
+    - `cat /etc/issue`
+    - `sudo lsb_release -a`
+    - `uname -r`
+    - 执行结果见下图：  
+        ![](./img/2015/06/view-ubuntu-version-and-kernel-version.png)
 
 
 
@@ -246,13 +246,13 @@ i A vim-runtime                                                         - Vi IMp
 i   vim-tiny                                                            - Vi IMproved - enhanced vi editor - compact version     
 ```
 
-The letter in the first column of each entry indicates the status of the package on the system: 
+The letter in the first column of each entry indicates the status of the package on the system:
 - `i` for installed
 - `c` for removed except for configuration files
 - `p` for purged (package and configuration files removed)
 - `v` for a **virtual package** (When you install certain packages, aptitude queries you and, if you agree, installs more than one package. You are either installing a package with dependencies or a virtual package, also called a metapackage. A **virtual package** is not a software package, but rather a metapackage that depends on other packages. Virtual pack- ages facilitate the installation of software that requires multiple packages.)
 
-A second letter in the first column indicates a stored action that will be performed on the package. 
+A second letter in the first column indicates a stored action that will be performed on the package.
 An `A` appearing as the third letter means the package was automatically installed.
 
 
@@ -733,10 +733,10 @@ $ logout
 $ bash --login
 $ exit
 logout
- 
+
 $ bash
 $ logout
-bash: logout: not login shell: use `exit'
+bash: logout: not login shell: use 'exit'
 $ exit
 exit
 ```
@@ -751,7 +751,7 @@ $ echo $0
 $ ps -ef | grep '\-bash' | grep -v grep
 root     16823 16821  0 May06 pts/0    00:00:00 -bash
 perf     21135 21134  0 May07 pts/1    00:00:00 -bash
- 
+
 # 在一个非登陆shell中：
 $ echo $0
 /bin/bash
@@ -771,7 +771,7 @@ $
 请阅读：
 
 - [Use the Unofficial Bash Strict Mode (Unless You Looove Debugging)](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
-- [How "Exit Traps" Can Make Your Bash Scripts Way More Robust And Reliable](http://redsymbol.net/articles/bash-exit-traps/) 
+- [How "Exit Traps" Can Make Your Bash Scripts Way More Robust And Reliable](http://redsymbol.net/articles/bash-exit-traps/)
 
 ### 语法
 
@@ -826,7 +826,7 @@ fi
 
 #----------------------------------
 # if...then...else pattern
-# 
+#
 # if test-command
 #    then
 #        commands
@@ -852,7 +852,7 @@ fi
 
 #----------------------------------
 # if...then...elif pattern
-# 
+#
 # if test-command
 #    then
 #        commands
@@ -890,7 +890,7 @@ fi
 
 #----------------------------------
 # for...in pattern
-# 
+#
 # for loop-index in argument-list
 # do
 #     commands
@@ -915,8 +915,8 @@ done
 
 
 #----------------------------------
-# for pattern: the loop-index takes on the value of each of the command- line arguments, one at a time. 
-# 
+# for pattern: the loop-index takes on the value of each of the command- line arguments, one at a time.
+#
 # for loop-index
 # do
 #     commands
@@ -939,8 +939,8 @@ do
 done
 
 #----------------------------------
-# while pattern 
-# 
+# while pattern
+#
 # while test-command
 # do
 #     commands
@@ -958,8 +958,8 @@ done
 echo
 
 #----------------------------------
-# until pattern 
-# 
+# until pattern
+#
 # until test-command
 # do
 #     commands
@@ -980,8 +980,8 @@ echo "Very good."
 
 
 #----------------------------------
-# break and continue pattern 
-# 
+# break and continue pattern
+#
 # until test-command
 # do
 #     commands
@@ -1006,8 +1006,8 @@ done
 
 
 #----------------------------------
-# case pattern 
-# 
+# case pattern
+#
 # case test-string in
 #     pattern-1)
 #         commands-1
@@ -1017,7 +1017,7 @@ done
 #         ;;
 #     pattern-3)
 #         commands-3
-#         ;; 
+#         ;;
 # ...
 # esac
 #----------------------------------
@@ -1059,8 +1059,8 @@ case "$letter" in
 esac
 
 #----------------------------------
-# select pattern 
-# 
+# select pattern
+#
 # select varname [in arg...]
 # do
 #     commands
@@ -1079,7 +1079,7 @@ do
         echo "Thanks for playing!"
         break
     fi
-    
+
     echo "You chose $FRUIT as your favorite."
     echo -e "That is choice number $REPLY.\n"
 done
@@ -1238,7 +1238,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 > minute hour day-of-month month day-of-week user command
 
-The first five fields indicate when cron will execute the command: 
+The first five fields indicate when cron will execute the command:
 
 - The **minute** is the number of minutes after the start of the hour
 - the **hour** is the hour of the day based on a 24-hour clock
