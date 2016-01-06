@@ -388,6 +388,7 @@ This program is similar to the TCP example, except now we created an object to h
 参考：
 
 - [Golang Projects - OSChina](http://www.oschina.net/project/lang/358/go)
+- [Awesome Go](https://github.com/avelino/awesome-go#continuous-integration)
 
 ## Project Dependency and Build
 
@@ -409,6 +410,7 @@ This program is similar to the TCP example, except now we created an object to h
 ## Terminal
 
 - [odin](https://github.com/jwaldrip/odin): A go-lang library to help build self documenting command line applications.
+- [go-flags](https://github.com/jessevdk/go-flags): go command line option parser
 
 ## Text Processing & Search
 
@@ -424,7 +426,7 @@ This program is similar to the TCP example, except now we created an object to h
 
 ## Robot
 
-- [Gobot](http://gobot.io/): Gobot is a framework for robotics, physical computing, and the Internet of Things, written in the Go programming language. 
+- [Gobot](http://gobot.io/): Gobot is a framework for robotics, physical computing, and the Internet of Things, written in the Go programming language.
 
 ## Data Access
 
@@ -440,6 +442,7 @@ This program is similar to the TCP example, except now we created an object to h
 - [go-simplejson](https://github.com/bitly/go-simplejson): a Go package to interact with arbitrary JSON
 - [Jason](https://github.com/antonholmquist/jason): Easy-to-use JSON Library for Go
 - [restful](https://github.com/devcamcar/restful): Restful HTTP Client package in golang
+- [Gizmo Microservice Toolkit](https://github.com/NYTimes/gizmo): This toolkit provides packages to put together server and pubsub daemons
 
 ## Server-side Push Service for Mobile App
 
@@ -462,7 +465,9 @@ This program is similar to the TCP example, except now we created an object to h
 - [GoRazor](https://github.com/sipin/gorazor): Razor view engine for Golang
 - [Webhook](https://github.com/adnanh/webhook): webhook is a lightweight configurable tool written in Go, that allows you to easily create HTTP endpoints (hooks) on your server, which you can use to execute configured commands.
 
+## Cache
 
+- [Groupcahe](https://github.com/golang/groupcache): groupcache is a caching and cache-filling library, intended as a replacement for memcached in many cases.
 
 # System Administration
 
@@ -491,6 +496,7 @@ This program is similar to the TCP example, except now we created an object to h
 
 - [Gogs](http://gogs.io/): 极易搭建的自助 Git 服务
 - [Gitea - a self-hosted Git service](https://github.com/go-gitea/gitea)
+- [git-appraise](https://github.com/google/git-appraise): Distributed Code Review For Git
 
 ## Backup
 

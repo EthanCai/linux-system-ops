@@ -1244,7 +1244,7 @@ The first five fields indicate when cron will execute the command:
 - the **hour** is the hour of the day based on a 24-hour clock
 - the **day-of-month** is a number from 1 to 31
 - the **day-of-week** is a number from 0 to 7, with 0 and 7 indicating Sunday
-- An asterisk (*) substitutes for any value in a field
+- An asterisk (`*`) substitutes for any value in a field
 - The user is the username or user ID of the user that the command will run as
 
 除了`/etc/crontab`，cron守护进程还会读取`/etc/cron.d`下的配置文件。下面是`/etc/cron.d/anacron`的内容，
@@ -1302,6 +1302,7 @@ LOGNAME=root
 ## Knowledge
 
 - [Linux Tools Quick Tutorial](http://linuxtools-rst.readthedocs.org/zh_CN/latest/index.html)
+- [the-art-of-command-line](https://github.com/jlevy/the-art-of-command-line)
 - [每天一个linux命令目录](http://www.cnblogs.com/peida/archive/2012/12/05/2803591.html)
 
 ## Utilites
