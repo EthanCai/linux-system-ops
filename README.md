@@ -9,4 +9,5 @@
 - [Vim基本操作](./vim基本操作.md)
 - [相关资源](./resources.md)
 - [container学习](./magic-container.md)
-- [Golang学习笔记](./golang-learning-notes.md)
+- [PowerShell学习笔记](./powershell-learning-notes.md)
+- [chef学习笔记](./chef-learning-notes.md)
