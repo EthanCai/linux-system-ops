@@ -437,16 +437,10 @@ This program is similar to the TCP example, except now we created an object to h
 
 - [bosun](https://github.com/bosun-monitor/bosun): Time Series Alerting Framework
 
-## Misc
+## Log
 
-- [go-simplejson](https://github.com/bitly/go-simplejson): a Go package to interact with arbitrary JSON
-- [Jason](https://github.com/antonholmquist/jason): Easy-to-use JSON Library for Go
-- [restful](https://github.com/devcamcar/restful): Restful HTTP Client package in golang
-- [Gizmo Microservice Toolkit](https://github.com/NYTimes/gizmo): This toolkit provides packages to put together server and pubsub daemons
-
-## Server-side Push Service for Mobile App
-
-- [uniqush-push](https://github.com/uniqush/uniqush-push): Uniqush is a free and open source software which provides a unified push service for server-side notification to apps on mobile devices.
+- [logrus](https://github.com/Sirupsen/logrus): Structured, pluggable logging for Go.
+- [Apex/log](https://github.com/apex/log): Structured logging package for Go.
 
 ## Message Queue
 
@@ -461,13 +455,31 @@ This program is similar to the TCP example, except now we created an object to h
 - [martini](https://github.com/go-martini/martini): Martini is a powerful package for quickly writing modular web applications/services in Golang.
 - [Gin Web Framework](https://github.com/gin-gonic/gin): Gin is a web framework written in Golang. It features a martini-like API with much better performance, up to 40 times faster thanks to httprouter. If you need performance and good productivity, you will love Gin.
 - [webgo](https://github.com/hoisie/web): web.go is the simplest way to write web applications in the Go programming language. It's ideal for writing simple, performant backend web services.
-- [Gorilla web toolkit](http://www.gorillatoolkit.org/): Gorilla is a web toolkit for the Go programming language.
-- [GoRazor](https://github.com/sipin/gorazor): Razor view engine for Golang
 - [Webhook](https://github.com/adnanh/webhook): webhook is a lightweight configurable tool written in Go, that allows you to easily create HTTP endpoints (hooks) on your server, which you can use to execute configured commands.
+
+## Micro Services
+
+- [goa](http://goa.design/): goa is a Go framework for developing RESTful microservices.
+- [Gizmo Microservice Toolkit](https://github.com/NYTimes/gizmo): This toolkit provides packages to put together server and pubsub daemons
 
 ## Cache
 
 - [Groupcahe](https://github.com/golang/groupcache): groupcache is a caching and cache-filling library, intended as a replacement for memcached in many cases.
+
+## Server-side Push Service for Mobile App
+
+- [uniqush-push](https://github.com/uniqush/uniqush-push): Uniqush is a free and open source software which provides a unified push service for server-side notification to apps on mobile devices.
+
+## Misc
+
+- [Gorilla web toolkit](http://www.gorillatoolkit.org/): Gorilla is a web toolkit for the Go programming language.
+- [GoRazor](https://github.com/sipin/gorazor): Razor view engine for Golang
+- [go-simplejson](https://github.com/bitly/go-simplejson): a Go package to interact with arbitrary JSON
+- [Jason](https://github.com/antonholmquist/jason): Easy-to-use JSON Library for Go
+- [restful](https://github.com/devcamcar/restful): Restful HTTP Client package in golang
+- [robpike.io/filter](https://godoc.org/robpike.io/filter): Package filter contains utility functions for filtering slices through the distributed application of a filter function.
+- [Parallel](https://github.com/wangkuiyi/parallel): Some OpenMP like syntax for Go
+
 
 # System Administration
 
