@@ -1310,8 +1310,6 @@ LOGNAME=root
 - [Explain Shell](http://explainshell.com/)
 
 
-
-
 # FAQ
 
 ## 如何安装中文语言支持（System Settings -> Language Support）及中文输入法（System Settings -> Text Entry）

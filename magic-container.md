@@ -68,15 +68,15 @@ Docker uses a client-server architecture. The Docker client talks to the Docker 
 ## Container
 
 - [Docker Engine](https://www.docker.com/): An open platform for distributed applications for developers and sysadmins
-	- [docker kitematic](https://kitematic.com/): Kitematic is the fastest and easiest way to start using Docker on your laptop. A completely automated process installs and configures the Docker environment on your machine in just minutes. Build and run containers through a simple, yet powerful graphical user interface (GUI).
-	- [docker registry](https://www.docker.com/docker-registry): [源代码](https://github.com/docker/distribution), Docker Registry is an open source application dedicated to the storage and distribution of your Docker images. Its seamless architecture allows both for fine grain integration with other systems and high-level scalability. Aggressively developed, its vibrant community includes industry leaders and users using it at the core of their images distribution solutions.
-	- [docker machine](https://www.docker.com/docker-machine): To get started with Docker, first you need to setup a Docker Engine. Docker Machine automatically sets up Docker on your computer, on cloud providers, and inside your data center. Docker Machine provisions the hosts, installs Docker Engine on them, and then configures the Docker client to talk to the Docker Engines.
-	- [docker compose](https://www.docker.com/docker-compose): Distributed applications consist of many small applications that work together. Docker transforms these applications into individual containers that are linked together. Instead of having to build, run and manage each individual container, Docker Compose allows you to define your multi-container application with all of its dependencies in a single file, then spin your application up in a single command. Your application’s structure and configuration are held in a single place, which makes spinning up applications simple and repeatable everywhere.
-	- [docker swarm](https://www.docker.com/docker-swarm): The nature of distributed applications requires compute resources that are also distributed. Docker Swarm provides native clustering capabilities to turn a group of Docker engines into a single, virtual Docker Engine. With these pooled resources, you can scale out your application as if it were running on a single, huge computer.
+    - [docker kitematic](https://kitematic.com/): Kitematic is the fastest and easiest way to start using Docker on your laptop. A completely automated process installs and configures the Docker environment on your machine in just minutes. Build and run containers through a simple, yet powerful graphical user interface (GUI).
+    - [docker registry](https://www.docker.com/docker-registry): [源代码](https://github.com/docker/distribution), Docker Registry is an open source application dedicated to the storage and distribution of your Docker images. Its seamless architecture allows both for fine grain integration with other systems and high-level scalability. Aggressively developed, its vibrant community includes industry leaders and users using it at the core of their images distribution solutions.
+    - [docker machine](https://www.docker.com/docker-machine): To get started with Docker, first you need to setup a Docker Engine. Docker Machine automatically sets up Docker on your computer, on cloud providers, and inside your data center. Docker Machine provisions the hosts, installs Docker Engine on them, and then configures the Docker client to talk to the Docker Engines.
+    - [docker compose](https://www.docker.com/docker-compose): Distributed applications consist of many small applications that work together. Docker transforms these applications into individual containers that are linked together. Instead of having to build, run and manage each individual container, Docker Compose allows you to define your multi-container application with all of its dependencies in a single file, then spin your application up in a single command. Your application’s structure and configuration are held in a single place, which makes spinning up applications simple and repeatable everywhere.
+    - [docker swarm](https://www.docker.com/docker-swarm): The nature of distributed applications requires compute resources that are also distributed. Docker Swarm provides native clustering capabilities to turn a group of Docker engines into a single, virtual Docker Engine. With these pooled resources, you can scale out your application as if it were running on a single, huge computer.
 
 ## Docker Network
 
-- [flannel](https://github.com/coreos/flannel): flannel is a virtual network that gives a subnet to each host for use with container runtimes. Platforms like Google's Kubernetes assume that each container (pod) has a unique, routable IP inside the cluster. The advantage of this model is that it reduces the complexity of doing port mapping. 
+- [flannel](https://github.com/coreos/flannel): flannel is a virtual network that gives a subnet to each host for use with container runtimes. Platforms like Google's Kubernetes assume that each container (pod) has a unique, routable IP inside the cluster. The advantage of this model is that it reduces the complexity of doing port mapping.
 - [Weave](https://github.com/weaveworks/weave): Weave creates a virtual network that connects Docker containers deployed across multiple hosts and enables their automatic discovery.
 - [Pipework](https://github.com/jpetazzo/pipework): Software-Defined Networking for Linux Containers. Pipework lets you connect together containers in arbitrarily complex scenarios. Pipework uses cgroups and namespace and works with "plain" LXC containers (created with lxc-start), and with the awesome Docker.
 
@@ -94,8 +94,8 @@ Docker uses a client-server architecture. The Docker client talks to the Docker 
 ## Container Management
 
 - [kubernetes](http://kubernetes.io/): Manage a cluster of Linux containers as a single system to accelerate Dev and simplify Ops.
-	- [kube-ui](https://github.com/kubernetes/kube-ui): Container Cluster Manager from Google Web UI. 介绍见[这里](http://kubernetes.io/v1.0/docs/user-guide/ui.html).
-	- [Kubernetes API client libraries](http://kubernetes.io/v1.0/docs/devel/client-libraries.html): 文档见[这里](https://godoc.org/github.com/kubernetes/kubernetes/pkg/client)
+    - [kube-ui](https://github.com/kubernetes/kube-ui): Container Cluster Manager from Google Web UI. 介绍见[这里](http://kubernetes.io/v1.0/docs/user-guide/ui.html).
+    - [Kubernetes API client libraries](http://kubernetes.io/v1.0/docs/devel/client-libraries.html): 文档见[这里](https://godoc.org/github.com/kubernetes/kubernetes/pkg/client)
 
 ## Monitor
 
@@ -125,7 +125,7 @@ Docker uses a client-server architecture. The Docker client talks to the Docker 
 
 ## Developer Tools
 
-- [Vagrant](https://www.vagrantup.com/): Vagrant 是一个基于 Ruby 的工具，用于创建和部署虚拟化开发环境。它使用 Oracle 的开源 VirtualBox 虚拟化系统，使用 Chef 创建自动化虚拟环境。 
+- [Vagrant](https://www.vagrantup.com/): Vagrant 是一个基于 Ruby 的工具，用于创建和部署虚拟化开发环境。它使用 Oracle 的开源 VirtualBox 虚拟化系统，使用 Chef 创建自动化虚拟环境。
 - [Panamax](http://panamax.io/): Panamax是一个CenturyLink开源的Docker管理工具，用户可以把多个Docker容器组合为模板并分享到GitHub。Panamax中的应用是由基于Docker镜像的独立服务组合而成，这些Docker镜像来自Docker Hub或者其它的Docker registry。Web的用户界面允许每个服务可以连接到其他服务，并可以配置环境变量、端口绑定、卷。另外也可以添加自定义的Docker运行命令。当这些服务组合在一起成为一个具备完整功能的应用后就可以作为一个模板保存到GitHub。Panamax的最初版本运行在由Vagrant管理的VirtualBox上，由于Vagrant的限制，目前Panamax仅可运行在Mac和Linux的VirtualBox上，并不支持其他虚拟化平台。CenturyLink的云平台也将会支持Panamax。
 
 ## PaaS
@@ -138,7 +138,7 @@ Docker uses a client-server architecture. The Docker client talks to the Docker 
 ## IaaS
 
 - [OpenStack](http://www.openstack.org/): Open source software for creating private and public clouds.
-- [Apache CloudStack](http://cloudstack.apache.org/): Apache CloudStack is open source software designed to deploy and manage large networks of virtual machines, as a highly available, highly scalable Infrastructure as a Service (IaaS) cloud computing platform. CloudStack is used by a number of service providers to offer public cloud services, and by many companies to provide an on-premises (private) cloud offering, or as part of a hybrid cloud solution. 
+- [Apache CloudStack](http://cloudstack.apache.org/): Apache CloudStack is open source software designed to deploy and manage large networks of virtual machines, as a highly available, highly scalable Infrastructure as a Service (IaaS) cloud computing platform. CloudStack is used by a number of service providers to offer public cloud services, and by many companies to provide an on-premises (private) cloud offering, or as part of a hybrid cloud solution.
 - [Zstack](http://zstack.org/cn/): ZStack是下一代开源的云计算IaaS（基础架构即服务）软件。它主要面向的是未来的智能数据中心， 通过提供全完善的APIs来管理包括计算、存储和网络在内的数据中心的各种资源。 用户可以基于ZStack构建自己的智能数据中心，也可以在稳定的ZStack之上搭建灵活的云应用场景， 例如VDI（虚拟桌面基础架构），PaaS（平台即服务），SaaS（软件即服务）等等。
 
 ## Virtual Machine OS
@@ -151,63 +151,16 @@ Docker uses a client-server architecture. The Docker client talks to the Docker 
 - [XenServer](http://xenserver.org/): XenServer is the leading open source virtualization platform, powered by the Xen Project hypervisor and the XAPI toolstack. It is used in the world's largest clouds and enterprises.
 - [Kernel Virtual Machine](http://www.linux-kvm.org/page/Main_Page): KVM (for Kernel-based Virtual Machine) is a full virtualization solution for Linux on x86 hardware containing virtualization extensions (Intel VT or AMD-V). It consists of a loadable kernel module, kvm.ko, that provides the core virtualization infrastructure and a processor specific module, kvm-intel.ko or kvm-amd.ko.
 - [Hyper](https://hyper.sh/): Hyper 是一种 App-Centric 的虚拟化技术，我们完全摒弃了传统虚机上必须和物理机一样，运行一个完整 OS 这种看似显然的假设，我们让Docker Image 直接运行在 Hypervisor 上。我们让一组容器直接启动在 hypervisor 上的时间达到 350 毫秒，并且还在进一步优化。而且所有这些，都是“开箱即得的”。当然有人会问，有了容器为什么还要虚机。诚然，虚机并不是所有人都需要的，但是，虚机天然具备更好的隔离性；虚拟机也仍然存在于很多企业应用的协议栈中，这样一个依赖更少、开箱即得，而且还带有 Pod、persist mode 等附加丰富特性的应用，是不少场景中都需要的。而我们最期待的，就是去引爆新的容器服务 —— CaaS。.传统虚拟机的问题其实在于过于刻意模仿物理机，刻意要承载完整操作系统，启动一台虚拟机要若干秒，甚至几分钟，Image 有若干GB，加载传播都很慢，但其实根本没有这个必要，Hyper希望兼取两者的强项
-- [OpenVZ](http://openvz.org/Main_Page): OpenVZ is container-based virtualization for Linux. OpenVZ creates multiple secure, isolated Linux containers (otherwise known as VEs or VPSs) on a single physical server enabling better server utilization and ensuring that applications do not conflict. Each container performs and executes exactly like a stand-alone server; a container can be rebooted independently and have root access, users, IP addresses, memory, processes, files, applications, system libraries and configuration files. 
+- [OpenVZ](http://openvz.org/Main_Page): OpenVZ is container-based virtualization for Linux. OpenVZ creates multiple secure, isolated Linux containers (otherwise known as VEs or VPSs) on a single physical server enabling better server utilization and ensuring that applications do not conflict. Each container performs and executes exactly like a stand-alone server; a container can be rebooted independently and have root access, users, IP addresses, memory, processes, files, applications, system libraries and configuration files.
 
 ## Network Virtualization
 
 - [Open vSwitch](http://openvswitch.org/): Open vSwitch is a production quality, multilayer virtual switch licensed under the open source Apache 2.0 license.  It is designed to enable massive network automation through programmatic extension, while still supporting standard management interfaces and protocols (e.g. NetFlow, sFlow, IPFIX, RSPAN, CLI, LACP, 802.1ag).  In addition, it is designed to support distribution across multiple physical servers similar to VMware's vNetwork distributed vswitch or Cisco's Nexus 1000V.
 - [Open Networking Foundation](https://www.opennetworking.org/index.php): Foundation about SDN and Open Flow
 
-# Articles
+## Docker on OSX
 
-演讲:
-
-- 2015-06-16: [基于Docker容器的云计算平台搭建实战](http://www.infoq.com/cn/presentations/build-cloud-computing-platform-based-on-docker-container)
-
-深入浅出Docker系列:
-
-- 2014-07-31: [深入浅出Docker（一）：Docker核心技术预览](http://www.infoq.com/cn/articles/docker-core-technology-preview)
-- 2014-08-15: [深入浅出Docker（二）：Docker命令行探秘](http://www.infoq.com/cn/articles/docker-command-line-quest)
-- 2014-08-29: [深入浅出Docker（三）：Docker开源之路](http://www.infoq.com/cn/articles/docker-open-source-road)
-- 2014-09-12: [深入浅出Docker（四）：Docker的集成测试部署之道](http://www.infoq.com/cn/articles/docker-integrated-test-and-deployment)
-- 2014-10-23: [深入浅出Docker（五）：基于Fig搭建开发环境](http://www.infoq.com/cn/articles/docker-build-development-environment-based-on-fig)
-- 2015-03-13: [深入浅出Docker（六）：像谷歌一样部署你的应用](http://www.infoq.com/cn/articles/deploy-your-application-like-google)
-
-DockerOne技术分享:
-
-- [DockOne技术分享（一）：Dockerfile与Docker构建流程解读](http://dockone.io/article/346)
-- [DockOne技术分享（二）：集群规模下日志处理和网络方案](http://dockone.io/article/355)
-- [DockOne技术分享（四）：AppC和Docker的对比](http://dockone.io/article/383)
-- [DockOne技术分享（十四）：腾讯蓝鲸数据平台之告警系统](http://dockone.io/article/537)
-
-Docker背后的内核知识:
-
-- 2015-03-12: [Docker背后的内核知识——Namespace资源隔离](http://www.infoq.com/cn/articles/docker-kernel-knowledge-namespace-resource-isolation)
-- 2015-04-20: [Docker背后的内核知识——cgroups资源限制](http://www.infoq.com/cn/articles/docker-kernel-knowledge-cgroups-resource-isolation)
-
-Docker源码分析:
-
-[Docker源码分析](http://www.infoq.com/cn/search.action?queryString=Docker%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90&page=1&searchOrder=&sst=6mw0v60aY59HlPFE)
-
-Kubernetes文章:
-
-- 论文: [Large-scale cluster management at Google with Borg](https://research.google.com/pubs/pub43438.html)，[备份](./Large-scale cluster management at Google with Borg.pdf)
-	- [Google发布论文 披露大规模集群管理工具Borg的细节](http://www.infoq.com/cn/news/2015/04/google-borg)
-	- [Docker背后的容器集群管理——从Borg到Kubernetes（一）](http://www.infoq.com/cn/articles/docker-container-cluster-management-part-01/)
-- 2014-10-30: [Kubernetes系统架构简介](http://www.infoq.com/cn/articles/Kubernetes-system-architecture-introduction)
-- 2014-10-30: [Kubernetes初探](http://blog.csdn.net/zhangjun2915/article/details/40598151)
-- 2014-12-03: [CentOS 7实战Kubernetes部署](http://www.infoq.com/cn/articles/centos7-practical-kubernetes-deployment)
-- 2015-01-09: [An introduction to containers, Kubernetes, and the trajectory of modern cloud computing](http://googlecloudplatform.blogspot.jp/2015/01/in-coming-weeks-we-will-be-publishing.html)
-- 2015-01-22: [What makes a container cluster?](http://googlecloudplatform.blogspot.pt/2015/01/what-makes-a-container-cluster.html)
-
-其它文章:
-
-- 2014-08-19: [十大基于Docker的开发工具](http://www.infoq.com/cn/news/2014/08/top-10-open-source-docker)
-- 2014-09-19: [Docker 资源管理](http://segmentfault.com/a/1190000000681188)
-- 2014-11-26: [Docker at Shopify: How we built containers that power over 100,000 online shops](http://www.shopify.com/technology/15934308-docker-at-shopify-how-we-built-containers-that-power-over-100-000-online-shops), [中文版](http://www.csdn.net/article/2014-11-25/2822806)
-- 2015-02-13: [唱衰Docker，给大红大火的Docker泼点冷水](http://www.infoq.com/cn/articles/bad-mouthing-docker)
-- 2015-05-19: [Eric Brewer：容器和微服务是计算的未来](https://linux.cn/article-5464-1.html)
-- 2015-06-02: [Docker背后的容器管理——Libcontainer深度解析](http://www.infoq.com/cn/articles/docker-container-management-libcontainer-depth-analysis)
+- [Dlite](https://github.com/nlf/dlite): The simplest way to use Docker on OSX.
 
 # FAQ
 
@@ -218,4 +171,3 @@ Kubernetes文章:
 Using the -H tcp://127.0.0.1:5555 docker daemon option on the UbuntuA machine will instruct docker to bind to the loopback network interface (127.0.0.1). As a result it will only accept connections originating from the UbuntuA machine.
 
 If you want to accept connections incoming from any network interface use -H tcp://0.0.0.0:5555. Be aware that anyone that would be able to connect to your UbuntuA machine on port 5555 will be able to control your docker host. You need to protect it with firewall rules to allow only UbuntuB to connect to UbuntuA on port 5555.
-
