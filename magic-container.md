@@ -33,7 +33,7 @@ Docker uses a client-server architecture. The Docker client talks to the Docker 
 - [The Docker Book](http://book.douban.com/subject/26285268/)
 - [Docker Up and Running](http://www.amazon.com/Docker-Up-Running-Karl-Matthias/dp/1491917571/ref=sr_1_1?ie=UTF8&qid=1437978051&sr=8-1&keywords=docker)
 - [shipyard中文文档](http://dockerpool.com/static/books/shipyard_doc/index.html)
-
+- [Docker Cheat Sheet](https://github.com/wsargent/docker-cheat-sheet/)
 
 # Resources
 
