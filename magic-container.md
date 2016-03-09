@@ -1,6 +1,8 @@
-# Docker介绍
+# Container Technology
 
-[Docker Wikipedia](https://en.wiki2.org/wiki/Docker_(software)
+## Docker介绍
+
+[Docker Wikipedia](https://en.wiki2.org/wiki/Docker_(software))
 
 Docker is an open-source project that automates the deployment of applications inside software containers, by providing an additional layer of abstraction and automation of operating-system-level virtualization on Linux. Docker uses resource isolation features of the Linux kernel such as cgroups and kernel namespaces to allow independent "containers" to run within a single Linux instance, avoiding the overhead of starting and maintaining virtual machines.
 
@@ -8,7 +10,7 @@ The Linux kernel's support for namespaces mostly isolates an application's view 
 
 According to industry analyst firm 451 Research, "Docker is a tool that can package an application and its dependencies in a virtual container that can run on any Linux server. This helps enable flexibility and portability on where the application can run, whether on premise [sic], public cloud, private cloud, bare metal, etc."
 
-## How is this different from virtual machines?
+### How is this different from virtual machines?
 
 Each virtual machine includes the application, the necessary binaries and libraries and an entire guest operating system - all of which may be tens of GBs in size.
 
@@ -16,13 +18,29 @@ Containers include the application and all of its dependencies, but share the ke
 
 ![](./img/2015/07/container-vs-vm.jpg)
 
-## Docker's Architecture
+### Docker's Architecture
 
 参考：[https://docs.docker.com/introduction/understanding-docker/](https://docs.docker.com/introduction/understanding-docker/)
 
 Docker uses a client-server architecture. The Docker client talks to the Docker daemon, which does the heavy lifting of building, running, and distributing your Docker containers. Both the Docker client and the daemon can run on the same system, or you can connect a Docker client to a remote Docker daemon. The Docker client and daemon communicate via sockets or through a RESTful API.
 
 ![](./img/2015/07/architecture.svg)
+
+## LXC, LXD, LXCFS and CGManager
+
+[Linux Containers](https://linuxcontainers.org/)
+
+linuxcontainers.org is the umbrella project behind LXC, LXD, LXCFS and CGManager.
+
+The goal is to offer a distro and vendor neutral environment for the development of Linux container technologies.
+
+## CoreOS rkt
+
+[rkt](https://coreos.com/rkt/)
+
+rkt is the next-generation container manager for Linux clusters. Designed for security, simplicity, and composability within modern cluster architectures, rkt discovers, verifies, fetches, and executes application containers with pluggable isolation. rkt can run the same container with varying degrees of protection, from lightweight, OS-level namespace and capabilities isolation to heavier, VM-level hardware virtualization.
+
+rkt’s primary interface comprises a single executable, rather than a background daemon, and rkt leverages this design to easily integrate with existing init systems, like systemd, and with advanced cluster orchestration environments, like Kubernetes. rkt implements a modern, open, standard container format, the App Container (appc), but can also execute other container images, like those created with Docker.
 
 # Docs & Books
 
@@ -40,7 +58,6 @@ Docker uses a client-server architecture. The Docker client talks to the Docker 
 网站：
 
 - [Docker Hub](https://hub.docker.com/)
-- [Docker Pool](http://www.dockerpool.com/)
 - [DaoCloud技术Blog](http://blog.daocloud.io/)
 - [灵雀云Blog](http://www.alauda.cn/blog/)
 - [UnitedStack技术分享](https://www.ustack.com/skill-share/)
@@ -156,6 +173,7 @@ Docker uses a client-server architecture. The Docker client talks to the Docker 
 ## Network Virtualization
 
 - [Open vSwitch](http://openvswitch.org/): Open vSwitch is a production quality, multilayer virtual switch licensed under the open source Apache 2.0 license.  It is designed to enable massive network automation through programmatic extension, while still supporting standard management interfaces and protocols (e.g. NetFlow, sFlow, IPFIX, RSPAN, CLI, LACP, 802.1ag).  In addition, it is designed to support distribution across multiple physical servers similar to VMware's vNetwork distributed vswitch or Cisco's Nexus 1000V.
+- [Data Plane Development Kit](http://www.dpdk.org/): DPDK is a set of libraries and drivers for fast packet processing. It was designed to run on any processors. The first supported CPU was Intel x86 and it is now extended to IBM Power 8, EZchip TILE-Gx and ARM. It runs mostly in Linux userland. A FreeBSD port is available for a subset of DPDK features.
 - [Open Networking Foundation](https://www.opennetworking.org/index.php): Foundation about SDN and Open Flow
 
 ## Docker on OSX
@@ -164,10 +182,47 @@ Docker uses a client-server architecture. The Docker client talks to the Docker 
 
 # FAQ
 
-## Docker client communicating with remote docker host
+## How to install and uninstall Docker in Ubuntu
+
+```sh
+# install docker
+$ curl -fsSL https://get.docker.com/ | sh
+
+# Uninstall docker and it's dependencies
+$ sudo apt-get remove --auto-remove docker
+
+# Purging docker, config/data and it's dependencies
+$ sudo apt-get purge --auto-remove docker-engine
+
+# restart to start docker server
+$ sudo shutdown -r 0
+```
+
+## Use docker hub mirror to speed up download docker image
+
+```sh
+$ echo "DOCKER_OPTS=\"\$DOCKER_OPTS --registry-mirror=http://6de9fa0c.m.daocloud.io\"" | sudo tee -a /etc/default/docker
+$ sudo service docker restart
+```
+
+Refer to:
+
+- [DaoCloud 加速器和 Toolbox](http://docs.daocloud.io/faq/what-is-daocloud-accelerator)
+
+
+## How to make docker daemon accept connections incoming from any network interface
 
 参考[Docker client communicating with docker host](http://stackoverflow.com/questions/26481258/docker-client-communicating-with-docker-host)
 
 Using the -H tcp://127.0.0.1:5555 docker daemon option on the UbuntuA machine will instruct docker to bind to the loopback network interface (127.0.0.1). As a result it will only accept connections originating from the UbuntuA machine.
 
 If you want to accept connections incoming from any network interface use -H tcp://0.0.0.0:5555. Be aware that anyone that would be able to connect to your UbuntuA machine on port 5555 will be able to control your docker host. You need to protect it with firewall rules to allow only UbuntuB to connect to UbuntuA on port 5555.
+
+## 在Mac OS X中，启动VirutalBox VM中的mongodb容器，挂载Mac OS X本地数据卷，启动mongod报“fsync: Invalid argument”的错误
+
+参考：
+
+- ["Fatal Assertion" with "fsync: Invalid Argument"](https://github.com/mvertes/docker-alpine-mongo/issues/1)
+- [OFFICIAL REPOSITORY - mongo](https://hub.docker.com/_/mongo/)
+
+WARNING: because MongoDB uses memory mapped files it is not possible to use it through vboxsf to your host (vbox bug). VirtualBox shared folders are not supported by MongoDB (see docs.mongodb.org and related jira.mongodb.org bug). This means that it is not possible with the default setup using Docker Toolbox to run a MongoDB container with the data directory mapped to the host.
