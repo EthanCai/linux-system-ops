@@ -223,6 +223,8 @@ If you want to accept connections incoming from any network interface use -H tcp
 参考：
 
 - ["Fatal Assertion" with "fsync: Invalid Argument"](https://github.com/mvertes/docker-alpine-mongo/issues/1)
+- [can not use external volume](https://github.com/docker-library/mongo/issues/30)
 - [OFFICIAL REPOSITORY - mongo](https://hub.docker.com/_/mongo/)
+- [How to set docker mongo data volume](http://stackoverflow.com/questions/35400740/how-to-set-docker-mongo-data-volume)
 
 WARNING: because MongoDB uses memory mapped files it is not possible to use it through vboxsf to your host (vbox bug). VirtualBox shared folders are not supported by MongoDB (see docs.mongodb.org and related jira.mongodb.org bug). This means that it is not possible with the default setup using Docker Toolbox to run a MongoDB container with the data directory mapped to the host.
