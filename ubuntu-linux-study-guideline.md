@@ -1303,6 +1303,7 @@ LOGNAME=root
 
 - [Linux Tools Quick Tutorial](http://linuxtools-rst.readthedocs.org/zh_CN/latest/index.html)
 - [the-art-of-command-line](https://github.com/jlevy/the-art-of-command-line)
+- [Linux Shell Scripting Tutorial (LSST) v2.0](https://bash.cyberciti.biz/guide/Main_Page)
 - [每天一个linux命令目录](http://www.cnblogs.com/peida/archive/2012/12/05/2803591.html)
 
 ## Utilites
