@@ -1,3 +1,133 @@
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [Preface](#preface)
+- [Glossary](#glossary)
+- [Install Ubuntu Linux](#install-ubuntu-linux)
+	- [目标](#目标)
+	- [内容](#内容)
+	- [Shell基本命令](#shell基本命令)
+		- [df](#df)
+		- [du](#du)
+	- [练习](#练习)
+		- [手动安装Ubuntu Desktop 14.04](#手动安装ubuntu-desktop-1404)
+		- [手动安装Ubuntu Server 14.04](#手动安装ubuntu-server-1404)
+		- [自动化安装Ubuntu Linux](#自动化安装ubuntu-linux)
+		- [查看Ubuntu的版本和Linux内核版本](#查看ubuntu的版本和linux内核版本)
+- [Basic Shell Knowledge](#basic-shell-knowledge)
+	- [目标](#目标)
+	- [内容](#内容)
+	- [Shell基本命令](#shell基本命令)
+		- [Display system manual: man](#display-system-manual-man)
+		- [Search the whatis database for stringss: apropos](#search-the-whatis-database-for-stringss-apropos)
+		- [A menu-based hypetext system: info, pinfo](#a-menu-based-hypetext-system-info-pinfo)
+		- [账号间的切换、提权至root: sudo](#账号间的切换提权至root-sudo)
+		- [Base Utilites: ls, cat, rm, less, more](#base-utilites-ls-cat-rm-less-more)
+		- [Working with files: cp, mv, head, tail, sort, uniq, diff, file](#working-with-files-cp-mv-head-tail-sort-uniq-diff-file)
+		- [Find something: find, mlocate, locate, which, grep](#find-something-find-mlocate-locate-which-grep)
+		- [Manipulate text: awk, sed, ack](#manipulate-text-awk-sed-ack)
+		- [More commands: echo, date](#more-commands-echo-date)
+- [Install and Manage Packages](#install-and-manage-packages)
+	- [目标](#目标)
+	- [内容](#内容)
+	- [Shell命令](#shell命令)
+		- [Debian package management system: dpkg](#debian-package-management-system-dpkg)
+		- [Advanced Package Tool: apt](#advanced-package-tool-apt)
+		- [aptitude](#aptitude)
+		- [git](#git)
+		- [wget](#wget)
+	- [练习](#练习)
+		- [查找软件包](#查找软件包)
+		- [下载软件包](#下载软件包)
+		- [安装软件包](#安装软件包)
+		- [移除软件包](#移除软件包)
+		- [自动移除软件包](#自动移除软件包)
+		- [清除下载的软件包](#清除下载的软件包)
+		- [更新源](#更新源)
+		- [更新系统](#更新系统)
+- [SSH](#ssh)
+	- [目标](#目标)
+	- [内容](#内容)
+	- [Shell基本命令](#shell基本命令)
+		- [SSH](#ssh)
+		- [本地和远程操作系统之间拷贝文件: `scp`, `sftp`, `sshfs`, `rsync`](#本地和远程操作系统之间拷贝文件-scp-sftp-sshfs-rsync)
+		- [Record a shell session: `script`](#record-a-shell-session-script)
+		- [Convert linux and macos files to windows format: `todos`, `fromdos`](#convert-linux-and-macos-files-to-windows-format-todos-fromdos)
+	- [练习](#练习)
+		- [安装SSH Server或者SSH Client](#安装ssh-server或者ssh-client)
+		- [在客户端操作系统上通过SSH连接Ubuntu Server](#在客户端操作系统上通过ssh连接ubuntu-server)
+		- [通过scp向server传送文件](#通过scp向server传送文件)
+		- [通过scp从server获取文件](#通过scp从server获取文件)
+- [Basic Vim Usage](#basic-vim-usage)
+	- [目标](#目标)
+	- [熟悉Vim](#熟悉vim)
+- [Advanced Vim Usage](#advanced-vim-usage)
+- [File, Directory, User, User Group, Authority](#file-directory-user-user-group-authority)
+	- [目标](#目标)
+	- [内容](#内容)
+- [Compress and Uncompress Files](#compress-and-uncompress-files)
+	- [目标](#目标)
+	- [内容](#内容)
+	- [练习](#练习)
+		- [`bzip2`, `bunzip2`, `bzcat`命令练习](#bzip2-bunzip2-bzcat命令练习)
+		- [`tar`命令练习](#tar命令练习)
+- [Process](#process)
+	- [目标](#目标)
+	- [内容](#内容)
+	- [Shell基本命令](#shell基本命令)
+- [Basic Network Management](#basic-network-management)
+	- [目标](#目标)
+	- [Basic Network Management](#basic-network-management)
+	- [Shell命令](#shell命令)
+- [Writing Shell Scripts](#writing-shell-scripts)
+	- [目标](#目标)
+	- [基本概念](#基本概念)
+		- [交互式shell和非交互式shell、登录shell和非登录shell的区别](#交互式shell和非交互式shell登录shell和非登录shell的区别)
+		- [如何让你的shell脚本更健壮和更可靠](#如何让你的shell脚本更健壮和更可靠)
+		- [语法](#语法)
+			- [常用系统变量](#常用系统变量)
+			- [Builtin commands that are symbols](#builtin-commands-that-are-symbols)
+			- [Control Structures](#control-structures)
+				- [if...else pattern](#ifelse-pattern)
+				- [if...then...else pattern](#ifthenelse-pattern)
+				- [if...then...elif pattern](#ifthenelif-pattern)
+				- [for...in pattern](#forin-pattern)
+				- [for pattern](#for-pattern)
+				- [while pattern](#while-pattern)
+				- [until pattern](#until-pattern)
+				- [break and continue pattern](#break-and-continue-pattern)
+				- [case pattern](#case-pattern)
+				- [select pattern](#select-pattern)
+			- [File Descriptors](#file-descriptors)
+	- [Shell命令](#shell命令)
+- [Schedule Tasks](#schedule-tasks)
+	- [目标](#目标)
+	- [内容](#内容)
+		- [参考](#参考)
+		- [cron的坑](#cron的坑)
+		- [cron和anacron的区别](#cron和anacron的区别)
+		- [Crontab文件](#crontab文件)
+			- [系统crontab文件](#系统crontab文件)
+			- [用户crontab文件](#用户crontab文件)
+		- [anacron配置文件](#anacron配置文件)
+- [Futher Reading](#futher-reading)
+	- [Knowledge](#knowledge)
+	- [Utilites](#utilites)
+- [FAQ](#faq)
+	- [如何安装中文语言支持及中文输入法](#如何安装中文语言支持及中文输入法)
+	- [如何升级系统，安装最新的补丁和最新版本的软件](#如何升级系统安装最新的补丁和最新版本的软件)
+	- [修改Ubuntu Software Repository的下载地址](#修改ubuntu-software-repository的下载地址)
+	- [如何给Ubuntu Linux Virutal Machine安装VMWare Tools](#如何给ubuntu-linux-virutal-machine安装vmware-tools)
+	- [如何给Ubuntu Linux Virtual Machine安装Parallel Tools](#如何给ubuntu-linux-virtual-machine安装parallel-tools)
+	- [使用命令`man wget > man-wget.txt`把命令文档输入到文本文件后，打开man-wget.txt，发现有很多重复字符，或者乱码？](#使用命令man-wget-man-wgettxt把命令文档输入到文本文件后打开man-wgettxt发现有很多重复字符或者乱码)
+	- [如何修改OS的hostname](#如何修改os的hostname)
+	- [设置DNS服务的服务地址](#设置dns服务的服务地址)
+	- [如何配置网卡和IP地址](#如何配置网卡和ip地址)
+	- [如何从Internet更新ubuntu本地的时间？](#如何从internet更新ubuntu本地的时间)
+	- [切换网络后，如何强制更新网卡IP？](#切换网络后如何强制更新网卡ip)
+
+<!-- /TOC -->
+
+
 # Preface
 
 面向开发的Ubuntu Linux快速学习手册，掌握基本Ubuntu Linux操作和管理
@@ -70,25 +200,37 @@ drwxr-xr-x  12 root root  4096 May 10 02:01 var/
 
 ## Shell基本命令
 
-- `df`: 检查linux服务器的文件系统的磁盘空间占用情况
-    - 参考 [每天一个linux命令（33）：df 命令](http://www.cnblogs.com/peida/archive/2012/12/07/2806483.html)
-- `du`: 查看使用空间的，但是与df命令不同的是Linux du命令是对文件和目录磁盘使用的空间的查看
-    - 参考 [每天一个linux命令（34）：du 命令](http://www.cnblogs.com/peida/archive/2012/12/10/2810755.html)
+### df
+
+`df`: 检查linux服务器的文件系统的磁盘空间占用情况，可以利用该命令来获取硬盘被占用了多少空间，目前还剩下多少空间等信息。
+
+- 参考 [每天一个linux命令（33）：df 命令](http://www.cnblogs.com/peida/archive/2012/12/07/2806483.html)
+
+### du
+
+`du`: 也是查看使用空间的，但是与`df`命令不同的是`du`命令是对文件和目录磁盘使用的空间的查看。
+
+- 参考 [每天一个linux命令（34）：du 命令](http://www.cnblogs.com/peida/archive/2012/12/10/2810755.html)
 
 ## 练习
 
-- 手动安装Ubuntu Desktop 14.04
-- 手动安装Ubuntu Server 14.04
-- 自动化安装Ubuntu Linux
-    - [Preboot Execution Environment](https://en.wiki2.org/wiki/Preboot_Execution_Environment)
-    - [Cobbler Quickstart Guide](http://www.cobblerd.org/manuals/quickstart/)
-    - [运维自动化之Cobbler系统安装详解](http://os.51cto.com/art/201109/288604_all.htm)
-- 如何查看Ubuntu的版本和Linux内核版本
-    - `cat /etc/issue`
-    - `sudo lsb_release -a`
-    - `uname -r`
-    - 执行结果见下图：  
-        ![](./img/2015/06/view-ubuntu-version-and-kernel-version.png)
+### 手动安装Ubuntu Desktop 14.04
+
+### 手动安装Ubuntu Server 14.04
+
+### 自动化安装Ubuntu Linux
+
+- [Preboot Execution Environment](https://en.wiki2.org/wiki/Preboot_Execution_Environment)
+- [Cobbler Quickstart Guide](http://www.cobblerd.org/manuals/quickstart/)
+- [运维自动化之Cobbler系统安装详解](http://os.51cto.com/art/201109/288604_all.htm)
+
+### 查看Ubuntu的版本和Linux内核版本
+
+- `cat /etc/issue`
+- `sudo lsb_release -a`
+- `uname -r`
+- 执行结果见下图：  
+    ![](./img/2015/06/view-ubuntu-version-and-kernel-version.png)
 
 
 
@@ -138,42 +280,55 @@ drwxr-xr-x  12 root root  4096 May 10 02:01 var/
 
 ## Shell基本命令
 
-- `man`: display system manual
-- `apropos`: search the whatis database for stringss
-- `info`, `pinfo`: a menu-based hypetext system
-- `sudo`: 账号间的切换、提权至root
-- Base Utilites:
-    - `ls`: list the names of files
-    - `cat`: display a text files
-    - `rm`: delete a files
-    - `less`, `more`: display a text file one screen at a time
-- Working with files:
-    - `cp`: copy file
-    - `mv`: move file, change the name of file
-    - `head`: diplay the beginning of a file
-    - `tail`: display the end of a file，参考[tail命令](http://www.cnblogs.com/peida/archive/2012/11/07/2758084.html)
-    - `sort`: sort lines of text，参考[sort命令](http://roclinux.cn/?p=1350)
-    - `uniq`: remove duplicate lines from a file，参考[uniq命令](http://www.linuxso.com/command/uniq.html)
-    - `diff`: compare two files，参考[diff命令](http://www.cnblogs.com/peida/archive/2012/12/12/2814048.html)
-    - `file`: determine file type
-- find something
-    - `find`: walk a file hierarchy, [每天一个linux命令（19）：find 命令概览](http://www.cnblogs.com/peida/archive/2012/11/13/2767374.html)
-    - find filenames quickly
-        - `mlocate`: ubuntu, centos下使用此命令，使用前需要执行`updatedb`命令创建`/var/lib/mlocate/mlocate.db`索引文件
-        - `locate`: MacOS使用此命令，使用前需要执行`sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist`创建`/var/db/locate.database`索引文件
-    - `which`, whereis: locate a utility
-    - `grep`: [每天一个linux命令（39）：grep 命令](http://www.cnblogs.com/peida/archive/2012/12/17/2821195.html)
-    - `ack`: a tool like grep, optimized for programmers
-        - [Offical website](http://beyondgrep.com/)
-- manipulate text
-    - `awk`: awk是一个强大的文本分析工具，相对于grep的查找，sed的编辑，awk在其对数据分析并生成报告时，显得尤为强大。
-        - [linux awk命令详解](http://www.cnblogs.com/ggjucheng/archive/2013/01/13/2858470.html)
-        - [simple awk tutorial](http://www.hcs.harvard.edu/~dholland/computers/awk.html)
-    - `sed`: edit text
-        - [linux中sed的用法](http://www.cnblogs.com/emanlee/archive/2013/09/07/3307642.html)
-- 更多命令
-    - `echo`: display text
-    - `date`: display the time and date，参考[date命令](http://www.cnblogs.com/peida/archive/2012/12/12/2814048.html)
+### Display system manual: man
+
+### Search the whatis database for stringss: apropos
+
+### A menu-based hypetext system: info, pinfo
+
+### 账号间的切换、提权至root: sudo
+
+### Base Utilites: ls, cat, rm, less, more
+
+- `ls`: list the names of files
+- `cat`: display a text files
+- `rm`: delete a files
+- `less`, `more`: display a text file one screen at a time
+
+### Working with files: cp, mv, head, tail, sort, uniq, diff, file
+
+- `cp`: copy file
+- `mv`: move file, change the name of file
+- `head`: diplay the beginning of a file
+- `tail`: display the end of a file，参考[tail命令](http://www.cnblogs.com/peida/archive/2012/11/07/2758084.html)
+- `sort`: sort lines of text，参考[sort命令](http://roclinux.cn/?p=1350)
+- `uniq`: remove duplicate lines from a file，参考[uniq命令](http://www.linuxso.com/command/uniq.html)
+- `diff`: compare two files，参考[diff命令](http://www.cnblogs.com/peida/archive/2012/12/12/2814048.html)
+- `file`: determine file type
+
+### Find something: find, mlocate, locate, which, grep
+
+- `find`: walk a file hierarchy, [每天一个linux命令（19）：find 命令概览](http://www.cnblogs.com/peida/archive/2012/11/13/2767374.html)
+- find filenames quickly
+    - `mlocate`: ubuntu, centos下使用此命令，使用前需要执行`updatedb`命令创建`/var/lib/mlocate/mlocate.db`索引文件
+    - `locate`: MacOS使用此命令，使用前需要执行`sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist`创建`/var/db/locate.database`索引文件
+- `which`, whereis: locate a utility
+- `grep`: [每天一个linux命令（39）：grep 命令](http://www.cnblogs.com/peida/archive/2012/12/17/2821195.html)
+
+### Manipulate text: awk, sed, ack
+
+- `awk`: awk是一个强大的文本分析工具，相对于grep的查找，sed的编辑，awk在其对数据分析并生成报告时，显得尤为强大。
+    - [linux awk命令详解](http://www.cnblogs.com/ggjucheng/archive/2013/01/13/2858470.html)
+    - [simple awk tutorial](http://www.hcs.harvard.edu/~dholland/computers/awk.html)
+- `sed`: edit text
+    - [linux中sed的用法](http://www.cnblogs.com/emanlee/archive/2013/09/07/3307642.html)
+- `ack`: a tool like grep, optimized for programmers
+    - [Offical website](http://beyondgrep.com/)
+
+### More commands: echo, date
+
+- `echo`: display text
+- `date`: display the time and date，参考[date命令](http://www.cnblogs.com/peida/archive/2012/12/12/2814048.html)
 
 
 # Install and Manage Packages
@@ -185,10 +340,7 @@ drwxr-xr-x  12 root root  4096 May 10 02:01 var/
 
 ## 内容
 
-- 参考内容
-    - [包管理系统指南](http://wiki.ubuntu.org.cn/包管理系统指南)
-    - PG2UL, page 517, chapter 13 - downloading and installing software
-- Repository: Repositories hold collections of software packages and related information, includ- ing headers that describe each package and provide information on other packages the package depends on. Ubuntu maintains repositories for each of its releases.
+- Repository: Repositories hold collections of software packages and related information, including headers that describe each package and provide information on other packages the package depends on. Ubuntu maintains repositories for each of its releases.
     - main: Ubuntu-supported open-source software
     - universe: Community-maintained open-source software
     - multiverse: Software restricted by copyright or legal issues
@@ -198,39 +350,45 @@ drwxr-xr-x  12 root root  4096 May 10 02:01 var/
 - `/etc/apt/sources.list`: specifies the repositories APT searches when you ask it to find or install a package.
     - 通过命名修改repository地址为中国访问更快的"mirrors.yun-idc.com": `sudo sed -i 's/archive.ubuntu.com/mirrors.yun-idc.com/g' /etc/apt/sources.list`
 - APT local package indexes is in `/var/lib/apt/lists` directory. APT uses these files to determine whether the packages on the system, and those in its cache, are the most recent versions.
-- `/var/cache/apt/archives` directory holds recently downloaded deb files (page 533)
-- The aptitude utility keeps very readable logs in `/var/log/aptitude`.
+- `/var/cache/apt/archives` directory holds recently downloaded deb files
+- The aptitude utility keeps very readable logs in `/var/log/aptitude`
+- 参考内容
+    - [包管理系统指南](http://wiki.ubuntu.org.cn/包管理系统指南)
+    - [Ubuntu服务器管理指南 - 包管理](https://help.ubuntu.com/lts/serverguide/package-management.html)
+    - PG2UL, page 517, chapter 13 - downloading and installing software
 
 ## Shell命令
 
-- `dpkg`
-    - 全称：Debian package management system
-    - dpkg主要是对本地的软件包进行管理，本地软件包包括已经在本地安装的软件包和已经下载但还没有安装的 deb 文件，不解决依赖关系。
-- `apt`
-    - 全称：Advanced Package Tool
-    - apt和dpkg的用途比较：APT downloads software packages, while dpkg installs, removes, maintains, manages dependencies of, and reports on software packages.
-    - apt的命令包含
-        - `apt-get`: 主要负责软件包的在线安装与升级，低层对 deb 包的处理还是用的 dpkg，解决依赖关系
-        - `apt-cache`: 主要用来查询软件包的状态和依赖关系
-        - `apt-file`: 主要负责查询软件包名称和软件包包含的文件（值得注意的是它要自己同步）
-- `aptitude`
-    - Ubuntu desktop 14.04中，并没有默认安装aptitude，需要执行`sudo apt-get install aptitude`来安装
-    - `aptitude install`: install package and its dependencies
-    - `aptitude remove`: remove package and its dependencies, but not include configuration
-    - `aptitude purge`: remove package and its dependencies, configuration
-    - `aptitude search`: looks for packages with names that match a pattern
-    - `aptitude clean`: Deletes all packages from the APT cache
-- `git`
-    - 安装git。如果已安装，忽略。
-    - 在命令行下使用git获取、创建分支、提交、合并代码
-    - 阅读[Pro Git (En)](https://git-scm.com/book/en/v2)， [Pro Git中文版](http://iissnan.com/progit/)
-- `wget`
-    - 安装wget。如果已安装，忽略。
-    - 学习使用wget
-    - 在线html文档，访问[wget html document](http://www.gnu.org/software/wget/manual/wget.html)
-- `vim`
-    - 安装vim
-    - Ubuntu Desktop 14.04 默认没有安装Vim
+### Debian package management system: dpkg
+
+dpkg主要是对本地的软件包进行管理，本地软件包包括已经在本地安装的软件包和已经下载但还没有安装的 deb 文件，不解决依赖关系。
+
+### Advanced Package Tool: apt
+
+- apt和dpkg的用途比较：APT downloads software packages, while dpkg installs, removes, maintains, manages dependencies of, and reports on software packages.
+- apt的命令包含
+    - `apt-get`: 主要负责软件包的在线安装与升级，低层对 deb 包的处理还是用的 dpkg，解决依赖关系
+    - `apt-cache`: 主要用来查询软件包的状态和依赖关系
+    - `apt-file`: 主要负责查询软件包名称和软件包包含的文件（值得注意的是它要自己同步）
+
+### aptitude
+
+- Ubuntu desktop 14.04中，并没有默认安装aptitude，需要执行`sudo apt-get install aptitude`来安装
+- `aptitude install`: install package and its dependencies
+- `aptitude remove`: remove package and its dependencies, but not include configuration
+- `aptitude purge`: remove package and its dependencies, configuration
+- `aptitude search`: looks for packages with names that match a pattern
+- `aptitude clean`: Deletes all packages from the APT cache
+- 参考：
+    - [Aptitude](https://help.ubuntu.com/lts/serverguide/aptitude.html)
+
+### git
+
+- 阅读[Pro Git (En)](https://git-scm.com/book/en/v2)， [Pro Git中文版](http://iissnan.com/progit/)
+
+### wget
+
+- 在线html文档，访问[wget html document](http://www.gnu.org/software/wget/manual/wget.html)
 
 ## 练习
 
@@ -320,8 +478,7 @@ apitude purge pattern #同上
 ### 自动移除软件包
 
 ```bash
-apt-get autoremove #删除不再需要的软件包
-注：aptitude 没有，它会自动解决这件事
+apt-get autoremove #删除不再需要的软件包。aptitude 没有，它会自动解决这件事
 ```
 
 ### 清除下载的软件包
@@ -360,45 +517,90 @@ aptitude full-upgrade #同上
 
 ## 内容
 
-- SSH
-    - [SSH原理与运用（一）](http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html)
-    - [SSH原理与运用（二）](http://www.ruanyifeng.com/blog/2011/12/ssh_port_forwarding.html)
-    - [OpenSSH-Server(Ubuntu Server Document)](https://help.ubuntu.com/lts/serverguide/openssh-server.html)
-    - [25个必须记住的SSH命令](http://os.51cto.com/art/201011/235252.htm)
-    - [mac下SSH免密码登录远程服务器](http://cssor.com/mac-ssh-auto-login-server.html)
-- 终端与本地文件的传输
-    - `scp`: [详解linux scp命令的应用](http://os.51cto.com/art/201003/187301.htm)
-    - 除了scp的其它文件传输方法：sftp，sshfs, rsync，参考 [how-to-copy-files-from-one-machine-to-another-using-ssh](http://unix.stackexchange.com/questions/106480/how-to-copy-files-from-one-machine-to-another-using-ssh#)
+- 简介
+    - OpenSSH is a freely available version of the Secure Shell (SSH) protocol family of tools for remotely controlling, or transferring files between, computers. Traditional tools used to accomplish these functions, such as `telnet` or `rcp`, are **insecure** and **transmit the user's password in cleartext when used**. OpenSSH provides a server daemon and client tools to facilitate **secure**, **encrypted** remote control and file transfer operations, effectively replacing the legacy tools.
+    - OpenSSH服务器组组件`sshd`持续监听来自任何客户端工具的连接请求。当一个连接请求发生时，`sshd`根据客户端连接的类型来设置当前连接。例如，如果远程计算机是通过 ssh 客户端应用程序来连接的话，OpenSSH 服务器将在认证之后设置一个远程控制会话。如果一个远程用户通过 scp 来连接 OpenSSH 服务器，OpenSSH 服务器将在认证之后开始服务器和客户机之间的安全文件拷贝。OpenSSH 可以支持多种认证模式，包括纯密码、公钥以及Kerberos票据。
+    - 参考
+        - [SSH原理与运用（一）](http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html)
+        - [SSH原理与运用（二）](http://www.ruanyifeng.com/blog/2011/12/ssh_port_forwarding.html)
+- 安装
+    - ubuntu默认并没有安装ssh服务，如果通过ssh链接ubuntu，需要自己手动安装ssh-server
+    - 安装客户端:
+        - `sudo apt-get install openssh-client`
+        - 通过在bash中执行`ssh`验证客户端是否安装成功
+    - 安装服务端:
+        - `sudo apt-get install openssh-server`
+        - 通过在bash中执行`ps -e |grep ssh`验证服务是否安装成功
+        - 配置服务端
+            - 配置文件保存在`/etc/ssh/sshd_config`
+            - 查看手册通过`man sshd_config`
+            - 配置完成后重启服务通过`sudo service ssh restart`
+    - 参考
+        - [OpenSSH-Server(Ubuntu Server Document)](https://help.ubuntu.com/lts/serverguide/openssh-server.html)
+        - [Generate a new ssh key and adding it to ssh agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#platform-linux)
+- 终端与本地文件的传输，具体用法见 **Shell基本命令**
+    - `scp`
+    - `sftp`
+    - `sshfs`
+    - `rsync`
 - 了解Linux下的语言编码、文件编码、终端编码之间的关系
     - [Linux下查看文件编码，文件或文件名编码格式转换](http://blog.sina.com.cn/s/blog_6fe0d70d0101du41.html)
     - [Linux中文乱码解决办法](http://www.mutouxiaogui.cn/blog/?p=21)
     - [Linux终端中文显示乱码](http://skypegnu1.blog.51cto.com/8991766/1545449)
-- 实践
-    - SSH
-        - 在Ubuntu Server安装openssh-server
-        - 在客户端操作系统上通过SSH连接Ubuntu Server
-            - Mac OS X上使用Terminal
-            - Windows上使用Putty、Xshell
-            - Ubuntu上安装openssh-client
-    - scp
-        - 通过scp向server传送文件
-        - 通过scp从server获取文件
+- 参考：
+    - [mac下SSH免密码登录远程服务器](http://cssor.com/mac-ssh-auto-login-server.html)
     - [让进程在断开SSH连接后依然保持运行](https://www.ibm.com/developerworks/cn/linux/l-cn-nohup/)
+    - [Ubuntu Document - OpenSSH 服务器](https://help.ubuntu.com/lts/serverguide/openssh-server.html)
 
 ## Shell基本命令
 
-- `script`: record a shell session
-- `todos`, `fromdos`: convert linux and macos files to windows format
+### SSH
+
+- 参考
+    - [25个必须记住的SSH命令](http://os.51cto.com/art/201011/235252.htm)
+
+### 本地和远程操作系统之间拷贝文件: `scp`, `sftp`, `sshfs`, `rsync`
+
+- 参考
+    - [详解linux scp命令的应用](http://os.51cto.com/art/201003/187301.htm)
+    - [how-to-copy-files-from-one-machine-to-another-using-ssh](http://unix.stackexchange.com/questions/106480/how-to-copy-files-from-one-machine-to-another-using-ssh)
+
+### Record a shell session: `script`
+
+### Convert linux and macos files to windows format: `todos`, `fromdos`
+
+## 练习
+
+### 安装SSH Server或者SSH Client
+
+### 在客户端操作系统上通过SSH连接Ubuntu Server
+
+- Mac OS X上使用Terminal
+- Windows上使用Putty、Xshell
+- Ubuntu上安装openssh-client
+
+### 通过scp向server传送文件
+
+### 通过scp从server获取文件
+
 
 
 # Basic Vim Usage
 
 ## 目标
+
 - 掌握Vim基本操作
 
 ## 熟悉Vim
 
 - 阅读[vim基本操作](./vim基本操作.md)
+
+
+
+# Advanced Vim Usage
+
+//todo: 高级Vim用法
+
 
 
 # File, Directory, User, User Group, Authority
@@ -451,23 +653,22 @@ aptitude full-upgrade #同上
 
 [rar tar gz zip 7z 有什么区别?](http://www.zhihu.com/question/26026741)：
 
-    tar是Linux常见的一种归档文件（原生不包括压缩功能）
-    gzip是gnu/Linux的一种压缩文件工具，算法是基于 DEFLATE，文件是gz，可以和tar组合。
-    zip是一种规范开放的压缩文件，算法不定，但主要是用 DEFLATE
-    rar的算法专有，但发行时附送解码器允许解码器再开发，编码器专有
-    7zip和zip差不多，算法不定，主要用bzip2和lzma，而且完全开源。
-    zip和7z更像是压缩容器，因为算法不是格式固定，允许支持其他压缩算法
-    The zip and unzip utilities are compatible with PKZIP, a Windows program that compresses and archives files.
-
-    大小与区别
-    tar是无压缩的，比压缩效率，gz的算法最原始，所以较低，其次zip，接着rar，7z两个主要算法基本上略优于rar，基本不相上下。
-
-    优缺点
-    在Linux里面，tar一般和其他没有文件管理的压缩算法文件结合使用，用tar打包整个文件目录结构成一个文件，再用gz，bzip等压缩算法压缩成一次。也是Linux常见的压缩归档的处理方法。
-
-    zip相对比较老，格式规范可知，所以积累了各种加解压实现，有较好的兼容性，不过现有文件格式相对而言比较落后，还有会有文件名乱码问题（因为文件名是用非Unicode编码）
-
-    rar和7z就新些，所用算法压缩效率也好很多，兼容性不及zip，不过rar的编码器有专利，但可以不制作编码器的情况使用或者再开发发行版的解码器（所以其他压缩管理工具可以调用rar的解码器来解压rar，但不能加压，百度云的在线解压rar可能是使用或者再开发过unrar文件），7z的文件和管理程序都是开源的，文件格式也比较好（支持Unicode文件名），两个主要压缩算法的性能都很好，只是差何时能普及而取代zip而已。
+> tar是Linux常见的一种归档文件（原生不包括压缩功能）
+> gzip是gnu/Linux的一种压缩文件工具，算法是基于 DEFLATE，文件是gz，可以和tar组合。
+> zip是一种规范开放的压缩文件，算法不定，但主要是用 DEFLATE
+> rar的算法专有，但发行时附送解码器允许解码器再开发，编码器专有
+> 7zip和zip差不多，算法不定，主要用bzip2和lzma，而且完全开源。
+> zip和7z更像是压缩容器，因为算法不是格式固定，允许支持其他压缩算法
+> The zip and unzip utilities are compatible with PKZIP, a Windows program that compresses and archives files.
+>
+> 大小与区别
+> tar是无压缩的，比压缩效率，gz的算法最原始，所以较低，其次zip，接着rar，7z两个主要算法基本上略优于rar，基本不相上下。
+>
+> 优缺点
+> 在Linux里面，tar一般和其他没有文件管理的压缩算法文件结合使用，用tar打包整个文件目录结构成一个文件，再用gz，bzip等压缩算法压缩成一次。也是Linux常见的压缩归档的处理方法。
+>
+> zip相对比较老，格式规范可知，所以积累了各种加解压实现，有较好的兼容性，不过现有文件格式相对而言比较落后，还有会有文件名乱码问题（因为文件名是用非Unicode编码）
+> rar和7z就新些，所用算法压缩效率也好很多，兼容性不及zip，不过rar的编码器有专利，但可以不制作编码器的情况使用或者再开发发行版的解码器（所以其他压缩管理工具可以调用rar的解码器来解压rar，但不能加压，百度云的在线解压rar可能是使用或者再开发过unrar文件），7z的文件和管理程序都是开源的，文件格式也比较好（支持Unicode文件名），两个主要压缩算法的性能都很好，只是差何时能普及而取代zip而已。
 
 - bzip2压缩
     - `bzip2`: compress a file
@@ -502,14 +703,14 @@ aptitude full-upgrade #同上
 ### `bzip2`, `bunzip2`, `bzcat`命令练习
 
 ```bash
-#使用bzip2压缩文件默认会自动删除原文件，生成的压缩文件名是"[原文件名（包括扩展名）].bz2"
+echo # 使用bzip2压缩文件默认会自动删除原文件，生成的压缩文件名是"[原文件名（包括扩展名）].bz2"
 $ bzip2 -v letter_e
 letter_e: 11680.00:1, 0.001 bits/byte, 99.99% saved, 584000 in, 50 out.
 
 $ ls -l
 -rw-rw-r-- 1 sam sam 50 2010-03-01 22:31 letter_e.bz2
 
-# 使用bunzip2解压文件会自动删除原压缩文件，原文件名去掉末尾的".bz2"就是生成的解压缩文件名
+echo # 使用bunzip2解压文件会自动删除原压缩文件，原文件名去掉末尾的".bz2"就是生成的解压缩文件名
 $ bunzip -v letter_e.bz2
 
 $ bzcat letter_e.bz2 | head -2
@@ -520,14 +721,14 @@ eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 ### `tar`命令练习
 
 ```bash
-# === Combine files into one file ===
+echo # === Combine files into one file ===
 
 $ ls -l g b d
 -rw-r--r-- 1 zach other 1178 2010-08-20 14:16 b
 -rw-r--r-- 1 zach zach  3783 2010-08-20 14:17 d
 -rw-r--r-- 1 zach zach  1302 2010-08-20 14:16 g
 
-#  –c (create), –v (verbose), and –f (write to or read from a file)
+echo # –c (create), –v (verbose), and –f (write to or read from a file)
 $ tar -cvf all.tar g b d
 g
 b
@@ -536,14 +737,14 @@ d
 $ ls -l all.tar
 -rw-r--r-- 1 zach zach  9728 2010-08-20 14:17 all.tar
 
-# –t option to display a table of contents for the archive
+echo # –t option to display a table of contents for the archive
 $ tar -tvf all.tar
 -rw-r--r-- zach /zach    1302 2010-08-20 14:16 g
 -rw-r--r-- zach /other   1178 2010-08-20 14:16 b
 -rw-r--r-- zach /zach    3783 2010-08-20 14:17 d
 
 
-# === Extract files from combined file ===
+echo # === Extract files from combined file ===
 
 $ ls -l mak*
 -rw-r--r-- 1 sam sam 1564560 2010-04-12 15:51 make-3.81.tar.gz
@@ -552,7 +753,7 @@ $ gunzip mak*
 $ ls -l mak*
 -rw-r--r-- 1 sam sam 6072320 2010-04-12 15:51 make-3.81.tar
 
-# –x to extract files from a tar archive
+echo # –x to extract files from a tar archive
 $ tar -xvf mak*
 make-3.81/
 make-3.81/config/
@@ -561,15 +762,15 @@ make-3.81/config/dospaths.m4
 make-3.81/tests/run_make_tests.pl
 make-3.81/tests/test_driver.pl
 
-# ===combine the gunzip and tar commands===
+echo # ===combine the gunzip and tar commands===
 
-# The –c option causes gunzip to send its output through the pipe instead of creating a file. The final hyphen (–) causes tar to read from standard input.
+echo # The –c option causes gunzip to send its output through the pipe instead of creating a file. The final hyphen (–) causes tar to read from standard input.
 $ gunzip -c make-3.81.tar.gz | tar -xvf -
 
-# –z option to cause tar to call gunzip
+echo # –z option to cause tar to call gunzip
 $ tar -xvzf make-3.81.tar.gz
 
-# -j option to cause tar to call bzip2
+echo # -j option to cause tar to call bzip2
 $ tar -xvjf make-3.81.tar.bz2
 ```
 
@@ -702,7 +903,7 @@ $ tar -xvjf make-3.81.tar.bz2
 
 ### 交互式shell和非交互式shell、登录shell和非登录shell的区别
 
-> 本节内容主要参考[交互式shell和非交互式shell、登录shell和非登录shell的区别](http://smilejay.com/2012/10/interactive-shell-login-shell/)
+> 参考[交互式shell和非交互式shell、登录shell和非登录shell的区别](http://smilejay.com/2012/10/interactive-shell-login-shell/)
 
 首先，这是两个不同的维度来划分的，一个是是否交互式，另一个是是否登录。
 
@@ -741,29 +942,34 @@ $ exit
 exit
 ```
 
+> man bash: A login shell is one whose first character of argument zero is a -, or one started with the –login option.
+
 bash是 login shell 时，其进程名为”-bash“ 而不是”bash”。 比如下面的命令行演示：
-man bash: A login shell is one whose first character of argument zero is a -, or one started with the –login option.
+
+_在 login shell 中：_
 
 ```bash
-# 在 login shell 中：
 $ echo $0
 -bash
 $ ps -ef | grep '\-bash' | grep -v grep
 root     16823 16821  0 May06 pts/0    00:00:00 -bash
 perf     21135 21134  0 May07 pts/1    00:00:00 -bash
+```
 
-# 在一个非登陆shell中：
+_在一个非登陆shell中：_
+
+```bash
 $ echo $0
 /bin/bash
 $ ps -ef | grep '\-bash' | grep -v grep
 $
 ```
 
-对于Bash来说，登录shell（包括交互式登录shell和使用“–login”选项的非交互shell），它会首先读取和执行`/etc/profile`全局配置文件中的命令，然后依次查找`~/.bash_profile`、`~/.bash_login` 和 `~/.profile`这三个配置文件，读取和执行这三个中的第一个存在且可读的文件中命令。除非被“–noprofile”选项禁止了。
+对于Bash来说，登录shell（包括交互式登录shell和使用`–login`选项的非交互shell），它会首先读取和执行`/etc/profile`全局配置文件中的命令，然后依次查找`~/.bash_profile`、`~/.bash_login` 和 `~/.profile`这三个配置文件，读取和执行**这三个中的第一个存在且可读的文件**中命令。除非被`–noprofile`选项禁止了。
 
 在非登录shell里，只读取`~/.bashrc`（和`/etc/bash.bashrc`、`/etc/bashrc`）文件，不同的发行版里面可能有所不同，如RHEL6.3中非登录shell仅执行了`~/.bashrc`文件（没有执行`/etc/bashrc`），而KUbuntu10.04中却依次执行了`/etc/bash.bashrc` 和 `~/.bashrc` 文件。
 
-对于这些规则，可以直接在相应的配置文件中加一些echo命令来验证其真实性。
+对于这些规则，可以直接在相应的配置文件中加一些`echo`命令来验证其真实性。
 
 
 ### 如何让你的shell脚本更健壮和更可靠
@@ -798,17 +1004,21 @@ $
 
 #### Control Structures
 
-```bash
-#----------------------------------
-# if...else pattern
-#
-# if test-command
-#    then
-#        commands
-# fi
-#----------------------------------
+##### if...else pattern
 
-# check arguments amounts
+pattern:
+
+```bash
+if test-command
+    then
+        commands
+fi
+```
+
+example:
+
+```bash
+echo check arguments amounts
 if [ $# -eq 0 ]
     then
         echo "You must supply at least one argument."
@@ -816,26 +1026,31 @@ if [ $# -eq 0 ]
 fi
 echo "Program running..."
 
-# check whether file is an ordinary file
+echo check whether file is an ordinary file
 if [ -f "$1" ]
     then
         echo "$1 is an ordinary file in the working directory"
     else
         echo "$1 is NOT an ordinary file in the working directory"
 fi
+```
 
-#----------------------------------
-# if...then...else pattern
-#
-# if test-command
-#    then
-#        commands
-#    else
-#        commands
-# fi
-#----------------------------------
+##### if...then...else pattern
 
-$ cat out
+pattern:
+
+```bash
+if test-command
+   then
+       commands
+   else
+       commands
+fi
+```
+
+example:
+
+```bash
 if [ $# -eq 0 ]
     then
         echo "Usage: out [-v] filenames..." 1>&2
@@ -849,23 +1064,28 @@ if [ "$1" = "-v" ]
     else
         cat -- "$@"
 fi
+```
 
-#----------------------------------
-# if...then...elif pattern
-#
-# if test-command
-#    then
-#        commands
-#    elif test-command
-#    then
-#        commands
-#    ...
-#    else
-#        commands
-# fi
-#----------------------------------
+##### if...then...elif pattern
 
-$ cat if3
+pattern:
+
+```bash
+if test-command
+   then
+       commands
+   elif test-command
+   then
+       commands
+   ...
+   else
+       commands
+fi
+```
+
+example:
+
+```bash
 echo -n "word 1: "
 read word1
 echo -n "word 2: "
@@ -887,24 +1107,30 @@ if [ "$word1" = "$word2" -a "$word2" = "$word3" ]
     else
         echo "No Match"
 fi
+```
 
-#----------------------------------
-# for...in pattern
-#
-# for loop-index in argument-list
-# do
-#     commands
-# done
-#----------------------------------
+##### for...in pattern
 
-$ cat fruit
+pattern:
+
+```bash
+for loop-index in argument-list
+do
+    commands
+done
+```
+
+example:
+
+```bash
 for fruit in apples oranges pears bananas
 do
     echo "$fruit"
 done
 echo "Task complete."
+```
 
-$ cat dirfiles
+```bash
 for i in *
 do
     if [ -d "$i" ]
@@ -912,20 +1138,24 @@ do
             echo "$i"
     fi
 done
+```
 
+##### for pattern
 
-#----------------------------------
-# for pattern: the loop-index takes on the value of each of the command- line arguments, one at a time.
-#
-# for loop-index
-# do
-#     commands
-# done
-#----------------------------------
+the loop-index takes on the value of each of the command- line arguments, one at a time.
 
-$ cat whos
-#!/bin/bash
+pattern:
 
+```bash
+for loop-index
+do
+    commands
+done
+```
+
+example:
+
+```bash
 if [ $# -eq 0 ]
     then
         echo "Usage: whos id..." 1>&2
@@ -937,36 +1167,44 @@ do
     mawk -F: '{print $1, $5}' /etc/passwd |
     grep -i "$id"
 done
+```
 
-#----------------------------------
-# while pattern
-#
-# while test-command
-# do
-#     commands
-# done
-#----------------------------------
+##### while pattern
 
-$ cat count
-#!/bin/bash
+pattern:
+
+```bash
+while test-command
+do
+    commands
+done
+```
+
+example:
+
+```bash
 number=0
 while [ "$number" -lt 10 ]
 do
     echo -n "$number"
     ((number +=1))
 done
-echo
+```
 
-#----------------------------------
-# until pattern
-#
-# until test-command
-# do
-#     commands
-# done
-#----------------------------------
+##### until pattern
 
-$ cat until1
+pattern:
+
+```bash
+until test-command
+do
+    commands
+done
+```
+
+example:
+
+```bash
 secretname=zach
 name=noname
 echo "Try to guess the secret name!"
@@ -977,18 +1215,13 @@ do
     read name
 done
 echo "Very good."
+```
 
+##### break and continue pattern
 
-#----------------------------------
-# break and continue pattern
-#
-# until test-command
-# do
-#     commands
-# done
-#----------------------------------
+example:
 
-$ cat brk
+```bash
 for index in 1 2 3 4 5 6 7 8 9 10
 do
     if [ $index -le 3 ] ; then
@@ -1003,26 +1236,29 @@ do
         break
     fi
 done
+```
 
+##### case pattern
 
-#----------------------------------
-# case pattern
-#
-# case test-string in
-#     pattern-1)
-#         commands-1
-#         ;;
-#     pattern-2)
-#         commands-2
-#         ;;
-#     pattern-3)
-#         commands-3
-#         ;;
-# ...
-# esac
-#----------------------------------
+pattern:
 
-$ cat case1
+```bash
+case test-string in
+    pattern-1)
+        commands-1
+        ;;
+    pattern-2)
+        commands-2
+        ;;
+    pattern-3)
+        commands-3
+        ;;
+esac
+```
+
+example:
+
+```bash
 echo -n "Enter A, B, or C: "
 read letter
 case "$letter" in
@@ -1039,36 +1275,22 @@ case "$letter" in
         echo "You did not enter A, B, or C"
         ;;
 esac
+```
 
-$ cat case2
-echo -n "Enter A, B, or C: "
-read letter
-case "$letter" in
-    a|A)
-        echo "You entered A"
-        ;;
-    b|B)
-        echo "You entered B"
-        ;;
-    c|C)
-        echo "You entered C"
-        ;;
-    *)
-        echo "You did not enter A, B, or C"
-        ;;
-esac
+##### select pattern
 
-#----------------------------------
-# select pattern
-#
-# select varname [in arg...]
-# do
-#     commands
-# done
-#----------------------------------
+pattern:
 
-$ cat fruit2
-#!/bin/bash
+```bash
+select varname [in arg...]
+do
+    commands
+done
+```
+
+example:
+
+```bash
 PS3="Choose your favorite fruit from these possibilities: "
 select FRUIT in apple banana blueberry kiwi orange watermelon STOP
 do
@@ -1088,8 +1310,6 @@ done
 #### File Descriptors
 
 ```bash
-$ cat sortmerg
-#!/bin/bash
 usage ()
 {
     if [ $# -ne 2 ]; then
@@ -1098,33 +1318,33 @@ usage ()
     fi
 }
 
-# Default temporary directory
+echo # Default temporary directory
 : ${TEMPDIR:=/tmp}
 
-# Check argument count
+echo #Check argument count'
 usage "$@"
 
-# Set up temporary files for sorting
+echo # Set up temporary files for sorting
 file1=$TEMPDIR/$$.file1
 file2=$TEMPDIR/$$.file2
 
-# Sort
+echo # Sort
 sort $1 > $file1
 sort $2 > $file2
 
-# Open $file1 and $file2 for reading. Use file descriptors 3 and 4.
+echo # Open $file1 and $file2 for reading. Use file descriptors 3 and 4.
 exec 3<$file1
 exec 4<$file2
 
-# Read the first line from each file to figure out how to start.
+echo #Read the first line from each file to figure out how to start.
 read Line1 <&3
 status1=$?
 read Line2 <&4
 status2=$?
 
-# Strategy: while there is still input left in both files:
-# Output the line that should come first.
-# Read a new line from the file that line came from.
+echo #Strategy: while there is still input left in both files:
+echo #Output the line that should come first.
+echo #Read a new line from the file that line came from.
 while [ $status1 -eq 0 -a $status2 -eq 0 ]
 do
     if [[ "$Line2" > "$Line1" ]]; then
@@ -1138,9 +1358,9 @@ do
     fi
 done
 
-# Now one of the files is at end-of-file.
-# Read from each file until the end.
-# First file1:
+echo #Now one of the files is at end-of-file.
+echo #Read from each file until the end.
+echo #First file1:'
 while [ $status1 -eq 0 ]
 do
     echo -e "1.\t$Line1"
@@ -1148,14 +1368,15 @@ do
     status1=$?
 done
 
-# Next file2:
-while [[ $status2 -eq 0 ]] do
-       echo -e "2.\t$Line2"
-       read Line2 <&4
-       status2=$?
+echo #Next file2:
+while [[ $status2 -eq 0 ]]
+do
+    echo -e "2.\t$Line2"
+    read Line2 <&4
+    status2=$?
 done
 
-# Close and remove both input files
+echo #Close and remove both input files
 exec 3<&- 4<&-
 rm -f $file1 $file2
 exit 0
@@ -1218,16 +1439,16 @@ crontab文件设置命令的执行频率。
 `/etc/crontab`内容如下：
 
 ```bash
-# /etc/crontab: system-wide crontab
-# Unlike any other crontab you don't have to run the `crontab'
-# command to install the new version when you edit this file
-# and files in /etc/cron.d. These files also have username fields,
-# that none of the other crontabs do.
+echo # /etc/crontab: system-wide crontab
+echo # Unlike any other crontab you don't have to run the `crontab'
+echo # command to install the new version when you edit this file
+echo # and files in /etc/cron.d. These files also have username fields,
+echo # that none of the other crontabs do.
 
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
-# m h dom mon dow user	command
+echo # m h dom mon dow user	command
 17 *	* * *	root    cd / && run-parts --report /etc/cron.hourly
 25 6	* * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
 47 6	* * 7	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )
@@ -1251,7 +1472,7 @@ The first five fields indicate when cron will execute the command:
 这段配置告知`cron`每天7:30 AM运行`anacron`初始化脚本。这段初始化脚本只会在系统开机且不使用电池电源的时候运行`anacron`。
 
 ```bash
-# /etc/cron.d/anacron: crontab entries for the anacron package
+echo # /etc/cron.d/anacron: crontab entries for the anacron package
 
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
@@ -1268,21 +1489,21 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 ### anacron配置文件
 
-Anacron 通过 /etc/anacrontab 文件进行控制。该文件可以包含注释行（使用一个前导散列符号 # 表示）、环境变量分配（比如 SHELL=/bin/bash）和作业定义。
+Anacron通过`/etc/anacrontab`文件进行控制。该文件可以包含注释行（使用一个前导散列符号`#`表示）、环境变量分配（比如`SHELL=/bin/bash`）和作业定义。
 
 `/etc/anacrontab`中的内容如下：
 
 ```bash
-# /etc/anacrontab: configuration file for anacron
+echo # /etc/anacrontab: configuration file for anacron
 
-# See anacron(8) and anacrontab(5) for details.
+echo # See anacron(8) and anacrontab(5) for details.
 
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 HOME=/root
 LOGNAME=root
 
-# These replace cron's entries
+echo # These replace cron's entries
 1	5	cron.daily	run-parts --report /etc/cron.daily
 7	10	cron.weekly	run-parts --report /etc/cron.weekly
 @monthly	15	cron.monthly	run-parts --report /etc/cron.monthly
@@ -1313,7 +1534,7 @@ LOGNAME=root
 
 # FAQ
 
-## 如何安装中文语言支持（System Settings -> Language Support）及中文输入法（System Settings -> Text Entry）
+## 如何安装中文语言支持及中文输入法
 
 [Ubuntu上的输入法情况](http://wiki.ubuntu.org.cn/%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95):
 
@@ -1341,9 +1562,9 @@ GUI操作
 
 终端操作
 
-1. 执行下面的命令，安装最新的系统补丁：`sudo apt-get update && sudo apt-get dist-upgrade`
+1. 执行下面的命令，安装最新的系统补丁：`sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get autoclean`
 
-## 修改Ubuntu Software Repository的下载地址，比如把下载地址改为国内的repository服务地址
+## 修改Ubuntu Software Repository的下载地址
 
 参考：
 
@@ -1378,18 +1599,11 @@ By editing these files from the command line, we can add, remove, or temporarily
 
 参考[How do I install Parallels Tools in Ubuntu Virtual Machine?](http://kb.parallels.com/en/113394)
 
-## 给Ubuntu安装SSH服务
-
-ubuntu默认并没有安装ssh服务，如果通过ssh链接ubuntu，需要自己手动安装ssh-server。
-
-- [Ubuntu Document - OpenSSH 服务器](https://help.ubuntu.com/lts/serverguide/openssh-server.html)
-- [ubuntu下如何安装使用SSH？](http://os.51cto.com/art/201109/291634.htm)
-
 ## 使用命令`man wget > man-wget.txt`把命令文档输入到文本文件后，打开man-wget.txt，发现有很多重复字符，或者乱码？
 
 将man手册查询命令输出到文本文件中，要求过滤掉控制字符^H（Backspace (退格)）  
 
-`man chmod |col –b >/home/man_chmod.txt`
+`man chmod | col –b > /home/man_chmod.txt`
 
 col命令的使用方法见[col命名详解](http://myblog.jyc.edu.cn/?p=62)
 
@@ -1454,6 +1668,7 @@ iface eth0 inet static
 ```bash
 sudo /etc/init.d/networking restart
 ```
+
 ## 如何从Internet更新ubuntu本地的时间？
 
 You can do so with `sudo ntpdate time.nist.gov` other servers include time.windows.com, etc.
