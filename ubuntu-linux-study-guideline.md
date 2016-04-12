@@ -1309,6 +1309,11 @@ done
 
 #### File Descriptors
 
+参考：
+
+- [I/O Redirection](http://www.tldp.org/LDP/abs/html/io-redirection.html)
+- [Bash: file descriptors](http://stackoverflow.com/questions/15606296/bash-file-descriptors)
+
 ```bash
 usage ()
 {
@@ -1319,7 +1324,7 @@ usage ()
 }
 
 echo # Default temporary directory
-: ${TEMPDIR:=/tmp}
+: ${TEMPDIR:=/tmpdescrip}
 
 echo #Check argument count'
 usage "$@"
