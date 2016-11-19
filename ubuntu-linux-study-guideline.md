@@ -1533,7 +1533,11 @@ By editing these files from the command line, we can add, remove, or temporarily
 将`sources.list`中默认下载地址改为从阿里云下载地址：
 
 ```bash
+$ sudo sed -i 's/http\:\/\/archive\.ubuntu\.com/http\:\/\/mirrors\.yun-idc\.com/g' /etc/apt/sources.list
+
 $ sudo sed -i 's/http\:\/\/us\.archive\.ubuntu\.com/http\:\/\/mirrors\.yun-idc\.com/g' /etc/apt/sources.list
+
+$ sudo sed -i 's/http\:\/\/cn\.archive\.ubuntu\.com/http\:\/\/mirrors\.yun-idc\.com/g' /etc/apt/sources.list
 ```
 
 ## 如何给Ubuntu Linux Virutal Machine安装VMWare Tools
