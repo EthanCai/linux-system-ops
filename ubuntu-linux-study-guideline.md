@@ -881,7 +881,7 @@ $ tar -xvjf make-3.81.tar.bz2
         - [如何理解ip路由和操作linux的路由表](http://linux.chinaunix.net/techdoc/net/2008/09/18/1033149.shtml)
     - TCP协议
     - UDP协议
-- 网络协议图谱
+- 网络协议图
 		- [常用网络通信协议结构图](./file/Network_Protocol_Diagram.jpg)
 	  - [TCP IP网络协议图](./file/TCP-IP_Network_Protocol_Diagram.pdf)
 	  - Network Protocol Map
