@@ -78,7 +78,7 @@
 	- [Shell基本命令](#shell基本命令)
 - [Basic Network Management](#basic-network-management)
 	- [目标](#目标)
-	- [Basic Network Management](#basic-network-management)
+	- [内容](#内容)
 	- [Shell命令](#shell命令)
 	- [练习](#练习)
 		- [修改OS的hostname](#修改os的hostname)
@@ -870,7 +870,7 @@ $ tar -xvjf make-3.81.tar.bz2
 
 - 掌握基本网络管理概念和操作
 
-## Basic Network Management
+## 内容
 
 - 概念
     - [基础网络概念](http://vbird.dic.ksu.edu.tw/linux_server/0110network_basic.php)
