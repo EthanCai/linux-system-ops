@@ -1,4 +1,4 @@
-<!-- TOC depthFrom:1 depthTo:2 withLinks:1 updateOnSave:1 orderedList:0 -->
+<!-- TOC depthFrom:1 depthTo:3 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [Preface](#preface)
 - [Glossary](#glossary)
@@ -6,21 +6,59 @@
 	- [目标](#目标)
 	- [内容](#内容)
 	- [Shell基本命令](#shell基本命令)
+		- [df](#df)
+		- [du](#du)
 	- [练习](#练习)
+		- [手动安装Ubuntu Desktop 14.04](#手动安装ubuntu-desktop-1404)
+		- [手动安装Ubuntu Server 14.04](#手动安装ubuntu-server-1404)
+		- [自动化安装Ubuntu Linux](#自动化安装ubuntu-linux)
+		- [查看Ubuntu的版本和Linux内核版本](#查看ubuntu的版本和linux内核版本)
 - [Basic Shell Knowledge](#basic-shell-knowledge)
 	- [目标](#目标)
 	- [内容](#内容)
 	- [Shell基本命令](#shell基本命令)
+		- [Display system manual: man](#display-system-manual-man)
+		- [Search the whatis database for stringss: apropos](#search-the-whatis-database-for-stringss-apropos)
+		- [A menu-based hypetext system: info, pinfo](#a-menu-based-hypetext-system-info-pinfo)
+		- [账号间的切换、提权至root: sudo](#账号间的切换提权至root-sudo)
+		- [Base Utilites: ls, cat, rm, less, more](#base-utilites-ls-cat-rm-less-more)
+		- [Working with files: cp, mv, head, tail, sort, uniq, diff, file](#working-with-files-cp-mv-head-tail-sort-uniq-diff-file)
+		- [Find something: find, mlocate, locate, which, grep](#find-something-find-mlocate-locate-which-grep)
+		- [Manipulate text: awk, sed, ack](#manipulate-text-awk-sed-ack)
+		- [More commands: echo, date](#more-commands-echo-date)
 - [Install and Manage Packages](#install-and-manage-packages)
 	- [目标](#目标)
 	- [内容](#内容)
 	- [Shell命令](#shell命令)
+		- [Debian package management system: dpkg](#debian-package-management-system-dpkg)
+		- [Advanced Package Tool: apt](#advanced-package-tool-apt)
+		- [aptitude](#aptitude)
+		- [git](#git)
+		- [wget](#wget)
 	- [练习](#练习)
-- [SSH](#ssh)
+		- [如何升级系统，安装最新的补丁和最新版本的软件](#如何升级系统安装最新的补丁和最新版本的软件)
+		- [修改Ubuntu Software Repository的下载地址](#修改ubuntu-software-repository的下载地址)
+		- [查找软件包](#查找软件包)
+		- [下载软件包](#下载软件包)
+		- [安装软件包](#安装软件包)
+		- [更新源](#更新源)
+		- [更新已经安装的软件包](#更新已经安装的软件包)
+		- [移除软件包](#移除软件包)
+		- [自动移除软件包](#自动移除软件包)
+		- [清除下载的软件包](#清除下载的软件包)
+- [SSH - Secure Shell](#ssh-secure-shell)
 	- [目标](#目标)
 	- [内容](#内容)
 	- [Shell基本命令](#shell基本命令)
+		- [SSH](#ssh)
+		- [本地和远程操作系统之间拷贝文件: `scp`, `sftp`, `sshfs`, `rsync`](#本地和远程操作系统之间拷贝文件-scp-sftp-sshfs-rsync)
+		- [Record a shell session: `script`](#record-a-shell-session-script)
+		- [Convert linux and macos files to windows format: `todos`, `fromdos`](#convert-linux-and-macos-files-to-windows-format-todos-fromdos)
 	- [练习](#练习)
+		- [安装SSH Server或者SSH Client](#安装ssh-server或者ssh-client)
+		- [在客户端操作系统上通过SSH连接Ubuntu Server](#在客户端操作系统上通过ssh连接ubuntu-server)
+		- [通过scp向server传送文件](#通过scp向server传送文件)
+		- [通过scp从server获取文件](#通过scp从server获取文件)
 - [Basic Vim Usage](#basic-vim-usage)
 	- [目标](#目标)
 	- [熟悉Vim](#熟悉vim)
@@ -32,6 +70,8 @@
 	- [目标](#目标)
 	- [内容](#内容)
 	- [练习](#练习)
+		- [`bzip2`, `bunzip2`, `bzcat`命令练习](#bzip2-bunzip2-bzcat命令练习)
+		- [`tar`命令练习](#tar命令练习)
 - [Process](#process)
 	- [目标](#目标)
 	- [内容](#内容)
@@ -40,31 +80,40 @@
 	- [目标](#目标)
 	- [Basic Network Management](#basic-network-management)
 	- [Shell命令](#shell命令)
+	- [练习](#练习)
+		- [修改OS的hostname](#修改os的hostname)
+		- [设置DNS服务的服务地址](#设置dns服务的服务地址)
+		- [如何配置网卡和IP地址](#如何配置网卡和ip地址)
+		- [从Internet更新ubuntu本地的时间](#从internet更新ubuntu本地的时间)
+	- [切换网络后，强制更新网卡IP](#切换网络后强制更新网卡ip)
 - [Writing Shell Scripts](#writing-shell-scripts)
 	- [目标](#目标)
 	- [基本概念](#基本概念)
+		- [交互式shell和非交互式shell、登录shell和非登录shell的区别](#交互式shell和非交互式shell登录shell和非登录shell的区别)
+		- [语法](#语法)
 	- [Shell命令](#shell命令)
+	- [练习](#练习)
+		- [如何让你的shell脚本更健壮和更可靠](#如何让你的shell脚本更健壮和更可靠)
 - [Schedule Tasks](#schedule-tasks)
 	- [目标](#目标)
 	- [内容](#内容)
+		- [参考](#参考)
+		- [cron的坑](#cron的坑)
+		- [cron和anacron的区别](#cron和anacron的区别)
+		- [Crontab文件](#crontab文件)
+		- [anacron配置文件](#anacron配置文件)
 - [Futher Reading](#futher-reading)
 	- [Knowledge](#knowledge)
 	- [Utilites](#utilites)
 - [FAQ](#faq)
 	- [如何安装中文语言支持及中文输入法](#如何安装中文语言支持及中文输入法)
-	- [如何升级系统，安装最新的补丁和最新版本的软件](#如何升级系统安装最新的补丁和最新版本的软件)
-	- [修改Ubuntu Software Repository的下载地址](#修改ubuntu-software-repository的下载地址)
 	- [如何给Ubuntu Linux Virutal Machine安装VMWare Tools](#如何给ubuntu-linux-virutal-machine安装vmware-tools)
 	- [如何给Ubuntu Linux Virtual Machine安装VirtualBox Additions](#如何给ubuntu-linux-virtual-machine安装virtualbox-additions)
 	- [如何给Ubuntu Linux Virtual Machine安装Parallel Tools](#如何给ubuntu-linux-virtual-machine安装parallel-tools)
 	- [使用命令`man wget > man-wget.txt`把命令文档输入到文本文件后，打开man-wget.txt，发现有很多重复字符，或者乱码？](#使用命令man-wget-man-wgettxt把命令文档输入到文本文件后打开man-wgettxt发现有很多重复字符或者乱码)
-	- [如何修改OS的hostname](#如何修改os的hostname)
-	- [设置DNS服务的服务地址](#设置dns服务的服务地址)
-	- [如何配置网卡和IP地址](#如何配置网卡和ip地址)
-	- [如何从Internet更新ubuntu本地的时间？](#如何从internet更新ubuntu本地的时间)
-	- [切换网络后，如何强制更新网卡IP？](#切换网络后如何强制更新网卡ip)
 
 <!-- /TOC -->
+
 
 # Preface
 
@@ -73,6 +122,8 @@
 # Glossary
 
 - **PG2UL**: 代表Pratical Guide to Ubuntu Linux, 3rd
+
+
 
 # Install Ubuntu Linux
 
@@ -93,7 +144,7 @@
 - Ubuntu每个release的不同edition的区别(参考PG2UL, page 32)
     - **DVD**: The DVD is a live/install DVD. The DVD includes all software packages supported by Ubuntu, not just those installed by default.
     - **Desktop CD**: The Desktop CD is a live/install CD
-    - **Alternate CD**: The Alternate Install CD is not a live CD; it is intended for special installations only. It presents more advanced installation options than the Desktop CD does. This CD is available for PC and 64-bit PC architectures (page 29), uses the textual installer, and installs an Ubuntu system that displays either a graphical or a textual interface.
+    - **Alternate CD**: The Alternate Install CD is not a live CD; it is intended for special installations only. It presents more advanced installation options than the Desktop CD does. This CD is available for PC and 64-bit PC architectures, uses the textual installer, and installs an Ubuntu system that displays either a graphical or a textual interface.
     - **Server CD**: The Server CD is not a live CD; it is intended for installation only.
     - **Minimal CD**: Not an official edition, the Minimal CD is small (5–20 megabytes) and provides a quick installation.
 - Linux下的各种文件系统的区别
@@ -128,8 +179,8 @@ drwxr-xr-x  12 root root  4096 May 10 02:01 var/
 - Primary, extended and logical partitions（参考PG2UL, page 34，把这三个概念讲的很清楚）
     - 一个Disk最多有4个Primary partitions
     - 只能把4个Primary partitions中的一个划分为多个logical partitions，这个被划分的primary partition就叫extended partition
-    - 示意图  
-![](./img/2015/06/primary-extended-logical-partition.png)
+    - 示意图
+		![](./img/2015/06/primary-extended-logical-partition.png)
 - LVM: Logical Volume Manager
     - 阅读[浅谈Linux磁盘存储管理续](http://ixdba.blog.51cto.com/2895551/562111/)
     - 阅读[LVM (简体中文) - ArchLinux Wiki](https://wiki.archlinux.org/index.php/LVM_%28%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%29)
@@ -158,16 +209,18 @@ drwxr-xr-x  12 root root  4096 May 10 02:01 var/
 
 ### 自动化安装Ubuntu Linux
 
-- [Preboot Execution Environment](https://en.wiki2.org/wiki/Preboot_Execution_Environment)
-- [Cobbler Quickstart Guide](http://www.cobblerd.org/manuals/quickstart/)
-- [运维自动化之Cobbler系统安装详解](http://os.51cto.com/art/201109/288604_all.htm)
+- [PXE - Preboot eXecution Environment](https://en.wiki2.org/wiki/Preboot_Execution_Environment)
+- [Cobbler](https://cobbler.github.io/)
+	- [Cobbler Quickstart Guide](https://cobbler.github.io/manuals/quickstart/)
+	- [运维自动化之Cobbler系统安装详解](http://os.51cto.com/art/201109/288604_all.htm)
+	- [使用 Cobbler 自动化和管理系统安装](http://www.ibm.com/developerworks/cn/linux/l-cobbler/index.html)
 
 ### 查看Ubuntu的版本和Linux内核版本
 
 - `cat /etc/issue`
 - `sudo lsb_release -a`
 - `uname -r`
-- 执行结果见下图：  
+- 执行结果见下图：
     ![](./img/2015/06/view-ubuntu-version-and-kernel-version.png)
 
 
@@ -250,7 +303,7 @@ drwxr-xr-x  12 root root  4096 May 10 02:01 var/
 - find filenames quickly
     - `mlocate`: ubuntu, centos下使用此命令，使用前需要执行`updatedb`命令创建`/var/lib/mlocate/mlocate.db`索引文件
     - `locate`: MacOS使用此命令，使用前需要执行`sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist`创建`/var/db/locate.database`索引文件
-- `which`, whereis: locate a utility
+- `which`, `whereis`: locate a utility
 - `grep`: [每天一个linux命令（39）：grep 命令](http://www.cnblogs.com/peida/archive/2012/12/17/2821195.html)
 
 ### Manipulate text: awk, sed, ack
@@ -267,6 +320,7 @@ drwxr-xr-x  12 root root  4096 May 10 02:01 var/
 
 - `echo`: display text
 - `date`: display the time and date，参考[date命令](http://www.cnblogs.com/peida/archive/2012/12/12/2814048.html)
+
 
 
 # Install and Manage Packages
@@ -329,6 +383,51 @@ dpkg主要是对本地的软件包进行管理，本地软件包包括已经在�
 - 在线html文档，访问[wget html document](http://www.gnu.org/software/wget/manual/wget.html)
 
 ## 练习
+
+### 如何升级系统，安装最新的补丁和最新版本的软件
+
+GUI操作
+
+1. System Settings -> Softwares&Updates -> Select best download server，选择最佳的软件更新服务器
+1. 然后按Alt+F2组合键调出运行命令框，然后键入`update-manager -d`，然后升级系统
+
+终端操作
+
+1. `sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get autoclean`
+2. `sudo apt-get update && sudo aptitude full-upgrade && sudo apt-get autoclean`
+
+### 修改Ubuntu Software Repository的下载地址
+
+参考：
+
+1. GUI操作参考[Linux开发环境搭建与使用——ubuntu更新设置](http://blog.csdn.net/tennysonsky/article/details/44221433)
+1. Bash操作参考：[Repositories/CommandLine](https://help.ubuntu.com/community/Repositories/CommandLine)
+
+Ubuntu uses apt for package management. Apt stores a list of repositories or software channels in the file
+
+```bash
+/etc/apt/sources.list
+```
+
+and in any file with the suffix .list under the directory
+
+```bash
+/etc/apt/sources.list.d/
+```
+
+See `man sources.list` for more about this storage mechanism.
+
+By editing these files from the command line, we can add, remove, or temporarily disable software repositories.
+
+将`sources.list`中默认下载地址改为从阿里云下载地址：
+
+```bash
+$ sudo sed -i 's/http\:\/\/archive\.ubuntu\.com/http\:\/\/mirrors\.yun-idc\.com/g' /etc/apt/sources.list
+
+$ sudo sed -i 's/http\:\/\/us\.archive\.ubuntu\.com/http\:\/\/mirrors\.yun-idc\.com/g' /etc/apt/sources.list
+
+$ sudo sed -i 's/http\:\/\/cn\.archive\.ubuntu\.com/http\:\/\/mirrors\.yun-idc\.com/g' /etc/apt/sources.list
+```
 
 ### 查找软件包
 
@@ -401,6 +500,20 @@ apt-get install package --reinstall #重新安装软件包
 apitude reinstall package #同上
 ```
 
+### 更新源
+
+```bash
+apt-get update #更新源
+aptitude update #同上
+```
+
+### 更新已经安装的软件包
+
+```bash
+apt-get upgrade #更新已经安装的软件包
+aptitude safe-upgrade #同上
+```
+
 ### 移除软件包
 
 ```bash
@@ -429,24 +542,9 @@ apt-get autoclean #清除 /var/cache/apt/archives 目录，不过只清理过时
 aptitude autoclean #同上
 ```
 
-### 更新源
-
-```bash
-apt-get update #更新源
-aptitude update #同上
-```
-
-### 更新系统
-
-```bash
-apt-get upgrade #更新已经安装的软件包
-aptitude safe-upgrade #同上
-apt-get dist-upgrade #升级系统
-aptitude full-upgrade #同上
-```
 
 
-# SSH
+# SSH - Secure Shell
 
 ## 目标
 
@@ -468,7 +566,7 @@ aptitude full-upgrade #同上
         - 通过在bash中执行`ssh`验证客户端是否安装成功
     - 安装服务端:
         - `sudo apt-get install openssh-server`
-        - 通过在bash中执行`ps -e |grep ssh`验证服务是否安装成功
+        - 通过在bash中执行`ps -e | grep ssh`验证服务是否安装成功
         - 配置服务端
             - 配置文件保存在`/etc/ssh/sshd_config`
             - 查看手册通过`man sshd_config`
@@ -765,11 +863,12 @@ $ tar -xvjf make-3.81.tar.bz2
     - 参考[每天一个linux命令（51）：lsof命令](http://www.cnblogs.com/peida/archive/2013/02/26/2932972.html)
 
 
+
 # Basic Network Management
 
 ## 目标
 
-- 查看网络状态与基本网络管理
+- 掌握基本网络管理概念和操作
 
 ## Basic Network Management
 
@@ -778,14 +877,17 @@ $ tar -xvjf make-3.81.tar.bz2
     - 网络协议的层次结构
         - 参考[互联网协议入门（一）](http://www.ruanyifeng.com/blog/2012/05/internet_protocol_suite_part_i.html)
         - 参考[互联网协议入门（二）](http://www.ruanyifeng.com/blog/2012/06/internet_protocol_suite_part_ii.html)
-        - 参考[TCP IP网络协议图](./file/TCP-IP_Network_Protocol_Diagram.pdf)
     - IP协议，IP地址的分类，子网掩码
         - [如何理解ip路由和操作linux的路由表](http://linux.chinaunix.net/techdoc/net/2008/09/18/1033149.shtml)
     - TCP协议
     - UDP协议
-    - PPP协议
-- 网络工具
-    - 使用Vim修改/etc/hosts
+- 网络协议图谱
+		- [常用网络通信协议结构图](./file/Network_Protocol_Diagram.jpg)
+	  - [TCP IP网络协议图](./file/TCP-IP_Network_Protocol_Diagram.pdf)
+	  - Network Protocol Map
+		  - [中文](./file/network-protocol-map-2016-zh.pdf)
+		  - [英文](./file/network-protocol-map-2016-en.pdf)
+- 参考
     - 常用文件传输方式及比较
         - [Linux 上的常用文件传输方式介绍与比较](http://www.ibm.com/developerworks/cn/linux/l-cn-filetransfer/)
         - [linux下不同服务器间数据传输(rcp,scp,rsync,ftp,sftp,lftp,wget,curl)](http://blog.csdn.net/emili/article/details/6858818)
@@ -825,6 +927,92 @@ $ tar -xvjf make-3.81.tar.bz2
     - 参考[百度百科-iptables](http://baike.baidu.com/view/504557.htm#1_1)
     - 参考[wikipedia - iptables](https://en.wiki2.org/wiki/Iptables)
 
+## 练习
+
+### 修改OS的hostname
+
+参考[How do I change the hostname without a restart?](http://askubuntu.com/questions/87665/how-do-i-change-the-hostname-without-a-restart)
+
+`hostname`临时保存在内存，永久保存在`/etc/hostname`文件中，同时`/etc/hosts`文件中也配置了`hostname`对应的IP地址
+
+- 查看主机名`hostname`
+- 临时修改主机名，命令执行后即时生效`sudo hostname [yourhostname]`，重启后依然恢复原hostname
+- 永久修改主机名，将新的主机名写入，重启系统后生效`sudo vim /etc/hostname`
+- `hostnamectl`命令包含了临时修改hostname和修改`/etc/hostname`两种操作，但是不会修改`/etc/hosts`，所以执行`hostnamectl`命令后还需要手动修改`/etc/hosts`文件  
+
+```bash
+hostnamectl set-hostname new-hostname
+```
+
+### 设置DNS服务的服务地址
+
+参考：
+
+- [/etc/resolv.conf](http://man7.org/linux/man-pages/man5/resolv.conf.5.html)
+- [Resolv.conf - Archlinux Wiki](https://wiki.archlinux.org/index.php/Resolv.conf)
+
+编辑保存DNS信息的配置文件
+
+```bash
+sudo pico /etc/resolv.conf
+```
+
+最多可以使用3个DNS地址，内容如下
+
+```bash
+nameserver xxx.xxx.xxx.xxx
+nameserver xxx.xxx.xxx.xxx
+nameserver xxx.xxx.xxx.xxx
+```
+
+对`resolv.conf`文件的修改是即时生效的，可以使用`nslookup`命令进行测试。
+
+### 如何配置网卡和IP地址
+
+ubuntu的网卡配置信息放在`/etc/network/interfaces`中，
+
+```bash
+sudo vim /etc/network/interfaces
+```
+
+要通过dhcp获取ip，则添加如下内容：
+
+```bash
+auto eth0
+iface eth0 inet dhcp
+```
+
+如果配置静态ip，则添加如下内容：
+
+```bash
+auto eth0
+iface eth0 inet static
+    address 192.168.1.201
+    netmask 255.255.255.0
+    gateway 192.168.1.1
+```
+
+需重启下网络服务使配置生效
+
+```bash
+sudo /etc/init.d/networking restart
+```
+
+### 从Internet更新ubuntu本地的时间
+
+You can do so with `sudo ntpdate time.nist.gov` other servers include time.windows.com, etc.
+http://www.pool.ntp.org/ lists time servers around the world.
+
+## 切换网络后，强制更新网卡IP
+
+To renew or release an IP address for the eth0 interface, enter:
+
+```bash
+$ sudo dhclient -r eth0
+$ sudo dhclient eth0
+```
+
+
 
 # Writing Shell Scripts
 
@@ -833,9 +1021,9 @@ $ tar -xvjf make-3.81.tar.bz2
 - Shell的基本概念及启动过程
 - 编写Shell脚本
 - 参考
-    - [Gnu Bash Reference](http://www.gnu.org/software/bash/manual/bashref.html)
     - [The art of command line](https://github.com/jlevy/the-art-of-command-line)
     - [Awesome Shell](https://github.com/alebcay/awesome-shell)
+    - [Gnu Bash Reference](http://www.gnu.org/software/bash/manual/bashref.html)
 
 ## 基本概念
 
@@ -863,8 +1051,8 @@ hB
 
 - 登录shell：是需要用户名、密码登录后才能进入的shell（或者通过”–login”选项生成的shell）。
 - 非登录shell：当然就不需要输入用户名和密码即可打开的Shell，例如：直接命令“bash”就是打开一个新的非登录shell，在Gnome或KDE中打开一个“终端”（terminal）窗口程序也是一个非登录shell。
-- 执行exit命令，退出一个shell（登录或非登录shell）；
-- 执行logout命令，退出登录shell（不能退出非登录shell）。
+
+执行exit命令，退出一个shell（登录或非登录shell）；执行logout命令，退出登录shell（不能退出非登录shell）。
 
 ```bash
 $ bash --login
@@ -909,421 +1097,9 @@ $
 
 对于这些规则，可以直接在相应的配置文件中加一些`echo`命令来验证其真实性。
 
-
-### 如何让你的shell脚本更健壮和更可靠
-
-请阅读：
-
-- [Use the Unofficial Bash Strict Mode (Unless You Looove Debugging)](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
-- [How "Exit Traps" Can Make Your Bash Scripts Way More Robust And Reliable](http://redsymbol.net/articles/bash-exit-traps/)
-
 ### 语法
 
-#### 常用系统变量
-
-- `$0`: 当前shell程序的名字
-- `$1`~`$9`: 命令行上的第一到第九个参数
-- `$#`: 命令行上的参数个数
-- `$*`: 命令行上的所有参数
-- `$@`: 分别用双引号引用命令行上的所有参数
-- `$$`: 当前进程的进程标识号(PID)
-- `$?`: 上一条命令的退出状态
-- `$!`: 最后一个后台进程的进程标识号
-
-#### Builtin commands that are symbols
-
-- `()`: subshell
-- `$()`: command substitution
-- `(())`: arithmetic evaluation
-- `$(())`: arithmetic expansion
-- `[]`: test command
-- `[[]]`: conditional expression
-
-
-#### Control Structures
-
-##### if...else pattern
-
-pattern:
-
-```bash
-if test-command
-    then
-        commands
-fi
-```
-
-example:
-
-```bash
-echo check arguments amounts
-if [ $# -eq 0 ]
-    then
-        echo "You must supply at least one argument."
-        exit 1
-fi
-echo "Program running..."
-
-echo check whether file is an ordinary file
-if [ -f "$1" ]
-    then
-        echo "$1 is an ordinary file in the working directory"
-    else
-        echo "$1 is NOT an ordinary file in the working directory"
-fi
-```
-
-##### if...then...else pattern
-
-pattern:
-
-```bash
-if test-command
-   then
-       commands
-   else
-       commands
-fi
-```
-
-example:
-
-```bash
-if [ $# -eq 0 ]
-    then
-        echo "Usage: out [-v] filenames..." 1>&2
-        exit 1
-fi
-
-if [ "$1" = "-v" ]
-    then
-        shift
-        less -- "$@"
-    else
-        cat -- "$@"
-fi
-```
-
-##### if...then...elif pattern
-
-pattern:
-
-```bash
-if test-command
-   then
-       commands
-   elif test-command
-   then
-       commands
-   ...
-   else
-       commands
-fi
-```
-
-example:
-
-```bash
-echo -n "word 1: "
-read word1
-echo -n "word 2: "
-read word2
-echo -n "word 3: "
-read word3
-if [ "$word1" = "$word2" -a "$word2" = "$word3" ]
-    then
-        echo "Match: words 1, 2, & 3"
-    elif [ "$word1" = "$word2" ]
-    then
-        echo "Match: words 1 & 2"
-    elif [ "$word1" = "$word3" ]
-    then
-        echo "Match: words 1 & 3"
-    elif [ "$word2" = "$word3" ]
-    then
-        echo "Match: words 2 & 3"
-    else
-        echo "No Match"
-fi
-```
-
-##### for...in pattern
-
-pattern:
-
-```bash
-for loop-index in argument-list
-do
-    commands
-done
-```
-
-example:
-
-```bash
-for fruit in apples oranges pears bananas
-do
-    echo "$fruit"
-done
-echo "Task complete."
-```
-
-```bash
-for i in *
-do
-    if [ -d "$i" ]
-        then
-            echo "$i"
-    fi
-done
-```
-
-##### for pattern
-
-the loop-index takes on the value of each of the command- line arguments, one at a time.
-
-pattern:
-
-```bash
-for loop-index
-do
-    commands
-done
-```
-
-example:
-
-```bash
-if [ $# -eq 0 ]
-    then
-        echo "Usage: whos id..." 1>&2
-        exit 1
-fi
-
-for id
-do
-    mawk -F: '{print $1, $5}' /etc/passwd |
-    grep -i "$id"
-done
-```
-
-##### while pattern
-
-pattern:
-
-```bash
-while test-command
-do
-    commands
-done
-```
-
-example:
-
-```bash
-number=0
-while [ "$number" -lt 10 ]
-do
-    echo -n "$number"
-    ((number +=1))
-done
-```
-
-##### until pattern
-
-pattern:
-
-```bash
-until test-command
-do
-    commands
-done
-```
-
-example:
-
-```bash
-secretname=zach
-name=noname
-echo "Try to guess the secret name!"
-echo
-until [ "$name" = "$secretname" ]
-do
-    echo -n "Your guess: "
-    read name
-done
-echo "Very good."
-```
-
-##### break and continue pattern
-
-example:
-
-```bash
-for index in 1 2 3 4 5 6 7 8 9 10
-do
-    if [ $index -le 3 ] ; then
-        echo "continue"
-        continue
-    fi
-
-    echo $index
-
-    if [ $index -ge 8 ] ; then
-        echo "break"
-        break
-    fi
-done
-```
-
-##### case pattern
-
-pattern:
-
-```bash
-case test-string in
-    pattern-1)
-        commands-1
-        ;;
-    pattern-2)
-        commands-2
-        ;;
-    pattern-3)
-        commands-3
-        ;;
-esac
-```
-
-example:
-
-```bash
-echo -n "Enter A, B, or C: "
-read letter
-case "$letter" in
-    A)
-        echo "You entered A"
-        ;;
-    B)
-        echo "You entered B"
-        ;;
-    C)
-        echo "You entered C"
-        ;;
-    *)
-        echo "You did not enter A, B, or C"
-        ;;
-esac
-```
-
-##### select pattern
-
-pattern:
-
-```bash
-select varname [in arg...]
-do
-    commands
-done
-```
-
-example:
-
-```bash
-PS3="Choose your favorite fruit from these possibilities: "
-select FRUIT in apple banana blueberry kiwi orange watermelon STOP
-do
-    if [ "$FRUIT" == "" ]; then
-        echo -e "Invalid entry.\n"
-        continue
-    elif [ $FRUIT = STOP ]; then
-        echo "Thanks for playing!"
-        break
-    fi
-
-    echo "You chose $FRUIT as your favorite."
-    echo -e "That is choice number $REPLY.\n"
-done
-```
-
-#### File Descriptors
-
-参考：
-
-- [I/O Redirection](http://www.tldp.org/LDP/abs/html/io-redirection.html)
-- [Bash: file descriptors](http://stackoverflow.com/questions/15606296/bash-file-descriptors)
-
-```bash
-usage ()
-{
-    if [ $# -ne 2 ]; then
-        echo "Usage: $0 file1 file2" 2>&1
-        exit 1
-    fi
-}
-
-echo # Default temporary directory
-: ${TEMPDIR:=/tmpdescrip}
-
-echo #Check argument count'
-usage "$@"
-
-echo # Set up temporary files for sorting
-file1=$TEMPDIR/$$.file1
-file2=$TEMPDIR/$$.file2
-
-echo # Sort
-sort $1 > $file1
-sort $2 > $file2
-
-echo # Open $file1 and $file2 for reading. Use file descriptors 3 and 4.
-exec 3<$file1
-exec 4<$file2
-
-echo #Read the first line from each file to figure out how to start.
-read Line1 <&3
-status1=$?
-read Line2 <&4
-status2=$?
-
-echo #Strategy: while there is still input left in both files:
-echo #Output the line that should come first.
-echo #Read a new line from the file that line came from.
-while [ $status1 -eq 0 -a $status2 -eq 0 ]
-do
-    if [[ "$Line2" > "$Line1" ]]; then
-            echo -e "1.\t$Line1"
-            read -u3 Line1
-            status1=$?
-        else
-            echo -e "2.\t$Line2"
-            read -u4 Line2
-            status2=$?
-    fi
-done
-
-echo #Now one of the files is at end-of-file.
-echo #Read from each file until the end.
-echo #First file1:'
-while [ $status1 -eq 0 ]
-do
-    echo -e "1.\t$Line1"
-    read Line1 <&3
-    status1=$?
-done
-
-echo #Next file2:
-while [[ $status2 -eq 0 ]]
-do
-    echo -e "2.\t$Line2"
-    read Line2 <&4
-    status2=$?
-done
-
-echo #Close and remove both input files
-exec 3<&- 4<&-
-rm -f $file1 $file2
-exit 0
-```
+请阅读[Shell脚本语法](./shell-script-grammar.md)
 
 ## Shell命令
 
@@ -1332,6 +1108,16 @@ exit 0
 - `xargs`: construct argument list(s) and execute utility
     - [Example xargs](http://examplenow.com/zh-cn/xargs/man1)
     - [10 Xargs Command Examples in Linux / UNIX](http://www.thegeekstuff.com/2013/12/xargs-examples/)
+
+## 练习
+
+### 如何让你的shell脚本更健壮和更可靠
+
+请阅读：
+
+- [Use the Unofficial Bash Strict Mode (Unless You Looove Debugging)](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
+- [How "Exit Traps" Can Make Your Bash Scripts Way More Robust And Reliable](http://redsymbol.net/articles/bash-exit-traps/)
+
 
 
 # Schedule Tasks
@@ -1496,50 +1282,6 @@ echo # These replace cron's entries
 - [Ubuntu 14.04安装搜狗拼音linux版应该注意的问题](http://blog.csdn.net/tao_627/article/details/24119037)
 - [Ubuntu下安装搜狗拼音输入法](http://blog.csdn.net/rflyee/article/details/9472579)
 
-## 如何升级系统，安装最新的补丁和最新版本的软件
-
-GUI操作
-
-1. System Settings -> Softwares&Updates -> Select best download server，选择最佳的软件更新服务器
-1. 然后按Alt+F2组合键调出运行命令框，然后键入`update-manager -d`，然后升级系统
-
-终端操作
-
-1. 执行下面的命令，安装最新的系统补丁：`sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get autoclean`
-
-## 修改Ubuntu Software Repository的下载地址
-
-参考：
-
-1. GUI操作参考[Linux开发环境搭建与使用——ubuntu更新设置](http://blog.csdn.net/tennysonsky/article/details/44221433)
-1. Bash操作参考：[Repositories/CommandLine](https://help.ubuntu.com/community/Repositories/CommandLine)
-
-Ubuntu uses apt for package management. Apt stores a list of repositories or software channels in the file
-
-```bash
-/etc/apt/sources.list
-```
-
-and in any file with the suffix .list under the directory
-
-```bash
-/etc/apt/sources.list.d/
-```
-
-See `man sources.list` for more about this storage mechanism.
-
-By editing these files from the command line, we can add, remove, or temporarily disable software repositories.
-
-将`sources.list`中默认下载地址改为从阿里云下载地址：
-
-```bash
-$ sudo sed -i 's/http\:\/\/archive\.ubuntu\.com/http\:\/\/mirrors\.yun-idc\.com/g' /etc/apt/sources.list
-
-$ sudo sed -i 's/http\:\/\/us\.archive\.ubuntu\.com/http\:\/\/mirrors\.yun-idc\.com/g' /etc/apt/sources.list
-
-$ sudo sed -i 's/http\:\/\/cn\.archive\.ubuntu\.com/http\:\/\/mirrors\.yun-idc\.com/g' /etc/apt/sources.list
-```
-
 ## 如何给Ubuntu Linux Virutal Machine安装VMWare Tools
 
 - 安装方法参考
@@ -1563,79 +1305,3 @@ $ sudo sed -i 's/http\:\/\/cn\.archive\.ubuntu\.com/http\:\/\/mirrors\.yun-idc\.
 `man chmod | col –b > /home/man_chmod.txt`
 
 col命令的使用方法见[col命名详解](http://myblog.jyc.edu.cn/?p=62)
-
-## 如何修改OS的hostname
-
-参考[How do I change the hostname without a restart?](http://askubuntu.com/questions/87665/how-do-i-change-the-hostname-without-a-restart)
-
-`hostname`临时保存在内存，永久保存在`/etc/hostname`文件中，同时`/etc/hosts`文件中也配置了`hostname`对应的IP地址
-
-- 查看主机名`hostname`
-- 临时修改主机名，命令执行后即时生效`sudo hostname [yourhostname]`，重启后依然恢复原hostname
-- 永久修改主机名，将新的主机名写入，重启系统后生效`sudo vim /etc/hostname`
-- `hostnamectl`命令包含了临时修改hostname和修改`/etc/hostname`两种操作，但是不会修改`/etc/hosts`，所以执行`hostnamectl`命令后还需要手动修改`/etc/hosts`文件  
-
-```bash
-hostnamectl set-hostname new-hostname
-```
-
-## 设置DNS服务的服务地址
-
-编辑保存DNS信息的配置文件
-
-```bash
-sudo pico /etc/resolv.conf
-```
-
-最多可以使用3个DNS地址，内容如下
-
-```bash
-nameserver xxx.xxx.xxx.xxx  nameserver xxx.xxx.xxx.xxx  nameserver xxx.xxx.xxx.xxx
-```
-
-对resolv.conf文件的修改是即时生效的，可以使用nslookup命令进行查询。
-
-## 如何配置网卡和IP地址
-
-ubuntu的网络配置信息放在`/etc/network/interfaces`中，
-
-```bash
-sudo vim /etc/network/interfaces
-```
-
-要通过dhcp获取ip，则添加如下内容：
-
-```bash
-auto eth0
-iface eth0 inet dhcp
-```
-
-如果配置静态ip，则添加如下内容：
-
-```bash
-auto eth0
-iface eth0 inet static
-    address 192.168.1.201
-    netmask 255.255.255.0
-    gateway 192.168.1.1
-```
-
-需重启下网络服务使配置生效
-
-```bash
-sudo /etc/init.d/networking restart
-```
-
-## 如何从Internet更新ubuntu本地的时间？
-
-You can do so with `sudo ntpdate time.nist.gov` other servers include time.windows.com, etc.
-http://www.pool.ntp.org/ lists time servers around the world.
-
-## 切换网络后，如何强制更新网卡IP？
-
-To renew or release an IP address for the eth0 interface, enter:
-
-```bash
-$ sudo dhclient -r eth0
-$ sudo dhclient eth0
-```
