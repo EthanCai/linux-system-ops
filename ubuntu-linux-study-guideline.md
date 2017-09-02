@@ -435,10 +435,10 @@ $ sudo sed -i 's/http\:\/\/cn\.archive\.ubuntu\.com/http\:\/\/mirrors\.yun-idc\.
 
 ```bash
 ➜  ~  aptitude search '~ivim'
-i   vim                                                                 - Vi IMproved - enhanced vi editor                                              
-i   vim-common                                                          - Vi IMproved - Common files                                                    
-i A vim-runtime                                                         - Vi IMproved - Runtime files                                                   
-i   vim-tiny                                                            - Vi IMproved - enhanced vi editor - compact version     
+i   vim                                                                 - Vi IMproved - enhanced vi editor
+i   vim-common                                                          - Vi IMproved - Common files
+i A vim-runtime                                                         - Vi IMproved - Runtime files
+i   vim-tiny                                                            - Vi IMproved - enhanced vi editor - compact version
 ```
 
 The letter in the first column of each entry indicates the status of the package on the system:
@@ -727,7 +727,7 @@ aptitude autoclean #同上
         - [linux下的压缩解压软件7zip](http://www.linuxdiyf.com/viewarticle.php?id=193969)
         - [How to use 7zip on Linux command Line](https://www.ibm.com/developerworks/community/blogs/6e6f6d1b-95c3-46df-8a26-b7efd8ee4b57/entry/how_to_use_7zip_on_linux_command_line144?lang=en)
         - [p7zip - archlinux document](https://wiki.archlinux.org/index.php/P7zip)
-- zip压缩  
+- zip压缩
     - zip: 参考[Linux zip command](http://linux.about.com/od/commands/l/blcmdl1_zip.htm)
     - unzip: 参考[Linux unzip command](http://linux.about.com/od/commands/l/blcmdl1_unzip.htm)
 - rar压缩
@@ -938,7 +938,7 @@ $ tar -xvjf make-3.81.tar.bz2
 - 查看主机名`hostname`
 - 临时修改主机名，命令执行后即时生效`sudo hostname [yourhostname]`，重启后依然恢复原hostname
 - 永久修改主机名，将新的主机名写入，重启系统后生效`sudo vim /etc/hostname`
-- `hostnamectl`命令包含了临时修改hostname和修改`/etc/hostname`两种操作，但是不会修改`/etc/hosts`，所以执行`hostnamectl`命令后还需要手动修改`/etc/hosts`文件  
+- `hostnamectl`命令包含了临时修改hostname和修改`/etc/hostname`两种操作，但是不会修改`/etc/hosts`，所以执行`hostnamectl`命令后还需要手动修改`/etc/hosts`文件
 
 ```bash
 hostnamectl set-hostname new-hostname
@@ -1253,8 +1253,16 @@ echo # These replace cron's entries
 
 - [Linux Tools Quick Tutorial](http://linuxtools-rst.readthedocs.org/zh_CN/latest/index.html)
 - [the-art-of-command-line](https://github.com/jlevy/the-art-of-command-line)
+- [The Bash Hackers Wiki](http://wiki.bash-hackers.org/start)
 - [Linux Shell Scripting Tutorial (LSST) v2.0](https://bash.cyberciti.biz/guide/Main_Page)
 - [每天一个linux命令目录](http://www.cnblogs.com/peida/archive/2012/12/05/2803591.html)
+- IBM DeveloperWorks - Linux tmpdescrip
+	- [Bash parameters and parameter expansions](https://www.ibm.com/developerworks/linux/library/l-bash-parameters/index.html)
+	- [Bash test and comparison functions](https://www.ibm.com/developerworks/linux/library/l-bash-test/index.html?ca=drs-)
+	- [Controlling the duration of scheduled jobs](https://www.ibm.com/developerworks/linux/library/l-job-terminating/index.html?ca=drs-)
+	- [Creating a pixel ruler from the command line](https://www.ibm.com/developerworks/linux/library/l-pixelruler/index.html?ca=drs-)
+	- [Finding rootfs during boot](https://www.ibm.com/developerworks/linux/library/l-boot-rootfs/index.html?ca=drs-)
+	- [Job scheduling with cron and at](https://www.ibm.com/developerworks/linux/library/l-job-scheduling/index.html?ca=drs-)
 
 ## Utilites
 
@@ -1267,12 +1275,12 @@ echo # These replace cron's entries
 
 [Ubuntu上的输入法情况](http://wiki.ubuntu.org.cn/%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95):
 
-> Ubuntu上有IBus、Fcitx等开源的输入法框架，支持各种各样的引擎。  
-> Rime（中州韵输入法引擎）是一种流行的开源跨平台输入法，支持IBus和Fcitx框架。  
-> 搜狗输入法在2014年4月发布了Linux版本，使用Fcitx框架。  
-> 免费但不开源的小小输入法，也提供对Ubuntu的支持。  
-> 作为Chrome扩展的输入法：Google Input Tools  
-> 作为Firefox扩展的输入法：火输(Fireinput)。  
+> Ubuntu上有IBus、Fcitx等开源的输入法框架，支持各种各样的引擎。
+> Rime（中州韵输入法引擎）是一种流行的开源跨平台输入法，支持IBus和Fcitx框架。
+> 搜狗输入法在2014年4月发布了Linux版本，使用Fcitx框架。
+> 免费但不开源的小小输入法，也提供对Ubuntu的支持。
+> 作为Chrome扩展的输入法：Google Input Tools
+> 作为Firefox扩展的输入法：火输(Fireinput)。
 > 可以直接在浏览器中使用的云输入法：搜狗云输入法、QQ云输入法等。
 
 目前比较推荐Linux上的搜狗输入法：[下载地址](http://pinyin.sogou.com/linux/?r=pinyin)
@@ -1300,7 +1308,7 @@ echo # These replace cron's entries
 
 ## 使用命令`man wget > man-wget.txt`把命令文档输入到文本文件后，打开man-wget.txt，发现有很多重复字符，或者乱码？
 
-将man手册查询命令输出到文本文件中，要求过滤掉控制字符^H（Backspace (退格)）  
+将man手册查询命令输出到文本文件中，要求过滤掉控制字符^H（Backspace (退格)）
 
 `man chmod | col –b > /home/man_chmod.txt`
 
