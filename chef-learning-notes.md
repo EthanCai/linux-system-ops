@@ -35,9 +35,9 @@ SCM的工作内容包括但不仅限于：
 Chef主要专注于系统基础设施管理。通过Chef，可以自动化的构建、部署、管理基础设施。让基础设施变得可版本化、可测试、可复制。
 
 > Chef turns infrastructure into code. With Chef, you can automate how you build, deploy, and manage your infrastructure. Your infrastructure becomes as versionable, testable, and repeatable as application code.
-> 
+>
 > Chef server stores your recipes as well as other configuration data. The Chef client is installed on each server, virtual machine, container, or networking device you manage—we’ll call these nodes. The client periodically polls Chef server latest policy and state of your network. If anything on the node is out of date, the client brings it up to date.
-> 
+>
 > ![](./img/chart-what-is-chef.png)
 
 # Learning Resource
