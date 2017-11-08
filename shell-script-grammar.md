@@ -1,3 +1,23 @@
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [常用系统变量](#常用系统变量)
+- [Builtin commands that are symbols](#builtin-commands-that-are-symbols)
+- [Control Structures](#control-structures)
+	- [if...else pattern](#ifelse-pattern)
+	- [if...then...else pattern](#ifthenelse-pattern)
+	- [if...then...elif pattern](#ifthenelif-pattern)
+	- [for...in pattern](#forin-pattern)
+	- [for pattern](#for-pattern)
+	- [while pattern](#while-pattern)
+	- [until pattern](#until-pattern)
+	- [break and continue pattern](#break-and-continue-pattern)
+	- [case pattern](#case-pattern)
+	- [select pattern](#select-pattern)
+- [File Descriptors](#file-descriptors)
+
+<!-- /TOC -->
+
+
 # 常用系统变量
 
 - `$0`: 当前shell程序的名字
