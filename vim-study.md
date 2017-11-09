@@ -1,11 +1,35 @@
-# 目录
-# 通过vimtutor学习vim的基本操作
+<!-- TOC -->
 
-在terminal中输入`vimtutor`进行vim基本操作的学习。
+- [使用Vim](#使用vim)
+    - [学习卡片](#学习卡片)
+    - [`vimtutor`教程](#vimtutor教程)
+        - [Chapter 1](#chapter-1)
+        - [Chapter 2](#chapter-2)
+        - [Chapter 3](#chapter-3)
+        - [Chapter 4](#chapter-4)
+        - [Chapter 5](#chapter-5)
+        - [Chapter 6](#chapter-6)
+        - [Chapter 7](#chapter-7)
+- [配置Vim](#配置vim)
+    - [安装`spf13-vim`](#安装spf13-vim)
+- [参考](#参考)
 
-## Chapter 1
+<!-- /TOC -->
 
-```sh
+
+# 使用Vim
+
+## 学习卡片
+
+![](./img/2015/05/vi-vim-cheat-sheet.gif)
+![](./img/2015/05/vi-vim-cheat-sheet-sch.gif)
+![](./img/2015/05/vim_cheat_sheet_for_programmers_print.png)
+
+## `vimtutor`教程
+
+### Chapter 1
+
+```text
                                Lesson 1 SUMMARY
 
 
@@ -27,15 +51,15 @@ NOTE: Pressing <ESC> will place you in Normal mode or will cancel
       an unwanted and partially completed command.
 ```
 
-## Chapter 2
+### Chapter 2
 
-```sh
+```text
                                Lesson 2 SUMMARY
 
 
-  1. To delete from the cursor up to the next word type:    dw
+  1. To delete from the cursor up to the next word type:     dw
   2. To delete from the cursor to the end of a line type:    d$
-  3. To delete a whole line type:    dd
+  3. To delete a whole line type:                            dd
 
   4. To repeat a motion prepend it with a number:   2w
   5. The format for a change command is:
@@ -53,9 +77,9 @@ NOTE: Pressing <ESC> will place you in Normal mode or will cancel
      To undo the undo's, type:                 CTRL-R
 ```
 
-## Chapter 3
+### Chapter 3
 
-```sh
+```text
                                Lesson 3 SUMMARY
 
 
@@ -76,9 +100,9 @@ NOTE: Pressing <ESC> will place you in Normal mode or will cancel
 
 ```
 
-## Chapter 4
+### Chapter 4
 
-```sh
+```text
                                Lesson 4 SUMMARY
 
 
@@ -102,9 +126,9 @@ NOTE: Pressing <ESC> will place you in Normal mode or will cancel
      To ask for confirmation each time add 'c'             :%s/old/new/gc
 ```
 
-## Chapter 5
+### Chapter 5
 
-```sh
+```text
                                Lesson 5 SUMMARY
 
 
@@ -128,9 +152,9 @@ NOTE: Pressing <ESC> will place you in Normal mode or will cancel
 
 ```
 
-## Chapter 6
+### Chapter 6
 
-```sh
+```text
                                Lesson 6 SUMMARY
 
   1. Type  o  to open a line BELOW the cursor and start Insert mode.
@@ -155,10 +179,10 @@ NOTE: Pressing <ESC> will place you in Normal mode or will cancel
 
 ```
 
-## Chapter 7
+### Chapter 7
 
 
-```sh
+```text
                                Lesson 7 SUMMARY
 
 
@@ -177,21 +201,9 @@ NOTE: Pressing <ESC> will place you in Normal mode or will cancel
 
 ```
 
-# 学习卡片
-
-![](./img/2015/05/vi-vim-cheat-sheet.gif)
-![](./img/2015/05/vi-vim-cheat-sheet-sch.gif)
-![](./img/2015/05/vim_cheat_sheet_for_programmers_print.png)
-
-图片从以下网站获取：
-- [Graphical vi-vim Cheat Sheet and Tutorial](http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html)
-- [Vim Cheat Sheet](http://michael.peopleofhonoronly.com/vim/)
-
 # 配置Vim
 
-参考：
-- [有哪些编程必备的 Vim 配置？](http://www.zhihu.com/question/19989337)
-- [spf13-vim](http://vim.spf13.com/)
+## 安装`spf13-vim`
 
 由于国内[http://j.mp/spf13-vim3](http://j.mp/spf13-vim3)被封，spf13-vim官网告知的安装方法无法执行成功。国内用户请通过下面的命令执行安装：
 
@@ -199,4 +211,11 @@ NOTE: Pressing <ESC> will place you in Normal mode or will cancel
 curl https://raw.githubusercontent.com/spf13/spf13-vim/3.0/bootstrap.sh -L -o - | sh
 ```
 
-//TODO:vim插件的使用
+# 参考
+
+- [有哪些编程必备的 Vim 配置？](http://www.zhihu.com/question/19989337)
+- [spf13-vim](http://vim.spf13.com/)
+- [amix/vimrc](https://github.com/amix/vimrc): The ultimate Vim configuration
+- [neovim](https://neovim.io/)
+- [Graphical vi-vim Cheat Sheet and Tutorial](http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html)
+- [Vim Cheat Sheet](http://michael.peopleofhonoronly.com/vim/)

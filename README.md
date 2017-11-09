@@ -1,7 +1,7 @@
 # Linux & Unix OS
 
 - [Ubuntu Linux学习大纲](./ubuntu-linux-study-guideline.md)
-  - [Vim基本操作](./vim基本操作.md)
+  - [Vim学习笔记](./vim-study.md)
   - [Shell脚本语法](./shell-script-grammar.md)
 - [Mac OS学习大纲](./mac-os-study-guideline.md)
 - [相关资源](./resources.md)
