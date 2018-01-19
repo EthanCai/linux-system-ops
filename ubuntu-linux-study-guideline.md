@@ -1255,6 +1255,7 @@ echo # These replace cron's entries
 - [the-art-of-command-line](https://github.com/jlevy/the-art-of-command-line)
 - [The Bash Hackers Wiki](http://wiki.bash-hackers.org/start)
 - [Linux Shell Scripting Tutorial (LSST) v2.0](https://bash.cyberciti.biz/guide/Main_Page)
+- [Shell & Utilities: Detailed Toc](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/contents.html)
 - [Bash-Snippets](https://github.com/alexanderepstein/Bash-Snippets)
 - [每天一个linux命令目录](http://www.cnblogs.com/peida/archive/2012/12/05/2803591.html)
 - IBM DeveloperWorks - Linux tmpdescrip
@@ -1268,6 +1269,10 @@ echo # These replace cron's entries
 ## Utilites
 
 - [Explain Shell](http://explainshell.com/)
+- [shunit2](https://github.com/kward/shunit2)
+- [shflags](https://github.com/kward/shflags)
+- [log4sh](https://github.com/kward/log4sh)
+- [bats](https://github.com/sstephenson/bats)
 
 
 # FAQ
