@@ -1,4 +1,4 @@
-<!-- TOC depthFrom:1 depthTo:3 withLinks:1 updateOnSave:1 orderedList:0 -->
+<!-- TOC depthFrom:1 depthTo:2 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [Preface](#preface)
 - [Glossary](#glossary)
@@ -6,59 +6,21 @@
 	- [目标](#目标)
 	- [内容](#内容)
 	- [Shell基本命令](#shell基本命令)
-		- [df](#df)
-		- [du](#du)
 	- [练习](#练习)
-		- [手动安装Ubuntu Desktop 14.04](#手动安装ubuntu-desktop-1404)
-		- [手动安装Ubuntu Server 14.04](#手动安装ubuntu-server-1404)
-		- [自动化安装Ubuntu Linux](#自动化安装ubuntu-linux)
-		- [查看Ubuntu的版本和Linux内核版本](#查看ubuntu的版本和linux内核版本)
 - [Basic Shell Knowledge](#basic-shell-knowledge)
 	- [目标](#目标)
 	- [内容](#内容)
 	- [Shell基本命令](#shell基本命令)
-		- [Display system manual: man](#display-system-manual-man)
-		- [Search the whatis database for stringss: apropos](#search-the-whatis-database-for-stringss-apropos)
-		- [A menu-based hypetext system: info, pinfo](#a-menu-based-hypetext-system-info-pinfo)
-		- [账号间的切换、提权至root: sudo](#账号间的切换提权至root-sudo)
-		- [Base Utilites: ls, cat, rm, less, more](#base-utilites-ls-cat-rm-less-more)
-		- [Working with files: cp, mv, head, tail, sort, uniq, diff, file](#working-with-files-cp-mv-head-tail-sort-uniq-diff-file)
-		- [Find something: find, mlocate, locate, which, grep](#find-something-find-mlocate-locate-which-grep)
-		- [Manipulate text: awk, sed, ack](#manipulate-text-awk-sed-ack)
-		- [More commands: echo, date](#more-commands-echo-date)
 - [Install and Manage Packages](#install-and-manage-packages)
 	- [目标](#目标)
 	- [内容](#内容)
 	- [Shell命令](#shell命令)
-		- [Debian package management system: dpkg](#debian-package-management-system-dpkg)
-		- [Advanced Package Tool: apt](#advanced-package-tool-apt)
-		- [aptitude](#aptitude)
-		- [git](#git)
-		- [wget](#wget)
 	- [练习](#练习)
-		- [如何升级系统，安装最新的补丁和最新版本的软件](#如何升级系统安装最新的补丁和最新版本的软件)
-		- [修改Ubuntu Software Repository的下载地址](#修改ubuntu-software-repository的下载地址)
-		- [查找软件包](#查找软件包)
-		- [下载软件包](#下载软件包)
-		- [安装软件包](#安装软件包)
-		- [更新源](#更新源)
-		- [更新已经安装的软件包](#更新已经安装的软件包)
-		- [移除软件包](#移除软件包)
-		- [自动移除软件包](#自动移除软件包)
-		- [清除下载的软件包](#清除下载的软件包)
 - [SSH - Secure Shell](#ssh-secure-shell)
 	- [目标](#目标)
 	- [内容](#内容)
 	- [Shell基本命令](#shell基本命令)
-		- [SSH](#ssh)
-		- [本地和远程操作系统之间拷贝文件: `scp`, `sftp`, `sshfs`, `rsync`](#本地和远程操作系统之间拷贝文件-scp-sftp-sshfs-rsync)
-		- [Record a shell session: `script`](#record-a-shell-session-script)
-		- [Convert linux and macos files to windows format: `todos`, `fromdos`](#convert-linux-and-macos-files-to-windows-format-todos-fromdos)
 	- [练习](#练习)
-		- [安装SSH Server或者SSH Client](#安装ssh-server或者ssh-client)
-		- [在客户端操作系统上通过SSH连接Ubuntu Server](#在客户端操作系统上通过ssh连接ubuntu-server)
-		- [通过scp向server传送文件](#通过scp向server传送文件)
-		- [通过scp从server获取文件](#通过scp从server获取文件)
 - [Basic Vim Usage](#basic-vim-usage)
 	- [目标](#目标)
 	- [熟悉Vim](#熟悉vim)
@@ -70,8 +32,6 @@
 	- [目标](#目标)
 	- [内容](#内容)
 	- [练习](#练习)
-		- [`bzip2`, `bunzip2`, `bzcat`命令练习](#bzip2-bunzip2-bzcat命令练习)
-		- [`tar`命令练习](#tar命令练习)
 - [Process](#process)
 	- [目标](#目标)
 	- [内容](#内容)
@@ -81,30 +41,15 @@
 	- [内容](#内容)
 	- [Shell命令](#shell命令)
 	- [练习](#练习)
-		- [修改OS的hostname](#修改os的hostname)
-		- [设置DNS服务的服务地址](#设置dns服务的服务地址)
-		- [如何配置网卡和IP地址](#如何配置网卡和ip地址)
-		- [从Internet更新ubuntu本地的时间](#从internet更新ubuntu本地的时间)
 	- [切换网络后，强制更新网卡IP](#切换网络后强制更新网卡ip)
 - [Writing Shell Scripts](#writing-shell-scripts)
 	- [目标](#目标)
 	- [基本概念](#基本概念)
-		- [交互式shell和非交互式shell、登录shell和非登录shell的区别](#交互式shell和非交互式shell登录shell和非登录shell的区别)
-		- [语法](#语法)
 	- [Shell命令](#shell命令)
 	- [练习](#练习)
-		- [如何让你的shell脚本更健壮和更可靠](#如何让你的shell脚本更健壮和更可靠)
 - [Schedule Tasks](#schedule-tasks)
 	- [目标](#目标)
 	- [内容](#内容)
-		- [参考](#参考)
-		- [cron的坑](#cron的坑)
-		- [cron和anacron的区别](#cron和anacron的区别)
-		- [Crontab文件](#crontab文件)
-		- [anacron配置文件](#anacron配置文件)
-- [Futher Reading](#futher-reading)
-	- [Knowledge](#knowledge)
-	- [Utilites](#utilites)
 - [FAQ](#faq)
 	- [如何安装中文语言支持及中文输入法](#如何安装中文语言支持及中文输入法)
 	- [如何给Ubuntu Linux Virutal Machine安装VMWare Tools](#如何给ubuntu-linux-virutal-machine安装vmware-tools)
@@ -179,8 +124,7 @@ drwxr-xr-x  12 root root  4096 May 10 02:01 var/
 - Primary, extended and logical partitions（参考PG2UL, page 34，把这三个概念讲的很清楚）
     - 一个Disk最多有4个Primary partitions
     - 只能把4个Primary partitions中的一个划分为多个logical partitions，这个被划分的primary partition就叫extended partition
-    - 示意图
-		![](./img/2015/06/primary-extended-logical-partition.png)
+    - 示意图 ![](./img/2015/06/primary-extended-logical-partition.png)
 - LVM: Logical Volume Manager
     - 阅读[浅谈Linux磁盘存储管理续](http://ixdba.blog.51cto.com/2895551/562111/)
     - 阅读[LVM (简体中文) - ArchLinux Wiki](https://wiki.archlinux.org/index.php/LVM_%28%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%29)
@@ -203,25 +147,19 @@ drwxr-xr-x  12 root root  4096 May 10 02:01 var/
 
 ## 练习
 
-### 手动安装Ubuntu Desktop 14.04
-
-### 手动安装Ubuntu Server 14.04
-
-### 自动化安装Ubuntu Linux
-
-- [PXE - Preboot eXecution Environment](https://en.wiki2.org/wiki/Preboot_Execution_Environment)
-- [Cobbler](https://cobbler.github.io/)
-	- [Cobbler Quickstart Guide](https://cobbler.github.io/manuals/quickstart/)
-	- [运维自动化之Cobbler系统安装详解](http://os.51cto.com/art/201109/288604_all.htm)
-	- [使用 Cobbler 自动化和管理系统安装](http://www.ibm.com/developerworks/cn/linux/l-cobbler/index.html)
-
-### 查看Ubuntu的版本和Linux内核版本
-
-- `cat /etc/issue`
-- `sudo lsb_release -a`
-- `uname -r`
-- 执行结果见下图：
-    ![](./img/2015/06/view-ubuntu-version-and-kernel-version.png)
+- 手动安装Ubuntu Desktop 14.04
+- 手动安装Ubuntu Server 14.04
+- 自动化安装Ubuntu Linux
+    - [PXE - Preboot eXecution Environment](https://en.wiki2.org/wiki/Preboot_Execution_Environment)
+    - [Cobbler](https://cobbler.github.io/)
+        - [Cobbler Quickstart Guide](https://cobbler.github.io/manuals/quickstart/)
+        - [运维自动化之Cobbler系统安装详解](http://os.51cto.com/art/201109/288604_all.htm)
+        - [使用 Cobbler 自动化和管理系统安装](http://www.ibm.com/developerworks/cn/linux/l-cobbler/index.html)
+- 查看Ubuntu的版本和Linux内核版本
+    - `cat /etc/issue`
+    - `sudo lsb_release -a`
+    - `uname -r`
+        - 执行结果见下图：![](./img/2015/06/view-ubuntu-version-and-kernel-version.png)
 
 
 
@@ -258,16 +196,22 @@ drwxr-xr-x  12 root root  4096 May 10 02:01 var/
             - 如果安装完成后，默认的shell不是zsh，按照如下操作：
                 - 执行`sudo chsh -s /bin/zsh`
                 - 重启系统，打开terminal，oh-my-zsh就生效了
-    - Windows下安装[Xshell](http://www.netsarang.com/products/xsh_overview.html)（其次是SecureCRT，Putty）
-    - MacOS下安装[oh-my-zsh](http://ohmyz.sh/), [iTerm2](https://www.iterm2.com/index.html), [Tmux](http://tmux.sourceforge.net/)
-        - [TMUX Manual](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man1/tmux.1?query=tmux&sec=1)
-- 在后台进程管理，
+    - Windows下安装
+        - [Xshell](http://www.netsarang.com/products/xsh_overview.html)
+        - 或 SecureCRT
+        - 或 Putty
+    - MacOS下安装
+        - [oh-my-zsh](http://ohmyz.sh/)
+        - [iTerm2](https://www.iterm2.com/index.html)
+        - [Tmux](http://tmux.sourceforge.net/)
+            - [TMUX Manual](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man1/tmux.1?query=tmux&sec=1)
+- 在后台进程管理
+    - `ls -l | lpr &`
+    - Control-Z: You can suspend a foreground job (stop it from running) by pressing the suspend key, usually CONTROL-Z. The shell then stops the process and disconnects standard input from the keyboard. You can put a suspended job in the background and restart it by using the `bg` command followed by the job number. You do not need to specify the job number when there is only one stopped job.
+    - `jobs`: view background jobs
+    - `fg`: connect the key-board to a program running in the background, bring it to the fore- ground.
+    - `kill`: kill process like `kill 18228`, kill background job like `kill %1`
     - 参考[Linux后台进程管理](http://blog.csdn.net/fengyifei11228/article/details/5737371)
-        - `ls -l | lpr &`
-        - Control-Z: You can suspend a foreground job (stop it from running) by pressing the suspend key, usually CONTROL-Z. The shell then stops the process and disconnects standard input from the keyboard. You can put a suspended job in the background and restart it by using the `bg` command followed by the job number. You do not need to specify the job number when there is only one stopped job.
-        - `jobs`: view background jobs
-        - `fg`: connect the key-board to a program running in the background, bring it to the fore- ground.
-        - `kill`: kill process like `kill 18228`, kill background job like `kill %1`
 
 ## Shell基本命令
 
@@ -607,35 +551,37 @@ aptitude autoclean #同上
 
 ## 练习
 
-### 安装SSH Server或者SSH Client
-
-### 在客户端操作系统上通过SSH连接Ubuntu Server
-
-- Mac OS X上使用Terminal
-- Windows上使用Putty、Xshell
-- Ubuntu上安装openssh-client
-
-### 通过scp向server传送文件
-
-### 通过scp从server获取文件
+- 安装SSH Server或者SSH Client
+- 在客户端操作系统上通过SSH连接Ubuntu Server
+    - Mac OS X上使用Terminal
+    - Windows上使用Putty、Xshell
+    - Ubuntu上安装openssh-client
+- 通过scp向server传送文件
+- 通过scp从server获取文件
 
 
 
-# Basic Vim Usage
+# Vim Usage
 
 ## 目标
 
 - 掌握Vim基本操作
 
-## 熟悉Vim
+## 内容
 
-- 阅读[vim基本操作](./vim基本操作.md)
+- 阅读[vim基本操作](./vim-learning-notes.md)
 
 
 
 # Advanced Vim Usage
 
-//todo: 高级Vim用法
+## 目标
+
+- 精通Vim操作
+
+## 内容
+
+- to add
 
 
 
@@ -1247,32 +1193,6 @@ echo # These replace cron's entries
 - identifier是anacron用来记录上次什么时候执行命令的文件的文件名，文件保存在`/var/spool/anacron`文件夹下
 
 
-# Futher Reading
-
-## Knowledge
-
-- [Linux Tools Quick Tutorial](http://linuxtools-rst.readthedocs.org/zh_CN/latest/index.html)
-- [the-art-of-command-line](https://github.com/jlevy/the-art-of-command-line)
-- [The Bash Hackers Wiki](http://wiki.bash-hackers.org/start)
-- [Linux Shell Scripting Tutorial (LSST) v2.0](https://bash.cyberciti.biz/guide/Main_Page)
-- [Shell & Utilities: Detailed Toc](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/contents.html)
-- [Bash-Snippets](https://github.com/alexanderepstein/Bash-Snippets)
-- [每天一个linux命令目录](http://www.cnblogs.com/peida/archive/2012/12/05/2803591.html)
-- IBM DeveloperWorks - Linux tmpdescrip
-	- [Bash parameters and parameter expansions](https://www.ibm.com/developerworks/linux/library/l-bash-parameters/index.html)
-	- [Bash test and comparison functions](https://www.ibm.com/developerworks/linux/library/l-bash-test/index.html?ca=drs-)
-	- [Controlling the duration of scheduled jobs](https://www.ibm.com/developerworks/linux/library/l-job-terminating/index.html?ca=drs-)
-	- [Creating a pixel ruler from the command line](https://www.ibm.com/developerworks/linux/library/l-pixelruler/index.html?ca=drs-)
-	- [Finding rootfs during boot](https://www.ibm.com/developerworks/linux/library/l-boot-rootfs/index.html?ca=drs-)
-	- [Job scheduling with cron and at](https://www.ibm.com/developerworks/linux/library/l-job-scheduling/index.html?ca=drs-)
-
-## Utilites
-
-- [Explain Shell](http://explainshell.com/)
-- [shunit2](https://github.com/kward/shunit2)
-- [shflags](https://github.com/kward/shflags)
-- [log4sh](https://github.com/kward/log4sh)
-- [bats](https://github.com/sstephenson/bats)
 
 
 # FAQ

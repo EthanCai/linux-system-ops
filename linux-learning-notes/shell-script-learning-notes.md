@@ -423,3 +423,30 @@ exec 3<&- 4<&-
 rm -f $file1 $file2
 exit 0
 ```
+
+# 参考
+
+- [Gnu Bash Reference](http://www.gnu.org/software/bash/manual/bashref.html)
+- [Linux Tools Quick Tutorial](http://linuxtools-rst.readthedocs.org/zh_CN/latest/index.html)
+- [The-art-of-command-line](https://github.com/jlevy/the-art-of-command-line)
+- [The Bash Hackers Wiki](http://wiki.bash-hackers.org/start)
+- [Linux Shell Scripting Tutorial (LSST) v2.0](https://bash.cyberciti.biz/guide/Main_Page)
+- [Shell & Utilities: Detailed Toc](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/contents.html)
+- [Bash-Snippets](https://github.com/alexanderepstein/Bash-Snippets)
+- [每天一个linux命令目录](http://www.cnblogs.com/peida/archive/2012/12/05/2803591.html)
+- IBM DeveloperWorks - Linux tmpdescrip
+	- [Bash parameters and parameter expansions](https://www.ibm.com/developerworks/linux/library/l-bash-parameters/index.html)
+	- [Bash test and comparison functions](https://www.ibm.com/developerworks/linux/library/l-bash-test/index.html?ca=drs-)
+	- [Controlling the duration of scheduled jobs](https://www.ibm.com/developerworks/linux/library/l-job-terminating/index.html?ca=drs-)
+	- [Creating a pixel ruler from the command line](https://www.ibm.com/developerworks/linux/library/l-pixelruler/index.html?ca=drs-)
+	- [Finding rootfs during boot](https://www.ibm.com/developerworks/linux/library/l-boot-rootfs/index.html?ca=drs-)
+	- [Job scheduling with cron and at](https://www.ibm.com/developerworks/linux/library/l-job-scheduling/index.html?ca=drs-)
+
+# 项目列表
+
+- [Awesome Shell](https://github.com/alebcay/awesome-shell)
+- [Explain Shell](http://explainshell.com/)
+- [shunit2](https://github.com/kward/shunit2)
+- [shflags](https://github.com/kward/shflags)
+- [log4sh](https://github.com/kward/log4sh)
+- [bats](https://github.com/sstephenson/bats)
