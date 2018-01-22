@@ -36,7 +36,7 @@
 - `(())`: arithmetic evaluation
 - `$(())`: arithmetic expansion
 - `[]`: test command
-- `[[]]`: conditional expression
+- `[[]]`: conditional expression, as the modern variant of the classic test command
 
 
 # Control Structures
