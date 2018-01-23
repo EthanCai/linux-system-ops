@@ -1,21 +1,23 @@
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
-
-- [常用系统变量](#常用系统变量)
+<!-- TOC START min:1 max:2 link:true update:true -->
+- [常用系统变量](#)
 - [Builtin commands that are symbols](#builtin-commands-that-are-symbols)
 - [Control Structures](#control-structures)
-	- [if...else pattern](#ifelse-pattern)
-	- [if...then...else pattern](#ifthenelse-pattern)
-	- [if...then...elif pattern](#ifthenelif-pattern)
-	- [for...in pattern](#forin-pattern)
-	- [for pattern](#for-pattern)
-	- [while pattern](#while-pattern)
-	- [until pattern](#until-pattern)
-	- [break and continue pattern](#break-and-continue-pattern)
-	- [case pattern](#case-pattern)
-	- [select pattern](#select-pattern)
+  - [if...else pattern](#ifelse-pattern)
+  - [if...then...else pattern](#ifthenelse-pattern)
+  - [if...then...elif pattern](#ifthenelif-pattern)
+  - [for...in pattern](#forin-pattern)
+  - [for pattern](#for-pattern)
+  - [while pattern](#while-pattern)
+  - [until pattern](#until-pattern)
+  - [break and continue pattern](#break-and-continue-pattern)
+  - [case pattern](#case-pattern)
+  - [select pattern](#select-pattern)
 - [File Descriptors](#file-descriptors)
+- [工具](#-1)
+- [项目列表](#-2)
+- [参考](#-3)
 
-<!-- /TOC -->
+<!-- TOC END -->
 
 
 # 常用系统变量
