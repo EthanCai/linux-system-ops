@@ -424,6 +424,21 @@ rm -f $file1 $file2
 exit 0
 ```
 
+# 工具
+
+- [Explain Shell](http://explainshell.com/)
+- [ShellCheck](https://www.shellcheck.net/)
+
+
+# 项目列表
+
+- [Awesome Shell](https://github.com/alebcay/awesome-shell)
+- [shunit2](https://github.com/kward/shunit2)
+- [shflags](https://github.com/kward/shflags)
+- [log4sh](https://github.com/kward/log4sh)
+- [bats](https://github.com/sstephenson/bats)
+
+
 # 参考
 
 - [Gnu Bash Reference](http://www.gnu.org/software/bash/manual/bashref.html)
@@ -441,12 +456,3 @@ exit 0
 	- [Creating a pixel ruler from the command line](https://www.ibm.com/developerworks/linux/library/l-pixelruler/index.html?ca=drs-)
 	- [Finding rootfs during boot](https://www.ibm.com/developerworks/linux/library/l-boot-rootfs/index.html?ca=drs-)
 	- [Job scheduling with cron and at](https://www.ibm.com/developerworks/linux/library/l-job-scheduling/index.html?ca=drs-)
-
-# 项目列表
-
-- [Awesome Shell](https://github.com/alebcay/awesome-shell)
-- [Explain Shell](http://explainshell.com/)
-- [shunit2](https://github.com/kward/shunit2)
-- [shflags](https://github.com/kward/shflags)
-- [log4sh](https://github.com/kward/log4sh)
-- [bats](https://github.com/sstephenson/bats)
