@@ -451,6 +451,7 @@ exit 0
 - [Shell & Utilities: Detailed Toc](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/contents.html)
 - [Bash-Snippets](https://github.com/alexanderepstein/Bash-Snippets)
 - [每天一个linux命令目录](http://www.cnblogs.com/peida/archive/2012/12/05/2803591.html)
+- [Linux命令大全手册](http://man.linuxde.net/)
 - IBM DeveloperWorks - Linux tmpdescrip
 	- [Bash parameters and parameter expansions](https://www.ibm.com/developerworks/linux/library/l-bash-parameters/index.html)
 	- [Bash test and comparison functions](https://www.ibm.com/developerworks/linux/library/l-bash-test/index.html?ca=drs-)
