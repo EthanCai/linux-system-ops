@@ -65,6 +65,7 @@ NOTE: Pressing <ESC> will place you in Normal mode or will cancel
   5. The format for a change command is:
                operator   [number]   motion
      where:
+     
        operator - is what to do, such as  d  for delete
        [number] - is an optional count to repeat the motion
        motion   - moves over the text to operate on, such as  w (word),
@@ -214,8 +215,12 @@ curl https://raw.githubusercontent.com/spf13/spf13-vim/3.0/bootstrap.sh -L -o - 
 # 参考
 
 - [有哪些编程必备的 Vim 配置？](http://www.zhihu.com/question/19989337)
-- [spf13-vim](http://vim.spf13.com/)
-- [amix/vimrc](https://github.com/amix/vimrc): The ultimate Vim configuration
-- [neovim](https://neovim.io/)
+- [笨方法学Vimscript](http://learnvimscriptthehardway.onefloweroneworld.com/): 面向那些想学会如何自定义Vim编辑器的用户
+- [vimgolf](http://www.vimgolf.com/): Real Vim ninjas count every keystroke
 - [Graphical vi-vim Cheat Sheet and Tutorial](http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html)
 - [Vim Cheat Sheet](http://michael.peopleofhonoronly.com/vim/)
+- [SpaceVim](https://github.com/SpaceVim/SpaceVim)
+- [spf13-vim](http://vim.spf13.com/)
+- [neovim](https://neovim.io/)
+- [amix/vimrc](https://github.com/amix/vimrc): The ultimate Vim configuration
+
