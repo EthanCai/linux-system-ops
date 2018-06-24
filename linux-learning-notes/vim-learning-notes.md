@@ -223,4 +223,3 @@ curl https://raw.githubusercontent.com/spf13/spf13-vim/3.0/bootstrap.sh -L -o - 
 - [spf13-vim](http://vim.spf13.com/)
 - [neovim](https://neovim.io/)
 - [amix/vimrc](https://github.com/amix/vimrc): The ultimate Vim configuration
-
