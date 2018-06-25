@@ -214,12 +214,17 @@ curl https://raw.githubusercontent.com/spf13/spf13-vim/3.0/bootstrap.sh -L -o - 
 
 # 参考
 
+学习内容：
+
 - [有哪些编程必备的 Vim 配置？](http://www.zhihu.com/question/19989337)
 - [笨方法学Vimscript](http://learnvimscriptthehardway.onefloweroneworld.com/): 面向那些想学会如何自定义Vim编辑器的用户
 - [vimgolf](http://www.vimgolf.com/): Real Vim ninjas count every keystroke
 - [Graphical vi-vim Cheat Sheet and Tutorial](http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html)
 - [Vim Cheat Sheet](http://michael.peopleofhonoronly.com/vim/)
-- [SpaceVim](https://github.com/SpaceVim/SpaceVim)
+
+VIM配置：
+
 - [spf13-vim](http://vim.spf13.com/)
+- [SpaceVim](https://github.com/SpaceVim/SpaceVim)
 - [neovim](https://neovim.io/)
 - [amix/vimrc](https://github.com/amix/vimrc): The ultimate Vim configuration
