@@ -444,7 +444,6 @@ exit 0
 # 参考
 
 - [Gnu Bash Reference](http://www.gnu.org/software/bash/manual/bashref.html)
-- [Linux Tools Quick Tutorial](http://linuxtools-rst.readthedocs.org/zh_CN/latest/index.html)
 - [The-art-of-command-line](https://github.com/jlevy/the-art-of-command-line)
 - [The Bash Hackers Wiki](http://wiki.bash-hackers.org/start)
 - [Linux Shell Scripting Tutorial (LSST) v2.0](https://bash.cyberciti.biz/guide/Main_Page)
