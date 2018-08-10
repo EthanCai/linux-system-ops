@@ -458,3 +458,4 @@ exit 0
 	- [Creating a pixel ruler from the command line](https://www.ibm.com/developerworks/linux/library/l-pixelruler/index.html?ca=drs-)
 	- [Finding rootfs during boot](https://www.ibm.com/developerworks/linux/library/l-boot-rootfs/index.html?ca=drs-)
 	- [Job scheduling with cron and at](https://www.ibm.com/developerworks/linux/library/l-job-scheduling/index.html?ca=drs-)
+- [Pure Bash Bible](https://github.com/dylanaraps/pure-bash-bible)
