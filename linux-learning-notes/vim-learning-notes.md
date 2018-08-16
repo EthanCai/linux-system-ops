@@ -214,6 +214,8 @@ curl https://raw.githubusercontent.com/spf13/spf13-vim/3.0/bootstrap.sh -L -o - 
 
 # 参考
 
+- [vim](https://www.vim.org/)
+
 学习内容：
 
 - [有哪些编程必备的 Vim 配置？](http://www.zhihu.com/question/19989337)
