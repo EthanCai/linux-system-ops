@@ -447,6 +447,7 @@ exit 0
 - [The-art-of-command-line](https://github.com/jlevy/the-art-of-command-line)
 - [The Bash Hackers Wiki](http://wiki.bash-hackers.org/start)
 - [Linux Shell Scripting Tutorial (LSST) v2.0](https://bash.cyberciti.biz/guide/Main_Page)
+- [Pure Bash Bible](https://github.com/dylanaraps/pure-bash-bible):  A collection of pure bash alternatives to external processes
 - [Shell & Utilities: Detailed Toc](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/contents.html)
 - [Bash-Snippets](https://github.com/alexanderepstein/Bash-Snippets)
 - [每天一个linux命令目录](http://www.cnblogs.com/peida/archive/2012/12/05/2803591.html)
