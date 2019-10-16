@@ -1,5 +1,5 @@
 <!-- TOC START min:1 max:2 link:true update:true -->
-- [常用系统变量](#)
+- [常用系统变量](#%e5%b8%b8%e7%94%a8%e7%b3%bb%e7%bb%9f%e5%8f%98%e9%87%8f)
 - [Builtin commands that are symbols](#builtin-commands-that-are-symbols)
 - [Control Structures](#control-structures)
   - [if...else pattern](#ifelse-pattern)
@@ -13,9 +13,9 @@
   - [case pattern](#case-pattern)
   - [select pattern](#select-pattern)
 - [File Descriptors](#file-descriptors)
-- [工具](#-1)
-- [项目列表](#-2)
-- [参考](#-3)
+- [工具](#%e5%b7%a5%e5%85%b7)
+- [项目列表](#%e9%a1%b9%e7%9b%ae%e5%88%97%e8%a1%a8)
+- [参考](#%e5%8f%82%e8%80%83)
 
 <!-- TOC END -->
 
@@ -452,6 +452,7 @@ exit 0
 - [Bash-Snippets](https://github.com/alexanderepstein/Bash-Snippets)
 - [每天一个linux命令目录](http://www.cnblogs.com/peida/archive/2012/12/05/2803591.html)
 - [Linux命令大全手册](http://man.linuxde.net/)
+- [Bash-Oneliner](https://github.com/onceupon/Bash-Oneliner)
 - IBM DeveloperWorks - Linux tmpdescrip
 	- [Bash parameters and parameter expansions](https://www.ibm.com/developerworks/linux/library/l-bash-parameters/index.html)
 	- [Bash test and comparison functions](https://www.ibm.com/developerworks/linux/library/l-bash-test/index.html?ca=drs-)
