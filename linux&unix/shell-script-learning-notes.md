@@ -1,5 +1,5 @@
 <!-- TOC START min:1 max:2 link:true update:true -->
-- [常用系统变量](#%e5%b8%b8%e7%94%a8%e7%b3%bb%e7%bb%9f%e5%8f%98%e9%87%8f)
+- [常用系统变量](#常用系统变量)
 - [Builtin commands that are symbols](#builtin-commands-that-are-symbols)
 - [Control Structures](#control-structures)
   - [if...else pattern](#ifelse-pattern)
@@ -13,9 +13,9 @@
   - [case pattern](#case-pattern)
   - [select pattern](#select-pattern)
 - [File Descriptors](#file-descriptors)
-- [工具](#%e5%b7%a5%e5%85%b7)
-- [项目列表](#%e9%a1%b9%e7%9b%ae%e5%88%97%e8%a1%a8)
-- [参考](#%e5%8f%82%e8%80%83)
+- [工具](#工具)
+- [项目列表](#项目列表)
+- [参考](#参考)
 
 <!-- TOC END -->
 
@@ -454,10 +454,10 @@ exit 0
 - [Linux命令大全手册](http://man.linuxde.net/)
 - [Bash-Oneliner](https://github.com/onceupon/Bash-Oneliner)
 - IBM DeveloperWorks - Linux tmpdescrip
-	- [Bash parameters and parameter expansions](https://www.ibm.com/developerworks/linux/library/l-bash-parameters/index.html)
-	- [Bash test and comparison functions](https://www.ibm.com/developerworks/linux/library/l-bash-test/index.html?ca=drs-)
-	- [Controlling the duration of scheduled jobs](https://www.ibm.com/developerworks/linux/library/l-job-terminating/index.html?ca=drs-)
-	- [Creating a pixel ruler from the command line](https://www.ibm.com/developerworks/linux/library/l-pixelruler/index.html?ca=drs-)
-	- [Finding rootfs during boot](https://www.ibm.com/developerworks/linux/library/l-boot-rootfs/index.html?ca=drs-)
-	- [Job scheduling with cron and at](https://www.ibm.com/developerworks/linux/library/l-job-scheduling/index.html?ca=drs-)
+	- [Bash parameters and parameter expansions](https://developer.ibm.com/tutorials/l-bash-parameters/)
+	- [Bash test and comparison functions](https://developer.ibm.com/tutorials/l-bash-test/)
+	- [Controlling the duration of scheduled jobs](https://www.ibm.com/developerworks/linux/library/l-job-terminating/)
+	- [Creating a pixel ruler from the command line](https://www.ibm.com/developerworks/library/l-pixelruler/index.html)
+	- [Finding rootfs during boot](https://developer.ibm.com/tutorials/l-boot-rootfs/)
+	- [Job scheduling with cron and at](https://www.ibm.com/developerworks/library/l-job-scheduling/index.html)
 - [Pure Bash Bible](https://github.com/dylanaraps/pure-bash-bible)
