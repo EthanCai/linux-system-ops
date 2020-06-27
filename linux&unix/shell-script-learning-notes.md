@@ -13,8 +13,6 @@
   - [case pattern](#case-pattern)
   - [select pattern](#select-pattern)
 - [File Descriptors](#file-descriptors)
-- [工具](#工具)
-- [项目列表](#项目列表)
 - [参考](#参考)
 
 <!-- TOC END -->
@@ -426,38 +424,38 @@ rm -f $file1 $file2
 exit 0
 ```
 
-# 工具
-
-- [Explain Shell](http://explainshell.com/)
-- [ShellCheck](https://www.shellcheck.net/)
-
-
-# 项目列表
-
-- [Awesome Shell](https://github.com/alebcay/awesome-shell)
-- [shunit2](https://github.com/kward/shunit2)
-- [shflags](https://github.com/kward/shflags)
-- [log4sh](https://github.com/kward/log4sh)
-- [bats](https://github.com/sstephenson/bats)
-
 
 # 参考
 
-- [Gnu Bash Reference](http://www.gnu.org/software/bash/manual/bashref.html)
-- [The-art-of-command-line](https://github.com/jlevy/the-art-of-command-line)
-- [The Bash Hackers Wiki](http://wiki.bash-hackers.org/start)
-- [Linux Shell Scripting Tutorial (LSST) v2.0](https://bash.cyberciti.biz/guide/Main_Page)
-- [Pure Bash Bible](https://github.com/dylanaraps/pure-bash-bible):  A collection of pure bash alternatives to external processes
-- [Shell & Utilities: Detailed Toc](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/contents.html)
-- [Bash-Snippets](https://github.com/alexanderepstein/Bash-Snippets)
-- [每天一个linux命令目录](http://www.cnblogs.com/peida/archive/2012/12/05/2803591.html)
-- [Linux命令大全手册](http://man.linuxde.net/)
-- [Bash-Oneliner](https://github.com/onceupon/Bash-Oneliner)
-- IBM DeveloperWorks - Linux tmpdescrip
-	- [Bash parameters and parameter expansions](https://developer.ibm.com/tutorials/l-bash-parameters/)
-	- [Bash test and comparison functions](https://developer.ibm.com/tutorials/l-bash-test/)
-	- [Controlling the duration of scheduled jobs](https://www.ibm.com/developerworks/linux/library/l-job-terminating/)
-	- [Creating a pixel ruler from the command line](https://www.ibm.com/developerworks/library/l-pixelruler/index.html)
-	- [Finding rootfs during boot](https://developer.ibm.com/tutorials/l-boot-rootfs/)
-	- [Job scheduling with cron and at](https://www.ibm.com/developerworks/library/l-job-scheduling/index.html)
-- [Pure Bash Bible](https://github.com/dylanaraps/pure-bash-bible)
+- Shell Tutorial
+  - [Gnu Bash Reference](http://www.gnu.org/software/bash/manual/bashref.html)
+  - [The-art-of-command-line](https://github.com/jlevy/the-art-of-command-line)
+  - [The Bash Hackers Wiki](http://wiki.bash-hackers.org/start)
+  - [Linux Shell Scripting Tutorial (LSST) v2.0](https://bash.cyberciti.biz/guide/Main_Page)
+  - [Pure Bash Bible](https://github.com/dylanaraps/pure-bash-bible):  A collection of pure bash alternatives to external processes
+  - [Shell & Utilities: Detailed Toc](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/contents.html)
+  - [Pure Bash Bible](https://github.com/dylanaraps/pure-bash-bible)
+  - [Advanced Bash-Scripting Guide](https://linux.die.net/abs-guide/index.html)
+  - IBM DeveloperWorks
+    - [Bash parameters and parameter expansions](https://developer.ibm.com/tutorials/l-bash-parameters/)
+    - [Bash test and comparison functions](https://developer.ibm.com/tutorials/l-bash-test/)
+    - [Controlling the duration of scheduled jobs](https://www.ibm.com/developerworks/linux/library/l-job-terminating/)
+    - [Creating a pixel ruler from the command line](https://www.ibm.com/developerworks/library/l-pixelruler/index.html)
+    - [Finding rootfs during boot](https://developer.ibm.com/tutorials/l-boot-rootfs/)
+    - [Job scheduling with cron and at](https://www.ibm.com/developerworks/library/l-job-scheduling/index.html)
+- Commands
+  - [每天一个linux命令目录](http://www.cnblogs.com/peida/archive/2012/12/05/2803591.html)
+  - [Linux命令大全手册](http://man.linuxde.net/)
+  - [Bash-Oneliner](https://github.com/onceupon/Bash-Oneliner)
+  - [Bash-Snippets](https://github.com/alexanderepstein/Bash-Snippets)
+- Tools
+  - [Explain Shell](http://explainshell.com/)
+  - [ShellCheck](https://www.shellcheck.net/)
+- Libraries
+  - [shunit2](https://github.com/kward/shunit2)
+  - [shflags](https://github.com/kward/shflags)
+  - [log4sh](https://github.com/kward/log4sh)
+  - [bats](https://github.com/sstephenson/bats)
+- Other
+  - [Awesome Shell](https://github.com/alebcay/awesome-shell)
+
