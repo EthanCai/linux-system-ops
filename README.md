@@ -25,7 +25,7 @@ Linux & Unix的操作系统：
 - [Ubuntu Linux学习笔记](./linux&unix/ubuntu-linux-study-guideline.md)
 - [Vim学习笔记](./linux&unix/vim-learning-notes.md)
 - [Shell脚本学习笔记](./linux&unix/shell-script-learning-notes.md)
-- [Mac OS学习大纲](./mac-os-study-guideline.md)
+- [Mac OS学习大纲](./linux&unix/mac-os-study-guideline.md)
 
 
 阅读路径：
@@ -55,16 +55,16 @@ Linux & Unix的操作系统：
 
 # Ops
 
-- [Container技术学习](./container-learning-notes.md)
-- [puppet学习笔记](./puppet-learning-notes.md)
-- [Ansible学习笔记](./ansible-learning-notes.md)
-- [Saltstack](./saltstack-learning-notes.md)
-- [chef学习笔记](./chef-learning-notes.md)
+- [Container技术学习](./devops/container-learning-notes.md)
+- [puppet学习笔记](./devops/puppet-learning-notes.md)
+- [Ansible学习笔记](./devops/ansible-learning-notes.md)
+- [Saltstack](./devops/saltstack-learning-notes.md)
+- [chef学习笔记](./devops/chef-learning-notes.md)
 
 # Windows
 
-- [PowerShell学习笔记](./powershell-learning-notes.md)
-- [Windows命令行学习笔记](./windows-command-line-utilities.md)
+- [PowerShell学习笔记](./windows/powershell-learning-notes.md)
+- [Windows命令行学习笔记](./windows/windows-command-line-utilities.md)
 
 
 # 参考
