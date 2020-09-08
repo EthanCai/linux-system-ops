@@ -434,7 +434,6 @@ exit 0
   - [Linux Shell Scripting Tutorial (LSST) v2.0](https://bash.cyberciti.biz/guide/Main_Page)
   - [Pure Bash Bible](https://github.com/dylanaraps/pure-bash-bible):  A collection of pure bash alternatives to external processes
   - [Shell & Utilities: Detailed Toc](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/contents.html)
-  - [Pure Bash Bible](https://github.com/dylanaraps/pure-bash-bible)
   - [Advanced Bash-Scripting Guide](https://linux.die.net/abs-guide/index.html)
   - IBM DeveloperWorks
     - [Bash parameters and parameter expansions](https://developer.ibm.com/tutorials/l-bash-parameters/)
