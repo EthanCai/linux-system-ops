@@ -435,16 +435,8 @@ exit 0
   - [Pure Bash Bible](https://github.com/dylanaraps/pure-bash-bible):  A collection of pure bash alternatives to external processes
   - [Shell & Utilities: Detailed Toc](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/contents.html)
   - [Advanced Bash-Scripting Guide](https://linux.die.net/abs-guide/index.html)
-  - IBM DeveloperWorks
-    - [Bash parameters and parameter expansions](https://developer.ibm.com/tutorials/l-bash-parameters/)
-    - [Bash test and comparison functions](https://developer.ibm.com/tutorials/l-bash-test/)
-    - [Controlling the duration of scheduled jobs](https://www.ibm.com/developerworks/linux/library/l-job-terminating/)
-    - [Creating a pixel ruler from the command line](https://www.ibm.com/developerworks/library/l-pixelruler/index.html)
-    - [Finding rootfs during boot](https://developer.ibm.com/tutorials/l-boot-rootfs/)
-    - [Job scheduling with cron and at](https://www.ibm.com/developerworks/library/l-job-scheduling/index.html)
-- Commands
-  - [每天一个linux命令目录](http://www.cnblogs.com/peida/archive/2012/12/05/2803591.html)
-  - [Linux命令大全手册](http://man.linuxde.net/)
+html)
+- Collection of bash scripts
   - [Bash-Oneliner](https://github.com/onceupon/Bash-Oneliner)
   - [Bash-Snippets](https://github.com/alexanderepstein/Bash-Snippets)
 - Tools
@@ -455,6 +447,12 @@ exit 0
   - [shflags](https://github.com/kward/shflags)
   - [log4sh](https://github.com/kward/log4sh)
   - [bats](https://github.com/sstephenson/bats)
+- IBM DeveloperWorks
+  - [Bash parameters and parameter expansions](https://developer.ibm.com/tutorials/l-bash-parameters/)
+  - [Bash test and comparison functions](https://developer.ibm.com/tutorials/l-bash-test/)
+  - [Controlling the duration of scheduled jobs](https://www.ibm.com/developerworks/linux/library/l-job-terminating/)
+  - [Creating a pixel ruler from the command line](https://www.ibm.com/developerworks/library/l-pixelruler/index.html)
+  - [Finding rootfs during boot](https://developer.ibm.com/tutorials/l-boot-rootfs/)
+  - [Job scheduling with cron and at](https://www.ibm.com/developerworks/library/l-job-scheduling/index)
 - Other
   - [Awesome Shell](https://github.com/alebcay/awesome-shell)
-
