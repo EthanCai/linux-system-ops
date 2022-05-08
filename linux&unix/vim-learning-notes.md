@@ -1,17 +1,17 @@
 <!-- TOC -->
 
 - [使用Vim](#使用vim)
-    - [学习卡片](#学习卡片)
-    - [`vimtutor`教程](#vimtutor教程)
-        - [Chapter 1](#chapter-1)
-        - [Chapter 2](#chapter-2)
-        - [Chapter 3](#chapter-3)
-        - [Chapter 4](#chapter-4)
-        - [Chapter 5](#chapter-5)
-        - [Chapter 6](#chapter-6)
-        - [Chapter 7](#chapter-7)
+  - [学习卡片](#学习卡片)
+  - [`vimtutor`教程](#vimtutor教程)
+    - [Chapter 1](#chapter-1)
+    - [Chapter 2](#chapter-2)
+    - [Chapter 3](#chapter-3)
+    - [Chapter 4](#chapter-4)
+    - [Chapter 5](#chapter-5)
+    - [Chapter 6](#chapter-6)
+    - [Chapter 7](#chapter-7)
 - [配置Vim](#配置vim)
-    - [安装`spf13-vim`](#安装spf13-vim)
+  - [安装`spf13-vim`](#安装spf13-vim)
 - [参考](#参考)
 
 <!-- /TOC -->
@@ -65,7 +65,7 @@ NOTE: Pressing <ESC> will place you in Normal mode or will cancel
   5. The format for a change command is:
                operator   [number]   motion
      where:
-     
+
        operator - is what to do, such as  d  for delete
        [number] - is an optional count to repeat the motion
        motion   - moves over the text to operate on, such as  w (word),
