@@ -1,24 +1,4 @@
-
-- [网络](#网络)
-  - [命令](#命令)
-  - [专题](#专题)
-- [数据传输](#数据传输)
-  - [命令](#命令-1)
-- [数据处理](#数据处理)
-  - [命令](#命令-2)
-  - [专题](#专题-1)
-- [CPU](#cpu)
-  - [命令](#命令-3)
-  - [专题](#专题-2)
-- [内存](#内存)
-  - [命令](#命令-4)
-- [进程](#进程)
-  - [命令](#命令-5)
-- [磁盘管理](#磁盘管理)
-  - [命令](#命令-6)
-  - [专题](#专题-3)
-- [安全](#安全)
-- [参考](#参考)
+[TOC]
 
 
 # 网络
@@ -28,6 +8,7 @@
 - ss: 获取socket统计信息，优势在于它能够显示更多更详细的有关TCP和连接状态的信息，而且比netstat更快
   - [man page](https://man7.org/linux/man-pages/man8/ss.8.html)
   - [How to Use the ss Command on Linux](https://www.howtogeek.com/681468/how-to-use-the-ss-command-on-linux/)
+  - [Probe Your Linux Sockets With ss](https://www.linux.com/learn/intro-to-linux/2017/4/probe-your-linux-sockets-ss)
 - netstat: 多种网络栈和接口统计信息
 - ifconfig: 多种网络栈和接口统计信息
 - ip: 网络接口统计信息
@@ -165,6 +146,10 @@
 
 - nmap
   - [Understanding Nmap by using hping](https://medium.com/@reginaldlaurent/understanding-nmap-by-using-hping-c27e6b613bd9)
+  - [Comparison of Nmap, Netcat, Hping3 tools](https://titanwolf.org/Network/Articles/Article?AID=43618944-204a-4ac9-a982-2f163db31e89)
+  - [NMAP 常用扫描简介（一）](https://mp.weixin.qq.com/s?__biz=MjM5NjQ4MjYwMQ==&mid=2664608847&idx=1&sn=5d98128987ce41aaf92028aac20383f4&chksm=bdce8f098ab9061f582e37a63c9901783577654f87a240b37372282e911288ce6b671b8180bb&scene=0&key=24d0ae311a85eefa32abe6c5b5c7cf5962630da7717bcaa1e18153031255be627971e084606566e6faf43eee1ea331d68034bf7d276796d8c7941a024ff821eca1880bd757e2aa85ac02acdc8f998da8&ascene=0&uin=MjYxMzYyNzA0MA%3D%3D&devicetype=iMac+MacBookPro11%2C4+OSX+OSX+10.12.4+build(16E195)&version=12020110&nettype=WIFI&fontScale=100&pass_ticket=6Hb1hWILMRJHL9uGhy9pAbkGJHl5duMbl9l1zltmQzBvNtmcDolgjXush5at2jq1)
+  - [Linux常用网络工具：批量主机服务扫描之nmap](https://www.linuxdiyf.com/linux/12486.html)
+  - [Informative guide to NC (Ncat) command in Linux](https://thelinuxgurus.com/informative-guide-to-nc-ncat-command-in-linux/)
 
 
 
