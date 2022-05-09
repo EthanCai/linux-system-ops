@@ -12,10 +12,17 @@
 - netstat: 多种网络栈和接口统计信息
 - ifconfig: 多种网络栈和接口统计信息
 - ip: 网络接口统计信息
+- iptables: a [user-space](https://en.wikipedia.org/wiki/User_space) utility program that allows a [system administrator](https://en.wikipedia.org/wiki/System_administrator) to configure the [IP packet filter rules](https://en.wikipedia.org/wiki/Packet_filter) of the [Linux kernel](https://en.wikipedia.org/wiki/Linux_kernel) [firewall](https://en.wikipedia.org/wiki/Firewall_(computing))
+  - [Iptables详解](https://blog.csdn.net/reyleon/article/details/12976341)
+  - https://en.wikipedia.org/wiki/Iptables
+  - https://www.netfilter.org/documentation/index.html
+  - https://www.frozentux.net/iptables-tutorial/iptables-tutorial.html
+  - https://wiki.archlinux.org/title/iptables
+
 - ping: 测试网络连通性
+- traceroute: 测试网络路由
 - mtr: 网络联通性判断工具，它可以结合 ping nslookup tracert 来判断网络的相关特性
   - [mtr的用法](https://mp.weixin.qq.com/s/90rHRd8ZjrWc6pv6H1gYtQ)
-- traceroute: 测试网络路由
 - pathchar: 确定网络路径特征
 - tcpdump: 网络数据包嗅探器
   - [home web site of tcpdump](https://www.tcpdump.org/)
@@ -89,6 +96,7 @@
   - [How Do I Find Out Linux CPU Utilization?](https://www.cyberciti.biz/tips/how-do-i-find-out-linux-cpu-utilization.html)
   - [理解CPU利用率](https://www.jianshu.com/p/f595ee986b55?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io)
   - [top命令](https://www.cnblogs.com/peida/archive/2012/12/24/2831353.html)
+  - [每天一个linux命令（44）：top命令](https://www.cnblogs.com/peida/archive/2012/12/24/2831353.html)
 - htop
 - sysstat
 - mpstat
