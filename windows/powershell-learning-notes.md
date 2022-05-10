@@ -1,4 +1,61 @@
-# 说明
+- [1. 说明](#1-说明)
+- [2. PowerShell Introduction](#2-powershell-introduction)
+- [3. Advantages](#3-advantages)
+- [4. Learning Videos](#4-learning-videos)
+  - [4.1. Getting Started with PowerShell 3.0 Jump Start](#41-getting-started-with-powershell-30-jump-start)
+    - [4.1.1. URL](#411-url)
+    - [4.1.2. 课程目录](#412-课程目录)
+    - [4.1.3. 内容概要](#413-内容概要)
+  - [4.2. Advanced Tools & Scripting with PowerShell 3.0 Jump Start](#42-advanced-tools--scripting-with-powershell-30-jump-start)
+    - [4.2.1. URL](#421-url)
+    - [4.2.2. 课程目录](#422-课程目录)
+    - [4.2.3. 内容概要](#423-内容概要)
+  - [4.3. Getting Started with PowerShell Desired State Configuration (DSC)](#43-getting-started-with-powershell-desired-state-configuration-dsc)
+    - [4.3.1. URL](#431-url)
+    - [4.3.2. 课程目录](#432-课程目录)
+    - [4.3.3. 内容概要](#433-内容概要)
+      - [4.3.3.1. 01 | Get Getting ready for DSC](#4331-01--get-getting-ready-for-dsc)
+      - [4.3.3.2. 02 | Performing a Push deployment](#4332-02--performing-a-push-deployment)
+      - [4.3.3.3. 03 | Configuring Pull Servers for Deployment​](#4333-03--configuring-pull-servers-for-deployment)
+      - [4.3.3.4. 04 | Deploying Configurations Using a Pull Server](#4334-04--deploying-configurations-using-a-pull-server)
+      - [4.3.3.5. 05 | Resource roundup](#4335-05--resource-roundup)
+      - [4.3.3.6. 06 | Writing better configurations](#4336-06--writing-better-configurations)
+      - [4.3.3.7. 07 | DSC and Linux](#4337-07--dsc-and-linux)
+  - [4.4. Advanced PowerShell Desired State Configuration (DSC) and Custom Resources](#44-advanced-powershell-desired-state-configuration-dsc-and-custom-resources)
+    - [4.4.1. URL](#441-url)
+    - [4.4.2. 课程目录](#442-课程目录)
+    - [4.4.3. 内容概要](#443-内容概要)
+      - [4.4.3.1. 01 | Getting Ready for DSC Custom Resources](#4431-01--getting-ready-for-dsc-custom-resources)
+      - [4.4.3.2. 02 | Implementing and Testing Custom Resources](#4432-02--implementing-and-testing-custom-resources)
+      - [4.4.3.3. 03 | Packaging and Deploying Custom Resources](#4433-03--packaging-and-deploying-custom-resources)
+      - [4.4.3.4. 04 | Using Classes to Build a Custom Resource](#4434-04--using-classes-to-build-a-custom-resource)
+      - [4.4.3.5. 05 | Enhancing Your Custom Resources](#4435-05--enhancing-your-custom-resources)
+  - [4.5. Windows Server 2012 R2 : 服务器管理和自动化](#45-windows-server-2012-r2--服务器管理和自动化)
+    - [4.5.1. URL](#451-url)
+    - [4.5.2. 课程目录](#452-课程目录)
+    - [4.5.3. 内容概要](#453-内容概要)
+- [5. Blog Articles](#5-blog-articles)
+- [6. Third-Party Utilities](#6-third-party-utilities)
+  - [6.1. PowerShell Modules](#61-powershell-modules)
+  - [6.2. Utilities](#62-utilities)
+- [7. Websites about PowerShell](#7-websites-about-powershell)
+  - [7.1. In China](#71-in-china)
+  - [7.2. Out of China](#72-out-of-china)
+- [8. Books](#8-books)
+- [9. FAQ](#9-faq)
+  - [9.1. Windows PowerShell Profiles文件保存在什么位置？](#91-windows-powershell-profiles文件保存在什么位置)
+  - [9.2. PowerShell Remote Trouble Shooting](#92-powershell-remote-trouble-shooting)
+  - [9.3. PowerShell展示本地及远程电脑的driver](#93-powershell展示本地及远程电脑的driver)
+  - [9.4. Windows 10的Microsoft Edge浏览器默认不能访问localhost website，如果解决？](#94-windows-10的microsoft-edge浏览器默认不能访问localhost-website如果解决)
+  - [9.5. Write-Host和Write-Output有什么区别？](#95-write-host和write-output有什么区别)
+  - [9.6. 如何查看所有的WMI Classes？](#96-如何查看所有的wmi-classes)
+  - [9.7. 如何连接局域网中不在域的PC？](#97-如何连接局域网中不在域的pc)
+  - [9.8. PowerShell中Cmdlet和Function有什么区别？](#98-powershell中cmdlet和function有什么区别)
+  - [9.9. ConEmu中PowerShell Shell输入中文字符时字符重叠在一起，如何解决？](#99-conemu中powershell-shell输入中文字符时字符重叠在一起如何解决)
+  - [9.10. Windows和Linux的dynamic port range动态端口范围是多少？](#910-windows和linux的dynamic-port-range动态端口范围是多少)
+
+
+# 1. 说明
 
 这个repository中的内容包括我学习PowerShell过程中，浏览过的文章、书籍、学习视频、学习过程中写的一些练习脚本。通过系统化的记录学习的内容，希望能够加深对各种知识理解。
 
@@ -10,7 +67,7 @@
 
 备注：[windows-command-line-utilities.md](./windows-command-line-utilities.md)是一些常用的windows命令行命令和工具的用法。
 
-# PowerShell Introduction
+# 2. PowerShell Introduction
 
 Please read [PowerShell-Wikipedia](https://en.wiki2.org/wiki/Windows_PowerShell) first. Following is the contents:
 
@@ -22,7 +79,7 @@ Please read [PowerShell-Wikipedia](https://en.wiki2.org/wiki/Windows_PowerShell)
 1. Application Support
 1. Alternative implementation
 
-# Advantages
+# 3. Advantages
 
 - 语言本身：
     - 丰富的命令（或者功能），以及扩展性
@@ -35,16 +92,16 @@ Please read [PowerShell-Wikipedia](https://en.wiki2.org/wiki/Windows_PowerShell)
     - 互操作性（interoperable）：比如.NET程序中执行PowerShell脚本
     - 广泛的支持（SQL Server，Exchange Server等）
 
-# Learning Videos
+# 4. Learning Videos
 
-## Getting Started with PowerShell 3.0 Jump Start
+## 4.1. Getting Started with PowerShell 3.0 Jump Start
 
-### URL
+### 4.1.1. URL
 - [Getting Started with PowerShell 3.0 Jump Start](https://www.microsoftvirtualacademy.com/en-US/training-courses/getting-started-with-powershell-3-0-jump-start-8276)
 - [快速入门 : PowerShell 3.0](http://www.microsoftvirtualacademy.com/training-courses/getting-started-with-powershell-3-0-jump-start-cn)
 - [youku上的观看地址](http://www.youku.com/playlist_show/id_20773431.html?sf=10201)
 
-### 课程目录
+### 4.1.2. 课程目录
 - Don't fear the Shell
 - The help System
 - The pipeline: getting connected & extending the shell
@@ -56,7 +113,7 @@ Please read [PowerShell-Wikipedia](https://en.wiki2.org/wiki/Windows_PowerShell)
 - Introducing scripting and toolmaking
 - Recommended Resources & Next Steps for PowerShell 3.0
 
-### 内容概要
+### 4.1.3. 内容概要
 
 **The Help System**
 
@@ -363,14 +420,14 @@ PS > $env:PSModulePath
 #   2. Module文件夹必须放在$env:PSModulePath的任何一个目录中
 ```
 
-## Advanced Tools & Scripting with PowerShell 3.0 Jump Start
+## 4.2. Advanced Tools & Scripting with PowerShell 3.0 Jump Start
 
-### URL
+### 4.2.1. URL
 
 - [Advanced Tools & Scripting with PowerShell 3.0 Jump Start](http://www.microsoftvirtualacademy.com/training-courses/advanced-tools-scripting-with-powershell-3-0-jump-start)
 - [PowerShell 3.0 高级工具和脚本](http://www.microsoftvirtualacademy.com/training-courses/821)
 
-### 课程目录
+### 4.2.2. 课程目录
 - Get Started Scripting
 - PowerShell’s Scripting Language
 - Simple Scripts and Functions
@@ -382,7 +439,7 @@ PS > $env:PSModulePath
 - Script and Manifest Modules
 - Recommended Resources & Next Steps for Advanced PowerShell 3.0
 
-### 内容概要
+### 4.2.3. 内容概要
 
 **PowerShell's Scripting Language**
 
@@ -416,13 +473,13 @@ PS > $env:PSModulePath
 
 参考：[幻灯片展示](https://sg1b-powerpoint.officeapps.live.com/p/PowerPointFrame.aspx?PowerPointView=SlideShowView&ui=en-US&rs=en-US&WOPISrc=http%3A%2F%2Fsg1b-15-view-wopi%2Ewopi%2Elive%2Enet%3A808%2Foh%2Fwopi%2Ffiles%2F%40%2FwFileId%3FwFileId%3Dhttps%253A%252F%252Fcp%252Dmlxprod%252Dstatic%252Emicrosoft%252Ecom%253A443%252F05373%252D1000%252Fen%252Dus%252Fcontent%252Fcontent%255Fdd9xmxwy%255F7604984382%252F04242015062605%252Epptx&access_token_ttl=0&wdSlideId=295&wdModeSwitchTime=1435885678020)
 
-## Getting Started with PowerShell Desired State Configuration (DSC)
+## 4.3. Getting Started with PowerShell Desired State Configuration (DSC)
 
-### URL
+### 4.3.1. URL
 
 - [Getting Started with PowerShell Desired State Configuration (DSC)](http://www.microsoftvirtualacademy.com/training-courses/getting-started-with-powershell-desired-state-configuration-dsc-)
 
-### 课程目录
+### 4.3.2. 课程目录
 - 01 | Get Getting ready for DSC
 - 02 | Performing a Push deployment
 - 03 | Configuring Pull Servers for Deployment​
@@ -432,9 +489,9 @@ PS > $env:PSModulePath
 - 07 | DSC and Linux
 - Recommended Resources & Next Steps
 
-### 内容概要
+### 4.3.3. 内容概要
 
-#### 01 | Get Getting ready for DSC
+#### 4.3.3.1. 01 | Get Getting ready for DSC
 
 通过Dsc可以实现：
 
@@ -530,7 +587,7 @@ Cmdlet          Start-DscConfiguration                             1.0        PS
 Cmdlet          Update-DscConfiguration                            1.0        PSDesiredStateConfiguration
 ```
 
-#### 02 | Performing a Push deployment
+#### 4.3.3.2. 02 | Performing a Push deployment
 
 ```PowerShell
 # 第1步，我在自己电脑上搭建了两个VM，一个Windows Server 2012 R2，另外一个是Windows Server 2012 ServerCore。下面我称前者是VMa，后者是VMb。
@@ -570,43 +627,43 @@ PS > Start-DscConfiguration -Path C:\dsc\Config -ComputerName 192.168.1.106 -Cre
 
 ```
 
-#### 03 | Configuring Pull Servers for Deployment​
+#### 4.3.3.3. 03 | Configuring Pull Servers for Deployment​
 
 ```PowerShell
 
 ```
 
-#### 04 | Deploying Configurations Using a Pull Server
+#### 4.3.3.4. 04 | Deploying Configurations Using a Pull Server
 
 ```PowerShell
 
 ```
 
-#### 05 | Resource roundup
+#### 4.3.3.5. 05 | Resource roundup
 
 ```PowerShell
 
 ```
 
-#### 06 | Writing better configurations
+#### 4.3.3.6. 06 | Writing better configurations
 
 ```PowerShell
 
 ```
 
-#### 07 | DSC and Linux
+#### 4.3.3.7. 07 | DSC and Linux
 
 ```PowerShell
 
 ```
 
-## Advanced PowerShell Desired State Configuration (DSC) and Custom Resources
+## 4.4. Advanced PowerShell Desired State Configuration (DSC) and Custom Resources
 
-### URL
+### 4.4.1. URL
 
 - [Advanced PowerShell Desired State Configuration (DSC) and Custom Resources](http://www.microsoftvirtualacademy.com/training-courses/advanced-powershell-desired-state-configuration-dsc-and-custom-resources)
 
-### 课程目录
+### 4.4.2. 课程目录
 - 01 | Getting Ready for DSC Custom Resources
 - 02 | Implementing and Testing Custom Resources
 - 03 | Packaging and Deploying Custom Resources
@@ -616,52 +673,52 @@ PS > Start-DscConfiguration -Path C:\dsc\Config -ComputerName 192.168.1.106 -Cre
 - 07 | Advanced Configurations
 - Recommended Resources & Next Steps
 
-### 内容概要
+### 4.4.3. 内容概要
 
-#### 01 | Getting Ready for DSC Custom Resources
+#### 4.4.3.1. 01 | Getting Ready for DSC Custom Resources
 
 ```PowerShell
 
 ```
 
-#### 02 | Implementing and Testing Custom Resources
+#### 4.4.3.2. 02 | Implementing and Testing Custom Resources
 
 ```PowerShell
 ```
 
-#### 03 | Packaging and Deploying Custom Resources
+#### 4.4.3.3. 03 | Packaging and Deploying Custom Resources
 
 ```PowerShell
 ```
 
-#### 04 | Using Classes to Build a Custom Resource
+#### 4.4.3.4. 04 | Using Classes to Build a Custom Resource
 
 ```PowerShell
 ```
 
-#### 05 | Enhancing Your Custom Resources
+#### 4.4.3.5. 05 | Enhancing Your Custom Resources
 
 ```PowerShell
 ```
 
-## Windows Server 2012 R2 : 服务器管理和自动化
+## 4.5. Windows Server 2012 R2 : 服务器管理和自动化
 
-### URL
+### 4.5.1. URL
 
 - [Windows Server 2012 R2 : 服务器管理和自动化](http://www.microsoftvirtualacademy.com/training-courses/803)
 
-### 课程目录
+### 4.5.2. 课程目录
 
 - Module 1 : 基于标准的管理
 - Module 2 : 简化常规任务
 - Module 3 : 部署
 - Module 4 : 多服务器管理
 
-### 内容概要
+### 4.5.3. 内容概要
 
 
 
-# Blog Articles
+# 5. Blog Articles
 
 - 2007-11-23: [An Introduction to Windows PowerShell and IIS 7.0](http://www.iis.net/learn/manage/powershell/an-introduction-to-windows-powershell-and-iis)
 - 2008-08-29: [How to run PowerShell scripts from C#](http://www.codeproject.com/Articles/18229/How-to-run-PowerShell-scripts-from-C)
@@ -726,9 +783,9 @@ PS > Start-DscConfiguration -Path C:\dsc\Config -ComputerName 192.168.1.106 -Cre
 - 2015-06-17: [Azure DSC Extension v2.0 released](http://blogs.msdn.com/b/powershell/archive/2015/06/17/azure-dsc-extension-v2-0-released.aspx)
 - 2015-06-23: [DSC Resource Kit flourishes as open source](http://blogs.msdn.com/b/powershell/archive/2015/06/23/dsc-resource-kit-flourishes-as-open-source.aspx)
 
-# Third-Party Utilities
+# 6. Third-Party Utilities
 
-## PowerShell Modules
+## 6.1. PowerShell Modules
 
 - [DSC Resource Kit (All Modules)](https://gallery.technet.microsoft.com/scriptcenter/DSC-Resource-Kit-All-c449312d)
 - [PSReadLine](https://github.com/lzybkr/PSReadLine) - A bash inspired readline implementation for PowerShell
@@ -743,7 +800,7 @@ PS > Start-DscConfiguration -Path C:\dsc\Config -ComputerName 192.168.1.106 -Cre
 - [PowerShellArsenal](https://github.com/mattifestation/PowerShellArsenal) is a PowerShell module used to aid a reverse engineer. The module can be used to disassemble managed and unmanaged code, perform .NET malware analysis, analyze/scrape memory, parse file formats and memory structures, obtain internal system information, etc. 
 - [Nishang](https://github.com/samratashok/nishang) is a framework and collection of scripts and payloads which enables usage of PowerShell for offensive security and penetration testing. Nishang is useful during various phases of a penetration test and is most powerful for post exploitation usage. 
 
-## Utilities
+## 6.2. Utilities
 
 - [PowerShell Tools for Visual Studio 2013](https://visualstudiogallery.msdn.microsoft.com/c9eb3ba8-0c59-4944-9a62-6eee37294597)
 - [Script Browser & Script Analyzer](http://www.microsoft.com/zh-cn/download/details.aspx?id=42525): Script Browser for Windows PowerShell ISE允许用户从Windows PowerShell ISE内直接搜索、下载和使用9000多个微软TechNet脚本中心的脚本示例。
@@ -753,13 +810,13 @@ PS > Start-DscConfiguration -Path C:\dsc\Config -ComputerName 192.168.1.106 -Cre
 - [winbootstrap](https://github.com/aroben/winbootstrap): 使用PowerShell自动安装并配置Cygwin
 - [clymb3r/PowerShell](https://github.com/clymb3r/PowerShell): Useful PowerShell scripts
 
-# Websites about PowerShell
+# 7. Websites about PowerShell
 
-## In China
+## 7.1. In China
 
 - [pstips.net](http://www.pstips.net/): 收集和分享 Windows PowerShell 相关教程,技术和最新动态
 
-## Out of China
+## 7.2. Out of China
 
 - [PowerShell Gallery](https://www.powershellgallery.com/)
 - [Microsoft Script Center - Technet](https://technet.microsoft.com/en-us/scriptcenter/bb410849.aspx)
@@ -769,7 +826,7 @@ PS > Start-DscConfiguration -Path C:\dsc\Config -ComputerName 192.168.1.106 -Cre
 - [powershell.org](http://powershell.org/wp/)
 - [Windows PowerShell Desired State Configuration Overview](https://technet.microsoft.com/en-us/library/dn249912.aspx)
 
-# Books
+# 8. Books
 
 - "Learn PowerShell 3 in a month of Lunches (2nd)" by Don Jones
 - "PowerShell in Depth (2nd)" by Don Jonnes
@@ -778,19 +835,19 @@ PS > Start-DscConfiguration -Path C:\dsc\Config -ComputerName 192.168.1.106 -Cre
 - "Learn PowerShell ToolMaking in a Month of Lunches" by Don Jones
 - [powershell.org free ebooks](http://powershell.org/wp/ebooks/)
 
-# FAQ
+# 9. FAQ
 
-## Windows PowerShell Profiles文件保存在什么位置？
+## 9.1. Windows PowerShell Profiles文件保存在什么位置？
 
 - [Windows PowerShell Profiles - Technet](https://technet.microsoft.com/en-us/library/bb613488(v=vs.85).aspx)
 - [Understanding and Using PowerShell Profiles - PowerShell Team Blog](http://blogs.technet.com/b/heyscriptingguy/archive/2013/01/04/understanding-and-using-powershell-profiles.aspx)
 
-## PowerShell Remote Trouble Shooting
+## 9.2. PowerShell Remote Trouble Shooting
 
 下面的文章中包含了很多关于PowerShell远程连接的一些问题和解决办法
 - [about_Remote_Troubleshooting - TechNet](https://technet.microsoft.com/en-us/library/dd347642.aspx)
 
-## PowerShell展示本地及远程电脑的driver
+## 9.3. PowerShell展示本地及远程电脑的driver
 
 `GET-WMIOBJECT –query "SELECT * from win32_logicaldisk where DriveType='3'"`
 
@@ -798,30 +855,30 @@ PS > Start-DscConfiguration -Path C:\dsc\Config -ComputerName 192.168.1.106 -Cre
 
 `GET-WMIOBJECT –query "SELECT * from win32_logicaldisk where DriveType = '3'" –computername "ContosoWS1"`
 
-## Windows 10的Microsoft Edge浏览器默认不能访问localhost website，如果解决？
+## 9.4. Windows 10的Microsoft Edge浏览器默认不能访问localhost website，如果解决？
 
 参考[Can't open localhost in Project Spartan in Windows 10 preview](http://stackoverflow.com/questions/30334289/cant-open-localhost-in-project-spartan-in-windows-10-preview)
 
 原因是：So the issue is Edge doesn't have access to the loopback addresses, which is something that most Windows Store are blocked from accessing.
 
-## Write-Host和Write-Output有什么区别？
+## 9.5. Write-Host和Write-Output有什么区别？
 
 参考：[Which should I use: “write-host”, “write-output”, or “[console]::WriteLine”?](http://stackoverflow.com/questions/8755497/which-should-i-use-write-host-write-output-or-consolewriteline)
 
 Write-Output should be used when you want to send data on in the pipe line, but not necessarily want to display it on screen. The pipeline will eventually write it to out-default if nothing else uses it first. Write-Host should be used when you want to do the opposite.
 
-## 如何查看所有的WMI Classes？
+## 9.6. 如何查看所有的WMI Classes？
 
 参考：
 - [How do I find the names fo WMI classes](http://blogs.technet.com/b/heyscriptingguy/archive/2009/03/03/how-do-i-find-the-names-of-wmi-classes.aspx)
 - [Windows Management Instrumentation - MSDN](https://msdn.microsoft.com/en-us/library/aa394582(v=vs.85).aspx)
 - [Windows Management Instrumentation - Wikipedia](https://en.wiki2.org/wiki/Windows_Management_Instrumentation)
 
-## 如何连接局域网中不在域的PC？
+## 9.7. 如何连接局域网中不在域的PC？
 
 参考：[Using Enter-PSSession on LAN without domain?](https://social.technet.microsoft.com/Forums/windowsserver/en-US/f4b79641-92cb-4aa7-8cd3-921853b9e0d5/using-enterpssession-on-lan-without-domain)
 
-## PowerShell中Cmdlet和Function有什么区别？
+## 9.8. PowerShell中Cmdlet和Function有什么区别？
 
 参考：[cmdlets vs functions](http://powershell.org/wp/forums/topic/cmdlets-vs-functions/)
 
@@ -829,11 +886,11 @@ Basically a true Powershell cmdlet is written in a .NET programming language, ty
 
 This is probably not the most eloquent description so I'll leave the nitty-gritty details to those who know more about the developer side of Powershell and .NET.
 
-## ConEmu中PowerShell Shell输入中文字符时字符重叠在一起，如何解决？
+## 9.9. ConEmu中PowerShell Shell输入中文字符时字符重叠在一起，如何解决？
 
 打开Settings -> Main -> Main console font，取消Monospace（等宽字体）上的勾。
 
-## Windows和Linux的dynamic port range动态端口范围是多少？
+## 9.10. Windows和Linux的dynamic port range动态端口范围是多少？
 
 参考：
 
