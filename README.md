@@ -79,12 +79,13 @@ Linux & Unix的操作系统：
 
 ## 国外著名Linux网站
 
-- [Linux](http://www.Linux.com/): 学习Linux的最好网站，也是Linux使用经验的汇聚地。
-- [Linux Online](http://www.Linux.org/): 最权威的Linux网站，文章讨论无所不包，软件硬件应有尽有。
+- [Linux](http://www.Linux.com/): 学习Linux的最好网站，也是Linux使用经验的汇聚地
+- [Linux Online](http://www.Linux.org/): 最权威的Linux网站，文章讨论无所不包，软件硬件应有尽有
 - [《Linux Journal》](http://www.Linuxjournal.com/): 很棒的Linux专业杂志
 - [Linux Foundation Blog](https://www.linuxfoundation.org/blog/)
-- [Apache](http://www.apache.org): 全球占有率最高的Web服务器：Apache的网站，学习它的最好场所。
-- [Linux Kernel](http://www.kernel.org): Linux核心的网站，有着很齐全的Linux的核心的各种版本。
+- [Apache](http://www.apache.org): 全球占有率最高的Web服务器：Apache的网站，学习它的最好场所
+- [Linux Kernel](http://www.kernel.org): Linux核心的网站，有着很齐全的Linux的核心的各种版本
+- [opensource.com](https://opensource.com/)
 
 ## Linux Desktop
 
