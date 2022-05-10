@@ -55,11 +55,16 @@
   - [What is ngrep and How to Use It?](https://linuxhint.com/how-to-use-ngrep/)
 - tcpkit: 支持用 lua 脚本分析网络数据包的工具，附带简单协议解析(Redis/Memcached)和延时统计
   - https://github.com/git-hulk/tcpkit
-- wireshark
+- wireshark: a popular open source graphical user interface (GUI) tool for analyzing packets
   - [Wireshark基本介绍和学习TCP三次握手](https://www.cnblogs.com/TankXiao/archive/2012/10/10/2711777.html)
   - [Wireshark 的抓包和分析，看这篇就够了！](https://mp.weixin.qq.com/s/poo59EGr-V6hC84goESaiA)
   - [【技术流】Wireshark对HTTPS数据的解密](https://zhuanlan.zhihu.com/p/36669377)
   - [Decrypting SSL/TLS Traffic with Wireshark](https://linuxhint.com/decrypt-ssl-tls-wireshark/)
+- tshark: tshark是wireshark网络分析工具下的一个分支，主要用于命令行环境进行抓包、分析，尤其对协议深层解析时，tcpdump难以胜任的场景中
+  - [tshark.dev](https://tshark.dev/)complete guide to working with packet captures on the command-line
+  - [网络分析利器wireshark命令版(1)：tshark简介](https://segmentfault.com/a/1190000018886363)
+  - [网络分析利器wireshark命令版(2)：tshark使用示例](https://segmentfault.com/a/1190000018886731)
+  - [Use Wireshark at the Linux command line with TShark](https://opensource.com/article/20/1/wireshark-linux-tshark)
 - dtrace
   - DTrace Tools
 - perf: TCP/IP栈跟踪：连接、数据包、丢包、延时
