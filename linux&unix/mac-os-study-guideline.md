@@ -1,5 +1,5 @@
 - [1. 知识体系](#1-知识体系)
-- [2. Futhur Reading](#2-futhur-reading)
+- [2. Further Reading](#2-further-reading)
 - [3. FAQ](#3-faq)
   - [3.1. Windows和Mac OS X的一些区别？](#31-windows和mac-os-x的一些区别)
   - [3.2. Macbook OS X Yosemite快捷键？](#32-macbook-os-x-yosemite快捷键)
@@ -22,7 +22,7 @@
         - [苹果新手Mac OS X 使用笔记－－系统目录结构](http://blog.csdn.net/smstong/article/details/15499661)
 
 
-# 2. Futhur Reading
+# 2. Further Reading
 
 - [好文推荐，《Mac OS X 背后的故事》](https://www.v2ex.com/t/154959)
 
