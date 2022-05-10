@@ -1,78 +1,121 @@
-<!-- TOC depthFrom:1 depthTo:2 withLinks:1 updateOnSave:1 orderedList:0 -->
+- [1. Preface](#1-preface)
+- [2. Glossary](#2-glossary)
+- [3. Install Ubuntu Linux](#3-install-ubuntu-linux)
+  - [3.1. 目标](#31-目标)
+  - [3.2. 内容](#32-内容)
+  - [3.3. Shell基本命令](#33-shell基本命令)
+    - [3.3.1. df](#331-df)
+    - [3.3.2. du](#332-du)
+  - [3.4. 练习](#34-练习)
+- [4. Basic Shell Knowledge](#4-basic-shell-knowledge)
+  - [4.1. 目标](#41-目标)
+  - [4.2. 内容](#42-内容)
+  - [4.3. Shell基本命令](#43-shell基本命令)
+    - [4.3.1. Display system manual: man](#431-display-system-manual-man)
+    - [4.3.2. Search the whatis database for stringss: apropos](#432-search-the-whatis-database-for-stringss-apropos)
+    - [4.3.3. A menu-based hypetext system: info, pinfo](#433-a-menu-based-hypetext-system-info-pinfo)
+    - [4.3.4. 账号间的切换、提权至root](#434-账号间的切换提权至root)
+    - [4.3.5. Base Utilites: ls, cat, rm, less, more](#435-base-utilites-ls-cat-rm-less-more)
+    - [4.3.6. Working with files: cp, mv, head, tail, sort, uniq, diff, file](#436-working-with-files-cp-mv-head-tail-sort-uniq-diff-file)
+    - [4.3.7. Find something: find, mlocate, locate, which, grep](#437-find-something-find-mlocate-locate-which-grep)
+    - [4.3.8. Manipulate text: awk, sed, ack](#438-manipulate-text-awk-sed-ack)
+    - [4.3.9. More commands: echo, date](#439-more-commands-echo-date)
+- [5. Install and Manage Packages](#5-install-and-manage-packages)
+  - [5.1. 目标](#51-目标)
+  - [5.2. 内容](#52-内容)
+  - [5.3. Shell命令](#53-shell命令)
+    - [5.3.1. Debian package management system: dpkg](#531-debian-package-management-system-dpkg)
+    - [5.3.2. Advanced Package Tool: apt](#532-advanced-package-tool-apt)
+    - [5.3.3. aptitude](#533-aptitude)
+    - [5.3.4. git](#534-git)
+    - [5.3.5. wget](#535-wget)
+  - [5.4. 练习](#54-练习)
+    - [5.4.1. 如何升级系统，安装最新的补丁和最新版本的软件](#541-如何升级系统安装最新的补丁和最新版本的软件)
+    - [5.4.2. 修改Ubuntu Software Repository的下载地址](#542-修改ubuntu-software-repository的下载地址)
+    - [5.4.3. 查找软件包](#543-查找软件包)
+    - [5.4.4. 下载软件包](#544-下载软件包)
+    - [5.4.5. 安装软件包](#545-安装软件包)
+    - [5.4.6. 更新源](#546-更新源)
+    - [5.4.7. 更新已经安装的软件包](#547-更新已经安装的软件包)
+    - [5.4.8. 移除软件包](#548-移除软件包)
+    - [5.4.9. 自动移除软件包](#549-自动移除软件包)
+    - [5.4.10. 清除下载的软件包](#5410-清除下载的软件包)
+- [6. SSH - Secure Shell](#6-ssh---secure-shell)
+  - [6.1. 目标](#61-目标)
+  - [6.2. 内容](#62-内容)
+  - [6.3. Shell基本命令](#63-shell基本命令)
+    - [6.3.1. SSH](#631-ssh)
+    - [6.3.2. 本地和远程操作系统之间拷贝文件: `scp`, `sftp`, `sshfs`, `rsync`](#632-本地和远程操作系统之间拷贝文件-scp-sftp-sshfs-rsync)
+    - [6.3.3. Record a shell session: `script`](#633-record-a-shell-session-script)
+    - [6.3.4. Convert linux and macos files to windows format: `todos`, `fromdos`](#634-convert-linux-and-macos-files-to-windows-format-todos-fromdos)
+  - [6.4. 练习](#64-练习)
+- [7. Vim Usage](#7-vim-usage)
+  - [7.1. 目标](#71-目标)
+  - [7.2. 内容](#72-内容)
+- [8. Advanced Vim Usage](#8-advanced-vim-usage)
+  - [8.1. 目标](#81-目标)
+  - [8.2. 内容](#82-内容)
+- [9. File, Directory, User, User Group, Authority](#9-file-directory-user-user-group-authority)
+  - [9.1. 目标](#91-目标)
+  - [9.2. 内容](#92-内容)
+- [10. Compress and Uncompress Files](#10-compress-and-uncompress-files)
+  - [10.1. 目标](#101-目标)
+  - [10.2. 内容](#102-内容)
+  - [10.3. 练习](#103-练习)
+    - [10.3.1. `bzip2`, `bunzip2`, `bzcat`命令练习](#1031-bzip2-bunzip2-bzcat命令练习)
+    - [10.3.2. `tar`命令练习](#1032-tar命令练习)
+- [11. Process](#11-process)
+  - [11.1. 目标](#111-目标)
+  - [11.2. 内容](#112-内容)
+  - [11.3. Shell基本命令](#113-shell基本命令)
+- [12. Basic Network Management](#12-basic-network-management)
+  - [12.1. 目标](#121-目标)
+  - [12.2. 内容](#122-内容)
+  - [12.3. Shell命令](#123-shell命令)
+  - [12.4. 练习](#124-练习)
+    - [12.4.1. 修改OS的hostname](#1241-修改os的hostname)
+    - [12.4.2. 设置DNS服务的服务地址](#1242-设置dns服务的服务地址)
+    - [12.4.3. 如何配置网卡和IP地址](#1243-如何配置网卡和ip地址)
+    - [12.4.4. 从Internet更新ubuntu本地的时间](#1244-从internet更新ubuntu本地的时间)
+  - [12.5. 切换网络后，强制更新网卡IP](#125-切换网络后强制更新网卡ip)
+- [13. Writing Shell Scripts](#13-writing-shell-scripts)
+  - [13.1. 目标](#131-目标)
+  - [13.2. 基本概念](#132-基本概念)
+    - [13.2.1. 交互式shell和非交互式shell、登录shell和非登录shell的区别](#1321-交互式shell和非交互式shell登录shell和非登录shell的区别)
+    - [13.2.2. 语法](#1322-语法)
+  - [13.3. Shell命令](#133-shell命令)
+  - [13.4. 练习](#134-练习)
+    - [13.4.1. 如何让你的shell脚本更健壮和更可靠](#1341-如何让你的shell脚本更健壮和更可靠)
+- [14. Schedule Tasks](#14-schedule-tasks)
+  - [14.1. 目标](#141-目标)
+  - [14.2. 内容](#142-内容)
+    - [14.2.1. 参考](#1421-参考)
+    - [14.2.2. cron的坑](#1422-cron的坑)
+    - [14.2.3. cron和anacron的区别](#1423-cron和anacron的区别)
+    - [14.2.4. Crontab文件](#1424-crontab文件)
+      - [14.2.4.1. 系统crontab文件](#14241-系统crontab文件)
+      - [14.2.4.2. 用户crontab文件](#14242-用户crontab文件)
+    - [14.2.5. anacron配置文件](#1425-anacron配置文件)
+- [15. FAQ](#15-faq)
+  - [15.1. 如何安装中文语言支持及中文输入法](#151-如何安装中文语言支持及中文输入法)
+  - [15.2. 如何给Ubuntu Linux Virutal Machine安装VMWare Tools](#152-如何给ubuntu-linux-virutal-machine安装vmware-tools)
+  - [15.3. 如何给Ubuntu Linux Virtual Machine安装VirtualBox Additions](#153-如何给ubuntu-linux-virtual-machine安装virtualbox-additions)
+  - [15.4. 如何给Ubuntu Linux Virtual Machine安装Parallel Tools](#154-如何给ubuntu-linux-virtual-machine安装parallel-tools)
+  - [15.5. 使用命令`man wget > man-wget.txt`把命令文档输入到文本文件后，打开man-wget.txt，发现有很多重复字符，或者乱码？](#155-使用命令man-wget--man-wgettxt把命令文档输入到文本文件后打开man-wgettxt发现有很多重复字符或者乱码)
 
-- [Preface](#preface)
-- [Glossary](#glossary)
-- [Install Ubuntu Linux](#install-ubuntu-linux)
-	- [目标](#目标)
-	- [内容](#内容)
-	- [Shell基本命令](#shell基本命令)
-	- [练习](#练习)
-- [Basic Shell Knowledge](#basic-shell-knowledge)
-	- [目标](#目标)
-	- [内容](#内容)
-	- [Shell基本命令](#shell基本命令)
-- [Install and Manage Packages](#install-and-manage-packages)
-	- [目标](#目标)
-	- [内容](#内容)
-	- [Shell命令](#shell命令)
-	- [练习](#练习)
-- [SSH - Secure Shell](#ssh-secure-shell)
-	- [目标](#目标)
-	- [内容](#内容)
-	- [Shell基本命令](#shell基本命令)
-	- [练习](#练习)
-- [Basic Vim Usage](#basic-vim-usage)
-	- [目标](#目标)
-	- [熟悉Vim](#熟悉vim)
-- [Advanced Vim Usage](#advanced-vim-usage)
-- [File, Directory, User, User Group, Authority](#file-directory-user-user-group-authority)
-	- [目标](#目标)
-	- [内容](#内容)
-- [Compress and Uncompress Files](#compress-and-uncompress-files)
-	- [目标](#目标)
-	- [内容](#内容)
-	- [练习](#练习)
-- [Process](#process)
-	- [目标](#目标)
-	- [内容](#内容)
-	- [Shell基本命令](#shell基本命令)
-- [Basic Network Management](#basic-network-management)
-	- [目标](#目标)
-	- [内容](#内容)
-	- [Shell命令](#shell命令)
-	- [练习](#练习)
-	- [切换网络后，强制更新网卡IP](#切换网络后强制更新网卡ip)
-- [Writing Shell Scripts](#writing-shell-scripts)
-	- [目标](#目标)
-	- [基本概念](#基本概念)
-	- [Shell命令](#shell命令)
-	- [练习](#练习)
-- [Schedule Tasks](#schedule-tasks)
-	- [目标](#目标)
-	- [内容](#内容)
-- [FAQ](#faq)
-	- [如何安装中文语言支持及中文输入法](#如何安装中文语言支持及中文输入法)
-	- [如何给Ubuntu Linux Virutal Machine安装VMWare Tools](#如何给ubuntu-linux-virutal-machine安装vmware-tools)
-	- [如何给Ubuntu Linux Virtual Machine安装VirtualBox Additions](#如何给ubuntu-linux-virtual-machine安装virtualbox-additions)
-	- [如何给Ubuntu Linux Virtual Machine安装Parallel Tools](#如何给ubuntu-linux-virtual-machine安装parallel-tools)
-	- [使用命令`man wget > man-wget.txt`把命令文档输入到文本文件后，打开man-wget.txt，发现有很多重复字符，或者乱码？](#使用命令man-wget-man-wgettxt把命令文档输入到文本文件后打开man-wgettxt发现有很多重复字符或者乱码)
 
-<!-- /TOC -->
-
-
-# Preface
+# 1. Preface
 
 面向开发的Ubuntu Linux快速学习手册，掌握基本Ubuntu Linux操作和管理
 
-# Glossary
+# 2. Glossary
 
 - **PG2UL**: 代表Pratical Guide to Ubuntu Linux, 3rd
 
 
+# 3. Install Ubuntu Linux
 
-# Install Ubuntu Linux
-
-## 目标
+## 3.1. 目标
 
 - 了解Ubuntu各版本的区别
 - 安装Ubuntu Desktop 12.04和Ubuntu Server 12.04
@@ -80,7 +123,7 @@
 - 了解mount point的概念
 - 熟悉primary partition、extended partition、logical partition的概念
 
-## 内容
+## 3.2. 内容
 
 - Ubuntu各个release版本的区别，参考下面几篇文章：
     - [List of Ubuntu releases](https://en.wiki2.org/wiki/List_of_Ubuntu_releases)
@@ -131,21 +174,21 @@ drwxr-xr-x  12 root root  4096 May 10 02:01 var/
     - 阅读[RAID](https://wiki.archlinux.org/index.php/RAID)
     - 阅读[Software RAID and LVM](https://wiki.archlinux.org/index.php/Software_RAID_and_LVM)
 
-## Shell基本命令
+## 3.3. Shell基本命令
 
-### df
+### 3.3.1. df
 
 `df`: 检查linux服务器的文件系统的磁盘空间占用情况，可以利用该命令来获取硬盘被占用了多少空间，目前还剩下多少空间等信息。
 
 - 参考 [每天一个linux命令（33）：df 命令](http://www.cnblogs.com/peida/archive/2012/12/07/2806483.html)
 
-### du
+### 3.3.2. du
 
 `du`: 也是查看使用空间的，但是与`df`命令不同的是`du`命令是对文件和目录磁盘使用的空间的查看。
 
 - 参考 [每天一个linux命令（34）：du 命令](http://www.cnblogs.com/peida/archive/2012/12/10/2810755.html)
 
-## 练习
+## 3.4. 练习
 
 - 手动安装Ubuntu Desktop 14.04
 - 手动安装Ubuntu Server 14.04
@@ -163,14 +206,14 @@ drwxr-xr-x  12 root root  4096 May 10 02:01 var/
 
 
 
-# Basic Shell Knowledge
+# 4. Basic Shell Knowledge
 
-## 目标
+## 4.1. 目标
 
 - 掌握Shell基本概念
 - 掌握基本的Shell命令
 
-## 内容
+## 4.2. 内容
 
 - 基础概念
     - [重定向](http://www.php100.com/html/webkaifa/Linux/2010/0430/6470.html): the various ways you can cause the shell to alter where standard input of a command comes from and where standard output goes to.
@@ -213,24 +256,30 @@ drwxr-xr-x  12 root root  4096 May 10 02:01 var/
     - `kill`: kill process like `kill 18228`, kill background job like `kill %1`
     - 参考[Linux后台进程管理](http://blog.csdn.net/fengyifei11228/article/details/5737371)
 
-## Shell基本命令
+## 4.3. Shell基本命令
 
-### Display system manual: man
+### 4.3.1. Display system manual: man
 
-### Search the whatis database for stringss: apropos
+### 4.3.2. Search the whatis database for stringss: apropos
 
-### A menu-based hypetext system: info, pinfo
+### 4.3.3. A menu-based hypetext system: info, pinfo
 
-### 账号间的切换、提权至root: sudo
+### 4.3.4. 账号间的切换、提权至root
 
-### Base Utilites: ls, cat, rm, less, more
+- sudo: 用户身份提权
+- su: 切换用户身份
+
+参考：
+- [Linux 下以其他用户身份运行程序—— su、sudo、runuser](https://www.cnblogs.com/bodhitree/p/6018369.html)
+
+### 4.3.5. Base Utilites: ls, cat, rm, less, more
 
 - `ls`: list the names of files
 - `cat`: display a text files
 - `rm`: delete a files
 - `less`, `more`: display a text file one screen at a time
 
-### Working with files: cp, mv, head, tail, sort, uniq, diff, file
+### 4.3.6. Working with files: cp, mv, head, tail, sort, uniq, diff, file
 
 - `cp`: copy file
 - `mv`: move file, change the name of file
@@ -241,7 +290,7 @@ drwxr-xr-x  12 root root  4096 May 10 02:01 var/
 - `diff`: compare two files，参考[diff命令](http://www.cnblogs.com/peida/archive/2012/12/12/2814048.html)
 - `file`: determine file type
 
-### Find something: find, mlocate, locate, which, grep
+### 4.3.7. Find something: find, mlocate, locate, which, grep
 
 - `find`: walk a file hierarchy, [每天一个linux命令（19）：find 命令概览](http://www.cnblogs.com/peida/archive/2012/11/13/2767374.html)
 - find filenames quickly
@@ -250,7 +299,7 @@ drwxr-xr-x  12 root root  4096 May 10 02:01 var/
 - `which`, `whereis`: locate a utility
 - `grep`: [每天一个linux命令（39）：grep 命令](http://www.cnblogs.com/peida/archive/2012/12/17/2821195.html)
 
-### Manipulate text: awk, sed, ack
+### 4.3.8. Manipulate text: awk, sed, ack
 
 - `awk`: awk是一个强大的文本分析工具，相对于grep的查找，sed的编辑，awk在其对数据分析并生成报告时，显得尤为强大。
     - [linux awk命令详解](http://www.cnblogs.com/ggjucheng/archive/2013/01/13/2858470.html)
@@ -260,21 +309,21 @@ drwxr-xr-x  12 root root  4096 May 10 02:01 var/
 - `ack`: a tool like grep, optimized for programmers
     - [Offical website](http://beyondgrep.com/)
 
-### More commands: echo, date
+### 4.3.9. More commands: echo, date
 
 - `echo`: display text
 - `date`: display the time and date，参考[date命令](http://www.cnblogs.com/peida/archive/2012/12/12/2814048.html)
 
 
 
-# Install and Manage Packages
+# 5. Install and Manage Packages
 
-## 目标
+## 5.1. 目标
 
 - 安装和管理包
 - 掌握`dpkg`, `apt`, `aptitude`命令
 
-## 内容
+## 5.2. 内容
 
 - Repository: Repositories hold collections of software packages and related information, including headers that describe each package and provide information on other packages the package depends on. Ubuntu maintains repositories for each of its releases.
     - main: Ubuntu-supported open-source software
@@ -293,13 +342,13 @@ drwxr-xr-x  12 root root  4096 May 10 02:01 var/
     - [Ubuntu服务器管理指南 - 包管理](https://help.ubuntu.com/lts/serverguide/package-management.html)
     - PG2UL, page 517, chapter 13 - downloading and installing software
 
-## Shell命令
+## 5.3. Shell命令
 
-### Debian package management system: dpkg
+### 5.3.1. Debian package management system: dpkg
 
 dpkg主要是对本地的软件包进行管理，本地软件包包括已经在本地安装的软件包和已经下载但还没有安装的 deb 文件，不解决依赖关系。
 
-### Advanced Package Tool: apt
+### 5.3.2. Advanced Package Tool: apt
 
 - apt和dpkg的用途比较：APT downloads software packages, while dpkg installs, removes, maintains, manages dependencies of, and reports on software packages.
 - apt的命令包含
@@ -307,7 +356,7 @@ dpkg主要是对本地的软件包进行管理，本地软件包包括已经在�
     - `apt-cache`: 主要用来查询软件包的状态和依赖关系
     - `apt-file`: 主要负责查询软件包名称和软件包包含的文件（值得注意的是它要自己同步）
 
-### aptitude
+### 5.3.3. aptitude
 
 - Ubuntu desktop 14.04中，并没有默认安装aptitude，需要执行`sudo apt-get install aptitude`来安装
 - `aptitude install`: install package and its dependencies
@@ -315,20 +364,23 @@ dpkg主要是对本地的软件包进行管理，本地软件包包括已经在�
 - `aptitude purge`: remove package and its dependencies, configuration
 - `aptitude search`: looks for packages with names that match a pattern
 - `aptitude clean`: Deletes all packages from the APT cache
-- 参考：
-    - [Aptitude](https://help.ubuntu.com/lts/serverguide/aptitude.html)
 
-### git
+参考：
+- [Aptitude](https://help.ubuntu.com/lts/serverguide/aptitude.html)
 
-- 阅读[Pro Git (En)](https://git-scm.com/book/en/v2)， [Pro Git中文版](http://iissnan.com/progit/)
+### 5.3.4. git
 
-### wget
+- 阅读
+  - [Pro Git (En)](https://git-scm.com/book/en/v2)
+  - [Pro Git中文版](http://iissnan.com/progit/)
+
+### 5.3.5. wget
 
 - 在线html文档，访问[wget html document](http://www.gnu.org/software/wget/manual/wget.html)
 
-## 练习
+## 5.4. 练习
 
-### 如何升级系统，安装最新的补丁和最新版本的软件
+### 5.4.1. 如何升级系统，安装最新的补丁和最新版本的软件
 
 GUI操作
 
@@ -340,7 +392,7 @@ GUI操作
 1. `sudo apt-get update && sudo apt-get dist-upgrade && sudo apt-get autoclean`
 2. `sudo apt-get update && sudo aptitude full-upgrade && sudo apt-get autoclean`
 
-### 修改Ubuntu Software Repository的下载地址
+### 5.4.2. 修改Ubuntu Software Repository的下载地址
 
 参考：
 
@@ -373,7 +425,7 @@ $ sudo sed -i 's/http\:\/\/us\.archive\.ubuntu\.com/http\:\/\/mirrors\.yun-idc\.
 $ sudo sed -i 's/http\:\/\/cn\.archive\.ubuntu\.com/http\:\/\/mirrors\.yun-idc\.com/g' /etc/apt/sources.list
 ```
 
-### 查找软件包
+### 5.4.3. 查找软件包
 
 `aptitude search`命令的查找结果一般如下：
 
@@ -426,14 +478,14 @@ dpkg -L package #查找已经安装 package 软件包包含哪些文件
 apt-file show pattern #查找 pattern 软件包(可以是安装了也可以是没有安装)包含哪些文件
 ```
 
-### 下载软件包
+### 5.4.4. 下载软件包
 
 ```bash
 apt-get install package -d #下载软件包
 aptitude download pattern #同上，不同的是下载的是符合 pattern 的软件包，后面不再指出
 ```
 
-### 安装软件包
+### 5.4.5. 安装软件包
 
 ```bash
 dpkg -i package_name.deb #安装本地软件包，不解决依赖关系
@@ -444,21 +496,21 @@ apt-get install package --reinstall #重新安装软件包
 apitude reinstall package #同上
 ```
 
-### 更新源
+### 5.4.6. 更新源
 
 ```bash
 apt-get update #更新源
 aptitude update #同上
 ```
 
-### 更新已经安装的软件包
+### 5.4.7. 更新已经安装的软件包
 
 ```bash
 apt-get upgrade #更新已经安装的软件包
 aptitude safe-upgrade #同上
 ```
 
-### 移除软件包
+### 5.4.8. 移除软件包
 
 ```bash
 dpkg -r package #删除软件包
@@ -470,13 +522,13 @@ apt-get remove package --purge #删除软件包及配置文件
 apitude purge pattern #同上
 ```
 
-### 自动移除软件包
+### 5.4.9. 自动移除软件包
 
 ```bash
 apt-get autoremove #删除不再需要的软件包。aptitude 没有，它会自动解决这件事
 ```
 
-### 清除下载的软件包
+### 5.4.10. 清除下载的软件包
 
 ```bash
 apt-get clean #清除 /var/cache/apt/archives 目录
@@ -488,14 +540,14 @@ aptitude autoclean #同上
 
 
 
-# SSH - Secure Shell
+# 6. SSH - Secure Shell
 
-## 目标
+## 6.1. 目标
 
 - 远程控制linux
 - Shell基本命令
 
-## 内容
+## 6.2. 内容
 
 - 简介
     - OpenSSH is a freely available version of the Secure Shell (SSH) protocol family of tools for remotely controlling, or transferring files between, computers. Traditional tools used to accomplish these functions, such as `telnet` or `rcp`, are **insecure** and **transmit the user's password in cleartext when used**. OpenSSH provides a server daemon and client tools to facilitate **secure**, **encrypted** remote control and file transfer operations, effectively replacing the legacy tools.
@@ -532,24 +584,24 @@ aptitude autoclean #同上
     - [让进程在断开SSH连接后依然保持运行](https://www.ibm.com/developerworks/cn/linux/l-cn-nohup/)
     - [Ubuntu Document - OpenSSH 服务器](https://help.ubuntu.com/lts/serverguide/openssh-server.html)
 
-## Shell基本命令
+## 6.3. Shell基本命令
 
-### SSH
+### 6.3.1. SSH
 
 - 参考
     - [25个必须记住的SSH命令](http://os.51cto.com/art/201011/235252.htm)
 
-### 本地和远程操作系统之间拷贝文件: `scp`, `sftp`, `sshfs`, `rsync`
+### 6.3.2. 本地和远程操作系统之间拷贝文件: `scp`, `sftp`, `sshfs`, `rsync`
 
 - 参考
     - [详解linux scp命令的应用](http://os.51cto.com/art/201003/187301.htm)
     - [how-to-copy-files-from-one-machine-to-another-using-ssh](http://unix.stackexchange.com/questions/106480/how-to-copy-files-from-one-machine-to-another-using-ssh)
 
-### Record a shell session: `script`
+### 6.3.3. Record a shell session: `script`
 
-### Convert linux and macos files to windows format: `todos`, `fromdos`
+### 6.3.4. Convert linux and macos files to windows format: `todos`, `fromdos`
 
-## 练习
+## 6.4. 练习
 
 - 安装SSH Server或者SSH Client
 - 在客户端操作系统上通过SSH连接Ubuntu Server
@@ -561,38 +613,38 @@ aptitude autoclean #同上
 
 
 
-# Vim Usage
+# 7. Vim Usage
 
-## 目标
+## 7.1. 目标
 
 - 掌握Vim基本操作
 
-## 内容
+## 7.2. 内容
 
 - 阅读[vim基本操作](./vim-learning-notes.md)
 
 
 
-# Advanced Vim Usage
+# 8. Advanced Vim Usage
 
-## 目标
+## 8.1. 目标
 
 - 精通Vim操作
 
-## 内容
+## 8.2. 内容
 
 - to add
 
 
 
-# File, Directory, User, User Group, Authority
+# 9. File, Directory, User, User Group, Authority
 
-## 目标
+## 9.1. 目标
 
 - 文件、目录、用户、用户组、权限
 - Shell基本命令
 
-## 内容
+## 9.2. 内容
 
 - Linux下的用户与组的关系、如何管理用户和组
     - [Linux用户和用户组管理](http://www.chinaunix.net/old_jh/4/438660.html)
@@ -623,13 +675,13 @@ aptitude autoclean #同上
     - `w`: list users on the system
     - `hostname`: display the system name
 
-# Compress and Uncompress Files
+# 10. Compress and Uncompress Files
 
-## 目标
+## 10.1. 目标
 
 - 熟悉文件的压缩和解压
 
-## 内容
+## 10.2. 内容
 
 阅读PG2UL， page 174, Compressing and archiving files
 
@@ -680,9 +732,9 @@ aptitude autoclean #同上
     - unrar: 参考[How To Extract RAR Files Under Linux](http://www.lifelinux.com/how-to-extract-rar-files-under-linux/)
 - `tar`: manipulate tape archives
 
-## 练习
+## 10.3. 练习
 
-### `bzip2`, `bunzip2`, `bzcat`命令练习
+### 10.3.1. `bzip2`, `bunzip2`, `bzcat`命令练习
 
 ```bash
 echo # 使用bzip2压缩文件默认会自动删除原文件，生成的压缩文件名是"[原文件名（包括扩展名）].bz2"
@@ -700,7 +752,7 @@ eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 ```
 
-### `tar`命令练习
+### 10.3.2. `tar`命令练习
 
 ```bash
 echo # === Combine files into one file ===
@@ -756,15 +808,15 @@ echo # -j option to cause tar to call bzip2
 $ tar -xvjf make-3.81.tar.bz2
 ```
 
-# Process
+# 11. Process
 
-## 目标
+## 11.1. 目标
 
 - 进程
 - 进程控制
 - 守护进程（daemon）和服务（service）
 
-## 内容
+## 11.2. 内容
 
 - 基础概念
     - 进程
@@ -792,7 +844,7 @@ $ tar -xvjf make-3.81.tar.bz2
     - 通过`service`命令控制服务
         - `sudo service [service name] {start|stop|restart|status}`
 
-## Shell基本命令
+## 11.3. Shell基本命令
 
 - `vmstat`: Report virtual memory statistics
 - `ps`: 使用PS查看进程信息，了解每一列的含义，掌握其参数
@@ -810,13 +862,13 @@ $ tar -xvjf make-3.81.tar.bz2
 
 
 
-# Basic Network Management
+# 12. Basic Network Management
 
-## 目标
+## 12.1. 目标
 
 - 掌握基本网络管理概念和操作
 
-## 内容
+## 12.2. 内容
 
 - 概念
     - [基础网络概念](http://vbird.dic.ksu.edu.tw/linux_server/0110network_basic.php)
@@ -843,7 +895,7 @@ $ tar -xvjf make-3.81.tar.bz2
     - [iptables vs route](http://superuser.com/questions/419659/iptables-vs-route)
     - [NAT - Network Address Translation](http://www.karlrupp.net/en/computer/nat_tutorial)
 
-## Shell命令
+## 12.3. Shell命令
 
 - `ifconfig`
     - 参考[每天一个linux命令（52）：ifconfig命令](http://www.cnblogs.com/peida/archive/2013/02/27/2934525.html)
@@ -873,9 +925,9 @@ $ tar -xvjf make-3.81.tar.bz2
     - 参考[百度百科-iptables](http://baike.baidu.com/view/504557.htm#1_1)
     - 参考[wikipedia - iptables](https://en.wiki2.org/wiki/Iptables)
 
-## 练习
+## 12.4. 练习
 
-### 修改OS的hostname
+### 12.4.1. 修改OS的hostname
 
 参考[How do I change the hostname without a restart?](http://askubuntu.com/questions/87665/how-do-i-change-the-hostname-without-a-restart)
 
@@ -890,7 +942,7 @@ $ tar -xvjf make-3.81.tar.bz2
 hostnamectl set-hostname new-hostname
 ```
 
-### 设置DNS服务的服务地址
+### 12.4.2. 设置DNS服务的服务地址
 
 参考：
 
@@ -913,7 +965,7 @@ nameserver xxx.xxx.xxx.xxx
 
 对`resolv.conf`文件的修改是即时生效的，可以使用`nslookup`命令进行测试。
 
-### 如何配置网卡和IP地址
+### 12.4.3. 如何配置网卡和IP地址
 
 ubuntu的网卡配置信息放在`/etc/network/interfaces`中，
 
@@ -944,12 +996,12 @@ iface eth0 inet static
 sudo /etc/init.d/networking restart
 ```
 
-### 从Internet更新ubuntu本地的时间
+### 12.4.4. 从Internet更新ubuntu本地的时间
 
 You can do so with `sudo ntpdate time.nist.gov` other servers include time.windows.com, etc.
 http://www.pool.ntp.org/ lists time servers around the world.
 
-## 切换网络后，强制更新网卡IP
+## 12.5. 切换网络后，强制更新网卡IP
 
 To renew or release an IP address for the eth0 interface, enter:
 
@@ -960,9 +1012,9 @@ $ sudo dhclient eth0
 
 
 
-# Writing Shell Scripts
+# 13. Writing Shell Scripts
 
-## 目标
+## 13.1. 目标
 
 - Shell的基本概念及启动过程
 - 编写Shell脚本
@@ -971,9 +1023,9 @@ $ sudo dhclient eth0
     - [Awesome Shell](https://github.com/alebcay/awesome-shell)
     - [Gnu Bash Reference](http://www.gnu.org/software/bash/manual/bashref.html)
 
-## 基本概念
+## 13.2. 基本概念
 
-### 交互式shell和非交互式shell、登录shell和非登录shell的区别
+### 13.2.1. 交互式shell和非交互式shell、登录shell和非登录shell的区别
 
 > 参考[交互式shell和非交互式shell、登录shell和非登录shell的区别](http://smilejay.com/2012/10/interactive-shell-login-shell/)
 
@@ -1043,11 +1095,11 @@ $
 
 对于这些规则，可以直接在相应的配置文件中加一些`echo`命令来验证其真实性。
 
-### 语法
+### 13.2.2. 语法
 
 请阅读[Shell脚本语法](./shell-script-grammar.md)
 
-## Shell命令
+## 13.3. Shell命令
 
 - `export`
 - `source`
@@ -1055,9 +1107,9 @@ $
     - [Example xargs](http://examplenow.com/zh-cn/xargs/man1)
     - [10 Xargs Command Examples in Linux / UNIX](http://www.thegeekstuff.com/2013/12/xargs-examples/)
 
-## 练习
+## 13.4. 练习
 
-### 如何让你的shell脚本更健壮和更可靠
+### 13.4.1. 如何让你的shell脚本更健壮和更可靠
 
 请阅读：
 
@@ -1066,17 +1118,17 @@ $
 
 
 
-# Schedule Tasks
+# 14. Schedule Tasks
 
-## 目标
+## 14.1. 目标
 
 - 掌握cron
 - 掌握anacron
 - 掌握at
 
-## 内容
+## 14.2. 内容
 
-### 参考
+### 14.2.1. 参考
 
 - PG2UL，page 605，Scheduling Tasks
 - [crontab 定时任务](http://linuxtools-rst.readthedocs.org/zh_CN/latest/tool/crontab.html)
@@ -1084,11 +1136,11 @@ $
 - [使用 Anacron 处理 Linux 关机问题](http://www.ibm.com/developerworks/cn/linux/l-anacron/index.html)
 - [linux定时任务的设置](http://www.blogjava.net/freeman1984/archive/2010/09/23/332715.html)
 
-### cron的坑
+### 14.2.2. cron的坑
 
 - crontab文件设置了任务的执行时间，此时间依赖当前os的系统时区。
 
-### cron和anacron的区别
+### 14.2.3. cron和anacron的区别
 
 cron是用来控制循环执行的例行性工作的，可循环的时间为分钟、小时、每周、每月或每年等。比如我要设定机器每天早上8点进行备份，就可以用到这个服务。
 除非我们的机器保持每天都24小时开始，否则就会有些系统例行工作都没有人做了，这个时候就可以用到anacron了。
@@ -1097,7 +1149,7 @@ anacron并不是用来取代cron的，anacron存在的目的就在于我们上�
 所以 anacron 并不能指定何时执行某项任务，而是以天为单位或者是在开机后立刻进行anacron的动作，他会去侦测停机期间应该进行但是并没有进行的cron服务，
 如果有就将该任务执行一遍，然后就自动停止。anacron脚本不会在OS使用电池作为电源时候运行。
 
-### Crontab文件
+### 14.2.4. Crontab文件
 
 共有两种类型的 Cron 作业（即由 Cron 运行的程序）：系统 Cron 作业，由系统运行，执行系统维护任务；另一种是 用户 Cron 作业，由用户创建，用于执行用户任务。
 对于这两种作业而言，系统 Cron 作业更加重要一些。这些作业可能包括清除 /tmp 中的陈旧文件、替换日志文件、更新垃圾邮件过滤规则，以及更新 locate 数据库。
@@ -1107,7 +1159,7 @@ cron守护进程根据crontab文件中的配置执行定时任务。
 - 系统crontab文件保存在`/etc/cron.d`目录和`/etc/crontab`文件中
 - 用户可以使用`crontab`工具设置个人的crontab文件，用户的crontab文件保存在`/var/spool/cron/crontabs`中
 
-#### 系统crontab文件
+#### 14.2.4.1. 系统crontab文件
 
 crontab文件设置命令的执行频率。
 
@@ -1155,14 +1207,14 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 30 7    * * *   root	start -q anacron || :
 ```
 
-#### 用户crontab文件
+#### 14.2.4.2. 用户crontab文件
 
 - 用户crontab文件保存在`/var/spool/cron/crontabs/`目录下，并且以用户名命令
 - 可以通过`crontab -l`查看当前用户的crontab文件
 - 可以通过`crontab -e`创建或者编辑当前用户的crontab文件
 - 可以通过`crontab -r`删除当前用户的crontab文件
 
-### anacron配置文件
+### 14.2.5. anacron配置文件
 
 Anacron通过`/etc/anacrontab`文件进行控制。该文件可以包含注释行（使用一个前导散列符号`#`表示）、环境变量分配（比如`SHELL=/bin/bash`）和作业定义。
 
@@ -1195,9 +1247,9 @@ echo # These replace cron's entries
 
 
 
-# FAQ
+# 15. FAQ
 
-## 如何安装中文语言支持及中文输入法
+## 15.1. 如何安装中文语言支持及中文输入法
 
 [Ubuntu上的输入法情况](http://wiki.ubuntu.org.cn/%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95):
 
@@ -1216,7 +1268,7 @@ echo # These replace cron's entries
 - [Ubuntu 14.04安装搜狗拼音linux版应该注意的问题](http://blog.csdn.net/tao_627/article/details/24119037)
 - [Ubuntu下安装搜狗拼音输入法](http://blog.csdn.net/rflyee/article/details/9472579)
 
-## 如何给Ubuntu Linux Virutal Machine安装VMWare Tools
+## 15.2. 如何给Ubuntu Linux Virutal Machine安装VMWare Tools
 
 - 安装方法参考
     - [Installing VMware Tools in an Ubuntu virtual machine (1022525)](http://kb.vmware.com/selfservice/microsites/search.do?cmd=displayKC&docType=kc&externalId=1022525)
@@ -1224,15 +1276,15 @@ echo # These replace cron's entries
     - [Uninstalling and manually installing VMware Tools in VMware Fusion (1014522)](http://kb.vmware.com/selfservice/microsites/search.do?cmd=displayKC&docType=kc&externalId=1014522&sliceId=1&docTypeID=DT_KB_1_1&dialogID=672738403&stateId=1%200%20672744194)
     - [VMware Tools Uninstaller in Ubuntu Guest Does Not Remove vmxnet Module (1004351)](http://kb.vmware.com/selfservice/microsites/search.do?cmd=displayKC&docType=kc&externalId=1004351&sliceId=1&docTypeID=DT_KB_1_1&dialogID=672738403&stateId=1%200%20672744194)
 
-## 如何给Ubuntu Linux Virtual Machine安装VirtualBox Additions
+## 15.3. 如何给Ubuntu Linux Virtual Machine安装VirtualBox Additions
 
 参考[How do I install Guest Additions in a VirtualBox VM?](http://askubuntu.com/questions/22743/how-do-i-install-guest-additions-in-a-virtualbox-vm)
 
-## 如何给Ubuntu Linux Virtual Machine安装Parallel Tools
+## 15.4. 如何给Ubuntu Linux Virtual Machine安装Parallel Tools
 
 参考[How do I install Parallels Tools in Ubuntu Virtual Machine?](http://kb.parallels.com/en/113394)
 
-## 使用命令`man wget > man-wget.txt`把命令文档输入到文本文件后，打开man-wget.txt，发现有很多重复字符，或者乱码？
+## 15.5. 使用命令`man wget > man-wget.txt`把命令文档输入到文本文件后，打开man-wget.txt，发现有很多重复字符，或者乱码？
 
 将man手册查询命令输出到文本文件中，要求过滤掉控制字符^H（Backspace (退格)）
 
