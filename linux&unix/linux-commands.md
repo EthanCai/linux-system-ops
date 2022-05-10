@@ -1,28 +1,16 @@
 - [1. 网络](#1-网络)
-  - [1.1. 命令](#11-命令)
-  - [1.2. 专题](#12-专题)
 - [2. 数据传输](#2-数据传输)
-  - [2.1. 命令](#21-命令)
 - [3. 文档处理](#3-文档处理)
-  - [3.1. 命令](#31-命令)
-  - [3.2. 专题](#32-专题)
 - [4. CPU](#4-cpu)
-  - [4.1. 命令](#41-命令)
-  - [4.2. 专题](#42-专题)
 - [5. 内存](#5-内存)
-  - [5.1. 命令](#51-命令)
 - [6. 进程](#6-进程)
-  - [6.1. 命令](#61-命令)
 - [7. 磁盘管理](#7-磁盘管理)
-  - [7.1. 命令](#71-命令)
-  - [7.2. 专题](#72-专题)
 - [8. 安全](#8-安全)
-- [9. 参考](#9-参考)
+- [9. 专题](#9-专题)
+- [10. 参考](#10-参考)
 
 
 # 1. 网络
-
-## 1.1. 命令
 
 - ss: 获取socket统计信息，优势在于它能够显示更多更详细的有关TCP和连接状态的信息，而且比netstat更快
   - [man page](https://man7.org/linux/man-pages/man8/ss.8.html)
@@ -70,20 +58,7 @@
   - [How to use perf tool for tracing similar to dtrace](https://www.thegeekdiary.com/how-to-use-perf-tool-for-tracing-similar-to-dtrace/)
 
 
-## 1.2. 专题
-
-- 查看TCP连接数
-  - https://my.oschina.net/u/1169079/blog/397705
-- 查看网络流量
-  - 监控总体带宽使用――nload、bmon、slurm、bwm-ng、cbm、speedometer和netload
-  - 监控总体带宽使用（批量式输出）――vnstat、ifstat、dstat和collectl
-  - 每个套接字连接的带宽使用――iftop、iptraf、tcptrack、pktstat、netwatch和trafshow
-  - 每个进程的带宽使用――nethogs
-
-
 # 2. 数据传输
-
-## 2.1. 命令
 
 - rsync
   - [官方文档](https://rsync.samba.org/documentation.html)
@@ -100,8 +75,6 @@
 
 
 # 3. 文档处理
-
-## 3.1. 命令
 
 - find
   - [Classic SysAdmin: How to Search for Files from the Linux Command Line](https://www.linuxfoundation.org/blog/classic-sysadmin-how-to-search-for-files-from-the-linux-command-line/)
@@ -130,14 +103,10 @@
   - [Sed - An Introduction and Tutorial by Bruce Barnett](https://www.grymoire.com/Unix/Sed.html)
   - [Intermediate Sed: Manipulating Streams of Text in a Linux Environment](https://www.digitalocean.com/community/tutorials/intermediate-sed-manipulating-streams-of-text-in-a-linux-environment)
 
-## 3.2. 专题
-
-- [数据科学家的命令行技巧](https://linux.cn/article-10342-1.html)
 
 
 # 4. CPU
 
-## 4.1. 命令
 
 - top
   - [30 Top Command Examples for Monitoring in Linux](https://linoxide.com/linux-command/linux-top-command-examples-screenshots/)
@@ -150,22 +119,15 @@
 - mpstat
 - sar: 系统活动报告工具，可以观测当前活动并且能配置为保存和报告历史统计数据
 
-## 4.2. 专题
-
-- [三种系统监控工具对比：top vs Htop vs Glances](https://mp.weixin.qq.com/s/_YdwciFT6qu5_kUIyylR2g)
 
 
 # 5. 内存
-
-## 5.1. 命令
 
 - vmstat: Virtual Meomory Statistics(虚拟内存统计), 可对操作系统的虚拟内存、进程、CPU活动进行监视. 它是对系统的整体情况进行统计, 但不能针对某个进程进行深入分析
   - [vmstat 命令](https://blogread.cn/it/article/3902?f=wb_news)
 
 
 # 6. 进程
-
-## 6.1. 命令
 
 - lsof: 用于查看进程开打的文件，打开文件的进程，进程打开的端口(TCP、UDP)
   - `man lsof`
@@ -185,17 +147,8 @@
 
 # 7. 磁盘管理
 
-## 7.1. 命令
-
 - df/du
   - [Linux下查看文件和文件夹大小的df和du命令](https://yayu.org/look.php?id=162)
-
-
-## 7.2. 专题
-
-- 在多个Linux上执行命令
-  - https://www.tecmint.com/run-commands-on-multiple-linux-servers/
-  - https://serverfault.com/questions/161690/distributed-grep
 
 
 # 8. 安全
@@ -209,7 +162,23 @@
 
 
 
-# 9. 参考
+# 9. 专题
+
+- 查看TCP连接数
+  - https://my.oschina.net/u/1169079/blog/397705
+- 查看网络流量
+  - 监控总体带宽使用――nload、bmon、slurm、bwm-ng、cbm、speedometer和netload
+  - 监控总体带宽使用（批量式输出）――vnstat、ifstat、dstat和collectl
+  - 每个套接字连接的带宽使用――iftop、iptraf、tcptrack、pktstat、netwatch和trafshow
+  - 每个进程的带宽使用――nethogs
+- [数据科学家的命令行技巧](https://linux.cn/article-10342-1.html)
+- [三种系统监控工具对比：top vs Htop vs Glances](https://mp.weixin.qq.com/s/_YdwciFT6qu5_kUIyylR2g)
+- 在多个Linux上执行命令
+  - https://www.tecmint.com/run-commands-on-multiple-linux-servers/
+  - https://serverfault.com/questions/161690/distributed-grep
+
+
+# 10. 参考
 
 - [Linux工具快速教程](https://linuxtools-rst.readthedocs.io/zh_CN/latest/index.html)
 - [Linux命令大全(手册)](https://www.linuxcool.com/)
