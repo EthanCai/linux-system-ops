@@ -3,23 +3,21 @@
   - [1.2. 专题](#12-专题)
 - [2. 数据传输](#2-数据传输)
   - [2.1. 命令](#21-命令)
-- [3. 数据处理](#3-数据处理)
+- [3. 文档处理](#3-文档处理)
   - [3.1. 命令](#31-命令)
   - [3.2. 专题](#32-专题)
-- [4. 文件管理](#4-文件管理)
+- [4. CPU](#4-cpu)
   - [4.1. 命令](#41-命令)
-- [5. CPU](#5-cpu)
+  - [4.2. 专题](#42-专题)
+- [5. 内存](#5-内存)
   - [5.1. 命令](#51-命令)
-  - [5.2. 专题](#52-专题)
-- [6. 内存](#6-内存)
+- [6. 进程](#6-进程)
   - [6.1. 命令](#61-命令)
-- [7. 进程](#7-进程)
+- [7. 磁盘管理](#7-磁盘管理)
   - [7.1. 命令](#71-命令)
-- [8. 磁盘管理](#8-磁盘管理)
-  - [8.1. 命令](#81-命令)
-  - [8.2. 专题](#82-专题)
-- [9. 安全](#9-安全)
-- [10. 参考](#10-参考)
+  - [7.2. 专题](#72-专题)
+- [8. 安全](#8-安全)
+- [9. 参考](#9-参考)
 
 
 # 1. 网络
@@ -39,7 +37,6 @@
   - https://www.netfilter.org/documentation/index.html
   - https://www.frozentux.net/iptables-tutorial/iptables-tutorial.html
   - https://wiki.archlinux.org/title/iptables
-
 - ping: 测试网络连通性
 - traceroute: 测试网络路由
 - mtr: 网络联通性判断工具，它可以结合 ping nslookup tracert 来判断网络的相关特性
@@ -53,6 +50,7 @@
   - [github.com/jpr5/ngrep](https://github.com/jpr5/ngrep)
   - [ngrep - wikipedia](https://en.wikipedia.org/wiki/Ngrep)
   - [What is ngrep and How to Use It?](https://linuxhint.com/how-to-use-ngrep/)
+  - [ngrep - network grep ](http://ngrep.sourceforge.net/usage.html)
 - tcpkit: 支持用 lua 脚本分析网络数据包的工具，附带简单协议解析(Redis/Memcached)和延时统计
   - https://github.com/git-hulk/tcpkit
 - wireshark: a popular open source graphical user interface (GUI) tool for analyzing packets
@@ -74,6 +72,8 @@
 
 ## 1.2. 专题
 
+- 查看TCP连接数
+  - https://my.oschina.net/u/1169079/blog/397705
 - 查看网络流量
   - 监控总体带宽使用――nload、bmon、slurm、bwm-ng、cbm、speedometer和netload
   - 监控总体带宽使用（批量式输出）――vnstat、ifstat、dstat和collectl
@@ -99,33 +99,45 @@
   - [阮一峰——curl网站开发指南](http://www.ruanyifeng.com/blog/2011/09/curl.html)
 
 
-# 3. 数据处理
+# 3. 文档处理
 
 ## 3.1. 命令
-
-- jq: jq is a lightweight and flexible command-line JSON processor.
-  - [tutorial](https://stedolan.github.io/jq/tutorial/)
-- xargs
-  - [xargs 命令教程](https://www.ruanyifeng.com/blog/2019/08/xargs-tutorial.html)
-
-## 3.2. 专题
-
-- [数据科学家的命令行技巧](https://linux.cn/article-10342-1.html)
-
-# 4. 文件管理
-
-## 4.1. 命令
 
 - find
   - [Classic SysAdmin: How to Search for Files from the Linux Command Line](https://www.linuxfoundation.org/blog/classic-sysadmin-how-to-search-for-files-from-the-linux-command-line/)
   - [Beyond Finding Stuff with the Linux find Command](https://www.linux.com/topic/desktop/beyond-finding-stuff/)
   - [find命令 – 根据路径和条件搜索指定文件](https://www.linuxcool.com/find)
   - [How to audit permissions with the find command](https://www.redhat.com/sysadmin/audit-permissions-find)
+- jq: jq is a lightweight and flexible command-line JSON processor.
+  - [tutorial](https://stedolan.github.io/jq/tutorial/)
+- xargs
+  - [xargs 命令教程](https://www.ruanyifeng.com/blog/2019/08/xargs-tutorial.html)
+- grep
+  - [Linux grep 命令](https://www.runoob.com/linux/linux-comm-grep.html)
+  - [Linux中的Grep命令使用实例](https://cloud.tencent.com/developer/article/1554542)
+- ack
+  - [Linux: Ack 用法, Ack 文档](https://justcode.ikeepstudying.com/2020/10/linux-ack-%E7%94%A8%E6%B3%95-ack-%E6%96%87%E6%A1%A3/)
+  - [官方文档](https://beyondgrep.com/documentation/)
+- awk
+  - [awk 入门教程](http://www.ruanyifeng.com/blog/2018/11/awk.html)
+  - [AWK 简明教程](https://coolshell.cn/articles/9070.html)
+  - [The GNU Awk User’s Guide](https://www.gnu.org/software/gawk/manual/gawk.html)
+  - [30 Examples for Awk Command in Text Processing](https://likegeeks.com/awk-command/)
+  - [How To Use the AWK language to Manipulate Text in Linux](https://www.digitalocean.com/community/tutorials/how-to-use-the-awk-language-to-manipulate-text-in-linux?utm_source=DigitalOcean_Newsletter)
+  - [Why you should learn just a little Awk](https://gregable.com/2010/09/why-you-should-know-just-little-awk.html)
+- sed
+  - [SED 简明教程](https://coolshell.cn/articles/9104.html)
+  - [Sed - An Introduction and Tutorial by Bruce Barnett](https://www.grymoire.com/Unix/Sed.html)
+  - [Intermediate Sed: Manipulating Streams of Text in a Linux Environment](https://www.digitalocean.com/community/tutorials/intermediate-sed-manipulating-streams-of-text-in-a-linux-environment)
+
+## 3.2. 专题
+
+- [数据科学家的命令行技巧](https://linux.cn/article-10342-1.html)
 
 
-# 5. CPU
+# 4. CPU
 
-## 5.1. 命令
+## 4.1. 命令
 
 - top
   - [30 Top Command Examples for Monitoring in Linux](https://linoxide.com/linux-command/linux-top-command-examples-screenshots/)
@@ -138,22 +150,22 @@
 - mpstat
 - sar: 系统活动报告工具，可以观测当前活动并且能配置为保存和报告历史统计数据
 
-## 5.2. 专题
+## 4.2. 专题
 
 - [三种系统监控工具对比：top vs Htop vs Glances](https://mp.weixin.qq.com/s/_YdwciFT6qu5_kUIyylR2g)
 
 
-# 6. 内存
+# 5. 内存
 
-## 6.1. 命令
+## 5.1. 命令
 
 - vmstat: Virtual Meomory Statistics(虚拟内存统计), 可对操作系统的虚拟内存、进程、CPU活动进行监视. 它是对系统的整体情况进行统计, 但不能针对某个进程进行深入分析
   - [vmstat 命令](https://blogread.cn/it/article/3902?f=wb_news)
 
 
-# 7. 进程
+# 6. 进程
 
-## 7.1. 命令
+## 6.1. 命令
 
 - lsof: 用于查看进程开打的文件，打开文件的进程，进程打开的端口(TCP、UDP)
   - `man lsof`
@@ -171,22 +183,22 @@
   - [Linux - 请允许我静静地后台运行](http://blog.jobbole.com/111850/)
 
 
-# 8. 磁盘管理
+# 7. 磁盘管理
 
-## 8.1. 命令
+## 7.1. 命令
 
 - df/du
   - [Linux下查看文件和文件夹大小的df和du命令](https://yayu.org/look.php?id=162)
 
 
-## 8.2. 专题
+## 7.2. 专题
 
 - 在多个Linux上执行命令
   - https://www.tecmint.com/run-commands-on-multiple-linux-servers/
   - https://serverfault.com/questions/161690/distributed-grep
 
 
-# 9. 安全
+# 8. 安全
 
 - nmap
   - [Understanding Nmap by using hping](https://medium.com/@reginaldlaurent/understanding-nmap-by-using-hping-c27e6b613bd9)
@@ -197,7 +209,7 @@
 
 
 
-# 10. 参考
+# 9. 参考
 
 - [Linux工具快速教程](https://linuxtools-rst.readthedocs.io/zh_CN/latest/index.html)
 - [Linux命令大全(手册)](https://www.linuxcool.com/)
