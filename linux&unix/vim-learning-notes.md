@@ -1,33 +1,33 @@
 <!-- TOC -->
 
-- [使用Vim](#使用vim)
-  - [学习卡片](#学习卡片)
-  - [`vimtutor`教程](#vimtutor教程)
-    - [Chapter 1](#chapter-1)
-    - [Chapter 2](#chapter-2)
-    - [Chapter 3](#chapter-3)
-    - [Chapter 4](#chapter-4)
-    - [Chapter 5](#chapter-5)
-    - [Chapter 6](#chapter-6)
-    - [Chapter 7](#chapter-7)
-- [配置Vim](#配置vim)
-  - [安装`spf13-vim`](#安装spf13-vim)
-- [参考](#参考)
+- [1. 使用Vim](#1-使用vim)
+  - [1.1. 学习卡片](#11-学习卡片)
+  - [1.2. `vimtutor`教程](#12-vimtutor教程)
+    - [1.2.1. Chapter 1](#121-chapter-1)
+    - [1.2.2. Chapter 2](#122-chapter-2)
+    - [1.2.3. Chapter 3](#123-chapter-3)
+    - [1.2.4. Chapter 4](#124-chapter-4)
+    - [1.2.5. Chapter 5](#125-chapter-5)
+    - [1.2.6. Chapter 6](#126-chapter-6)
+    - [1.2.7. Chapter 7](#127-chapter-7)
+- [2. 配置Vim](#2-配置vim)
+  - [2.1. 安装`spf13-vim`](#21-安装spf13-vim)
+- [3. 参考](#3-参考)
 
 <!-- /TOC -->
 
 
-# 使用Vim
+# 1. 使用Vim
 
-## 学习卡片
+## 1.1. 学习卡片
 
 ![](./img/2015/05/vi-vim-cheat-sheet.gif)
 ![](./img/2015/05/vi-vim-cheat-sheet-sch.gif)
 ![](./img/2015/05/vim_cheat_sheet_for_programmers_print.png)
 
-## `vimtutor`教程
+## 1.2. `vimtutor`教程
 
-### Chapter 1
+### 1.2.1. Chapter 1
 
 ```text
                                Lesson 1 SUMMARY
@@ -51,7 +51,7 @@ NOTE: Pressing <ESC> will place you in Normal mode or will cancel
       an unwanted and partially completed command.
 ```
 
-### Chapter 2
+### 1.2.2. Chapter 2
 
 ```text
                                Lesson 2 SUMMARY
@@ -78,7 +78,7 @@ NOTE: Pressing <ESC> will place you in Normal mode or will cancel
      To undo the undo's, type:                 CTRL-R
 ```
 
-### Chapter 3
+### 1.2.3. Chapter 3
 
 ```text
                                Lesson 3 SUMMARY
@@ -101,7 +101,7 @@ NOTE: Pressing <ESC> will place you in Normal mode or will cancel
 
 ```
 
-### Chapter 4
+### 1.2.4. Chapter 4
 
 ```text
                                Lesson 4 SUMMARY
@@ -127,7 +127,7 @@ NOTE: Pressing <ESC> will place you in Normal mode or will cancel
      To ask for confirmation each time add 'c'             :%s/old/new/gc
 ```
 
-### Chapter 5
+### 1.2.5. Chapter 5
 
 ```text
                                Lesson 5 SUMMARY
@@ -153,7 +153,7 @@ NOTE: Pressing <ESC> will place you in Normal mode or will cancel
 
 ```
 
-### Chapter 6
+### 1.2.6. Chapter 6
 
 ```text
                                Lesson 6 SUMMARY
@@ -180,7 +180,7 @@ NOTE: Pressing <ESC> will place you in Normal mode or will cancel
 
 ```
 
-### Chapter 7
+### 1.2.7. Chapter 7
 
 
 ```text
@@ -202,9 +202,9 @@ NOTE: Pressing <ESC> will place you in Normal mode or will cancel
 
 ```
 
-# 配置Vim
+# 2. 配置Vim
 
-## 安装`spf13-vim`
+## 2.1. 安装`spf13-vim`
 
 由于国内[http://j.mp/spf13-vim3](http://j.mp/spf13-vim3)被封，spf13-vim官网告知的安装方法无法执行成功。国内用户请通过下面的命令执行安装：
 
@@ -212,7 +212,7 @@ NOTE: Pressing <ESC> will place you in Normal mode or will cancel
 curl https://raw.githubusercontent.com/spf13/spf13-vim/3.0/bootstrap.sh -L -o - | sh
 ```
 
-# 参考
+# 3. 参考
 
 - [vim](https://www.vim.org/)
 

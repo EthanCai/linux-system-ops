@@ -1,24 +1,24 @@
 <!-- TOC START min:1 max:2 link:true update:true -->
-- [常用系统变量](#常用系统变量)
-- [Builtin commands that are symbols](#builtin-commands-that-are-symbols)
-- [Control Structures](#control-structures)
-  - [if...else pattern](#ifelse-pattern)
-  - [if...then...else pattern](#ifthenelse-pattern)
-  - [if...then...elif pattern](#ifthenelif-pattern)
-  - [for...in pattern](#forin-pattern)
-  - [for pattern](#for-pattern)
-  - [while pattern](#while-pattern)
-  - [until pattern](#until-pattern)
-  - [break and continue pattern](#break-and-continue-pattern)
-  - [case pattern](#case-pattern)
-  - [select pattern](#select-pattern)
-- [File Descriptors](#file-descriptors)
-- [参考](#参考)
+- [1. 常用系统变量](#1-常用系统变量)
+- [2. Builtin commands that are symbols](#2-builtin-commands-that-are-symbols)
+- [3. Control Structures](#3-control-structures)
+  - [3.1. if...else pattern](#31-ifelse-pattern)
+  - [3.2. if...then...else pattern](#32-ifthenelse-pattern)
+  - [3.3. if...then...elif pattern](#33-ifthenelif-pattern)
+  - [3.4. for...in pattern](#34-forin-pattern)
+  - [3.5. for pattern](#35-for-pattern)
+  - [3.6. while pattern](#36-while-pattern)
+  - [3.7. until pattern](#37-until-pattern)
+  - [3.8. break and continue pattern](#38-break-and-continue-pattern)
+  - [3.9. case pattern](#39-case-pattern)
+  - [3.10. select pattern](#310-select-pattern)
+- [4. File Descriptors](#4-file-descriptors)
+- [5. 参考](#5-参考)
 
 <!-- TOC END -->
 
 
-# 常用系统变量
+# 1. 常用系统变量
 
 - `$0`: 当前shell程序的名字
 - `$1`~`$9`: 命令行上的第一到第九个参数
@@ -29,7 +29,7 @@
 - `$?`: 上一条命令的退出状态
 - `$!`: 最后一个后台进程的进程标识号
 
-# Builtin commands that are symbols
+# 2. Builtin commands that are symbols
 
 - `()`: subshell
 - `$()`: command substitution
@@ -39,9 +39,9 @@
 - `[[]]`: conditional expression, as the modern variant of the classic test command
 
 
-# Control Structures
+# 3. Control Structures
 
-## if...else pattern
+## 3.1. if...else pattern
 
 pattern:
 
@@ -72,7 +72,7 @@ if [ -f "$1" ]
 fi
 ```
 
-## if...then...else pattern
+## 3.2. if...then...else pattern
 
 pattern:
 
@@ -103,7 +103,7 @@ if [ "$1" = "-v" ]
 fi
 ```
 
-## if...then...elif pattern
+## 3.3. if...then...elif pattern
 
 pattern:
 
@@ -146,7 +146,7 @@ if [ "$word1" = "$word2" -a "$word2" = "$word3" ]
 fi
 ```
 
-## for...in pattern
+## 3.4. for...in pattern
 
 pattern:
 
@@ -177,7 +177,7 @@ do
 done
 ```
 
-## for pattern
+## 3.5. for pattern
 
 the loop-index takes on the value of each of the command- line arguments, one at a time.
 
@@ -206,7 +206,7 @@ do
 done
 ```
 
-## while pattern
+## 3.6. while pattern
 
 pattern:
 
@@ -228,7 +228,7 @@ do
 done
 ```
 
-## until pattern
+## 3.7. until pattern
 
 pattern:
 
@@ -254,7 +254,7 @@ done
 echo "Very good."
 ```
 
-## break and continue pattern
+## 3.8. break and continue pattern
 
 example:
 
@@ -275,7 +275,7 @@ do
 done
 ```
 
-## case pattern
+## 3.9. case pattern
 
 pattern:
 
@@ -314,7 +314,7 @@ case "$letter" in
 esac
 ```
 
-## select pattern
+## 3.10. select pattern
 
 pattern:
 
@@ -344,7 +344,7 @@ do
 done
 ```
 
-# File Descriptors
+# 4. File Descriptors
 
 参考：
 
@@ -425,7 +425,7 @@ exit 0
 ```
 
 
-# 参考
+# 5. 参考
 
 - Shell Tutorial
   - [Gnu Bash Reference](http://www.gnu.org/software/bash/manual/bashref.html)
