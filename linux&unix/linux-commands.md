@@ -86,6 +86,16 @@
 
 - [数据科学家的命令行技巧](https://linux.cn/article-10342-1.html)
 
+# 文件管理
+
+## 命令
+
+- find
+  - [Classic SysAdmin: How to Search for Files from the Linux Command Line](https://www.linuxfoundation.org/blog/classic-sysadmin-how-to-search-for-files-from-the-linux-command-line/)
+  - [Beyond Finding Stuff with the Linux find Command](https://www.linux.com/topic/desktop/beyond-finding-stuff/)
+  - [find命令 – 根据路径和条件搜索指定文件](https://www.linuxcool.com/find)
+  - [How to audit permissions with the find command](https://www.redhat.com/sysadmin/audit-permissions-find)
+
 
 # CPU
 
