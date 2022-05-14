@@ -22,13 +22,13 @@ Linux & Unix的操作系统：
     - [VxWorks](http://www.windriver.com/products/vxworks/): 参考[VxWork介绍及编程](http://www.embhelp.com/drew/mypage/VxWorks.htm)
 
 
-
 学习笔记：
 
 - [Ubuntu Linux学习笔记](./linux&unix/ubuntu-linux-study-guideline.md)
-- [Vim学习笔记](./linux&unix/vim-learning-notes.md)
 - [Shell脚本学习笔记](./linux&unix/shell-script-learning-notes.md)
-- [Mac OS学习大纲](./linux&unix/mac-os-study-guideline.md)
+- [Linux命令](./linux%26unix/linux-commands.md)
+- [Tmux学习笔记](./linux&unix/tmux-learning-notes.md)
+- [Vim学习笔记](./linux&unix/vim-learning-notes.md)
 
 
 阅读路径：
@@ -56,13 +56,19 @@ Linux & Unix的操作系统：
     - Windows Internals
     - Windows内核原理和实现
 
-# Operations
+# DevOps
 
 - [Container技术学习](./devops/container-learning-notes.md)
-- [Puppet学习笔记](./devops/puppet-learning-notes.md)
 - [Ansible学习笔记](./devops/ansible-learning-notes.md)
-- [SaltStack](./devops/saltstack-learning-notes.md)
-- [chef学习笔记](./devops/chef-learning-notes.md)
+- [SaltStack学习笔记](./devops/saltstack-learning-notes.md)
+
+# SRE
+
+- [Container技术学习](./sre/container-learning-notes.md)
+
+# MacOS
+
+- [Mac OS学习笔记](./macos/mac-os-study-guideline.md)
 
 # Windows
 
