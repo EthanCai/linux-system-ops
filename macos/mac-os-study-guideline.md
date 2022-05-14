@@ -45,7 +45,7 @@
 
 ## 3.4. MacOS建议使用什么包管理工具？
 
-[Homebrew](http://brew.sh/)  
+[Homebrew](http://brew.sh/)
 [Homebrew的用户手册](https://github.com/Homebrew/homebrew/tree/master/share/doc/homebrew)
 
 ## 3.5. 如何配置Mac开发环境？
@@ -69,8 +69,7 @@
 ## 3.7. 如何在Finder右键菜单中直接打开Shell？
 
 - 通过Automator创建一个Service，参考[open-shell-at-selected-folder-via-automater-service](http://blog.xcodev.com/archives/open-shell-at-selected-folder-via-automater-service/)
-- 通过菜单Finder -> Services->Services Preferences，找到"Files and Folders"下的"New Terminal xxx"并勾选上  
-![add-new-terminal-item-in-folder-context-menu](./img/2015/05/add-new-terminal-item-in-folder-context-menu.jpg)
+- 通过菜单Finder -> Services->Services Preferences，找到"Files and Folders"下的"New Terminal xxx"并勾选![](assets/2022-05-15-00-19-40.png)
 
 ## 3.8. Mac OS X如何使用系统自带功能截屏？
 
