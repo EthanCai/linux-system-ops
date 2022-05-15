@@ -5,19 +5,21 @@
 - [5. 内存](#5-内存)
 - [6. 进程](#6-进程)
 - [7. 磁盘管理](#7-磁盘管理)
-- [8. 安全](#8-安全)
-- [9. 专题](#9-专题)
-- [10. 参考](#10-参考)
+- [8. 性能优化](#8-性能优化)
+- [9. 安全](#9-安全)
+- [10. 专题](#10-专题)
+- [11. 参考](#11-参考)
 
 
 # 1. 网络
 
+- netstat: 多种网络栈和接口统计信息
+- ifconfig: 多种网络栈和接口统计信息
+- iftop: 
 - ss: 获取socket统计信息，优势在于它能够显示更多更详细的有关TCP和连接状态的信息，而且比netstat更快
   - [man page](https://man7.org/linux/man-pages/man8/ss.8.html)
   - [How to Use the ss Command on Linux](https://www.howtogeek.com/681468/how-to-use-the-ss-command-on-linux/)
   - [Probe Your Linux Sockets With ss](https://www.linux.com/learn/intro-to-linux/2017/4/probe-your-linux-sockets-ss)
-- netstat: 多种网络栈和接口统计信息
-- ifconfig: 多种网络栈和接口统计信息
 - ip: 网络接口统计信息
 - iptables: a [user-space](https://en.wikipedia.org/wiki/User_space) utility program that allows a [system administrator](https://en.wikipedia.org/wiki/System_administrator) to configure the [IP packet filter rules](https://en.wikipedia.org/wiki/Packet_filter) of the [Linux kernel](https://en.wikipedia.org/wiki/Linux_kernel) [firewall](https://en.wikipedia.org/wiki/Firewall_(computing))
   - [Iptables详解](https://blog.csdn.net/reyleon/article/details/12976341)
@@ -51,11 +53,6 @@
   - [网络分析利器wireshark命令版(1)：tshark简介](https://segmentfault.com/a/1190000018886363)
   - [网络分析利器wireshark命令版(2)：tshark使用示例](https://segmentfault.com/a/1190000018886731)
   - [Use Wireshark at the Linux command line with TShark](https://opensource.com/article/20/1/wireshark-linux-tshark)
-- dtrace
-  - DTrace Tools
-- perf: TCP/IP栈跟踪：连接、数据包、丢包、延时
-  - [perf Examples](https://www.brendangregg.com/perf.html)
-  - [How to use perf tool for tracing similar to dtrace](https://www.thegeekdiary.com/how-to-use-perf-tool-for-tracing-similar-to-dtrace/)
 
 
 # 2. 数据传输
@@ -109,9 +106,9 @@
 
 
 - top
+  - [理解CPU利用率](https://www.jianshu.com/p/f595ee986b55?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io)
   - [30 Top Command Examples for Monitoring in Linux](https://linoxide.com/linux-command/linux-top-command-examples-screenshots/)
   - [How Do I Find Out Linux CPU Utilization?](https://www.cyberciti.biz/tips/how-do-i-find-out-linux-cpu-utilization.html)
-  - [理解CPU利用率](https://www.jianshu.com/p/f595ee986b55?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io)
   - [top命令](https://www.cnblogs.com/peida/archive/2012/12/24/2831353.html)
   - [每天一个linux命令（44）：top命令](https://www.cnblogs.com/peida/archive/2012/12/24/2831353.html)
 - htop
@@ -149,9 +146,22 @@
 
 - df/du
   - [Linux下查看文件和文件夹大小的df和du命令](https://yayu.org/look.php?id=162)
+- iostat: 收集和展示系统输入和输出存储设备统计的简单工具
+- iotop: 监控和显示实时的磁盘 I/O 输入和输出和程序进程
+
+# 8. 性能优化
+
+- perf: TCP/IP栈跟踪：连接、数据包、丢包、延时
+  - [perf Examples](https://www.brendangregg.com/perf.html)
+  - [How to use perf tool for tracing similar to dtrace](https://www.thegeekdiary.com/how-to-use-perf-tool-for-tracing-similar-to-dtrace/)
+- DTrace: DTrace is a comprehensive dynamic tracing framework originally created by Sun Microsystems for troubleshooting kernel and application problems on production systems in real time
+  - [wiki2 - DTrace](https://wiki2.org/en/DTrace)
+  - [DTrace Tools](https://www.brendangregg.com/dtrace.html)
+- Berkeley Packet Filter: The Berkeley Packet Filter (BPF) is a technology used in certain computer operating systems for programs that need to, among other things, analyze network traffic (and eBPF is an extended BPF JIT virtual machine in the Linux kernel).
+  - [Wiki2 - BPF](https://wiki2.org/en/EBPF+Newton)
 
 
-# 8. 安全
+# 9. 安全
 
 - nmap
   - [Understanding Nmap by using hping](https://medium.com/@reginaldlaurent/understanding-nmap-by-using-hping-c27e6b613bd9)
@@ -162,7 +172,7 @@
 
 
 
-# 9. 专题
+# 10. 专题
 
 - 查看TCP连接数
   - https://my.oschina.net/u/1169079/blog/397705
@@ -178,9 +188,13 @@
   - https://serverfault.com/questions/161690/distributed-grep
 
 
-# 10. 参考
+# 11. 参考
 
 - [Linux工具快速教程](https://linuxtools-rst.readthedocs.io/zh_CN/latest/index.html)
 - [Linux命令大全(手册)](https://www.linuxcool.com/)
 - [每天一个linux命令目录](https://www.cnblogs.com/peida/archive/2012/12/05/2803591.html)
-
+- 性能优化
+  - [Linux Performance](https://www.brendangregg.com/linuxperf.html)
+  - [性能之巅：Linux 网络性能分析工具](https://www.infoq.cn/article/linux-networking-performance-analytics/)
+  - [性能不好怎么办？对着清单撸一遍](https://mp.weixin.qq.com/s?__biz=MzAwNjY4NTQ4MA==&mid=2651174290&idx=1&sn=288518f030801f4d90878e806546487c&scene=1&srcid=0721NBPW2U9bCAlMyD6IR9uY&from=singlemessage&isappinstalled=0#wechat_redirect)
+    - [中文翻译：用十条命令在一分钟内检查Linux服务器性能](http://www.infoq.com/cn/news/2015/12/linux-performance/)
