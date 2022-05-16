@@ -13,13 +13,15 @@
 
 # 1. 网络
 
-- netstat: 多种网络栈和接口统计信息
-- ifconfig: 多种网络栈和接口统计信息
-- iftop: 
-- ss: 获取socket统计信息，优势在于它能够显示更多更详细的有关TCP和连接状态的信息，而且比netstat更快
-  - [man page](https://man7.org/linux/man-pages/man8/ss.8.html)
-  - [How to Use the ss Command on Linux](https://www.howtogeek.com/681468/how-to-use-the-ss-command-on-linux/)
-  - [Probe Your Linux Sockets With ss](https://www.linux.com/learn/intro-to-linux/2017/4/probe-your-linux-sockets-ss)
+设备信息：
+
+- ifconfig: 显示或设置网络设备参数信息
+  - [ifconfig命令 – 显示或设置网络设备参数信息](https://www.linuxcool.com/ifconfig)
+- iftop: 用来监控网卡的实时流量、反向解析IP、显示端口信息
+  - [Linux流量监控工具 - iftop (最全面的iftop教程)](https://www.vpser.net/manage/iftop.html)
+
+连通性：
+
 - ip: 网络接口统计信息
 - iptables: a [user-space](https://en.wikipedia.org/wiki/User_space) utility program that allows a [system administrator](https://en.wikipedia.org/wiki/System_administrator) to configure the [IP packet filter rules](https://en.wikipedia.org/wiki/Packet_filter) of the [Linux kernel](https://en.wikipedia.org/wiki/Linux_kernel) [firewall](https://en.wikipedia.org/wiki/Firewall_(computing))
   - [Iptables详解](https://blog.csdn.net/reyleon/article/details/12976341)
@@ -31,6 +33,16 @@
 - traceroute: 测试网络路由
 - mtr: 网络联通性判断工具，它可以结合 ping nslookup tracert 来判断网络的相关特性
   - [mtr的用法](https://mp.weixin.qq.com/s/90rHRd8ZjrWc6pv6H1gYtQ)
+
+状态统计：
+
+- netstat: 显示网络状态，例如网络连接状态、路由表信息、接口状态、NAT、多播成员等等
+  - [netstat命令 – 显示网络状态](https://www.linuxcool.com/netstat)
+  - [20 netstat command examples in Linux [Cheat Sheet]](https://www.golinuxcloud.com/netstat-command-in-linux/)
+- ss: 获取socket统计信息，优势在于它能够显示更多更详细的有关TCP和连接状态的信息，而且比netstat更快
+  - [man page](https://man7.org/linux/man-pages/man8/ss.8.html)
+  - [How to Use the ss Command on Linux](https://www.howtogeek.com/681468/how-to-use-the-ss-command-on-linux/)
+  - [Probe Your Linux Sockets With ss](https://www.linux.com/learn/intro-to-linux/2017/4/probe-your-linux-sockets-ss)
 - pathchar: 确定网络路径特征
 - tcpdump: 网络数据包嗅探器
   - [home web site of tcpdump](https://www.tcpdump.org/)
@@ -114,8 +126,6 @@
 - htop
 - sysstat
 - mpstat
-- sar: 系统活动报告工具，可以观测当前活动并且能配置为保存和报告历史统计数据
-
 
 
 # 5. 内存
@@ -151,6 +161,10 @@
 
 # 8. 性能优化
 
+- sar: System Activity Reporter（系统活动情况报告）的缩写。sar工具将对系统当前的状态进行取样，然后通过计算数据和比例来表达系统的当前运行状态。它的特点是可以连续对系统取样，获得大量的取样数据；取样数据和分析的结果都可以存入文件，所需的负载很小。
+  - [sar 找出系统瓶颈的利器](https://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/sar.html)
+  - [10 Useful Sar (Sysstat) Examples for UNIX / Linux Performance Monitoring](https://www.thegeekstuff.com/2011/03/sar-examples/)
+  - [20 sar command examples in Linux [Cheat Sheet]](https://www.golinuxcloud.com/sar-command-in-linux/)
 - perf: TCP/IP栈跟踪：连接、数据包、丢包、延时
   - [perf Examples](https://www.brendangregg.com/perf.html)
   - [How to use perf tool for tracing similar to dtrace](https://www.thegeekdiary.com/how-to-use-perf-tool-for-tracing-similar-to-dtrace/)
@@ -176,6 +190,8 @@
 
 - 查看TCP连接数
   - https://my.oschina.net/u/1169079/blog/397705
+- TCP常见故障排查
+  - https://ms2008.github.io/2018/06/01/tcp-troubleshooting/
 - 查看网络流量
   - 监控总体带宽使用――nload、bmon、slurm、bwm-ng、cbm、speedometer和netload
   - 监控总体带宽使用（批量式输出）――vnstat、ifstat、dstat和collectl
@@ -190,9 +206,11 @@
 
 # 11. 参考
 
-- [Linux工具快速教程](https://linuxtools-rst.readthedocs.io/zh_CN/latest/index.html)
-- [Linux命令大全(手册)](https://www.linuxcool.com/)
-- [每天一个linux命令目录](https://www.cnblogs.com/peida/archive/2012/12/05/2803591.html)
+ 手册
+  - [Linux命令大全(手册)](https://www.linuxcool.com/)
+  - [Linux Tools Quick Tutorial](https://linuxtools-rst.readthedocs.io/)
+  - [100+ Linux commands cheat sheet & examples](https://www.golinuxcloud.com/linux-commands-cheat-sheet/)
+  - [每天一个linux命令目录](https://www.cnblogs.com/peida/archive/2012/12/05/2803591.html)
 - 性能优化
   - [Linux Performance](https://www.brendangregg.com/linuxperf.html)
   - [性能之巅：Linux 网络性能分析工具](https://www.infoq.cn/article/linux-networking-performance-analytics/)
