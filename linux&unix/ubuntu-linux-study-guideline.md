@@ -873,22 +873,22 @@ $ tar -xvjf make-3.81.tar.bz2
 - 概念
     - [基础网络概念](http://vbird.dic.ksu.edu.tw/linux_server/0110network_basic.php)
     - 网络协议的层次结构
-        - 参考[互联网协议入门（一）](http://www.ruanyifeng.com/blog/2012/05/internet_protocol_suite_part_i.html)
-        - 参考[互联网协议入门（二）](http://www.ruanyifeng.com/blog/2012/06/internet_protocol_suite_part_ii.html)
+      - 参考[互联网协议入门（一）](http://www.ruanyifeng.com/blog/2012/05/internet_protocol_suite_part_i.html)
+      - 参考[互联网协议入门（二）](http://www.ruanyifeng.com/blog/2012/06/internet_protocol_suite_part_ii.html)
     - IP协议，IP地址的分类，子网掩码
-        - [如何理解ip路由和操作linux的路由表](http://linux.chinaunix.net/techdoc/net/2008/09/18/1033149.shtml)
+      - [如何理解ip路由和操作linux的路由表](http://linux.chinaunix.net/techdoc/net/2008/09/18/1033149.shtml)
     - TCP协议
     - UDP协议
 - 网络协议图
-		- [常用网络通信协议结构图](./file/Network_Protocol_Diagram.jpg)
-	  - [TCP IP网络协议图](./file/TCP-IP_Network_Protocol_Diagram.pdf)
-	  - Network Protocol Map
-		  - [中文](./file/network-protocol-map-2016-zh.pdf)
-		  - [英文](./file/network-protocol-map-2016-en.pdf)
+    - [常用网络通信协议结构图](./file/Network_Protocol_Diagram.jpg)
+    - [TCP IP网络协议图](./file/TCP-IP_Network_Protocol_Diagram.pdf)
+    - Network Protocol Map
+      - [中文](./file/network-protocol-map-2016-zh.pdf)
+      - [英文](./file/network-protocol-map-2016-en.pdf)
 - 参考
     - 常用文件传输方式及比较
-        - [Linux 上的常用文件传输方式介绍与比较](http://www.ibm.com/developerworks/cn/linux/l-cn-filetransfer/)
-        - [linux下不同服务器间数据传输(rcp,scp,rsync,ftp,sftp,lftp,wget,curl)](http://blog.csdn.net/emili/article/details/6858818)
+      - [Linux 上的常用文件传输方式介绍与比较](http://www.ibm.com/developerworks/cn/linux/l-cn-filetransfer/)
+      - [linux下不同服务器间数据传输(rcp,scp,rsync,ftp,sftp,lftp,wget,curl)](http://blog.csdn.net/emili/article/details/6858818)
     - [Linux常用网络指令](http://linux.vbird.org/linux_server/0140networkcommand.php)
     - [linux网络配置命令之ifconfig、ip和route](http://chrinux.blog.51cto.com/6466723/1188108)
     - [Linux and Unix ifconfig command](http://www.computerhope.com/unix/uifconfi.htm)
