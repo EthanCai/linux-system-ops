@@ -13,22 +13,34 @@
 
 # 1. 网络
 
-设备信息：
+设备&路由：
 
+- ip: 用于显示与配置网卡参数。作为Linux系统下一款好用的网卡参数配置工具，ip命令除了常规操作外，还可以对主机的路由、网络设备、策略路由以及隧道信息进行查看。
+  - [ip命令 – 显示与配置网卡参数](https://www.linuxcool.com/ip)
+  - [16 Linux ip command examples to configure network interfaces (cheatsheet)](https://www.golinuxcloud.com/linux-ip-command/)
+  - [https://www.golinuxcloud.com/ip-route-command-in-linux/](https://www.golinuxcloud.com/ip-route-command-in-linux/)
 - ifconfig: 显示或设置网络设备参数信息
   - [ifconfig命令 – 显示或设置网络设备参数信息](https://www.linuxcool.com/ifconfig)
-- iftop: 用来监控网卡的实时流量、反向解析IP、显示端口信息
-  - [Linux流量监控工具 - iftop (最全面的iftop教程)](https://www.vpser.net/manage/iftop.html)
-
-连通性：
-
-- ip: 网络接口统计信息
-- iptables: a [user-space](https://en.wikipedia.org/wiki/User_space) utility program that allows a [system administrator](https://en.wikipedia.org/wiki/System_administrator) to configure the [IP packet filter rules](https://en.wikipedia.org/wiki/Packet_filter) of the [Linux kernel](https://en.wikipedia.org/wiki/Linux_kernel) [firewall](https://en.wikipedia.org/wiki/Firewall_(computing))
+- route
+  - [第二章、基础网络概念 | 鸟哥的linux私房菜](http://cn.linux.vbird.org/linux_server/0110network_basic_3.php#tcpip_network_route)
+  - [第八章、路由观念与路由器设定 | 鸟哥的linux私房菜](http://cn.linux.vbird.org/linux_server/0230router_1.php)
+- iptables: a user-space utility program that allows a system administrator to configure the IP packet filter rules of the Linux kernel firewall, implemented as different Netfilter modules. The filters are organized in different tables, which contain chains of rules for how to treat network traffic packets.
   - [Iptables详解](https://blog.csdn.net/reyleon/article/details/12976341)
   - https://en.wikipedia.org/wiki/Iptables
   - https://www.netfilter.org/documentation/index.html
   - https://www.frozentux.net/iptables-tutorial/iptables-tutorial.html
   - https://wiki.archlinux.org/title/iptables
+  - [iptables vs route](http://superuser.com/questions/419659/iptables-vs-route)
+- iftop: 用来监控网卡的实时流量、反向解析IP、显示端口信息
+  - [Linux流量监控工具 - iftop (最全面的iftop教程)](https://www.vpser.net/manage/iftop.html)
+
+
+DNS&连通性：
+
+- `nslookup`, `host`, `dig`: DNS lookup utility
+    - 参考[Linux and Unix - nslookup command](http://www.computerhope.com/unix/unslooku.htm)
+    - 参考[Linux and Unix - host command](http://www.computerhope.com/unix/host.htm)
+    - 参考[Linux and Unix - dig command](http://www.computerhope.com/unix/dig.htm)
 - ping: 测试网络连通性
 - traceroute: 测试网络路由
 - mtr: 网络联通性判断工具，它可以结合 ping nslookup tracert 来判断网络的相关特性
