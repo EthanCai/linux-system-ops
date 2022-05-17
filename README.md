@@ -43,7 +43,7 @@ Linux & Unix的操作系统：
 
 1. Step 1
     - A Practical Guide to Ubuntu Linux, 3rd, Mark G. Sobell
-    - 鸟哥的Linux私房菜
+    - [鸟哥的Linux私房菜](http://cn.linux.vbird.org/)
     - C语言程序设计：现代方法
     - Practical Vim
     - Linux Shell Scripting Cookbook
