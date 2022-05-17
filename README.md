@@ -1,3 +1,11 @@
+# 概要
+
+学习Linux相关运维知识，能够帮助成为更优秀的工程师。这也是这个repo诞生的原因。
+
+# 学习准备
+
+1. 参考[golang-dev-vm](https://github.com/EthanCai/golang-dev-vm)准备一个linux虚拟机。
+
 # Linux & Unix
 
 Linux & Unix的操作系统：
