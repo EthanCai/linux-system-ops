@@ -27,8 +27,9 @@
 - iptables: a user-space utility program that allows a system administrator to configure the IP packet filter rules of the Linux kernel firewall, implemented as different Netfilter modules. The filters are organized in different tables, which contain chains of rules for how to treat network traffic packets.
   - [Iptables详解](https://blog.csdn.net/reyleon/article/details/12976341)
   - https://en.wikipedia.org/wiki/Iptables
+    - ![](./assets/packet-flow-in-netfilter-and-general-networking.png)
   - https://www.netfilter.org/documentation/index.html
-  - https://www.frozentux.net/iptables-tutorial/iptables-tutorial.html
+    - https://www.frozentux.net/iptables-tutorial/iptables-tutorial.html
   - https://wiki.archlinux.org/title/iptables
   - [iptables vs route](http://superuser.com/questions/419659/iptables-vs-route)
 - iftop: 用来监控网卡的实时流量、反向解析IP、显示端口信息
@@ -37,14 +38,22 @@
 
 DNS&连通性：
 
-- `nslookup`, `host`, `dig`: DNS lookup utility
+- DNS lookup utility
+  - nslookup
     - 参考[Linux and Unix - nslookup command](http://www.computerhope.com/unix/unslooku.htm)
-    - 参考[Linux and Unix - host command](http://www.computerhope.com/unix/host.htm)
+  - dig
     - 参考[Linux and Unix - dig command](http://www.computerhope.com/unix/dig.htm)
+  - host
+    - 参考[Linux and Unix - host command](http://www.computerhope.com/unix/host.htm)
 - ping: 测试网络连通性
-- traceroute: 测试网络路由
-- mtr: 网络联通性判断工具，它可以结合 ping nslookup tracert 来判断网络的相关特性
+  - [ping命令 – 测试主机间网络连通性](https://www.linuxcool.com/ping)
+  - [15+ ping command examples in Linux](https://www.golinuxcloud.com/ping-command-linux)
+- traceroute: 追踪数据包在网络上的传输时的全部路径
+  - [每天一个linux命令（55）：traceroute命令](https://www.cnblogs.com/peida/archive/2013/03/07/2947326.html)
+  - [traceroute命令 – 追踪数据包在网络上的传输时的全部路径](https://www.linuxcool.com/traceroute)
+- mtr: 全称 my traceroute，是一个把 ping 和 traceroute 合并到一个程序的网络诊断工具
   - [mtr的用法](https://mp.weixin.qq.com/s/90rHRd8ZjrWc6pv6H1gYtQ)
+  - [MTR工具使用说明与结果分析](https://help.aliyun.com/document_detail/98706.html)
 
 状态统计：
 
