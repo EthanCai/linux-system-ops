@@ -116,6 +116,9 @@ DNS&连通性：
 - xargs
   - [xargs 命令教程](https://www.ruanyifeng.com/blog/2019/08/xargs-tutorial.html)
 - grep
+  - [Using Grep & Regular Expressions to Search for Text Patterns in Linux](https://www.digitalocean.com/community/tutorials/using-grep-regular-expressions-to-search-for-text-patterns-in-linux)
+  - [How To Use grep Command In Linux / UNIX With Practical Examples](https://www.cyberciti.biz/faq/howto-use-grep-command-in-linux-unix/)
+    - [Regular expressions in grep ( regex ) with examples](https://www.cyberciti.biz/faq/grep-regular-expressions/)
   - [Linux grep 命令](https://www.runoob.com/linux/linux-comm-grep.html)
   - [Linux中的Grep命令使用实例](https://cloud.tencent.com/developer/article/1554542)
 - ack
