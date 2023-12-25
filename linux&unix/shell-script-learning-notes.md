@@ -1,7 +1,7 @@
 <!-- TOC START min:1 max:2 link:true update:true -->
-- [1. 常用系统变量](#1-常用系统变量)
-- [2. Builtin commands that are symbols](#2-builtin-commands-that-are-symbols)
-- [3. Control Structures](#3-control-structures)
+- [1. 常用系统变量 Common System Variables](#1-常用系统变量-common-system-variables)
+- [2. 符号化的内置命令 Builtin commands that are symbols](#2-符号化的内置命令-builtin-commands-that-are-symbols)
+- [3. 控制结构 Control Structures](#3-控制结构-control-structures)
   - [3.1. if...else pattern](#31-ifelse-pattern)
   - [3.2. if...then...else pattern](#32-ifthenelse-pattern)
   - [3.3. if...then...elif pattern](#33-ifthenelif-pattern)
@@ -12,13 +12,13 @@
   - [3.8. break and continue pattern](#38-break-and-continue-pattern)
   - [3.9. case pattern](#39-case-pattern)
   - [3.10. select pattern](#310-select-pattern)
-- [4. File Descriptors](#4-file-descriptors)
-- [5. 参考](#5-参考)
+- [4. 文件描述符 File Descriptors](#4-文件描述符-file-descriptors)
+- [5. 参考 References](#5-参考-references)
 
 <!-- TOC END -->
 
 
-# 1. 常用系统变量
+# 1. 常用系统变量 Common System Variables
 
 - `$0`: 当前shell程序的名字
 - `$1`~`$9`: 命令行上的第一到第九个参数
@@ -29,7 +29,7 @@
 - `$?`: 上一条命令的退出状态
 - `$!`: 最后一个后台进程的进程标识号
 
-# 2. Builtin commands that are symbols
+# 2. 符号化的内置命令 Builtin commands that are symbols
 
 - `()`: subshell
 - `$()`: command substitution
@@ -39,7 +39,7 @@
 - `[[]]`: conditional expression, as the modern variant of the classic test command
 
 
-# 3. Control Structures
+# 3. 控制结构 Control Structures
 
 ## 3.1. if...else pattern
 
@@ -344,7 +344,7 @@ do
 done
 ```
 
-# 4. File Descriptors
+# 4. 文件描述符 File Descriptors
 
 参考：
 
@@ -425,7 +425,7 @@ exit 0
 ```
 
 
-# 5. 参考
+# 5. 参考 References
 
 - Shell Tutorial
   - [Gnu Bash Reference](http://www.gnu.org/software/bash/manual/bashref.html)
