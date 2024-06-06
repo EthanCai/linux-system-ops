@@ -434,7 +434,8 @@ exit 0
   - [Linux Shell Scripting Tutorial (LSST) v2.0](https://bash.cyberciti.biz/guide/Main_Page)
   - [Pure Bash Bible](https://github.com/dylanaraps/pure-bash-bible):  A collection of pure bash alternatives to external processes
   - [Shell & Utilities: Detailed Toc](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/contents.html)
-  - [Advanced Bash-Scripting Guide](https://linux.die.net/abs-guide/index.html)
+  - [Advanced Bash-Scripting Guide](https://tldp.org/LDP/abs/html/)
+    - 其它地址： [Advanced Bash-Scripting Guide](https://linux.die.net/abs-guide/index.html)
 html)
 - Collection of bash scripts
   - [Bash-Oneliner](https://github.com/onceupon/Bash-Oneliner)
